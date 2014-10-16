@@ -1,0 +1,66 @@
+======================
+Linux Mint 17 安装笔记
+======================
+
+2014年 10月 16日 星期四 20:31:00 CST
+
+install cloudstation
+====================
+
+   * download cloudstation
+   * uncompress
+   * ./install
+
+setup software souce 
+====================
+select the fastest software
+
+install software
+================
+
+install following softwware::
+
+    apt-get install build-essential
+    apt-get install fcitx fcitx-ui-classic fcitx-table-wbpy
+    apt-get install git
+    
+    sudo apt-get install keepassx filezilla
+    sudo apt-get install vim-gnome ctags 
+
+software setup::
+
+    sync firefox
+    setup git
+
+Setup virtualenv
+-----------------
+
+install pip and virtualenvwrapper::
+
+    sudo apt-get install python-pip
+    sudo pip install virtualenvwrapper
+
+add flowing to ~/.bashrc::
+
+    export WORKON_HOME=$HOME/.virtualenvs
+    export PROJECT_HOME=$HOME/project
+    source /usr/local/bin/virtualenvwrapper.sh
+
+reload .bashrc
+
+
+install XBMC
+-------------
+
+输入如下命令安装（ 适用于 Ubuntu 9.10 Karmic 或更高版本，详见：
+http://wiki.xbmc.org/index.php?title=HOW-TO:Install_XBMC_on_Ubuntu/HOW-TO_1)::
+
+    sudo apt-get install python-software-properties pkg-config
+    sudo add-apt-repository ppa:team-xbmc
+    sudo apt-get update
+    sudo apt-get install xbmc xbmc-standalone
+
+安装完以后要设置字体：进入 XBMC，菜单 System -> Appearance -> Skin -> Fonts ->
+选择 Arial based 。
+
+
