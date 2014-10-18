@@ -8,13 +8,13 @@ github.io 丢失下划线开头的文件
 于是写 Email 向 github 求助，很快就得到回复。原来是 Jekyll （亦或是 ruby?) 的
 问题。 Jekyll 不支持点号、井号或下划线开头的东东。
 
-解决方法：
+* 解决方法：
 
-在根目录加入一个 .nojekyll 文件，来关闭 Jekyll 。 
+ 在根目录加入一个 .nojekyll 文件，来关闭 Jekyll 。 
 
-参考：
+* 参考：
 
-https://help.github.com/articles/files-that-start-with-an-underscore-are-missing/
+ https://help.github.com/articles/files-that-start-with-an-underscore-are-missing/
 
 ======================
 Linux Mint 17 安装笔记
@@ -33,10 +33,10 @@ setup software souce
 ====================
 select the fastest software
 
-install software
-================
+install some software
+=====================
 
-install following softwware::
+* install following softwware::
 
     apt-get install build-essential
     apt-get install fcitx fcitx-ui-classic fcitx-table-wbpy
@@ -45,30 +45,31 @@ install following softwware::
     sudo apt-get install keepassx filezilla
     sudo apt-get install vim-gnome ctags 
 
-software setup::
+* software setup
 
-    sync firefox
-    setup git
+    * sync firefox
 
-Setup virtualenv
------------------
+    * setup git, see :ref:`setup_git`.
 
-install pip and virtualenvwrapper::
+install virtualenv
+==================
+
+* install pip and virtualenvwrapper::
 
     sudo apt-get install python-pip
     sudo pip install virtualenvwrapper
 
-add flowing to ~/.bashrc::
+* add flowing to ~/.bashrc::
 
     export WORKON_HOME=$HOME/.virtualenvs
     export PROJECT_HOME=$HOME/project
     source /usr/local/bin/virtualenvwrapper.sh
 
-reload .bashrc
+* reload .bashrc
 
 
 install XBMC
--------------
+============
 
 输入如下命令安装（ 适用于 Ubuntu 9.10 Karmic 或更高版本，详见：
 http://wiki.xbmc.org/index.php?title=HOW-TO:Install_XBMC_on_Ubuntu/HOW-TO_1)::
