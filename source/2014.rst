@@ -25,9 +25,9 @@ Linux Mint 17 安装笔记
 install cloudstation
 ====================
 
-   * download cloudstation
-   * uncompress
-   * ./install
+* download cloudstation
+* uncompress
+* ./install
 
 setup software souce 
 ====================

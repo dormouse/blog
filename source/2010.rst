@@ -39,9 +39,8 @@ dormouse 2010年09月24日 08:41 分类：个人日记
 
 来源： http://www.nasa.gov/topics/earth/features/health-sapping.html
 
-.. image:: 483897main_Global-PM2.5-map.JPG
+.. image:: _images/main_Global-PM2.5-map.JPG
    :width: 400 px
-   :target: _images/483897main_Global-PM2.5-map.JPG
 
 ===============
 电子书比较中...
@@ -51,7 +50,7 @@ dormouse 2010年09月24日 08:41 分类：个人日记
 
 想买一本电子书，比较中...
 
-.. image:: ebook.jpg
+.. image:: _images/ebook.jpg
 
 还有一些备选的型号:台电K3，纽曼6206。
 
@@ -64,7 +63,7 @@ http://player.youku.com/player.php/partnerid/XOTcy/sid/XMTk1MjUxODI0/v.swf
 ================
 2010年07月10日 21:56 分类：个人日记
 
-.. image:: newegg.jpg
+.. image:: _images/newegg.jpg
 
 ======================
 《战略特勤组》观后感

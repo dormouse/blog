@@ -9,7 +9,7 @@
 
 我出现在这里：》
 
-.. image:: iamhere.png
+.. image:: _images/iamhere.png
 
 ========================
 Linux下常用的CLI软件[ZT]

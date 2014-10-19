@@ -7,6 +7,15 @@
 安装xeTex
 =========
 
+方法一：
+--------
+
+没有测试过。
+apt-get install texlive-full
+
+方法二：
+--------
+
 去 tex 的老家 http://www.tug.org/ ，在 http://www.tug.org/texlive/acquire-netinstall.html 下载
 `install-tl-unx.tar.gz <http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz>`_ 。
 
@@ -84,10 +93,10 @@
     \usepackage{sphinx}
     \usepackage{multirow}
     \usepackage{fontspec}     % 引入 fontsepc，這樣才可以用下面的設定字型的指令
-    \setmainfont{文泉驿等宽正黑}  % 預設字型
-    \setsansfont{文泉驿等宽正黑}  % sans family 字型
-    \setromanfont{文泉驿等宽正黑} % roman 字型
-    \setmonofont{文泉驿等宽正黑}  % 等寬字型
+    \setmainfont{文泉驿等宽微米黑}  % 預設字型
+    \setsansfont{文泉驿等宽微米黑}  % sans family 字型
+    \setromanfont{文泉驿等宽微米黑} % roman 字型
+    \setmonofont{文泉驿等宽微米黑}  % 等寬字型
     \XeTeXlinebreaklocale "zh"          % 設定斷行演算法為中文
     \XeTeXlinebreakskip = 0pt plus 1pt  % 設定中文字距與英文字距
 
