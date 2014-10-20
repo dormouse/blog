@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>结合 Sphinx 与 xeTex 生成PDF &mdash; Dormouse&#39;s Blog 0.1 文档</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="top" title="Dormouse&#39;s Blog 0.1 文档" href="index.html" />
+    <link rel="next" title="Vim Tips" href="vim.html" />
+    <link rel="prev" title="Sphinx cheat sheet" href="sphinx_cheet_sheet.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="vim.html" title="Vim Tips"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="sphinx_cheet_sheet.html" title="Sphinx cheat sheet"
+             accesskey="P">上一页</a> |</li>
+        <li><a href="index.html">Dormouse&#39;s Blog 0.1 文档</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">內容目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">结合 Sphinx 与 xeTex 生成PDF</a><ul>
+<li><a class="reference internal" href="#xetex">安装xeTex</a><ul>
+<li><a class="reference internal" href="#id1">方法一：</a></li>
+<li><a class="reference internal" href="#id2">方法二：</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#sphinx">安装 Sphinx</a></li>
+<li><a class="reference internal" href="#sphinx-pdf">用 Sphinx 生成 PDF 文件</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="sphinx_cheet_sheet.html"
+                        title="上一章">Sphinx cheat sheet</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="vim.html"
+                        title="下一章">Vim Tips</a></p>
+  <h3>本页</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/pdf.txt"
+           rel="nofollow">显示源代码</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>快速搜索</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="转向" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    输入相关的术语，模块，类或者函数名称进行搜索
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="sphinx-xetex-pdf">
+<h1>结合 Sphinx 与 xeTex 生成PDF<a class="headerlink" href="#sphinx-xetex-pdf" title="永久链接至标题">¶</a></h1>
+<p>2013年 01月 27日 星期日 21:42:37 CST</p>
+<div class="section" id="xetex">
+<h2>安装xeTex<a class="headerlink" href="#xetex" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id1">
+<h3>方法一：<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h3>
+<p>没有测试过。
+apt-get install texlive-full</p>
+</div>
+<div class="section" id="id2">
+<h3>方法二：<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
+<p>去 tex 的老家 <a class="reference external" href="http://www.tug.org/">http://www.tug.org/</a> ，在 <a class="reference external" href="http://www.tug.org/texlive/acquire-netinstall.html">http://www.tug.org/texlive/acquire-netinstall.html</a> 下载
+<a class="reference external" href="http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz">install-tl-unx.tar.gz</a> 。</p>
+<p>解压缩后，运行:</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo ./install-tl --gui=wizard
+</pre></div>
+</div>
+<p>如果没有安装 wget ，则运行:</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo yum install wget
+</pre></div>
+</div>
+<p>安装输出大致如下:</p>
+<div class="highlight-python"><div class="highlight"><pre>输入 “In” 开始安装，一共有2599个项目......
+Actions:
+&lt;I&gt; start installation to hard disk
+&lt;H&gt; help
+&lt;Q&gt; quit
+
+Enter command: i
+Installing to: /usr/local/texlive/2012
+Installing [0001/2599, time/total: ??:??/??:??]: 12many [376k]
+Installing [0002/2599, time/total: 00:09/10:05:07]: 2up [66k]
+Installing [0003/2599, time/total: 00:10/09:32:46]: Asana-Math [458k]
+Installing [0004/2599, time/total: 00:12/05:36:55]: ESIEEcv [137k]
+Installing [0005/2599, time/total: 00:15/06:05:39]: FAQ-en [5765k]
+......
+
+See /usr/local/texlive/2012/index.html
+for links to documentation.  The TeX Live web site
+contains updates and corrections: http://tug.org/texlive.
+
+TeX Live is a joint project of the TeX user groups around the world;
+please consider supporting it by joining the group best for you. The
+list of user groups is on the web at http://tug.org/usergroups.html.
+
+
+Add /usr/local/texlive/2012/texmf/doc/man to MANPATH, if not dynamically determined.
+Add /usr/local/texlive/2012/texmf/doc/info to INFOPATH.
+
+Most importantly, add /usr/local/texlive/2012/bin/x86_64-linux
+to your PATH for current and future sessions.
+</pre></div>
+</div>
+<p>设置路径，把以下内容放在 .bash_profile 中，然后运行 . ~/.bash_profile(ubuntu
+下是 ~/.bashrc):</p>
+<div class="highlight-python"><div class="highlight"><pre>PATH=$PATH:$HOME/.local/bin:$HOME/bin
+PATH=/usr/local/texlive/2012/bin/x86_64-linux:$PATH; export PATH
+MANPATH=/usr/local/texlive/2012/texmf/doc/man:$MANPATH; export MANPATH
+INFOPATH=/usr/local/texlive/2012/texmf/doc/info:$INFOPATH; export INFOPATH
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="sphinx">
+<h2>安装 Sphinx<a class="headerlink" href="#sphinx" title="永久链接至标题">¶</a></h2>
+<p>使用如下命令安装:</p>
+<div class="highlight-python"><div class="highlight"><pre>easy_install -U Sphinx
+</pre></div>
+</div>
+</div>
+<div class="section" id="sphinx-pdf">
+<h2>用 Sphinx 生成 PDF 文件<a class="headerlink" href="#sphinx-pdf" title="永久链接至标题">¶</a></h2>
+<p>使用这个命令生成 tex 文件:</p>
+<div class="highlight-python"><div class="highlight"><pre>make latex
+</pre></div>
+</div>
+<p>把生成的 tex 文件的“title{XXX}”之前的开头部分替换为如下内容:</p>
+<div class="highlight-python"><div class="highlight"><pre>% Generated by Sphinx.
+\def\sphinxdocclass{report}
+\documentclass[letterpaper,10pt,english]{sphinxmanual}
+\usepackage[T1]{fontenc}
+\usepackage{babel}
+\usepackage{times}
+\usepackage[Bjarne]{fncychap}
+\usepackage{longtable}
+\usepackage{sphinx}
+\usepackage{multirow}
+\usepackage{fontspec}     % 引入 fontsepc，這樣才可以用下面的設定字型的指令
+\setmainfont{文泉驿等宽微米黑}  % 預設字型
+\setsansfont{文泉驿等宽微米黑}  % sans family 字型
+\setromanfont{文泉驿等宽微米黑} % roman 字型
+\setmonofont{文泉驿等宽微米黑}  % 等寬字型
+\XeTeXlinebreaklocale &quot;zh&quot;          % 設定斷行演算法為中文
+\XeTeXlinebreakskip = 0pt plus 1pt  % 設定中文字距與英文字距
+</pre></div>
+</div>
+<p>在 Linux 中可以用 fc-list 命令来获得字体名称。</p>
+<p>运行 <strong>两遍</strong> 以下命令即可生成 PDF 文件:</p>
+<div class="highlight-python"><div class="highlight"><pre>xelatex Test.tex
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="vim.html" title="Vim Tips"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="sphinx_cheet_sheet.html" title="Sphinx cheat sheet"
+             >上一页</a> |</li>
+        <li><a href="index.html">Dormouse&#39;s Blog 0.1 文档</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; 版权所有 2010-2014, Dormouse.Young.
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3 创建。
+    </div>
+  </body>
+</html>

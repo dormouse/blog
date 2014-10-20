@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Vim Tips &mdash; Dormouse&#39;s Blog 0.1 文档</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="top" title="Dormouse&#39;s Blog 0.1 文档" href="index.html" />
+    <link rel="next" title="Apt cheat sheet" href="apt.html" />
+    <link rel="prev" title="结合 Sphinx 与 xeTex 生成PDF" href="pdf.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="apt.html" title="Apt cheat sheet"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="pdf.html" title="结合 Sphinx 与 xeTex 生成PDF"
+             accesskey="P">上一页</a> |</li>
+        <li><a href="index.html">Dormouse&#39;s Blog 0.1 文档</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">內容目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Vim Tips</a></li>
+<li><a class="reference internal" href="#my-vimrc">my .vimrc</a></li>
+</ul>
+
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="pdf.html"
+                        title="上一章">结合 Sphinx 与 xeTex 生成PDF</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="apt.html"
+                        title="下一章">Apt cheat sheet</a></p>
+  <h3>本页</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/vim.txt"
+           rel="nofollow">显示源代码</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>快速搜索</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="转向" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    输入相关的术语，模块，类或者函数名称进行搜索
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="vim-tips">
+<h1>Vim Tips<a class="headerlink" href="#vim-tips" title="永久链接至标题">¶</a></h1>
+<p>2012年 05月 07日 星期一 20:25:53 CST</p>
+<ul class="simple">
+<li>:r! date 插入当前时间</li>
+</ul>
+</div>
+<div class="section" id="my-vimrc">
+<h1>my .vimrc<a class="headerlink" href="#my-vimrc" title="永久链接至标题">¶</a></h1>
+<p>2014年 10月 20日 星期一 20:24:31 CST</p>
+<p>There is my .vimrc:</p>
+<div class="highlight-python"><div class="highlight"><pre>set nocompatible
+source $VIMRUNTIME/vimrc_example.vim
+source $VIMRUNTIME/mswin.vim
+behave mswin
+
+set diffexpr=MyDiff()
+function MyDiff()
+  let opt = &#39;-a --binary &#39;
+  if &amp;diffopt =~ &#39;icase&#39; | let opt = opt . &#39;-i &#39; | endif
+  if &amp;diffopt =~ &#39;iwhite&#39; | let opt = opt . &#39;-b &#39; | endif
+  let arg1 = v:fname_in
+  if arg1 =~ &#39; &#39; | let arg1 = &#39;&quot;&#39; . arg1 . &#39;&quot;&#39; | endif
+  let arg2 = v:fname_new
+  if arg2 =~ &#39; &#39; | let arg2 = &#39;&quot;&#39; . arg2 . &#39;&quot;&#39; | endif
+  let arg3 = v:fname_out
+  if arg3 =~ &#39; &#39; | let arg3 = &#39;&quot;&#39; . arg3 . &#39;&quot;&#39; | endif
+  let eq = &#39;&#39;
+  if $VIMRUNTIME =~ &#39; &#39;
+    if &amp;sh =~ &#39;\&lt;cmd&#39;
+      let cmd = &#39;&quot;&quot;&#39; . $VIMRUNTIME . &#39;\diff&quot;&#39;
+      let eq = &#39;&quot;&#39;
+    else
+      let cmd = substitute($VIMRUNTIME, &#39; &#39;, &#39;&quot; &#39;, &#39;&#39;) . &#39;\diff&quot;&#39;
+    endif
+  else
+    let cmd = $VIMRUNTIME . &#39;\diff&#39;
+  endif
+  silent execute &#39;!&#39; . cmd . &#39; &#39; . opt . arg1 . &#39; &#39; . arg2 . &#39; &gt; &#39; . arg3 . eq
+endfunction
+
+set lines=40 columns=85
+set autoindent
+set shiftwidth=4
+set tabstop=4
+set expandtab
+set nu
+set nobackup
+
+&quot;搜索时忽略大小写
+set ignorecase
+
+&quot;解决中文字符显示半个的问题
+set ambiwidth=double
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+&quot;解决windows下的中文乱码问题
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+set encoding=utf-8
+&quot;set termencoding=utf-8
+set fileencodings=ucs-bom,utf-8,chinese,latin-1
+if has(&quot;win32&quot;)
+    set fileencoding=chinese
+    &quot;解决中文菜单乱码
+    set langmenu=zh_CN.utf-8
+    source $VIMRUNTIME/delmenu.vim
+    source $VIMRUNTIME/menu.vim
+    &quot;解决console输出乱码
+    language messages zh_cn.utf-8
+    &quot;设置字体
+    &quot;取得当前使用的字体：set guifont?
+    &quot;如果字体名称中含有空格，需要在空格前面加上一个反斜杠(\)：
+    &quot;set guifont=Terminal:h18:b:cANSI
+    set guifont=Fixedsys
+else
+    set fileencoding=utf-8
+    set guifont=文泉驿等宽微米黑\ 11
+endif
+
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+&quot; 设定 vimdiff 的颜色 &quot;
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+if &amp;diff
+    set tw=80 columns=180
+    &quot; 设定超过的部份会自动换行，适合搭配显示行号使用
+    &quot; Add 代表新增的一行， Delete 代表删除的一行，
+    &quot; Change 代表有差异的一行，Text 代表有差异的这一行中，具有差异的部份
+    hi DiffAdd ctermfg=Grey ctermbg=Blue guifg=Black guibg=LightBlue
+    hi DiffDelete ctermfg=Grey ctermbg=Grey guifg=Grey
+    hi DiffChange ctermfg=Black ctermbg=DarkGreen guifg=Black guibg=LightGray
+    hi DiffText ctermfg=Black ctermbg=Grey guifg=Black guibg=Gray
+endif
+
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+&quot; 设定TAG &quot;
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+set foldmethod=syntax &quot; 用语法高亮来定义折叠
+set foldmethod=indent &quot; 更多的缩进表示更高级别的折叠(这个似乎效果好一些)
+let Tlist_Show_One_File = 1 &quot;不同时显示多个文件的tag，只显示当前文件的。
+let Tlist_Exit_OnlyWindow = 1 &quot;如果 taglist 窗口是最后一个窗口，则退出 vim。
+let Tlist_Auto_Open=1 &quot;自动打开Tlist
+&quot;let Tlist_Use_Right_Window = 1 &quot;在右侧窗口中显示 taglist 窗口。
+
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+&quot; F5 运行当前程序 &quot;
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+map &lt;F5&gt; &lt;ESC&gt;: call RunCurrentScript()&lt;CR&gt;
+
+function RunCurrentScript()
+    w
+    if &amp;filetype == &quot;python&quot;
+        !python %
+    elseif &amp;filetype == &quot;c&quot;
+        !cc -o %:r % &amp;&amp; ./%:r
+    endif
+endfunction
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="apt.html" title="Apt cheat sheet"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="pdf.html" title="结合 Sphinx 与 xeTex 生成PDF"
+             >上一页</a> |</li>
+        <li><a href="index.html">Dormouse&#39;s Blog 0.1 文档</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; 版权所有 2010-2014, Dormouse.Young.
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3 创建。
+    </div>
+  </body>
+</html>

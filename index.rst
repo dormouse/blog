@@ -46,6 +46,7 @@ Welcome to Dormouse's Blog!
    vim
    apt
    virtualenv
+   compressor
 
 Indices and tables
 ==================

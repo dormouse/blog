@@ -1,3 +1,53 @@
+============
+pelican note
+============
+
+2014年 10月 20日 星期一 14:36:04 CST
+
+install
+=======
+
+use follow command::
+
+    sudo easy_install pip
+    sudo pip install pelican==3.3
+    sudo pip install markdown
+
+
+start bloging
+=============
+
+quick start
+-----------
+
+use follow command::
+
+    mkdir ~/projects/gitblog
+    cd ~/projects/gitblog
+    pelican-quickstart
+
+create an article
+------------------
+
+save following as ~/projects/gitblog/content/keyboard-review.md.::
+
+    Title: My First Review
+    Date: 2010-12-03 10:20
+    Category: Review
+
+    Following is a review of my favorite mechanical keyboard.
+
+output content
+--------------
+
+use follow command::
+
+    pelican content
+
+    cd ~/projects/yoursite/output
+    python -m SimpleHTTPServer
+
+
 ==============================
 github.io 丢失下划线开头的文件
 ==============================

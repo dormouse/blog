@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Git 用法 &mdash; Dormouse&#39;s Blog 0.1 文档</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="top" title="Dormouse&#39;s Blog 0.1 文档" href="index.html" />
+    <link rel="next" title="Sphinx cheat sheet" href="sphinx_cheet_sheet.html" />
+    <link rel="prev" title="Get Him to the Greek" href="2010.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="sphinx_cheet_sheet.html" title="Sphinx cheat sheet"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="2010.html" title="Get Him to the Greek"
+             accesskey="P">上一页</a> |</li>
+        <li><a href="index.html">Dormouse&#39;s Blog 0.1 文档</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">內容目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Git 用法</a></li>
+<li><a class="reference internal" href="#github">使用 Github</a><ul>
+<li><a class="reference internal" href="#setup-git">设置 Git</a></li>
+<li><a class="reference internal" href="#ssh">生成 SSH 密钥</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="2010.html"
+                        title="上一章">Get Him to the Greek</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="sphinx_cheet_sheet.html"
+                        title="下一章">Sphinx cheat sheet</a></p>
+  <h3>本页</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/git.txt"
+           rel="nofollow">显示源代码</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>快速搜索</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="转向" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    输入相关的术语，模块，类或者函数名称进行搜索
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="git">
+<h1>Git 用法<a class="headerlink" href="#git" title="永久链接至标题">¶</a></h1>
+<p>添加文件:</p>
+<div class="highlight-python"><div class="highlight"><pre>git add README test.rb LICENSE
+</pre></div>
+</div>
+<p>提交变动:</p>
+<div class="highlight-python"><div class="highlight"><pre>git commit -m &#39;initial commit of my project&#39;
+git commit -a -m &#39;made a change&#39;
+</pre></div>
+</div>
+<p>列出当前所有分支,前面带星号的是当前所有分支:</p>
+<div class="highlight-python"><div class="highlight"><pre>git branch
+</pre></div>
+</div>
+<p>查看各个分支最后一个提交对象的信息:</p>
+<div class="highlight-python"><div class="highlight"><pre>git branch -v：
+</pre></div>
+</div>
+<p>创建分支:</p>
+<div class="highlight-python"><div class="highlight"><pre>git branch test
+</pre></div>
+</div>
+<p>切换分支:</p>
+<div class="highlight-python"><div class="highlight"><pre>git checkout test
+</pre></div>
+</div>
+<p>创建并切换到新分支:</p>
+<div class="highlight-python"><div class="highlight"><pre>git checkout -b iss53
+</pre></div>
+</div>
+<p>合并分支，下例把 hotfix 分支并入 master 分支:</p>
+<div class="highlight-python"><div class="highlight"><pre>git checkout master
+git merge hotfix
+</pre></div>
+</div>
+<p>删除分支:</p>
+<div class="highlight-python"><div class="highlight"><pre>git branch -d hotfix
+</pre></div>
+</div>
+<p>查询合并时产生的冲突:</p>
+<div class="highlight-python"><div class="highlight"><pre>git status
+</pre></div>
+</div>
+<p>可视化的解决冲突的工具:</p>
+<div class="highlight-python"><div class="highlight"><pre>git mergetool
+</pre></div>
+</div>
+<p>要从该清单中筛选出你已经（或尚未）与当前分支合并的分支，
+可以用 &#8211;merge 和 &#8211;no-merged 选项（Git 1.5.6 以上版本）。
+比如用git branch &#8211;merge 查看哪些分支已被并入当前分支，
+也就是说哪些分支是当前分支的直接上游:</p>
+<div class="highlight-python"><div class="highlight"><pre>git branch --merged
+  iss53
+* master
+</pre></div>
+</div>
+<p>另外可以用 git branch &#8211;no-merged 查看尚未合并的工作:</p>
+<div class="highlight-python"><div class="highlight"><pre>git branch --no-merged
+    testing
+</pre></div>
+</div>
+</div>
+<div class="section" id="github">
+<h1>使用 Github<a class="headerlink" href="#github" title="永久链接至标题">¶</a></h1>
+<div class="section" id="setup-git">
+<span id="id1"></span><h2>设置 Git<a class="headerlink" href="#setup-git" title="永久链接至标题">¶</a></h2>
+<p>设置用户名和电子邮件:</p>
+<div class="highlight-python"><div class="highlight"><pre>git config --global user.name &quot;Your Name Here&quot;
+git config --global user.email &quot;your_email@example.com&quot;
+</pre></div>
+</div>
+</div>
+<div class="section" id="ssh">
+<h2>生成 SSH 密钥<a class="headerlink" href="#ssh" title="永久链接至标题">¶</a></h2>
+<p>第一步：检查 ~/.ssh 下有无 id_rsa.pub 或 id_dsa.pub 文件，如果两个都没有，那么
+可以开始第二步，否则直接跳到第3步。</p>
+<p>第二步：生成新的 SSH 密钥</p>
+<p>生成密钥可以使用如下命令。程序会询问密钥储存的位置，如果使用缺省位置则直接按
+回车即可:</p>
+<div class="highlight-python"><div class="highlight"><pre>ssh-keygen -t rsa -C &quot;your_email@example.com&quot;
+# Creates a new ssh key, using the provided email as a label
+# Generating public/private rsa key pair.
+# Enter file in which to save the key (/home/you/.ssh/id_rsa):
+
+Now you need to enter a passphrase.
+Why do passphrases matter?
+
+# Enter passphrase (empty for no passphrase): [Type a passphrase]
+# Enter same passphrase again: [Type passphrase again]
+
+Which should give you something like this:
+
+# Your identification has been saved in /home/you/.ssh/id_rsa.
+# Your public key has been saved in /home/you/.ssh/id_rsa.pub.
+# The key fingerprint is:
+# 01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@example.com
+</pre></div>
+</div>
+<p>第三步：把 SSH 密钥添加到 GitHub</p>
+<p>把 id_rsa.pub 的内容添加到 GitHub:</p>
+<div class="highlight-python"><div class="highlight"><pre>cat ~/.ssh/id_rsa.pub
+</pre></div>
+</div>
+<p>第四步：测试密钥是否添加成功</p>
+<p>使用如下命令:</p>
+<div class="highlight-python"><div class="highlight"><pre>ssh -T git@github.com
+# Attempts to ssh to github
+</pre></div>
+</div>
+<p>可能会看到如下出错信息:</p>
+<div class="highlight-python"><div class="highlight"><pre>...
+Agent admitted failure to sign using the key.
+debug1: No more authentication methods to try.
+Permission denied (publickey).
+</pre></div>
+</div>
+<p>在某些 Linux 发行版中会出现这个问题，正常的。</p>
+<p>可以会看到如下警告:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># The authenticity of host &#39;github.com (207.97.227.239)&#39; can&#39;t be established.</span>
+<span class="c"># RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.</span>
+<span class="c"># Are you sure you want to continue connecting (yes/no)?</span>
+</pre></div>
+</div>
+<p>这也是正常的，写上“ yes ”就可以了，然后就会看到:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># Hi username! You&#39;ve successfully authenticated, but GitHub does not</span>
+<span class="c"># provide shell access.</span>
+</pre></div>
+</div>
+<p>如果 username 是正确的名字，那就成功了。</p>
+<p>如果看到“ access denied ”的字样，那么就只能使用 HTTPS 方法吧。</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="sphinx_cheet_sheet.html" title="Sphinx cheat sheet"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="2010.html" title="Get Him to the Greek"
+             >上一页</a> |</li>
+        <li><a href="index.html">Dormouse&#39;s Blog 0.1 文档</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; 版权所有 2010-2014, Dormouse.Young.
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3 创建。
+    </div>
+  </body>
+</html>
