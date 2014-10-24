@@ -64,7 +64,8 @@ github.io 丢失下划线开头的文件
 
 * 参考：
 
- https://help.github.com/articles/files-that-start-with-an-underscore-are-missing/
+ `files-that-start-with-an-underscore-are-missing
+ <https://help.github.com/articles/files-that-start-with-an-underscore-are-missing/>`_
 
 ======================
 Linux Mint 17 安装笔记
@@ -81,19 +82,16 @@ install cloudstation
 
 setup software souce 
 ====================
-select the fastest software
+select the fastest software souce
 
 install some software
 =====================
 
-* install following softwware::
+* install following software::
 
-    apt-get install build-essential
-    apt-get install fcitx fcitx-ui-classic fcitx-table-wbpy
-    apt-get install git
-    
-    sudo apt-get install keepassx filezilla
-    sudo apt-get install vim-gnome ctags 
+    sudo apt-get install build-essential
+    sudo apt-get install fcitx fcitx-ui-classic fcitx-table-wbpy
+    sudo apt-get install git vim-gnome ctags keepassx filezilla
 
 * software setup
 
@@ -114,15 +112,16 @@ install virtualenv
     export WORKON_HOME=$HOME/.virtualenvs
     export PROJECT_HOME=$HOME/project
     source /usr/local/bin/virtualenvwrapper.sh
-
-* reload .bashrc
+    reload .bashrc
 
 
 install XBMC
 ============
 
-输入如下命令安装（ 适用于 Ubuntu 9.10 Karmic 或更高版本，详见：
-http://wiki.xbmc.org/index.php?title=HOW-TO:Install_XBMC_on_Ubuntu/HOW-TO_1)::
+输入如下命令安装（适用于 Ubuntu 9.10 Karmic 或更高版本，详见：
+`Install_XBMC_on_Ubuntu/HOW-TO
+<http://wiki.xbmc.org/index.php?title=HOW-TO:Install_XBMC_on_Ubuntu/HOW-TO_1>`_
+）::
 
     sudo apt-get install python-software-properties pkg-config
     sudo add-apt-repository ppa:team-xbmc

@@ -22,7 +22,9 @@ add flowing to ~/.bashrc::
     export PROJECT_HOME=$HOME/project
     source /usr/local/bin/virtualenvwrapper.sh
 
-reload .bashrc
+reload it::
+
+    reload .bashrc
 
 creat virtualenv::
 
