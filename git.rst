@@ -61,6 +61,10 @@ Git 用法
     git branch --no-merged
         testing
 
+.gitignore 不起作用::
+
+    git rm -r --cached _build/*
+
 使用 Github
 ============
 

@@ -47,6 +47,7 @@ Welcome to Dormouse's Blog!
    apt
    virtualenv
    compressor
+   note
 
 Indices and tables
 ==================
