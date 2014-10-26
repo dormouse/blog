@@ -6,7 +6,7 @@ Install wordpress on LinuxMint(Ubuntu)
 
 #. install softwares::
 
-    sudo apt-get install wordpress   mysql-server phpmyadmin
+    sudo apt-get install wordpress mysql-server phpmyadmin
 
 #. make links::
 
@@ -112,9 +112,9 @@ install cloudstation
 * uncompress
 * ./install
 
-setup software souce 
-====================
-select the fastest software souce
+setup software source 
+=====================
+select the fastest software source
 
 install some software
 =====================
