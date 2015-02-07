@@ -47,6 +47,7 @@ Welcome to Dormouse's Blog!
    apt
    virtualenv
    compressor
+   pandas
    note
 
 Indices and tables
