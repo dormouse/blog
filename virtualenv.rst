@@ -6,36 +6,36 @@
 
 开始日期:2012年4月25日
 
-最后修改:2014年10月16日
+最后修改:2014年10月31日
 
 使用 virtualenvwrapper
 =======================
 
-install pip and virtualenvwrapper::
+Install pip and virtualenvwrapper::
 
     sudo apt-get install python-pip
     sudo pip install virtualenvwrapper
 
-add flowing to ~/.bashrc::
+Add flowing to ~/.bashrc::
 
     export WORKON_HOME=$HOME/.virtualenvs
     export PROJECT_HOME=$HOME/project
     source /usr/local/bin/virtualenvwrapper.sh
 
-reload it::
+Reload it::
 
     reload .bashrc
 
-creat virtualenv::
+Creat virtualenv::
 
     cd project
     mkvirtualenv legohole
 
-you should see something like::
+You should see something like::
 
     (legohole)dormouse@dormouse ~ $ 
 
-usage::
+Usage::
     
     mkvirtualenv [env] 创建新的虚拟环境
     workon [env]切换环境，如果不带环境名参数，则显示当前使用的环境
@@ -48,6 +48,12 @@ usage::
     cdsitepackages [subdir] 把当前工作目录设置为所在环境的sitepackages路径。
     add2virtualenv [dir] [dir] 把指定的目录加入当前使用的环境的path中，这常使用于在多个project里面同时使用一个较大的库的情况。
     toggleglobalsitepackages -q 控制当前的环境是否使用全局的sitepackages目录。
+
+Do some "pip install ..."
+
+Freeze requirements::
+
+    pip freeze > requirements.txt
 
 使用 virtualenv
 ===============

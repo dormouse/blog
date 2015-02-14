@@ -121,7 +121,7 @@ install some software
 
 * install following software::
 
-    sudo apt-get install build-essential
+    sudo apt-get install build-essential python-dev 
     sudo apt-get install fcitx fcitx-ui-classic fcitx-table-wbpy
     sudo apt-get install git vim-gnome ctags keepassx filezilla
 
