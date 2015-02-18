@@ -123,6 +123,26 @@ You can represent code blocks fairly easily::
 * ``^``, for subsubsections
 * ``"``, for paragraphs
 
+全局替换
+========
+reST支持“替换”，例如::
+
+   .. |name| replace:: replacement *text*
+
+或者::
+
+   .. |caution| image:: warning.png
+                :alt: Warning!
+
+如果你想在所有文件使用中这些替换，一种方式是把它们写入 `rst_prolog` ；
+另一种方式是把它们放到一个单独的文件中，然后在需要使用的文件中使用
+:rst:dir:`include` 指令来导入这些替换。
+
+Sphinx 内置的全局替换有 ``|today|`` 、 ``|release|`` 和 ``|version|`` 。
+
+`today` 表示当前日期（时间），其显示格式可以通过 `conf.py` 文件中的 `today_fmt`
+来设置。
+
 图像
 ====
 
