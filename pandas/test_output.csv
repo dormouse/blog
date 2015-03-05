@@ -1,9 +1,9 @@
 Row,Date,Day,Day#,Top 10 Gross,#1 Movie,Gross
-2,Jan. 31,Sat,31,"$41,633,588",American Sniper,"$16,510,536"
-9,Feb. 7,Sat,38,"$59,153,298",SpongeBob,"$24,086,968"
-16,Feb. 14,Sat,45,"$87,900,659",Fifty Shades of Grey,"$36,752,460"
-23,Feb. 21,Sat,52,"$43,708,356",Fifty Shades of Grey,"$8,991,100"
-3,Feb. 1,Sun,32,"$12,515,579",American Sniper,"$4,244,376"
-10,Feb. 8,Sun,39,"$36,197,013",SpongeBob,"$16,372,597"
-17,Feb. 15,Sun,46,"$51,731,279",Fifty Shades of Grey,"$18,140,150"
-24,Feb. 22,Sun,53,"$27,348,157",SpongeBob,"$5,344,478"
+2,Jan. 31,Sat,31,41633588,American Sniper,16510536
+9,Feb. 7,Sat,38,59153298,SpongeBob,24086968
+16,Feb. 14,Sat,45,87900659,Fifty Shades of Grey,36752460
+23,Feb. 21,Sat,52,43708356,Fifty Shades of Grey,8991100
+3,Feb. 1,Sun,32,12515579,American Sniper,4244376
+10,Feb. 8,Sun,39,36197013,SpongeBob,16372597
+17,Feb. 15,Sun,46,51731279,Fifty Shades of Grey,18140150
+24,Feb. 22,Sun,53,27348157,SpongeBob,5344478
