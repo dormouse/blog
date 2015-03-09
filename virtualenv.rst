@@ -55,6 +55,10 @@ Freeze requirements::
 
     pip freeze > requirements.txt
 
+Use pip to install later::
+
+    pip install -r requirements.txt
+
 使用 virtualenv
 ===============
 
