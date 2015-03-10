@@ -2,9 +2,10 @@
 pandas 入门
 ===========
 
--  版本号： 0.1
+-  版本号： 0.2
 -  创建时间： 2015-02-07 10:26:33
 -  修改时间： |today|
+
 
 建立环境
 --------
@@ -15,7 +16,7 @@ pandas 入门
 ::
 
     sudo apt-get install build-essential python-dev 
-    sudo apt-get install python-pandas
+    sudo apt-get install python-pandas python-tk
     sudo apt-get install python-scipy python-matplotlib python-tables
     sudo apt-get install python-numexpr python-xlrd python-statsmodels
     sudo apt-get install python-openpyxl python-xlwt python-bs4   
@@ -34,6 +35,8 @@ pandas 入门
 ::
 
     ipython notebook
+    #如果你使用matplotlib内嵌进网页中,那么需要运行:
+    ipython notebook --matplotlib inline
 
 导入 pandas
 -----------
@@ -42,21 +45,179 @@ pandas 入门
 
     import pandas as pd
     import numpy as np
-
 读入数据
 --------
 
 .. code:: python
 
     # 读入 CSV 格式数据
-    df_sango = pd.read_csv('test.csv',encoding='utf-8')
+    # 数据来源：http://boxofficemojo.com/daily/
+    df_movies = pd.read_csv('movies.csv', sep='\t', encoding='utf-8')
+    df_movies.head()
+
+
+
+.. raw:: html
+
+    <div style="max-height:1000px;max-width:1500px;overflow:auto;">
+    <table border="1" class="dataframe">
+      <thead>
+        <tr style="text-align: right;">
+          <th></th>
+          <th>Row</th>
+          <th>Date</th>
+          <th>Day</th>
+          <th>Day#</th>
+          <th>Top 10 Gross</th>
+          <th>#1 Movie</th>
+          <th>Gross</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>0</th>
+          <td> 1</td>
+          <td> Jan. 30</td>
+          <td> Fri</td>
+          <td> 30</td>
+          <td> $26,168,351</td>
+          <td> American Sniper</td>
+          <td>  $9,905,616</td>
+        </tr>
+        <tr>
+          <th>1</th>
+          <td> 2</td>
+          <td> Jan. 31</td>
+          <td> Sat</td>
+          <td> 31</td>
+          <td> $41,633,588</td>
+          <td> American Sniper</td>
+          <td> $16,510,536</td>
+        </tr>
+        <tr>
+          <th>2</th>
+          <td> 3</td>
+          <td>  Feb. 1</td>
+          <td> Sun</td>
+          <td> 32</td>
+          <td> $12,515,579</td>
+          <td> American Sniper</td>
+          <td>  $4,244,376</td>
+        </tr>
+        <tr>
+          <th>3</th>
+          <td> 4</td>
+          <td>  Feb. 2</td>
+          <td> Mon</td>
+          <td> 33</td>
+          <td>  $6,475,068</td>
+          <td> American Sniper</td>
+          <td>  $2,645,109</td>
+        </tr>
+        <tr>
+          <th>4</th>
+          <td> 5</td>
+          <td>  Feb. 3</td>
+          <td> Tue</td>
+          <td> 34</td>
+          <td>  $7,825,091</td>
+          <td> American Sniper</td>
+          <td>  $2,923,141</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>5 rows × 7 columns</p>
+    </div>
+
+
+
+.. code:: python
+
+    df_movies = pd.read_csv('movies.csv', sep='\t', encoding='utf-8',thousands=',',escapechar='$')
+    df_movies.head()
+
+
+
+.. raw:: html
+
+    <div style="max-height:1000px;max-width:1500px;overflow:auto;">
+    <table border="1" class="dataframe">
+      <thead>
+        <tr style="text-align: right;">
+          <th></th>
+          <th>Row</th>
+          <th>Date</th>
+          <th>Day</th>
+          <th>Day#</th>
+          <th>Top 10 Gross</th>
+          <th>#1 Movie</th>
+          <th>Gross</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>0</th>
+          <td> 1</td>
+          <td> Jan. 30</td>
+          <td> Fri</td>
+          <td> 30</td>
+          <td> 26168351</td>
+          <td> American Sniper</td>
+          <td>  9905616</td>
+        </tr>
+        <tr>
+          <th>1</th>
+          <td> 2</td>
+          <td> Jan. 31</td>
+          <td> Sat</td>
+          <td> 31</td>
+          <td> 41633588</td>
+          <td> American Sniper</td>
+          <td> 16510536</td>
+        </tr>
+        <tr>
+          <th>2</th>
+          <td> 3</td>
+          <td>  Feb. 1</td>
+          <td> Sun</td>
+          <td> 32</td>
+          <td> 12515579</td>
+          <td> American Sniper</td>
+          <td>  4244376</td>
+        </tr>
+        <tr>
+          <th>3</th>
+          <td> 4</td>
+          <td>  Feb. 2</td>
+          <td> Mon</td>
+          <td> 33</td>
+          <td>  6475068</td>
+          <td> American Sniper</td>
+          <td>  2645109</td>
+        </tr>
+        <tr>
+          <th>4</th>
+          <td> 5</td>
+          <td>  Feb. 3</td>
+          <td> Tue</td>
+          <td> 34</td>
+          <td>  7825091</td>
+          <td> American Sniper</td>
+          <td>  2923141</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>5 rows × 7 columns</p>
+    </div>
+
+
 
 复制数据
 --------
 
 .. code:: python
 
-    df = df_sango.copy()
+    df = df_movies.copy()
     df.head(3)
 
 
@@ -68,40 +229,49 @@ pandas 入门
       <thead>
         <tr style="text-align: right;">
           <th></th>
-          <th>序号</th>
-          <th>武将</th>
-          <th>武力</th>
-          <th>智力</th>
-          <th>物品</th>
+          <th>Row</th>
+          <th>Date</th>
+          <th>Day</th>
+          <th>Day#</th>
+          <th>Top 10 Gross</th>
+          <th>#1 Movie</th>
+          <th>Gross</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <th>0</th>
           <td> 1</td>
-          <td> 吕布</td>
-          <td> 100</td>
-          <td> 42</td>
-          <td>  方天画戟+10武力</td>
+          <td> Jan. 30</td>
+          <td> Fri</td>
+          <td> 30</td>
+          <td> 26168351</td>
+          <td> American Sniper</td>
+          <td>  9905616</td>
         </tr>
         <tr>
           <th>1</th>
           <td> 2</td>
-          <td> 关羽</td>
-          <td>  99</td>
-          <td> 85</td>
-          <td> 青龙偃月刀+10武力</td>
+          <td> Jan. 31</td>
+          <td> Sat</td>
+          <td> 31</td>
+          <td> 41633588</td>
+          <td> American Sniper</td>
+          <td> 16510536</td>
         </tr>
         <tr>
           <th>2</th>
           <td> 3</td>
-          <td> 张飞</td>
-          <td>  99</td>
-          <td> 51</td>
-          <td>   丈八蛇矛+9武力</td>
+          <td>  Feb. 1</td>
+          <td> Sun</td>
+          <td> 32</td>
+          <td> 12515579</td>
+          <td> American Sniper</td>
+          <td>  4244376</td>
         </tr>
       </tbody>
     </table>
+    <p>3 rows × 7 columns</p>
     </div>
 
 
@@ -109,6 +279,14 @@ pandas 入门
 导出数据
 --------
 
+.. code:: python
+
+    #导出周六的数据，格式为 CSV
+    df[ (df['Day'] == 'Sat') ].to_csv('test_output.csv', mode='w', encoding='utf-8', index=False)
+.. code:: python
+
+    #在前面的文件中追加周日的数据
+    df[ (df['Day'] == 'Sun') ].to_csv('test_output.csv', mode='a', header=False, encoding='utf-8', index=False)
 显示数据
 --------
 
@@ -126,64 +304,77 @@ pandas 入门
       <thead>
         <tr style="text-align: right;">
           <th></th>
-          <th>序号</th>
-          <th>武将</th>
-          <th>武力</th>
-          <th>智力</th>
-          <th>物品</th>
+          <th>Row</th>
+          <th>Date</th>
+          <th>Day</th>
+          <th>Day#</th>
+          <th>Top 10 Gross</th>
+          <th>#1 Movie</th>
+          <th>Gross</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <th>0</th>
           <td> 1</td>
-          <td> 吕布</td>
-          <td> 100</td>
-          <td> 42</td>
-          <td>  方天画戟+10武力</td>
+          <td> Jan. 30</td>
+          <td> Fri</td>
+          <td> 30</td>
+          <td> 26168351</td>
+          <td> American Sniper</td>
+          <td>  9905616</td>
         </tr>
         <tr>
           <th>1</th>
           <td> 2</td>
-          <td> 关羽</td>
-          <td>  99</td>
-          <td> 85</td>
-          <td> 青龙偃月刀+10武力</td>
+          <td> Jan. 31</td>
+          <td> Sat</td>
+          <td> 31</td>
+          <td> 41633588</td>
+          <td> American Sniper</td>
+          <td> 16510536</td>
         </tr>
         <tr>
           <th>2</th>
           <td> 3</td>
-          <td> 张飞</td>
-          <td>  99</td>
-          <td> 51</td>
-          <td>   丈八蛇矛+9武力</td>
+          <td>  Feb. 1</td>
+          <td> Sun</td>
+          <td> 32</td>
+          <td> 12515579</td>
+          <td> American Sniper</td>
+          <td>  4244376</td>
         </tr>
         <tr>
           <th>3</th>
           <td> 4</td>
-          <td> 赵云</td>
-          <td>  98</td>
-          <td> 88</td>
-          <td>        NaN</td>
+          <td>  Feb. 2</td>
+          <td> Mon</td>
+          <td> 33</td>
+          <td>  6475068</td>
+          <td> American Sniper</td>
+          <td>  2645109</td>
         </tr>
         <tr>
           <th>4</th>
           <td> 5</td>
-          <td> 马超</td>
-          <td>  98</td>
-          <td> 48</td>
-          <td>        NaN</td>
+          <td>  Feb. 3</td>
+          <td> Tue</td>
+          <td> 34</td>
+          <td>  7825091</td>
+          <td> American Sniper</td>
+          <td>  2923141</td>
         </tr>
       </tbody>
     </table>
+    <p>5 rows × 7 columns</p>
     </div>
 
 
 
 .. code:: python
 
-    #显示开头的数据，指定显示 8 条
-    df.head(8)
+    #显示开头的数据，指定显示 3 条
+    df.head(3)
 
 
 
@@ -194,80 +385,49 @@ pandas 入门
       <thead>
         <tr style="text-align: right;">
           <th></th>
-          <th>序号</th>
-          <th>武将</th>
-          <th>武力</th>
-          <th>智力</th>
-          <th>物品</th>
+          <th>Row</th>
+          <th>Date</th>
+          <th>Day</th>
+          <th>Day#</th>
+          <th>Top 10 Gross</th>
+          <th>#1 Movie</th>
+          <th>Gross</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <th>0</th>
           <td> 1</td>
-          <td> 吕布</td>
-          <td> 100</td>
-          <td> 42</td>
-          <td>  方天画戟+10武力</td>
+          <td> Jan. 30</td>
+          <td> Fri</td>
+          <td> 30</td>
+          <td> 26168351</td>
+          <td> American Sniper</td>
+          <td>  9905616</td>
         </tr>
         <tr>
           <th>1</th>
           <td> 2</td>
-          <td> 关羽</td>
-          <td>  99</td>
-          <td> 85</td>
-          <td> 青龙偃月刀+10武力</td>
+          <td> Jan. 31</td>
+          <td> Sat</td>
+          <td> 31</td>
+          <td> 41633588</td>
+          <td> American Sniper</td>
+          <td> 16510536</td>
         </tr>
         <tr>
           <th>2</th>
           <td> 3</td>
-          <td> 张飞</td>
-          <td>  99</td>
-          <td> 51</td>
-          <td>   丈八蛇矛+9武力</td>
-        </tr>
-        <tr>
-          <th>3</th>
-          <td> 4</td>
-          <td> 赵云</td>
-          <td>  98</td>
-          <td> 88</td>
-          <td>        NaN</td>
-        </tr>
-        <tr>
-          <th>4</th>
-          <td> 5</td>
-          <td> 马超</td>
-          <td>  98</td>
-          <td> 48</td>
-          <td>        NaN</td>
-        </tr>
-        <tr>
-          <th>5</th>
-          <td> 6</td>
-          <td> 典韦</td>
-          <td>  98</td>
-          <td> 45</td>
-          <td>    双铁戟+5武力</td>
-        </tr>
-        <tr>
-          <th>6</th>
-          <td> 7</td>
-          <td> 许褚</td>
-          <td>  98</td>
-          <td> 40</td>
-          <td>        NaN</td>
-        </tr>
-        <tr>
-          <th>7</th>
-          <td> 8</td>
-          <td> 黄忠</td>
-          <td>  97</td>
-          <td> 66</td>
-          <td>        NaN</td>
+          <td>  Feb. 1</td>
+          <td> Sun</td>
+          <td> 32</td>
+          <td> 12515579</td>
+          <td> American Sniper</td>
+          <td>  4244376</td>
         </tr>
       </tbody>
     </table>
+    <p>3 rows × 7 columns</p>
     </div>
 
 
@@ -286,64 +446,77 @@ pandas 入门
       <thead>
         <tr style="text-align: right;">
           <th></th>
-          <th>序号</th>
-          <th>武将</th>
-          <th>武力</th>
-          <th>智力</th>
-          <th>物品</th>
+          <th>Row</th>
+          <th>Date</th>
+          <th>Day</th>
+          <th>Day#</th>
+          <th>Top 10 Gross</th>
+          <th>#1 Movie</th>
+          <th>Gross</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th>250</th>
-          <td> 251</td>
-          <td> 向朗</td>
-          <td> 34</td>
-          <td> 83</td>
-          <td> NaN</td>
+          <th>24</th>
+          <td> 25</td>
+          <td> Feb. 23</td>
+          <td> Mon</td>
+          <td> 54</td>
+          <td>  7385671</td>
+          <td> Fifty Shades of Grey</td>
+          <td> 1846390</td>
         </tr>
         <tr>
-          <th>251</th>
-          <td> 252</td>
-          <td> 左慈</td>
-          <td> 33</td>
-          <td> 98</td>
-          <td> NaN</td>
+          <th>25</th>
+          <td> 26</td>
+          <td> Feb. 24</td>
+          <td> Tue</td>
+          <td> 55</td>
+          <td>  9424126</td>
+          <td> Fifty Shades of Grey</td>
+          <td> 2265910</td>
         </tr>
         <tr>
-          <th>252</th>
-          <td> 253</td>
-          <td> 曹植</td>
-          <td> 32</td>
-          <td> 91</td>
-          <td> NaN</td>
+          <th>26</th>
+          <td> 27</td>
+          <td> Feb. 25</td>
+          <td> Wed</td>
+          <td> 56</td>
+          <td>  6862942</td>
+          <td> Fifty Shades of Grey</td>
+          <td> 1772230</td>
         </tr>
         <tr>
-          <th>253</th>
-          <td> 254</td>
-          <td> 谯周</td>
-          <td> 32</td>
-          <td> 69</td>
-          <td> NaN</td>
+          <th>27</th>
+          <td> 28</td>
+          <td> Feb. 26</td>
+          <td> Thu</td>
+          <td> 57</td>
+          <td>  7161773</td>
+          <td> Fifty Shades of Grey</td>
+          <td> 1790520</td>
         </tr>
         <tr>
-          <th>254</th>
-          <td> 255</td>
-          <td> 于吉</td>
-          <td> 30</td>
-          <td> 97</td>
-          <td> NaN</td>
+          <th>28</th>
+          <td> 29</td>
+          <td> Feb. 27</td>
+          <td> Fri</td>
+          <td> 58</td>
+          <td> 26457000</td>
+          <td>         Focus (2015)</td>
+          <td> 6465000</td>
         </tr>
       </tbody>
     </table>
+    <p>5 rows × 7 columns</p>
     </div>
 
 
 
 .. code:: python
 
-    #显示末尾的数据，缺省显示 3 条
-    df.tail(3)
+    #显示末尾的数据，缺省显示 2 条
+    df.tail(2)
 
 
 
@@ -354,40 +527,128 @@ pandas 入门
       <thead>
         <tr style="text-align: right;">
           <th></th>
-          <th>序号</th>
-          <th>武将</th>
-          <th>武力</th>
-          <th>智力</th>
-          <th>物品</th>
+          <th>Row</th>
+          <th>Date</th>
+          <th>Day</th>
+          <th>Day#</th>
+          <th>Top 10 Gross</th>
+          <th>#1 Movie</th>
+          <th>Gross</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th>252</th>
-          <td> 253</td>
-          <td> 曹植</td>
-          <td> 32</td>
-          <td> 91</td>
-          <td> NaN</td>
+          <th>27</th>
+          <td> 28</td>
+          <td> Feb. 26</td>
+          <td> Thu</td>
+          <td> 57</td>
+          <td>  7161773</td>
+          <td> Fifty Shades of Grey</td>
+          <td> 1790520</td>
         </tr>
         <tr>
-          <th>253</th>
-          <td> 254</td>
-          <td> 谯周</td>
-          <td> 32</td>
-          <td> 69</td>
-          <td> NaN</td>
-        </tr>
-        <tr>
-          <th>254</th>
-          <td> 255</td>
-          <td> 于吉</td>
-          <td> 30</td>
-          <td> 97</td>
-          <td> NaN</td>
+          <th>28</th>
+          <td> 29</td>
+          <td> Feb. 27</td>
+          <td> Fri</td>
+          <td> 58</td>
+          <td> 26457000</td>
+          <td>         Focus (2015)</td>
+          <td> 6465000</td>
         </tr>
       </tbody>
     </table>
+    <p>2 rows × 7 columns</p>
+    </div>
+
+
+
+.. code:: python
+
+    #只显示指定的行和列
+    df.iloc[[1,3,5],[0,1,2,3]]
+
+
+
+.. raw:: html
+
+    <div style="max-height:1000px;max-width:1500px;overflow:auto;">
+    <table border="1" class="dataframe">
+      <thead>
+        <tr style="text-align: right;">
+          <th></th>
+          <th>Row</th>
+          <th>Date</th>
+          <th>Day</th>
+          <th>Day#</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>1</th>
+          <td> 2</td>
+          <td> Jan. 31</td>
+          <td> Sat</td>
+          <td> 31</td>
+        </tr>
+        <tr>
+          <th>3</th>
+          <td> 4</td>
+          <td>  Feb. 2</td>
+          <td> Mon</td>
+          <td> 33</td>
+        </tr>
+        <tr>
+          <th>5</th>
+          <td> 6</td>
+          <td>  Feb. 4</td>
+          <td> Wed</td>
+          <td> 35</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>3 rows × 4 columns</p>
+    </div>
+
+
+
+.. code:: python
+
+    df.loc[[1,3,5],['Date', 'Gross']]
+
+
+
+.. raw:: html
+
+    <div style="max-height:1000px;max-width:1500px;overflow:auto;">
+    <table border="1" class="dataframe">
+      <thead>
+        <tr style="text-align: right;">
+          <th></th>
+          <th>Date</th>
+          <th>Gross</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>1</th>
+          <td> Jan. 31</td>
+          <td> 16510536</td>
+        </tr>
+        <tr>
+          <th>3</th>
+          <td>  Feb. 2</td>
+          <td>  2645109</td>
+        </tr>
+        <tr>
+          <th>5</th>
+          <td>  Feb. 4</td>
+          <td>  2273342</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>3 rows × 2 columns</p>
     </div>
 
 
@@ -397,10 +658,11 @@ pandas 入门
 
 .. code:: python
 
+    df = df_movies.copy()
     # 单元格赋值
     # 单个单元格赋值
-    df.ix[0,u'武力'] = 1001
-    df.loc[df.index[1], u'智力']=999
+    df.ix[0, u'#1 Movie'] = u'土豆之歌'
+    df.loc[df.index[1], u'Gross']= 999
     df.head(3)
 
 
@@ -412,40 +674,49 @@ pandas 入门
       <thead>
         <tr style="text-align: right;">
           <th></th>
-          <th>序号</th>
-          <th>武将</th>
-          <th>武力</th>
-          <th>智力</th>
-          <th>物品</th>
+          <th>Row</th>
+          <th>Date</th>
+          <th>Day</th>
+          <th>Day#</th>
+          <th>Top 10 Gross</th>
+          <th>#1 Movie</th>
+          <th>Gross</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <th>0</th>
           <td> 1</td>
-          <td> 吕布</td>
-          <td> 1001</td>
-          <td>  42</td>
-          <td>  方天画戟+10武力</td>
+          <td> Jan. 30</td>
+          <td> Fri</td>
+          <td> 30</td>
+          <td> 26168351</td>
+          <td>            土豆之歌</td>
+          <td> 9905616</td>
         </tr>
         <tr>
           <th>1</th>
           <td> 2</td>
-          <td> 关羽</td>
-          <td>   99</td>
-          <td> 999</td>
-          <td> 青龙偃月刀+10武力</td>
+          <td> Jan. 31</td>
+          <td> Sat</td>
+          <td> 31</td>
+          <td> 41633588</td>
+          <td> American Sniper</td>
+          <td>     999</td>
         </tr>
         <tr>
           <th>2</th>
           <td> 3</td>
-          <td> 张飞</td>
-          <td>   99</td>
-          <td>  51</td>
-          <td>   丈八蛇矛+9武力</td>
+          <td>  Feb. 1</td>
+          <td> Sun</td>
+          <td> 32</td>
+          <td> 12515579</td>
+          <td> American Sniper</td>
+          <td> 4244376</td>
         </tr>
       </tbody>
     </table>
+    <p>3 rows × 7 columns</p>
     </div>
 
 
@@ -453,7 +724,7 @@ pandas 入门
 .. code:: python
 
     # 多单个单元格赋值
-    df.loc[df.index[0:2], u'智力'] = [100, 200]
+    df.loc[df.index[0:2], u'Gross'] = [100, 200]
     df.head(3)
 
 
@@ -465,40 +736,49 @@ pandas 入门
       <thead>
         <tr style="text-align: right;">
           <th></th>
-          <th>序号</th>
-          <th>武将</th>
-          <th>武力</th>
-          <th>智力</th>
-          <th>物品</th>
+          <th>Row</th>
+          <th>Date</th>
+          <th>Day</th>
+          <th>Day#</th>
+          <th>Top 10 Gross</th>
+          <th>#1 Movie</th>
+          <th>Gross</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <th>0</th>
           <td> 1</td>
-          <td> 吕布</td>
-          <td> 1001</td>
-          <td> 100</td>
-          <td>  方天画戟+10武力</td>
+          <td> Jan. 30</td>
+          <td> Fri</td>
+          <td> 30</td>
+          <td> 26168351</td>
+          <td>            土豆之歌</td>
+          <td>     100</td>
         </tr>
         <tr>
           <th>1</th>
           <td> 2</td>
-          <td> 关羽</td>
-          <td>   99</td>
-          <td> 200</td>
-          <td> 青龙偃月刀+10武力</td>
+          <td> Jan. 31</td>
+          <td> Sat</td>
+          <td> 31</td>
+          <td> 41633588</td>
+          <td> American Sniper</td>
+          <td>     200</td>
         </tr>
         <tr>
           <th>2</th>
           <td> 3</td>
-          <td> 张飞</td>
-          <td>   99</td>
-          <td>  51</td>
-          <td>   丈八蛇矛+9武力</td>
+          <td>  Feb. 1</td>
+          <td> Sun</td>
+          <td> 32</td>
+          <td> 12515579</td>
+          <td> American Sniper</td>
+          <td> 4244376</td>
         </tr>
       </tbody>
     </table>
+    <p>3 rows × 7 columns</p>
     </div>
 
 
@@ -514,9 +794,10 @@ pandas 入门
 
 .. code:: python
 
+    df = df_movies.copy()
     #用一个列表来显式地指定，列表长度必须与列数一致
     # 示例 1
-    df.columns = ['No', 'Name', 'FORCE', 'IQ', 'Artifact']
+    df.columns = [u'Row', u'Date', u'WeekDay', u'Day', u'Top10Gross', u'No1Moive', u'Gross']
     df.head()
 
 
@@ -528,56 +809,69 @@ pandas 入门
       <thead>
         <tr style="text-align: right;">
           <th></th>
-          <th>No</th>
-          <th>Name</th>
-          <th>FORCE</th>
-          <th>IQ</th>
-          <th>Artifact</th>
+          <th>Row</th>
+          <th>Date</th>
+          <th>WeekDay</th>
+          <th>Day</th>
+          <th>Top10Gross</th>
+          <th>No1Moive</th>
+          <th>Gross</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <th>0</th>
           <td> 1</td>
-          <td> 吕布</td>
-          <td> 1001</td>
-          <td> 100</td>
-          <td>  方天画戟+10武力</td>
+          <td> Jan. 30</td>
+          <td> Fri</td>
+          <td> 30</td>
+          <td> 26168351</td>
+          <td> American Sniper</td>
+          <td>  9905616</td>
         </tr>
         <tr>
           <th>1</th>
           <td> 2</td>
-          <td> 关羽</td>
-          <td>   99</td>
-          <td> 200</td>
-          <td> 青龙偃月刀+10武力</td>
+          <td> Jan. 31</td>
+          <td> Sat</td>
+          <td> 31</td>
+          <td> 41633588</td>
+          <td> American Sniper</td>
+          <td> 16510536</td>
         </tr>
         <tr>
           <th>2</th>
           <td> 3</td>
-          <td> 张飞</td>
-          <td>   99</td>
-          <td>  51</td>
-          <td>   丈八蛇矛+9武力</td>
+          <td>  Feb. 1</td>
+          <td> Sun</td>
+          <td> 32</td>
+          <td> 12515579</td>
+          <td> American Sniper</td>
+          <td>  4244376</td>
         </tr>
         <tr>
           <th>3</th>
           <td> 4</td>
-          <td> 赵云</td>
-          <td>   98</td>
-          <td>  88</td>
-          <td>        NaN</td>
+          <td>  Feb. 2</td>
+          <td> Mon</td>
+          <td> 33</td>
+          <td>  6475068</td>
+          <td> American Sniper</td>
+          <td>  2645109</td>
         </tr>
         <tr>
           <th>4</th>
           <td> 5</td>
-          <td> 马超</td>
-          <td>   98</td>
-          <td>  48</td>
-          <td>        NaN</td>
+          <td>  Feb. 3</td>
+          <td> Tue</td>
+          <td> 34</td>
+          <td>  7825091</td>
+          <td> American Sniper</td>
+          <td>  2923141</td>
         </tr>
       </tbody>
     </table>
+    <p>5 rows × 7 columns</p>
     </div>
 
 
@@ -597,56 +891,69 @@ pandas 入门
       <thead>
         <tr style="text-align: right;">
           <th></th>
-          <th>no</th>
-          <th>name</th>
-          <th>force</th>
-          <th>iq</th>
-          <th>artifact</th>
+          <th>row</th>
+          <th>date</th>
+          <th>weekday</th>
+          <th>day</th>
+          <th>top10gross</th>
+          <th>no1moive</th>
+          <th>gross</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <th>0</th>
           <td> 1</td>
-          <td> 吕布</td>
-          <td> 1001</td>
-          <td> 100</td>
-          <td>  方天画戟+10武力</td>
+          <td> Jan. 30</td>
+          <td> Fri</td>
+          <td> 30</td>
+          <td> 26168351</td>
+          <td> American Sniper</td>
+          <td>  9905616</td>
         </tr>
         <tr>
           <th>1</th>
           <td> 2</td>
-          <td> 关羽</td>
-          <td>   99</td>
-          <td> 200</td>
-          <td> 青龙偃月刀+10武力</td>
+          <td> Jan. 31</td>
+          <td> Sat</td>
+          <td> 31</td>
+          <td> 41633588</td>
+          <td> American Sniper</td>
+          <td> 16510536</td>
         </tr>
         <tr>
           <th>2</th>
           <td> 3</td>
-          <td> 张飞</td>
-          <td>   99</td>
-          <td>  51</td>
-          <td>   丈八蛇矛+9武力</td>
+          <td>  Feb. 1</td>
+          <td> Sun</td>
+          <td> 32</td>
+          <td> 12515579</td>
+          <td> American Sniper</td>
+          <td>  4244376</td>
         </tr>
         <tr>
           <th>3</th>
           <td> 4</td>
-          <td> 赵云</td>
-          <td>   98</td>
-          <td>  88</td>
-          <td>        NaN</td>
+          <td>  Feb. 2</td>
+          <td> Mon</td>
+          <td> 33</td>
+          <td>  6475068</td>
+          <td> American Sniper</td>
+          <td>  2645109</td>
         </tr>
         <tr>
           <th>4</th>
           <td> 5</td>
-          <td> 马超</td>
-          <td>   98</td>
-          <td>  48</td>
-          <td>        NaN</td>
+          <td>  Feb. 3</td>
+          <td> Tue</td>
+          <td> 34</td>
+          <td>  7825091</td>
+          <td> American Sniper</td>
+          <td>  2923141</td>
         </tr>
       </tbody>
     </table>
+    <p>5 rows × 7 columns</p>
     </div>
 
 
@@ -669,40 +976,49 @@ pandas 入门
       <thead>
         <tr style="text-align: right;">
           <th></th>
-          <th>NO</th>
-          <th>NAME</th>
-          <th>FORCE</th>
-          <th>IQ</th>
-          <th>ARTIFACT</th>
+          <th>ROW</th>
+          <th>DATE</th>
+          <th>WEEKDAY</th>
+          <th>DAY</th>
+          <th>TOP10GROSS</th>
+          <th>NO1MOIVE</th>
+          <th>GROSS</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th>252</th>
-          <td> 253</td>
-          <td> 曹植</td>
-          <td> 32</td>
-          <td> 91</td>
-          <td> NaN</td>
+          <th>26</th>
+          <td> 27</td>
+          <td> Feb. 25</td>
+          <td> Wed</td>
+          <td> 56</td>
+          <td>  6862942</td>
+          <td> Fifty Shades of Grey</td>
+          <td> 1772230</td>
         </tr>
         <tr>
-          <th>253</th>
-          <td> 254</td>
-          <td> 谯周</td>
-          <td> 32</td>
-          <td> 69</td>
-          <td> NaN</td>
+          <th>27</th>
+          <td> 28</td>
+          <td> Feb. 26</td>
+          <td> Thu</td>
+          <td> 57</td>
+          <td>  7161773</td>
+          <td> Fifty Shades of Grey</td>
+          <td> 1790520</td>
         </tr>
         <tr>
-          <th>254</th>
-          <td> 255</td>
-          <td> 于吉</td>
-          <td> 30</td>
-          <td> 97</td>
-          <td> NaN</td>
+          <th>28</th>
+          <td> 29</td>
+          <td> Feb. 27</td>
+          <td> Fri</td>
+          <td> 58</td>
+          <td> 26457000</td>
+          <td>         Focus (2015)</td>
+          <td> 6465000</td>
         </tr>
       </tbody>
     </table>
+    <p>3 rows × 7 columns</p>
     </div>
 
 
@@ -710,7 +1026,7 @@ pandas 入门
 .. code:: python
 
     # 示例 2 ：改变特定的列头
-    df = df.rename(columns={'NAME': u'姓名', 'ARTIFACT': u'物品'})
+    df = df.rename(columns={'DATE': u'日期', 'GROSS': u'票房'})
     df.head()
 
 
@@ -722,56 +1038,69 @@ pandas 入门
       <thead>
         <tr style="text-align: right;">
           <th></th>
-          <th>NO</th>
-          <th>姓名</th>
-          <th>FORCE</th>
-          <th>IQ</th>
-          <th>物品</th>
+          <th>ROW</th>
+          <th>日期</th>
+          <th>WEEKDAY</th>
+          <th>DAY</th>
+          <th>TOP10GROSS</th>
+          <th>NO1MOIVE</th>
+          <th>票房</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <th>0</th>
           <td> 1</td>
-          <td> 吕布</td>
-          <td> 1001</td>
-          <td> 100</td>
-          <td>  方天画戟+10武力</td>
+          <td> Jan. 30</td>
+          <td> Fri</td>
+          <td> 30</td>
+          <td> 26168351</td>
+          <td> American Sniper</td>
+          <td>  9905616</td>
         </tr>
         <tr>
           <th>1</th>
           <td> 2</td>
-          <td> 关羽</td>
-          <td>   99</td>
-          <td> 200</td>
-          <td> 青龙偃月刀+10武力</td>
+          <td> Jan. 31</td>
+          <td> Sat</td>
+          <td> 31</td>
+          <td> 41633588</td>
+          <td> American Sniper</td>
+          <td> 16510536</td>
         </tr>
         <tr>
           <th>2</th>
           <td> 3</td>
-          <td> 张飞</td>
-          <td>   99</td>
-          <td>  51</td>
-          <td>   丈八蛇矛+9武力</td>
+          <td>  Feb. 1</td>
+          <td> Sun</td>
+          <td> 32</td>
+          <td> 12515579</td>
+          <td> American Sniper</td>
+          <td>  4244376</td>
         </tr>
         <tr>
           <th>3</th>
           <td> 4</td>
-          <td> 赵云</td>
-          <td>   98</td>
-          <td>  88</td>
-          <td>        NaN</td>
+          <td>  Feb. 2</td>
+          <td> Mon</td>
+          <td> 33</td>
+          <td>  6475068</td>
+          <td> American Sniper</td>
+          <td>  2645109</td>
         </tr>
         <tr>
           <th>4</th>
           <td> 5</td>
-          <td> 马超</td>
-          <td>   98</td>
-          <td>  48</td>
-          <td>        NaN</td>
+          <td>  Feb. 3</td>
+          <td> Tue</td>
+          <td> 34</td>
+          <td>  7825091</td>
+          <td> American Sniper</td>
+          <td>  2923141</td>
         </tr>
       </tbody>
     </table>
+    <p>5 rows × 7 columns</p>
     </div>
 
 
@@ -781,15 +1110,14 @@ pandas 入门
 
 .. code:: python
 
-    types = df.columns.to_series().groupby(df.dtypes).groups
-    types
+    df.columns.to_series().groupby(df.dtypes).groups
 
 
 
 .. parsed-literal::
 
-    {dtype('int64'): ['NO', 'FORCE', 'IQ'],
-     dtype('O'): [u'\u59d3\u540d', u'\u7269\u54c1']}
+    {dtype('int64'): [u'ROW', u'DAY', u'TOP10GROSS', u'\u7968\u623f'],
+     dtype('O'): [u'\u65e5\u671f', u'WEEKDAY', u'NO1MOIVE']}
 
 
 
@@ -802,8 +1130,8 @@ pandas 入门
 
 .. parsed-literal::
 
-    object :	姓名,物品
-    int64 :	NO,FORCE,IQ
+    object :	日期,WEEKDAY,NO1MOIVE
+    int64 :	ROW,DAY,TOP10GROSS,票房
 
 
 插入列
@@ -811,9 +1139,7 @@ pandas 入门
 
 .. code:: python
 
-    df = df_sango.copy()
-    df.columns = ['no', 'name', 'force', 'iq', 'artifact']
-    
+    df = df_movies.copy()
     # 方式一：在末尾添加
     df['memo'] = pd.Series('', index=df.index)
     df.head(3)
@@ -827,11 +1153,13 @@ pandas 入门
       <thead>
         <tr style="text-align: right;">
           <th></th>
-          <th>no</th>
-          <th>name</th>
-          <th>force</th>
-          <th>iq</th>
-          <th>artifact</th>
+          <th>Row</th>
+          <th>Date</th>
+          <th>Day</th>
+          <th>Day#</th>
+          <th>Top 10 Gross</th>
+          <th>#1 Movie</th>
+          <th>Gross</th>
           <th>memo</th>
         </tr>
       </thead>
@@ -839,32 +1167,39 @@ pandas 入门
         <tr>
           <th>0</th>
           <td> 1</td>
-          <td> 吕布</td>
-          <td> 100</td>
-          <td> 42</td>
-          <td>  方天画戟+10武力</td>
+          <td> Jan. 30</td>
+          <td> Fri</td>
+          <td> 30</td>
+          <td> 26168351</td>
+          <td> American Sniper</td>
+          <td>  9905616</td>
           <td> </td>
         </tr>
         <tr>
           <th>1</th>
           <td> 2</td>
-          <td> 关羽</td>
-          <td>  99</td>
-          <td> 85</td>
-          <td> 青龙偃月刀+10武力</td>
+          <td> Jan. 31</td>
+          <td> Sat</td>
+          <td> 31</td>
+          <td> 41633588</td>
+          <td> American Sniper</td>
+          <td> 16510536</td>
           <td> </td>
         </tr>
         <tr>
           <th>2</th>
           <td> 3</td>
-          <td> 张飞</td>
-          <td>  99</td>
-          <td> 51</td>
-          <td>   丈八蛇矛+9武力</td>
+          <td>  Feb. 1</td>
+          <td> Sun</td>
+          <td> 32</td>
+          <td> 12515579</td>
+          <td> American Sniper</td>
+          <td>  4244376</td>
           <td> </td>
         </tr>
       </tbody>
     </table>
+    <p>3 rows × 8 columns</p>
     </div>
 
 
@@ -872,7 +1207,8 @@ pandas 入门
 .. code:: python
 
     # 方式二：在中间插入
-    df.insert(loc=2, column='age', value='')
+    df = df_movies.copy()
+    df.insert(loc=1, column=u'year', value=u'2015')
     df.head(3)
 
 
@@ -884,48 +1220,53 @@ pandas 入门
       <thead>
         <tr style="text-align: right;">
           <th></th>
-          <th>no</th>
-          <th>name</th>
-          <th>age</th>
-          <th>force</th>
-          <th>iq</th>
-          <th>artifact</th>
-          <th>memo</th>
+          <th>Row</th>
+          <th>year</th>
+          <th>Date</th>
+          <th>Day</th>
+          <th>Day#</th>
+          <th>Top 10 Gross</th>
+          <th>#1 Movie</th>
+          <th>Gross</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <th>0</th>
           <td> 1</td>
-          <td> 吕布</td>
-          <td> </td>
-          <td> 100</td>
-          <td> 42</td>
-          <td>  方天画戟+10武力</td>
-          <td> </td>
+          <td> 2015</td>
+          <td> Jan. 30</td>
+          <td> Fri</td>
+          <td> 30</td>
+          <td> 26168351</td>
+          <td> American Sniper</td>
+          <td>  9905616</td>
         </tr>
         <tr>
           <th>1</th>
           <td> 2</td>
-          <td> 关羽</td>
-          <td> </td>
-          <td>  99</td>
-          <td> 85</td>
-          <td> 青龙偃月刀+10武力</td>
-          <td> </td>
+          <td> 2015</td>
+          <td> Jan. 31</td>
+          <td> Sat</td>
+          <td> 31</td>
+          <td> 41633588</td>
+          <td> American Sniper</td>
+          <td> 16510536</td>
         </tr>
         <tr>
           <th>2</th>
           <td> 3</td>
-          <td> 张飞</td>
-          <td> </td>
-          <td>  99</td>
-          <td> 51</td>
-          <td>   丈八蛇矛+9武力</td>
-          <td> </td>
+          <td> 2015</td>
+          <td>  Feb. 1</td>
+          <td> Sun</td>
+          <td> 32</td>
+          <td> 12515579</td>
+          <td> American Sniper</td>
+          <td>  4244376</td>
         </tr>
       </tbody>
     </table>
+    <p>3 rows × 8 columns</p>
     </div>
 
 
@@ -933,7 +1274,8 @@ pandas 入门
 .. code:: python
 
     # 根据现有值生成一个新的列
-    df.insert(loc = 5 , column='ability', value=df['force'] + df['iq'])
+    df = df_movies.copy()
+    df.insert(loc = 5 , column=u'OtherGross', value=df[u'Top 10 Gross'] - df[u'Gross'])
     df.head(3)
 
 
@@ -945,52 +1287,53 @@ pandas 入门
       <thead>
         <tr style="text-align: right;">
           <th></th>
-          <th>no</th>
-          <th>name</th>
-          <th>age</th>
-          <th>force</th>
-          <th>iq</th>
-          <th>ability</th>
-          <th>artifact</th>
-          <th>memo</th>
+          <th>Row</th>
+          <th>Date</th>
+          <th>Day</th>
+          <th>Day#</th>
+          <th>Top 10 Gross</th>
+          <th>OtherGross</th>
+          <th>#1 Movie</th>
+          <th>Gross</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <th>0</th>
           <td> 1</td>
-          <td> 吕布</td>
-          <td> </td>
-          <td> 100</td>
-          <td> 42</td>
-          <td> 142</td>
-          <td>  方天画戟+10武力</td>
-          <td> </td>
+          <td> Jan. 30</td>
+          <td> Fri</td>
+          <td> 30</td>
+          <td> 26168351</td>
+          <td> 16262735</td>
+          <td> American Sniper</td>
+          <td>  9905616</td>
         </tr>
         <tr>
           <th>1</th>
           <td> 2</td>
-          <td> 关羽</td>
-          <td> </td>
-          <td>  99</td>
-          <td> 85</td>
-          <td> 184</td>
-          <td> 青龙偃月刀+10武力</td>
-          <td> </td>
+          <td> Jan. 31</td>
+          <td> Sat</td>
+          <td> 31</td>
+          <td> 41633588</td>
+          <td> 25123052</td>
+          <td> American Sniper</td>
+          <td> 16510536</td>
         </tr>
         <tr>
           <th>2</th>
           <td> 3</td>
-          <td> 张飞</td>
-          <td> </td>
-          <td>  99</td>
-          <td> 51</td>
-          <td> 150</td>
-          <td>   丈八蛇矛+9武力</td>
-          <td> </td>
+          <td>  Feb. 1</td>
+          <td> Sun</td>
+          <td> 32</td>
+          <td> 12515579</td>
+          <td>  8271203</td>
+          <td> American Sniper</td>
+          <td>  4244376</td>
         </tr>
       </tbody>
     </table>
+    <p>3 rows × 8 columns</p>
     </div>
 
 
@@ -999,15 +1342,16 @@ pandas 入门
 
     # 根据现有值生成多个新的列
     # 方法一
-    def process_artifact_col(text):
-        #根据物品生成物品名称和物品功能两个新的列
+    df = df_movies.copy()
+    def process_date_col(text):
+        #根据日期生成月份和日两个新的列
         if pd.isnull(text):
-            art_name = art_func = np.nan
+            month = day = np.nan
         else:
-            art_name, art_func = text.split('+')
-        return pd.Series([art_name, art_func])
+            month, day = text.split('.')
+        return pd.Series([month, day])
     
-    df[[u'art_name', u'art_func']] = df.artifact.apply(process_artifact_col)
+    df[[u'month', u'day']] = df.Date.apply(process_date_col)
     df.head()
 
 
@@ -1019,86 +1363,81 @@ pandas 入门
       <thead>
         <tr style="text-align: right;">
           <th></th>
-          <th>no</th>
-          <th>name</th>
-          <th>age</th>
-          <th>force</th>
-          <th>iq</th>
-          <th>ability</th>
-          <th>artifact</th>
-          <th>memo</th>
-          <th>art_name</th>
-          <th>art_func</th>
+          <th>Row</th>
+          <th>Date</th>
+          <th>Day</th>
+          <th>Day#</th>
+          <th>Top 10 Gross</th>
+          <th>#1 Movie</th>
+          <th>Gross</th>
+          <th>month</th>
+          <th>day</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <th>0</th>
           <td> 1</td>
-          <td> 吕布</td>
-          <td> </td>
-          <td> 100</td>
-          <td> 42</td>
-          <td> 142</td>
-          <td>  方天画戟+10武力</td>
-          <td> </td>
-          <td>  方天画戟</td>
-          <td> 10武力</td>
+          <td> Jan. 30</td>
+          <td> Fri</td>
+          <td> 30</td>
+          <td> 26168351</td>
+          <td> American Sniper</td>
+          <td>  9905616</td>
+          <td> Jan</td>
+          <td>  30</td>
         </tr>
         <tr>
           <th>1</th>
           <td> 2</td>
-          <td> 关羽</td>
-          <td> </td>
-          <td>  99</td>
-          <td> 85</td>
-          <td> 184</td>
-          <td> 青龙偃月刀+10武力</td>
-          <td> </td>
-          <td> 青龙偃月刀</td>
-          <td> 10武力</td>
+          <td> Jan. 31</td>
+          <td> Sat</td>
+          <td> 31</td>
+          <td> 41633588</td>
+          <td> American Sniper</td>
+          <td> 16510536</td>
+          <td> Jan</td>
+          <td>  31</td>
         </tr>
         <tr>
           <th>2</th>
           <td> 3</td>
-          <td> 张飞</td>
-          <td> </td>
-          <td>  99</td>
-          <td> 51</td>
-          <td> 150</td>
-          <td>   丈八蛇矛+9武力</td>
-          <td> </td>
-          <td>  丈八蛇矛</td>
-          <td>  9武力</td>
+          <td>  Feb. 1</td>
+          <td> Sun</td>
+          <td> 32</td>
+          <td> 12515579</td>
+          <td> American Sniper</td>
+          <td>  4244376</td>
+          <td> Feb</td>
+          <td>   1</td>
         </tr>
         <tr>
           <th>3</th>
           <td> 4</td>
-          <td> 赵云</td>
-          <td> </td>
-          <td>  98</td>
-          <td> 88</td>
-          <td> 186</td>
-          <td>        NaN</td>
-          <td> </td>
-          <td>   NaN</td>
-          <td>  NaN</td>
+          <td>  Feb. 2</td>
+          <td> Mon</td>
+          <td> 33</td>
+          <td>  6475068</td>
+          <td> American Sniper</td>
+          <td>  2645109</td>
+          <td> Feb</td>
+          <td>   2</td>
         </tr>
         <tr>
           <th>4</th>
           <td> 5</td>
-          <td> 马超</td>
-          <td> </td>
-          <td>  98</td>
-          <td> 48</td>
-          <td> 146</td>
-          <td>        NaN</td>
-          <td> </td>
-          <td>   NaN</td>
-          <td>  NaN</td>
+          <td>  Feb. 3</td>
+          <td> Tue</td>
+          <td> 34</td>
+          <td>  7825091</td>
+          <td> American Sniper</td>
+          <td>  2923141</td>
+          <td> Feb</td>
+          <td>   3</td>
         </tr>
       </tbody>
     </table>
+    <p>5 rows × 9 columns</p>
     </div>
 
 
@@ -1106,9 +1445,9 @@ pandas 入门
 .. code:: python
 
     # 方法二(结果同上，但是没有方法一好)
+    df = df_movies.copy()
     for idx, row in df.iterrows():
-        art_name, art_func = process_artifact_col(row['artifact'])
-        df.ix[idx, 'art_name'], df.ix[idx, 'art_func'] = art_name, art_func
+        df.ix[idx, u'month'], df.ix[idx, 'day'] = process_date_col(row[u'Date'])
     df.head()
 
 
@@ -1120,86 +1459,81 @@ pandas 入门
       <thead>
         <tr style="text-align: right;">
           <th></th>
-          <th>no</th>
-          <th>name</th>
-          <th>age</th>
-          <th>force</th>
-          <th>iq</th>
-          <th>ability</th>
-          <th>artifact</th>
-          <th>memo</th>
-          <th>art_name</th>
-          <th>art_func</th>
+          <th>Row</th>
+          <th>Date</th>
+          <th>Day</th>
+          <th>Day#</th>
+          <th>Top 10 Gross</th>
+          <th>#1 Movie</th>
+          <th>Gross</th>
+          <th>month</th>
+          <th>day</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <th>0</th>
           <td> 1</td>
-          <td> 吕布</td>
-          <td> </td>
-          <td> 100</td>
-          <td> 42</td>
-          <td> 142</td>
-          <td>  方天画戟+10武力</td>
-          <td> </td>
-          <td>  方天画戟</td>
-          <td> 10武力</td>
+          <td> Jan. 30</td>
+          <td> Fri</td>
+          <td> 30</td>
+          <td> 26168351</td>
+          <td> American Sniper</td>
+          <td>  9905616</td>
+          <td> Jan</td>
+          <td>  30</td>
         </tr>
         <tr>
           <th>1</th>
           <td> 2</td>
-          <td> 关羽</td>
-          <td> </td>
-          <td>  99</td>
-          <td> 85</td>
-          <td> 184</td>
-          <td> 青龙偃月刀+10武力</td>
-          <td> </td>
-          <td> 青龙偃月刀</td>
-          <td> 10武力</td>
+          <td> Jan. 31</td>
+          <td> Sat</td>
+          <td> 31</td>
+          <td> 41633588</td>
+          <td> American Sniper</td>
+          <td> 16510536</td>
+          <td> Jan</td>
+          <td>  31</td>
         </tr>
         <tr>
           <th>2</th>
           <td> 3</td>
-          <td> 张飞</td>
-          <td> </td>
-          <td>  99</td>
-          <td> 51</td>
-          <td> 150</td>
-          <td>   丈八蛇矛+9武力</td>
-          <td> </td>
-          <td>  丈八蛇矛</td>
-          <td>  9武力</td>
+          <td>  Feb. 1</td>
+          <td> Sun</td>
+          <td> 32</td>
+          <td> 12515579</td>
+          <td> American Sniper</td>
+          <td>  4244376</td>
+          <td> Feb</td>
+          <td>   1</td>
         </tr>
         <tr>
           <th>3</th>
           <td> 4</td>
-          <td> 赵云</td>
-          <td> </td>
-          <td>  98</td>
-          <td> 88</td>
-          <td> 186</td>
-          <td>        NaN</td>
-          <td> </td>
-          <td>   NaN</td>
-          <td>  NaN</td>
+          <td>  Feb. 2</td>
+          <td> Mon</td>
+          <td> 33</td>
+          <td>  6475068</td>
+          <td> American Sniper</td>
+          <td>  2645109</td>
+          <td> Feb</td>
+          <td>   2</td>
         </tr>
         <tr>
           <th>4</th>
           <td> 5</td>
-          <td> 马超</td>
-          <td> </td>
-          <td>  98</td>
-          <td> 48</td>
-          <td> 146</td>
-          <td>        NaN</td>
-          <td> </td>
-          <td>   NaN</td>
-          <td>  NaN</td>
+          <td>  Feb. 3</td>
+          <td> Tue</td>
+          <td> 34</td>
+          <td>  7825091</td>
+          <td> American Sniper</td>
+          <td>  2923141</td>
+          <td> Feb</td>
+          <td>   3</td>
         </tr>
       </tbody>
     </table>
+    <p>5 rows × 9 columns</p>
     </div>
 
 
@@ -1209,8 +1543,9 @@ pandas 入门
 
 .. code:: python
 
+    df = df_movies.copy()
     #根据一列的值改变另一列
-    df['force'] = df['iq'].apply(lambda x: x + 1)
+    df[u'#1 Movie'] = df[u'#1 Movie'].apply(lambda x: x[::-1])
     df.head(3)
 
 
@@ -1222,60 +1557,49 @@ pandas 入门
       <thead>
         <tr style="text-align: right;">
           <th></th>
-          <th>no</th>
-          <th>name</th>
-          <th>age</th>
-          <th>force</th>
-          <th>iq</th>
-          <th>ability</th>
-          <th>artifact</th>
-          <th>memo</th>
-          <th>art_name</th>
-          <th>art_func</th>
+          <th>Row</th>
+          <th>Date</th>
+          <th>Day</th>
+          <th>Day#</th>
+          <th>Top 10 Gross</th>
+          <th>#1 Movie</th>
+          <th>Gross</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <th>0</th>
           <td> 1</td>
-          <td> 吕布</td>
-          <td> </td>
-          <td> 43</td>
-          <td> 42</td>
-          <td> 142</td>
-          <td>  方天画戟+10武力</td>
-          <td> </td>
-          <td>  方天画戟</td>
-          <td> 10武力</td>
+          <td> Jan. 30</td>
+          <td> Fri</td>
+          <td> 30</td>
+          <td> 26168351</td>
+          <td> repinS naciremA</td>
+          <td>  9905616</td>
         </tr>
         <tr>
           <th>1</th>
           <td> 2</td>
-          <td> 关羽</td>
-          <td> </td>
-          <td> 86</td>
-          <td> 85</td>
-          <td> 184</td>
-          <td> 青龙偃月刀+10武力</td>
-          <td> </td>
-          <td> 青龙偃月刀</td>
-          <td> 10武力</td>
+          <td> Jan. 31</td>
+          <td> Sat</td>
+          <td> 31</td>
+          <td> 41633588</td>
+          <td> repinS naciremA</td>
+          <td> 16510536</td>
         </tr>
         <tr>
           <th>2</th>
           <td> 3</td>
-          <td> 张飞</td>
-          <td> </td>
-          <td> 52</td>
-          <td> 51</td>
-          <td> 150</td>
-          <td>   丈八蛇矛+9武力</td>
-          <td> </td>
-          <td>  丈八蛇矛</td>
-          <td>  9武力</td>
+          <td>  Feb. 1</td>
+          <td> Sun</td>
+          <td> 32</td>
+          <td> 12515579</td>
+          <td> repinS naciremA</td>
+          <td>  4244376</td>
         </tr>
       </tbody>
     </table>
+    <p>3 rows × 7 columns</p>
     </div>
 
 
@@ -1283,8 +1607,8 @@ pandas 入门
 .. code:: python
 
     # 同时改变多个列的值
-    cols = ['force', 'iq']
-    df[cols] = df[cols].applymap(lambda x: x-10)
+    cols = [u'Gross', u'Top 10 Gross']
+    df[cols] = df[cols].applymap(lambda x: x/10000)
     df.head(3)
 
 
@@ -1296,60 +1620,49 @@ pandas 入门
       <thead>
         <tr style="text-align: right;">
           <th></th>
-          <th>no</th>
-          <th>name</th>
-          <th>age</th>
-          <th>force</th>
-          <th>iq</th>
-          <th>ability</th>
-          <th>artifact</th>
-          <th>memo</th>
-          <th>art_name</th>
-          <th>art_func</th>
+          <th>Row</th>
+          <th>Date</th>
+          <th>Day</th>
+          <th>Day#</th>
+          <th>Top 10 Gross</th>
+          <th>#1 Movie</th>
+          <th>Gross</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <th>0</th>
           <td> 1</td>
-          <td> 吕布</td>
-          <td> </td>
-          <td> 33</td>
-          <td> 32</td>
-          <td> 142</td>
-          <td>  方天画戟+10武力</td>
-          <td> </td>
-          <td>  方天画戟</td>
-          <td> 10武力</td>
+          <td> Jan. 30</td>
+          <td> Fri</td>
+          <td> 30</td>
+          <td> 2616</td>
+          <td> repinS naciremA</td>
+          <td>  990</td>
         </tr>
         <tr>
           <th>1</th>
           <td> 2</td>
-          <td> 关羽</td>
-          <td> </td>
-          <td> 76</td>
-          <td> 75</td>
-          <td> 184</td>
-          <td> 青龙偃月刀+10武力</td>
-          <td> </td>
-          <td> 青龙偃月刀</td>
-          <td> 10武力</td>
+          <td> Jan. 31</td>
+          <td> Sat</td>
+          <td> 31</td>
+          <td> 4163</td>
+          <td> repinS naciremA</td>
+          <td> 1651</td>
         </tr>
         <tr>
           <th>2</th>
           <td> 3</td>
-          <td> 张飞</td>
-          <td> </td>
-          <td> 42</td>
-          <td> 41</td>
-          <td> 150</td>
-          <td>   丈八蛇矛+9武力</td>
-          <td> </td>
-          <td>  丈八蛇矛</td>
-          <td>  9武力</td>
+          <td>  Feb. 1</td>
+          <td> Sun</td>
+          <td> 32</td>
+          <td> 1251</td>
+          <td> repinS naciremA</td>
+          <td>  424</td>
         </tr>
       </tbody>
     </table>
+    <p>3 rows × 7 columns</p>
     </div>
 
 
@@ -1359,7 +1672,7 @@ pandas 入门
 
 .. code:: python
 
-    df = df_sango.copy()
+    df = df_movies.copy()
     # 添加一个空行
     df = df.append(pd.Series(
                     [np.nan]*len(df.columns), # Fill cells with NaNs
@@ -1376,40 +1689,49 @@ pandas 入门
       <thead>
         <tr style="text-align: right;">
           <th></th>
-          <th>序号</th>
-          <th>武将</th>
-          <th>武力</th>
-          <th>智力</th>
-          <th>物品</th>
+          <th>Row</th>
+          <th>Date</th>
+          <th>Day</th>
+          <th>Day#</th>
+          <th>Top 10 Gross</th>
+          <th>#1 Movie</th>
+          <th>Gross</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th>253</th>
-          <td> 254</td>
-          <td>  谯周</td>
-          <td> 32</td>
-          <td> 69</td>
-          <td> NaN</td>
+          <th>27</th>
+          <td> 28</td>
+          <td> Feb. 26</td>
+          <td> Thu</td>
+          <td> 57</td>
+          <td>  7161773</td>
+          <td> Fifty Shades of Grey</td>
+          <td> 1790520</td>
         </tr>
         <tr>
-          <th>254</th>
-          <td> 255</td>
-          <td>  于吉</td>
-          <td> 30</td>
-          <td> 97</td>
-          <td> NaN</td>
+          <th>28</th>
+          <td> 29</td>
+          <td> Feb. 27</td>
+          <td> Fri</td>
+          <td> 58</td>
+          <td> 26457000</td>
+          <td>         Focus (2015)</td>
+          <td> 6465000</td>
         </tr>
         <tr>
-          <th>255</th>
-          <td> NaN</td>
+          <th>29</th>
+          <td>NaN</td>
+          <td>     NaN</td>
           <td> NaN</td>
           <td>NaN</td>
-          <td>NaN</td>
-          <td> NaN</td>
+          <td>      NaN</td>
+          <td>                  NaN</td>
+          <td>     NaN</td>
         </tr>
       </tbody>
     </table>
+    <p>3 rows × 7 columns</p>
     </div>
 
 
@@ -1419,18 +1741,17 @@ pandas 入门
 
 .. code:: python
 
-    df = df_sango.copy()
     # 计数有空值的行
     nans = df.shape[0] - df.dropna().shape[0]
     print(u'一共有 %d 行出现空值' % nans)
     
     # 填充空值为`无`
     df.fillna(value=u'无', inplace=True)
-    df.head()
+    df.tail()
 
 .. parsed-literal::
 
-    一共有 238 行出现空值
+    一共有 1 行出现空值
 
 
 
@@ -1442,56 +1763,69 @@ pandas 入门
       <thead>
         <tr style="text-align: right;">
           <th></th>
-          <th>序号</th>
-          <th>武将</th>
-          <th>武力</th>
-          <th>智力</th>
-          <th>物品</th>
+          <th>Row</th>
+          <th>Date</th>
+          <th>Day</th>
+          <th>Day#</th>
+          <th>Top 10 Gross</th>
+          <th>#1 Movie</th>
+          <th>Gross</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th>0</th>
-          <td> 1</td>
-          <td> 吕布</td>
-          <td> 100</td>
-          <td> 42</td>
-          <td>  方天画戟+10武力</td>
+          <th>25</th>
+          <td> 26</td>
+          <td> Feb. 24</td>
+          <td> Tue</td>
+          <td> 55</td>
+          <td>    9424126</td>
+          <td> Fifty Shades of Grey</td>
+          <td> 2265910</td>
         </tr>
         <tr>
-          <th>1</th>
-          <td> 2</td>
-          <td> 关羽</td>
-          <td>  99</td>
-          <td> 85</td>
-          <td> 青龙偃月刀+10武力</td>
+          <th>26</th>
+          <td> 27</td>
+          <td> Feb. 25</td>
+          <td> Wed</td>
+          <td> 56</td>
+          <td>    6862942</td>
+          <td> Fifty Shades of Grey</td>
+          <td> 1772230</td>
         </tr>
         <tr>
-          <th>2</th>
-          <td> 3</td>
-          <td> 张飞</td>
-          <td>  99</td>
-          <td> 51</td>
-          <td>   丈八蛇矛+9武力</td>
+          <th>27</th>
+          <td> 28</td>
+          <td> Feb. 26</td>
+          <td> Thu</td>
+          <td> 57</td>
+          <td>    7161773</td>
+          <td> Fifty Shades of Grey</td>
+          <td> 1790520</td>
         </tr>
         <tr>
-          <th>3</th>
-          <td> 4</td>
-          <td> 赵云</td>
-          <td>  98</td>
-          <td> 88</td>
+          <th>28</th>
+          <td> 29</td>
+          <td> Feb. 27</td>
+          <td> Fri</td>
+          <td> 58</td>
+          <td> 2.6457e+07</td>
+          <td>         Focus (2015)</td>
+          <td> 6465000</td>
+        </tr>
+        <tr>
+          <th>29</th>
+          <td>  无</td>
+          <td>       无</td>
+          <td>   无</td>
+          <td>  无</td>
           <td>          无</td>
-        </tr>
-        <tr>
-          <th>4</th>
-          <td> 5</td>
-          <td> 马超</td>
-          <td>  98</td>
-          <td> 48</td>
-          <td>          无</td>
+          <td>                    无</td>
+          <td>       无</td>
         </tr>
       </tbody>
     </table>
+    <p>5 rows × 7 columns</p>
     </div>
 
 
@@ -1501,15 +1835,15 @@ pandas 入门
 
 .. code:: python
 
-    df = df_sango.copy()
+    df = df_movies.copy()
     # 添加一个空行
     df = df.append(pd.Series(
                     [np.nan]*len(df.columns), # Fill cells with NaNs
                     index=df.columns),
                     ignore_index=True)
-    # 根据某一列排序（由高到低）
-    df.sort(u'智力', ascending=False, inplace=True)
-    df.head(3)
+    # 根据某一列排序（由低到高）
+    df.sort(u'Gross', ascending=True, inplace=True)
+    df.head()
 
 
 
@@ -1520,40 +1854,69 @@ pandas 入门
       <thead>
         <tr style="text-align: right;">
           <th></th>
-          <th>序号</th>
-          <th>武将</th>
-          <th>武力</th>
-          <th>智力</th>
-          <th>物品</th>
+          <th>Row</th>
+          <th>Date</th>
+          <th>Day</th>
+          <th>Day#</th>
+          <th>Top 10 Gross</th>
+          <th>#1 Movie</th>
+          <th>Gross</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th>163</th>
-          <td> 164</td>
-          <td> 诸葛亮</td>
-          <td> 68</td>
-          <td> 100</td>
-          <td> 兵书二十四篇+9智力</td>
+          <th>12</th>
+          <td> 13</td>
+          <td> Feb. 11</td>
+          <td> Wed</td>
+          <td> 42</td>
+          <td> 6138013</td>
+          <td>      American Sniper</td>
+          <td> 1468160</td>
         </tr>
         <tr>
-          <th>131</th>
-          <td> 132</td>
-          <td> 司马懿</td>
-          <td> 73</td>
-          <td>  99</td>
-          <td>        NaN</td>
+          <th>13</th>
+          <td> 14</td>
+          <td> Feb. 12</td>
+          <td> Thu</td>
+          <td> 43</td>
+          <td> 5969515</td>
+          <td>            SpongeBob</td>
+          <td> 1527552</td>
         </tr>
         <tr>
-          <th>169</th>
-          <td> 170</td>
-          <td>  庞统</td>
-          <td> 66</td>
-          <td>  98</td>
-          <td>        NaN</td>
+          <th>26</th>
+          <td> 27</td>
+          <td> Feb. 25</td>
+          <td> Wed</td>
+          <td> 56</td>
+          <td> 6862942</td>
+          <td> Fifty Shades of Grey</td>
+          <td> 1772230</td>
+        </tr>
+        <tr>
+          <th>27</th>
+          <td> 28</td>
+          <td> Feb. 26</td>
+          <td> Thu</td>
+          <td> 57</td>
+          <td> 7161773</td>
+          <td> Fifty Shades of Grey</td>
+          <td> 1790520</td>
+        </tr>
+        <tr>
+          <th>24</th>
+          <td> 25</td>
+          <td> Feb. 23</td>
+          <td> Mon</td>
+          <td> 54</td>
+          <td> 7385671</td>
+          <td> Fifty Shades of Grey</td>
+          <td> 1846390</td>
         </tr>
       </tbody>
     </table>
+    <p>5 rows × 7 columns</p>
     </div>
 
 
@@ -1562,7 +1925,7 @@ pandas 入门
 
     # 排序后重新编制索引
     df.index = range(1,len(df.index)+1)
-    df.head(3)
+    df.head()
 
 
 
@@ -1573,40 +1936,69 @@ pandas 入门
       <thead>
         <tr style="text-align: right;">
           <th></th>
-          <th>序号</th>
-          <th>武将</th>
-          <th>武力</th>
-          <th>智力</th>
-          <th>物品</th>
+          <th>Row</th>
+          <th>Date</th>
+          <th>Day</th>
+          <th>Day#</th>
+          <th>Top 10 Gross</th>
+          <th>#1 Movie</th>
+          <th>Gross</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <th>1</th>
-          <td> 164</td>
-          <td> 诸葛亮</td>
-          <td> 68</td>
-          <td> 100</td>
-          <td> 兵书二十四篇+9智力</td>
+          <td> 13</td>
+          <td> Feb. 11</td>
+          <td> Wed</td>
+          <td> 42</td>
+          <td> 6138013</td>
+          <td>      American Sniper</td>
+          <td> 1468160</td>
         </tr>
         <tr>
           <th>2</th>
-          <td> 132</td>
-          <td> 司马懿</td>
-          <td> 73</td>
-          <td>  99</td>
-          <td>        NaN</td>
+          <td> 14</td>
+          <td> Feb. 12</td>
+          <td> Thu</td>
+          <td> 43</td>
+          <td> 5969515</td>
+          <td>            SpongeBob</td>
+          <td> 1527552</td>
         </tr>
         <tr>
           <th>3</th>
-          <td> 170</td>
-          <td>  庞统</td>
-          <td> 66</td>
-          <td>  98</td>
-          <td>        NaN</td>
+          <td> 27</td>
+          <td> Feb. 25</td>
+          <td> Wed</td>
+          <td> 56</td>
+          <td> 6862942</td>
+          <td> Fifty Shades of Grey</td>
+          <td> 1772230</td>
+        </tr>
+        <tr>
+          <th>4</th>
+          <td> 28</td>
+          <td> Feb. 26</td>
+          <td> Thu</td>
+          <td> 57</td>
+          <td> 7161773</td>
+          <td> Fifty Shades of Grey</td>
+          <td> 1790520</td>
+        </tr>
+        <tr>
+          <th>5</th>
+          <td> 25</td>
+          <td> Feb. 23</td>
+          <td> Mon</td>
+          <td> 54</td>
+          <td> 7385671</td>
+          <td> Fifty Shades of Grey</td>
+          <td> 1846390</td>
         </tr>
       </tbody>
     </table>
+    <p>5 rows × 7 columns</p>
     </div>
 
 
@@ -1616,7 +2008,7 @@ pandas 入门
 
 .. code:: python
 
-    df = df_sango.copy()
+    df = df_movies.copy()
     # 根据列类型过滤
     # 只选择字符串型的列
     df.loc[:, (df.dtypes == np.dtype('O')).values].head()
@@ -1630,38 +2022,45 @@ pandas 入门
       <thead>
         <tr style="text-align: right;">
           <th></th>
-          <th>武将</th>
-          <th>物品</th>
+          <th>Date</th>
+          <th>Day</th>
+          <th>#1 Movie</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <th>0</th>
-          <td> 吕布</td>
-          <td>  方天画戟+10武力</td>
+          <td> Jan. 30</td>
+          <td> Fri</td>
+          <td> American Sniper</td>
         </tr>
         <tr>
           <th>1</th>
-          <td> 关羽</td>
-          <td> 青龙偃月刀+10武力</td>
+          <td> Jan. 31</td>
+          <td> Sat</td>
+          <td> American Sniper</td>
         </tr>
         <tr>
           <th>2</th>
-          <td> 张飞</td>
-          <td>   丈八蛇矛+9武力</td>
+          <td>  Feb. 1</td>
+          <td> Sun</td>
+          <td> American Sniper</td>
         </tr>
         <tr>
           <th>3</th>
-          <td> 赵云</td>
-          <td>        NaN</td>
+          <td>  Feb. 2</td>
+          <td> Mon</td>
+          <td> American Sniper</td>
         </tr>
         <tr>
           <th>4</th>
-          <td> 马超</td>
-          <td>        NaN</td>
+          <td>  Feb. 3</td>
+          <td> Tue</td>
+          <td> American Sniper</td>
         </tr>
       </tbody>
     </table>
+    <p>5 rows × 3 columns</p>
     </div>
 
 
@@ -1669,7 +2068,9 @@ pandas 入门
 .. code:: python
 
     # 选择 artifact 为空值的行
-    df[df[u'物品'].isnull()].head()
+    df.ix[0, u'Gross'] = np.nan
+    df.ix[3, u'Gross'] = np.nan
+    df[df[u'Gross'].isnull()].head()
 
 
 
@@ -1680,64 +2081,47 @@ pandas 入门
       <thead>
         <tr style="text-align: right;">
           <th></th>
-          <th>序号</th>
-          <th>武将</th>
-          <th>武力</th>
-          <th>智力</th>
-          <th>物品</th>
+          <th>Row</th>
+          <th>Date</th>
+          <th>Day</th>
+          <th>Day#</th>
+          <th>Top 10 Gross</th>
+          <th>#1 Movie</th>
+          <th>Gross</th>
         </tr>
       </thead>
       <tbody>
         <tr>
+          <th>0</th>
+          <td> 1</td>
+          <td> Jan. 30</td>
+          <td> Fri</td>
+          <td> 30</td>
+          <td> 26168351</td>
+          <td> American Sniper</td>
+          <td>NaN</td>
+        </tr>
+        <tr>
           <th>3</th>
           <td> 4</td>
-          <td> 赵云</td>
-          <td> 98</td>
-          <td> 88</td>
-          <td> NaN</td>
-        </tr>
-        <tr>
-          <th>4</th>
-          <td> 5</td>
-          <td> 马超</td>
-          <td> 98</td>
-          <td> 48</td>
-          <td> NaN</td>
-        </tr>
-        <tr>
-          <th>6</th>
-          <td> 7</td>
-          <td> 许褚</td>
-          <td> 98</td>
-          <td> 40</td>
-          <td> NaN</td>
-        </tr>
-        <tr>
-          <th>7</th>
-          <td> 8</td>
-          <td> 黄忠</td>
-          <td> 97</td>
-          <td> 66</td>
-          <td> NaN</td>
-        </tr>
-        <tr>
-          <th>8</th>
-          <td> 9</td>
-          <td> 庞德</td>
-          <td> 97</td>
-          <td> 70</td>
-          <td> NaN</td>
+          <td>  Feb. 2</td>
+          <td> Mon</td>
+          <td> 33</td>
+          <td>  6475068</td>
+          <td> American Sniper</td>
+          <td>NaN</td>
         </tr>
       </tbody>
     </table>
+    <p>2 rows × 7 columns</p>
     </div>
 
 
 
 .. code:: python
 
-    # 选择`物品`为非空值的行
-    df[df[u'物品'].notnull()].head()
+    # 选择'Gross'为非空值的行
+    df[df[u'Gross'].notnull()].head()
 
 
 
@@ -1748,56 +2132,69 @@ pandas 入门
       <thead>
         <tr style="text-align: right;">
           <th></th>
-          <th>序号</th>
-          <th>武将</th>
-          <th>武力</th>
-          <th>智力</th>
-          <th>物品</th>
+          <th>Row</th>
+          <th>Date</th>
+          <th>Day</th>
+          <th>Day#</th>
+          <th>Top 10 Gross</th>
+          <th>#1 Movie</th>
+          <th>Gross</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th>0 </th>
-          <td>  1</td>
-          <td> 吕布</td>
-          <td> 100</td>
-          <td> 42</td>
-          <td>  方天画戟+10武力</td>
+          <th>1</th>
+          <td> 2</td>
+          <td> Jan. 31</td>
+          <td> Sat</td>
+          <td> 31</td>
+          <td> 41633588</td>
+          <td> American Sniper</td>
+          <td> 16510536</td>
         </tr>
         <tr>
-          <th>1 </th>
-          <td>  2</td>
-          <td> 关羽</td>
-          <td>  99</td>
-          <td> 85</td>
-          <td> 青龙偃月刀+10武力</td>
+          <th>2</th>
+          <td> 3</td>
+          <td>  Feb. 1</td>
+          <td> Sun</td>
+          <td> 32</td>
+          <td> 12515579</td>
+          <td> American Sniper</td>
+          <td>  4244376</td>
         </tr>
         <tr>
-          <th>2 </th>
-          <td>  3</td>
-          <td> 张飞</td>
-          <td>  99</td>
-          <td> 51</td>
-          <td>   丈八蛇矛+9武力</td>
+          <th>4</th>
+          <td> 5</td>
+          <td>  Feb. 3</td>
+          <td> Tue</td>
+          <td> 34</td>
+          <td>  7825091</td>
+          <td> American Sniper</td>
+          <td>  2923141</td>
         </tr>
         <tr>
-          <th>5 </th>
-          <td>  6</td>
-          <td> 典韦</td>
-          <td>  98</td>
-          <td> 45</td>
-          <td>    双铁戟+5武力</td>
+          <th>5</th>
+          <td> 6</td>
+          <td>  Feb. 4</td>
+          <td> Wed</td>
+          <td> 35</td>
+          <td>  5819529</td>
+          <td> American Sniper</td>
+          <td>  2273342</td>
         </tr>
         <tr>
-          <th>16</th>
-          <td> 17</td>
-          <td> 孙坚</td>
-          <td>  94</td>
-          <td> 85</td>
-          <td>    古锭刀+7武力</td>
+          <th>6</th>
+          <td> 7</td>
+          <td>  Feb. 5</td>
+          <td> Thu</td>
+          <td> 36</td>
+          <td>  6165344</td>
+          <td> American Sniper</td>
+          <td>  2506106</td>
         </tr>
       </tbody>
     </table>
+    <p>5 rows × 7 columns</p>
     </div>
 
 
@@ -1805,7 +2202,7 @@ pandas 入门
 .. code:: python
 
     # 根据条件过滤
-    df[ (df[u'武力'] >99) | (df[u'智力'] >= 99) ]
+    df[ (df[u'Day'] == u'Sat') | (df[u'Day#'] <= 32) ]
 
 
 
@@ -1816,47 +2213,86 @@ pandas 入门
       <thead>
         <tr style="text-align: right;">
           <th></th>
-          <th>序号</th>
-          <th>武将</th>
-          <th>武力</th>
-          <th>智力</th>
-          <th>物品</th>
+          <th>Row</th>
+          <th>Date</th>
+          <th>Day</th>
+          <th>Day#</th>
+          <th>Top 10 Gross</th>
+          <th>#1 Movie</th>
+          <th>Gross</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th>0  </th>
-          <td>   1</td>
-          <td>  吕布</td>
-          <td> 100</td>
-          <td>  42</td>
-          <td>  方天画戟+10武力</td>
+          <th>0 </th>
+          <td>  1</td>
+          <td> Jan. 30</td>
+          <td> Fri</td>
+          <td> 30</td>
+          <td> 26168351</td>
+          <td>      American Sniper</td>
+          <td>      NaN</td>
         </tr>
         <tr>
-          <th>131</th>
-          <td> 132</td>
-          <td> 司马懿</td>
-          <td>  73</td>
-          <td>  99</td>
-          <td>        NaN</td>
+          <th>1 </th>
+          <td>  2</td>
+          <td> Jan. 31</td>
+          <td> Sat</td>
+          <td> 31</td>
+          <td> 41633588</td>
+          <td>      American Sniper</td>
+          <td> 16510536</td>
         </tr>
         <tr>
-          <th>163</th>
-          <td> 164</td>
-          <td> 诸葛亮</td>
-          <td>  68</td>
-          <td> 100</td>
-          <td> 兵书二十四篇+9智力</td>
+          <th>2 </th>
+          <td>  3</td>
+          <td>  Feb. 1</td>
+          <td> Sun</td>
+          <td> 32</td>
+          <td> 12515579</td>
+          <td>      American Sniper</td>
+          <td>  4244376</td>
+        </tr>
+        <tr>
+          <th>8 </th>
+          <td>  9</td>
+          <td>  Feb. 7</td>
+          <td> Sat</td>
+          <td> 38</td>
+          <td> 59153298</td>
+          <td>            SpongeBob</td>
+          <td> 24086968</td>
+        </tr>
+        <tr>
+          <th>15</th>
+          <td> 16</td>
+          <td> Feb. 14</td>
+          <td> Sat</td>
+          <td> 45</td>
+          <td> 87900659</td>
+          <td> Fifty Shades of Grey</td>
+          <td> 36752460</td>
+        </tr>
+        <tr>
+          <th>22</th>
+          <td> 23</td>
+          <td> Feb. 21</td>
+          <td> Sat</td>
+          <td> 52</td>
+          <td> 43708356</td>
+          <td> Fifty Shades of Grey</td>
+          <td>  8991100</td>
         </tr>
       </tbody>
     </table>
+    <p>6 rows × 7 columns</p>
     </div>
 
 
 
 .. code:: python
 
-    df[ (df[u'武力'] >87) & (df[u'智力'] >= 87) ]
+    df[ (df[u'Day'] == u'Sat') & (df[u'Day#'] <= 32) ]
 
 
 
@@ -1867,40 +2303,29 @@ pandas 入门
       <thead>
         <tr style="text-align: right;">
           <th></th>
-          <th>序号</th>
-          <th>武将</th>
-          <th>武力</th>
-          <th>智力</th>
-          <th>物品</th>
+          <th>Row</th>
+          <th>Date</th>
+          <th>Day</th>
+          <th>Day#</th>
+          <th>Top 10 Gross</th>
+          <th>#1 Movie</th>
+          <th>Gross</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th>3 </th>
-          <td>  4</td>
-          <td> 赵云</td>
-          <td> 98</td>
-          <td> 88</td>
-          <td> NaN</td>
-        </tr>
-        <tr>
-          <th>15</th>
-          <td> 16</td>
-          <td> 张辽</td>
-          <td> 95</td>
-          <td> 88</td>
-          <td> NaN</td>
-        </tr>
-        <tr>
-          <th>19</th>
-          <td> 20</td>
-          <td> 姜维</td>
-          <td> 93</td>
-          <td> 96</td>
-          <td> NaN</td>
+          <th>1</th>
+          <td> 2</td>
+          <td> Jan. 31</td>
+          <td> Sat</td>
+          <td> 31</td>
+          <td> 41633588</td>
+          <td> American Sniper</td>
+          <td> 16510536</td>
         </tr>
       </tbody>
     </table>
+    <p>1 rows × 7 columns</p>
     </div>
 
 
@@ -1920,15 +2345,133 @@ pandas 入门
 图形化
 ------
 
+.. code:: python
+
+    ts = pd.Series(np.random.randn(1000), index=pd.date_range('1/1/2000', periods=1000))
+    ts = ts.cumsum()
+    ts.plot()
+
+
+
+.. parsed-literal::
+
+    <matplotlib.axes.AxesSubplot at 0x7f832bf45c50>
+
+
+
+
+.. image:: _images/pandas_67_1.png
+
+.. code:: python
+
+    df = df_movies.copy()
+    df[u'Date'] = pd.to_datetime(df[u'Date'] + ',2015' )
+    df.head()
+
+
+
+.. raw:: html
+
+    <div style="max-height:1000px;max-width:1500px;overflow:auto;">
+    <table border="1" class="dataframe">
+      <thead>
+        <tr style="text-align: right;">
+          <th></th>
+          <th>Row</th>
+          <th>Date</th>
+          <th>Day</th>
+          <th>Day#</th>
+          <th>Top 10 Gross</th>
+          <th>#1 Movie</th>
+          <th>Gross</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>0</th>
+          <td> 1</td>
+          <td>2015-01-30</td>
+          <td> Fri</td>
+          <td> 30</td>
+          <td> 26168351</td>
+          <td> American Sniper</td>
+          <td>  9905616</td>
+        </tr>
+        <tr>
+          <th>1</th>
+          <td> 2</td>
+          <td>2015-01-31</td>
+          <td> Sat</td>
+          <td> 31</td>
+          <td> 41633588</td>
+          <td> American Sniper</td>
+          <td> 16510536</td>
+        </tr>
+        <tr>
+          <th>2</th>
+          <td> 3</td>
+          <td>2015-02-01</td>
+          <td> Sun</td>
+          <td> 32</td>
+          <td> 12515579</td>
+          <td> American Sniper</td>
+          <td>  4244376</td>
+        </tr>
+        <tr>
+          <th>3</th>
+          <td> 4</td>
+          <td>2015-02-02</td>
+          <td> Mon</td>
+          <td> 33</td>
+          <td>  6475068</td>
+          <td> American Sniper</td>
+          <td>  2645109</td>
+        </tr>
+        <tr>
+          <th>4</th>
+          <td> 5</td>
+          <td>2015-02-03</td>
+          <td> Tue</td>
+          <td> 34</td>
+          <td>  7825091</td>
+          <td> American Sniper</td>
+          <td>  2923141</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>5 rows × 7 columns</p>
+    </div>
+
+
+
+.. code:: python
+
+    df.plot(x='Date', y=['Top 10 Gross', 'Gross'])
+
+
+
+.. parsed-literal::
+
+    <matplotlib.axes.AxesSubplot at 0x7f832bd9ff50>
+
+
+
+
+.. image:: _images/pandas_69_1.png
+
 
 使用另一个 DataFrame 来更新数据
 -------------------------------
 
 .. code:: python
 
-    df_1 = df_sango.copy()
-    df_2 = df_sango.copy()
-    df_2[u'智力'] = df_2[u'智力'].apply(lambda x: x + 10)
+    df_1 = df_movies.copy()
+    df_2 = pd.DataFrame({u'#1 Movie':[u'American Sniper',
+                                u'SpongeBob',
+                                u'Fifty Shades of Grey'],
+                                u'chs':[u'美国阻击手',
+                                        u'海绵宝宝',
+                                        u'五十度灰']})
     df_1.head()
 
 
@@ -1940,56 +2483,69 @@ pandas 入门
       <thead>
         <tr style="text-align: right;">
           <th></th>
-          <th>序号</th>
-          <th>武将</th>
-          <th>武力</th>
-          <th>智力</th>
-          <th>物品</th>
+          <th>Row</th>
+          <th>Date</th>
+          <th>Day</th>
+          <th>Day#</th>
+          <th>Top 10 Gross</th>
+          <th>#1 Movie</th>
+          <th>Gross</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <th>0</th>
           <td> 1</td>
-          <td> 吕布</td>
-          <td> 100</td>
-          <td> 42</td>
-          <td>  方天画戟+10武力</td>
+          <td> Jan. 30</td>
+          <td> Fri</td>
+          <td> 30</td>
+          <td> 26168351</td>
+          <td> American Sniper</td>
+          <td>  9905616</td>
         </tr>
         <tr>
           <th>1</th>
           <td> 2</td>
-          <td> 关羽</td>
-          <td>  99</td>
-          <td> 85</td>
-          <td> 青龙偃月刀+10武力</td>
+          <td> Jan. 31</td>
+          <td> Sat</td>
+          <td> 31</td>
+          <td> 41633588</td>
+          <td> American Sniper</td>
+          <td> 16510536</td>
         </tr>
         <tr>
           <th>2</th>
           <td> 3</td>
-          <td> 张飞</td>
-          <td>  99</td>
-          <td> 51</td>
-          <td>   丈八蛇矛+9武力</td>
+          <td>  Feb. 1</td>
+          <td> Sun</td>
+          <td> 32</td>
+          <td> 12515579</td>
+          <td> American Sniper</td>
+          <td>  4244376</td>
         </tr>
         <tr>
           <th>3</th>
           <td> 4</td>
-          <td> 赵云</td>
-          <td>  98</td>
-          <td> 88</td>
-          <td>        NaN</td>
+          <td>  Feb. 2</td>
+          <td> Mon</td>
+          <td> 33</td>
+          <td>  6475068</td>
+          <td> American Sniper</td>
+          <td>  2645109</td>
         </tr>
         <tr>
           <th>4</th>
           <td> 5</td>
-          <td> 马超</td>
-          <td>  98</td>
-          <td> 48</td>
-          <td>        NaN</td>
+          <td>  Feb. 3</td>
+          <td> Tue</td>
+          <td> 34</td>
+          <td>  7825091</td>
+          <td> American Sniper</td>
+          <td>  2923141</td>
         </tr>
       </tbody>
     </table>
+    <p>5 rows × 7 columns</p>
     </div>
 
 
@@ -2007,264 +2563,117 @@ pandas 入门
       <thead>
         <tr style="text-align: right;">
           <th></th>
-          <th>序号</th>
-          <th>武将</th>
-          <th>武力</th>
-          <th>智力</th>
-          <th>物品</th>
+          <th>#1 Movie</th>
+          <th>chs</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>0</th>
+          <td>      American Sniper</td>
+          <td> 美国阻击手</td>
+        </tr>
+        <tr>
+          <th>1</th>
+          <td>            SpongeBob</td>
+          <td>  海绵宝宝</td>
+        </tr>
+        <tr>
+          <th>2</th>
+          <td> Fifty Shades of Grey</td>
+          <td>  五十度灰</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>3 rows × 2 columns</p>
+    </div>
+
+
+
+.. code:: python
+
+    pd.merge(df_1, df_2, on=u'#1 Movie').head()
+
+
+
+.. raw:: html
+
+    <div style="max-height:1000px;max-width:1500px;overflow:auto;">
+    <table border="1" class="dataframe">
+      <thead>
+        <tr style="text-align: right;">
+          <th></th>
+          <th>Row</th>
+          <th>Date</th>
+          <th>Day</th>
+          <th>Day#</th>
+          <th>Top 10 Gross</th>
+          <th>#1 Movie</th>
+          <th>Gross</th>
+          <th>chs</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <th>0</th>
           <td> 1</td>
-          <td> 吕布</td>
-          <td> 100</td>
-          <td> 52</td>
-          <td>  方天画戟+10武力</td>
+          <td> Jan. 30</td>
+          <td> Fri</td>
+          <td> 30</td>
+          <td> 26168351</td>
+          <td> American Sniper</td>
+          <td>  9905616</td>
+          <td> 美国阻击手</td>
         </tr>
         <tr>
           <th>1</th>
           <td> 2</td>
-          <td> 关羽</td>
-          <td>  99</td>
-          <td> 95</td>
-          <td> 青龙偃月刀+10武力</td>
+          <td> Jan. 31</td>
+          <td> Sat</td>
+          <td> 31</td>
+          <td> 41633588</td>
+          <td> American Sniper</td>
+          <td> 16510536</td>
+          <td> 美国阻击手</td>
         </tr>
         <tr>
           <th>2</th>
           <td> 3</td>
-          <td> 张飞</td>
-          <td>  99</td>
-          <td> 61</td>
-          <td>   丈八蛇矛+9武力</td>
+          <td>  Feb. 1</td>
+          <td> Sun</td>
+          <td> 32</td>
+          <td> 12515579</td>
+          <td> American Sniper</td>
+          <td>  4244376</td>
+          <td> 美国阻击手</td>
         </tr>
         <tr>
           <th>3</th>
           <td> 4</td>
-          <td> 赵云</td>
-          <td>  98</td>
-          <td> 98</td>
-          <td>        NaN</td>
+          <td>  Feb. 2</td>
+          <td> Mon</td>
+          <td> 33</td>
+          <td>  6475068</td>
+          <td> American Sniper</td>
+          <td>  2645109</td>
+          <td> 美国阻击手</td>
         </tr>
         <tr>
           <th>4</th>
           <td> 5</td>
-          <td> 马超</td>
-          <td>  98</td>
-          <td> 58</td>
-          <td>        NaN</td>
+          <td>  Feb. 3</td>
+          <td> Tue</td>
+          <td> 34</td>
+          <td>  7825091</td>
+          <td> American Sniper</td>
+          <td>  2923141</td>
+          <td> 美国阻击手</td>
         </tr>
       </tbody>
     </table>
+    <p>5 rows × 8 columns</p>
     </div>
 
 
-
-.. code:: python
-
-    df_1.set_index(u'武将', inplace=True)
-    df_2.set_index(u'武将', inplace=True)
-    df_1.update(other=df_2[u'智力'], overwrite=True)
-    df_1.head()
-
-
-
-.. raw:: html
-
-    <div style="max-height:1000px;max-width:1500px;overflow:auto;">
-    <table border="1" class="dataframe">
-      <thead>
-        <tr style="text-align: right;">
-          <th></th>
-          <th>序号</th>
-          <th>武力</th>
-          <th>智力</th>
-          <th>物品</th>
-        </tr>
-        <tr>
-          <th>武将</th>
-          <th></th>
-          <th></th>
-          <th></th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th>吕布</th>
-          <td> 1</td>
-          <td> 100</td>
-          <td> 52</td>
-          <td>  方天画戟+10武力</td>
-        </tr>
-        <tr>
-          <th>关羽</th>
-          <td> 2</td>
-          <td>  99</td>
-          <td> 95</td>
-          <td> 青龙偃月刀+10武力</td>
-        </tr>
-        <tr>
-          <th>张飞</th>
-          <td> 3</td>
-          <td>  99</td>
-          <td> 61</td>
-          <td>   丈八蛇矛+9武力</td>
-        </tr>
-        <tr>
-          <th>赵云</th>
-          <td> 4</td>
-          <td>  98</td>
-          <td> 98</td>
-          <td>        NaN</td>
-        </tr>
-        <tr>
-          <th>马超</th>
-          <td> 5</td>
-          <td>  98</td>
-          <td> 58</td>
-          <td>        NaN</td>
-        </tr>
-      </tbody>
-    </table>
-    </div>
-
-
-
-.. code:: python
-
-    df_2.head()
-
-
-
-.. raw:: html
-
-    <div style="max-height:1000px;max-width:1500px;overflow:auto;">
-    <table border="1" class="dataframe">
-      <thead>
-        <tr style="text-align: right;">
-          <th></th>
-          <th>序号</th>
-          <th>武力</th>
-          <th>智力</th>
-          <th>物品</th>
-        </tr>
-        <tr>
-          <th>武将</th>
-          <th></th>
-          <th></th>
-          <th></th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th>吕布</th>
-          <td> 1</td>
-          <td> 100</td>
-          <td> 52</td>
-          <td>  方天画戟+10武力</td>
-        </tr>
-        <tr>
-          <th>关羽</th>
-          <td> 2</td>
-          <td>  99</td>
-          <td> 95</td>
-          <td> 青龙偃月刀+10武力</td>
-        </tr>
-        <tr>
-          <th>张飞</th>
-          <td> 3</td>
-          <td>  99</td>
-          <td> 61</td>
-          <td>   丈八蛇矛+9武力</td>
-        </tr>
-        <tr>
-          <th>赵云</th>
-          <td> 4</td>
-          <td>  98</td>
-          <td> 98</td>
-          <td>        NaN</td>
-        </tr>
-        <tr>
-          <th>马超</th>
-          <td> 5</td>
-          <td>  98</td>
-          <td> 58</td>
-          <td>        NaN</td>
-        </tr>
-      </tbody>
-    </table>
-    </div>
-
-
-
-.. code:: python
-
-    # 重置 index
-    df_1.reset_index(inplace=True)
-    df_1.head()
-
-
-
-.. raw:: html
-
-    <div style="max-height:1000px;max-width:1500px;overflow:auto;">
-    <table border="1" class="dataframe">
-      <thead>
-        <tr style="text-align: right;">
-          <th></th>
-          <th>武将</th>
-          <th>序号</th>
-          <th>武力</th>
-          <th>智力</th>
-          <th>物品</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th>0</th>
-          <td> 吕布</td>
-          <td> 1</td>
-          <td> 100</td>
-          <td> 52</td>
-          <td>  方天画戟+10武力</td>
-        </tr>
-        <tr>
-          <th>1</th>
-          <td> 关羽</td>
-          <td> 2</td>
-          <td>  99</td>
-          <td> 95</td>
-          <td> 青龙偃月刀+10武力</td>
-        </tr>
-        <tr>
-          <th>2</th>
-          <td> 张飞</td>
-          <td> 3</td>
-          <td>  99</td>
-          <td> 61</td>
-          <td>   丈八蛇矛+9武力</td>
-        </tr>
-        <tr>
-          <th>3</th>
-          <td> 赵云</td>
-          <td> 4</td>
-          <td>  98</td>
-          <td> 98</td>
-          <td>        NaN</td>
-        </tr>
-        <tr>
-          <th>4</th>
-          <td> 马超</td>
-          <td> 5</td>
-          <td>  98</td>
-          <td> 58</td>
-          <td>        NaN</td>
-        </tr>
-      </tbody>
-    </table>
-    </div>
 
 

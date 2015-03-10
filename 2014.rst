@@ -34,50 +34,160 @@ Install wordpress on LinuxMint(Ubuntu)
 pelican note
 ============
 
-2014年 10月 20日 星期一 14:36:04 CST
+:date: 2015-03-10 13:55:57
+:modified: 2015-03-10 13:55:57
+:tags: pelican, blog
+:category: write
+:author: Dormouse Young
+:summary: How to build a pelican from scratch?
 
-install
-=======
+Install software::
 
-use follow command::
+    mkdir pelican_blog
+    cd pelican_blog
+    mkvirtualenv pelican_blog
+    pip install pelican markdown
 
-    sudo easy_install pip
-    sudo pip install pelican==3.3
-    sudo pip install markdown
+Start pelican setup::
 
-
-start bloging
-=============
-
-quick start
------------
-
-use follow command::
-
-    mkdir ~/projects/gitblog
-    cd ~/projects/gitblog
     pelican-quickstart
 
-create an article
-------------------
+You will see blow::
 
-save following as ~/projects/gitblog/content/keyboard-review.md.::
+    Welcome to pelican-quickstart v3.5.0.
 
-    Title: My First Review
-    Date: 2010-12-03 10:20
-    Category: Review
+    This script will help you create a new Pelican-based website.
 
-    Following is a review of my favorite mechanical keyboard.
+    Please answer the following questions so this script can generate the files
+    needed by Pelican.
 
-output content
---------------
+        
+    > Where do you want to create your new web site? [.] 
+    > What will be the title of this web site? Dormouse Hole
+    > Who will be the author of this web site? Dormouse.Young
+    > What will be the default language of this web site? [en] zh
+    > Do you want to specify a URL prefix? e.g., http://example.com   (Y/n) 
+    > What is your URL prefix? (see above example; no trailing slash) http://http://dormouse.github.io
+    > Do you want to enable article pagination? (Y/n) 
+    > How many articles per page do you want? [10] 
+    > Do you want to generate a Fabfile/Makefile to automate generation and publishing? (Y/n) 
+    > Do you want an auto-reload & simpleHTTP script to assist with theme and site development? (Y/n) 
+    > Do you want to upload your website using FTP? (y/N) 
+    > Do you want to upload your website using SSH? (y/N) 
+    > Do you want to upload your website using Dropbox? (y/N) 
+    > Do you want to upload your website using S3? (y/N) 
+    > Do you want to upload your website using Rackspace Cloud Files? (y/N) 
+    > Do you want to upload your website using GitHub Pages? (y/N) y
+    > Is this your personal page (username.github.io)? (y/N) y
+    Done. Your new project is available at /home/dormouse/project/pelican_blog
 
-use follow command::
+Now we have::
 
-    pelican content
+    content            fabfile.py  output          publishconf.py
+    develop_server.sh  Makefile    pelicanconf.py
 
-    cd ~/projects/yoursite/output
-    python -m SimpleHTTPServer
+get plugins::
+
+    git clone git://github.com/getpelican/pelican-plugins.git
+
+get all themes::
+
+    git clone --recursive git://github.com/getpelican/pelican-themes ./pelican-themes
+
+Edit pelicanconf.py like following:
+
+.. code-block:: python
+
+    #!/usr/bin/env python
+    # -*- coding: utf-8 -*- #
+    from __future__ import unicode_literals
+
+    AUTHOR = u'Dormouse.Young'
+    AUTHOR_EMAIL = u'dormouse.young@gmail.com'
+    SITENAME = u'Dormouse Hole'
+    SITEURL = 'https://dormouse.github.io'
+    TAGLINE = 'Simple is better.'
+    PATH = 'content'
+    TIMEZONE = 'Asia/Shanghai'
+    DEFAULT_LANG = u'zh'
+    DEFAULT_DATE_FORMAT = ('%Y-%m-%d')
+
+    # Feed generation is usually not desired when developing
+    FEED_ALL_ATOM = None
+    CATEGORY_FEED_ATOM = None
+    TRANSLATION_FEED_ATOM = None
+    AUTHOR_FEED_ATOM = None
+    AUTHOR_FEED_RSS = None
+    DEFAULT_PAGINATION = 10
+
+    # Blogroll
+    LINKS = (('Pelican', 'http://getpelican.com/'),
+             ('Python.org', 'http://python.org/'),
+             ('Jinja2', 'http://jinja.pocoo.org/'),
+            )
+
+    # Social widget
+    SOCIAL = (('Github', 'https://github.com/dormouse'),
+            )
+
+    # Uncomment following line if you want document-relative URLs when developing
+    RELATIVE_URLS = True
+
+    # Theme
+    THEME = 'pelican-themes/voidy-bootstrap'
+    SITESUBTITLE ='Simple is better.'
+    STYLESHEET_FILES = ("pygment.css", "voidybootstrap.css",)
+    CUSTOM_ARTICLE_FOOTERS = ("taglist.html", "sharing.html", )
+    CUSTOM_SCRIPTS_ARTICLE = "sharing_scripts.html"
+    SIDEBAR = "sidebar.html"
+
+    DISQUS_SITENAME = "dormouseyoung"
+
+
+Edit publishconf.py like following:
+
+.. code-block:: python
+
+    #!/usr/bin/env python
+    # -*- coding: utf-8 -*- #
+    from __future__ import unicode_literals
+
+    # This file is only used if you use `make publish` or
+    # explicitly specify it as your config file.
+
+    import os
+    import sys
+    sys.path.append(os.curdir)
+    from pelicanconf import *
+
+    SITEURL = 'https://dormouse.github.io'
+    RELATIVE_URLS = False
+
+    FEED_ALL_ATOM = 'feeds/all.atom.xml'
+    CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
+
+    DELETE_OUTPUT_DIRECTORY = True
+
+    # Following items are often useful when publishing
+
+    DISQUS_SITENAME = "dormouseyoung"
+    #GOOGLE_ANALYTICS = ""
+
+Start first article::
+
+    cd content
+    mkdir articles files images pages
+    vim articles/hello.md
+
+Start develop server to preview local html::
+
+    make devserver
+
+参考资料：
+
+* `Configuring Pelican Static Blog <http://pbpython.com/pelican-config.html>`_
+* `使用Pelican + Markdown + GitHub Pages来撰写Blog <http://www.tuicool.com/articles/INjiui>`_
+
 
 
 ==============================
