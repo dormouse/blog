@@ -82,6 +82,8 @@ div.related ul li a:hover {
 }
 
 div.sphinxsidebarwrapper {
+    position: relative;
+    top: 0px;
     padding: 0;
 }
 
