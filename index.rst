@@ -50,6 +50,14 @@ Welcome to Dormouse's Blog!
    pandas
    note
 
+Python 笔记
+===========
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   python_note/*
+
 Indices and tables
 ==================
 

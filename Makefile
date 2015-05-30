@@ -53,10 +53,11 @@ html:
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
-	@echo
-	rsync -a $(BUILDDIR)/html/ ~/project/dormouse.github.io
-	@echo
-	@echo "Rsync finished."
+
+# @echo
+# rsync -a $(BUILDDIR)/html/ ~/project/dormouse.github.io
+# @echo
+# @echo "Rsync finished."
 
 dirhtml:
 	$(SPHINXBUILD) -b dirhtml $(ALLSPHINXOPTS) $(BUILDDIR)/dirhtml
