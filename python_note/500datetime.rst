@@ -4,17 +4,29 @@
 
 Python 标准库中的 datetime 模块提供了各种对日期和时间的处理方法。
 
-打印时间
+
+基本操作
 ========
 
 ::
 
-    In [1]: from datetime import datetime
+    In [1]: import datetime
 
-    In [2]: datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    Out[2]: '2015-05-30 10:47:58'
+    In [2]: now = datetime.datetime.now()
 
-转义符对应意义如下:
+    In [3]: now
+    Out[3]: datetime.datetime(2015, 6, 1, 10, 26, 38, 836099)
+
+    In [4]: now.strftime("%Y-%m-%d %H:%M:%S")
+    Out[4]: '2015-06-01 10:26:38'
+
+    In [5]: now.replace(hour=0,minute=0,second=0)
+    Out[5]: datetime.datetime(2015, 6, 1, 0, 0, 0, 836099)
+
+    In [6]: now - datetime.timedelta(days=1)
+    Out[6]: datetime.datetime(2015, 5, 31, 10, 26, 38, 836099)
+
+转义符说明：
 
 ====== ==============================================
 转义符 说明
@@ -42,6 +54,7 @@ Python 标准库中的 datetime 模块提供了各种对日期和时间的处理
 %Z     当前时区的名称
 %%     %号本身
 ====== ==============================================
+
 
 时区转换
 ========
@@ -89,6 +102,7 @@ Python 标准库中的 datetime 模块提供了各种对日期和时间的处理
 
     In [6]: localtime(now)
     Out[7]: datetime.datetime(2015, 5, 30, 11, 16, 57, 362481, tzinfo=<DstTzInfo 'Asia/Shanghai' CST+8:00:00 STD>)
+
 
 程序暂停
 ========
