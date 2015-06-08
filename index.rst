@@ -40,9 +40,11 @@ Welcome to Dormouse's Blog!
 .. toctree::
    :maxdepth: 1
 
+   django
    git
    sphinx_cheet_sheet
    pdf
+   pip
    vim
    apt
    virtualenv

@@ -184,7 +184,7 @@ the former, while the HTML builder would prefer the latter.
 
 
 脚注
----------
+====
 
 脚注用 ``[#name]_`` 来表示，在文档底部“ Footnotes ”标题后写具体内容::
 
@@ -200,7 +200,7 @@ footnotes without names (``[#]_``).
 
 
 Citations
----------
+=========
 
 Standard reST citations  are supported, with the
 additional feature that they are "global", i.e. all citations can be referenced
@@ -215,7 +215,7 @@ numeric or begins with ``#``.
 
 
 Comments
---------
+========
 
 Every explicit markup block which isn't a valid markup construct (like the
 footnotes above) is regarded as a comment .  For
@@ -232,7 +232,7 @@ You can indent text after a comment start to form multiline comments::
       Still in the comment.
 
 Gotchas
--------
+=======
 
 There are some problems one commonly runs into while authoring reST documents:
 
@@ -244,6 +244,56 @@ There are some problems one commonly runs into while authoring reST documents:
 
 * **No nested inline markup:** Something like ``*see :func:`foo`*`` is not
   possible.
+
+
+警告符
+======
+
+Admonitions are specially marked "topics" that can appear anywhere an
+ordinary body element can. They contain arbitrary body elements. Typically,
+an admonition is rendered as an offset block in a document, sometimes
+outlined or shaded, with a title matching the admonition type. For example::
+
+    .. DANGER::
+       Beware killer rabbits!
+
+This directive might be rendered something like this::
+
+    +------------------------+
+    |        !DANGER!        |
+    |                        |
+    | Beware killer rabbits! |
+    +------------------------+
+
+The following admonition directives have been implemented::
+
+    attention
+    caution
+    danger
+    error
+    hint
+    important
+    note
+    tip
+    warning
+
+Any text immediately following the directive indicator (on the same line and/or indented on following lines) is interpreted as a directive block and is parsed for normal body elements. For example, the following "note" admonition directive contains one paragraph and a bullet list consisting of two list items::
+
+    .. note:: This is a note admonition.
+       This is the second line of the first paragraph.
+
+       - The note contains all indented body elements
+         following.
+       - It includes this bullet list.
+
+以上代码渲染结果如下：
+
+.. note:: This is a note admonition.
+   This is the second line of the first paragraph.
+
+   - The note contains all indented body elements
+     following.
+   - It includes this bullet list.
 
 
 .. rubric:: Footnotes
