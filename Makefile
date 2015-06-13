@@ -6,6 +6,7 @@ SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
 PAPER         =
 BUILDDIR      = _build
+GITHUB_DIR=~/project/dormouse.github.io
 
 # User-friendly check for sphinx-build
 ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
@@ -54,10 +55,13 @@ html:
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 
-# @echo
-# rsync -a $(BUILDDIR)/html/ ~/project/dormouse.github.io
-# @echo
-# @echo "Rsync finished."
+git:
+	@echo
+	@echo "Rsync starting..."
+	rsync -a $(BUILDDIR)/html/ ~/project/dormouse.github.io --exclude ".git"
+	cd $(GITHUB_DIR) && git add --all && git commit -m 'update' && git push origin $(GITHUB_PAGES_BRANCH)
+	@echo
+	@echo "Rsync finished."
 
 dirhtml:
 	$(SPHINXBUILD) -b dirhtml $(ALLSPHINXOPTS) $(BUILDDIR)/dirhtml

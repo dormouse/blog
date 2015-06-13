@@ -127,8 +127,6 @@ Modify My Pelican Blog
 :author: Dormouse Young
 :summary: After install pleican, I do something more.
 
-.. contents::
-
 
 Modify Theme
 ============
