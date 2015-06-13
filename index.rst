@@ -26,6 +26,7 @@ Welcome to Dormouse's Blog!
    :maxdepth: 1
 
    compressor
+   django
    git
    install_linux_soft
    note
