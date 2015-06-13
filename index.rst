@@ -7,48 +7,34 @@
 Welcome to Dormouse's Blog!
 ===========================================
 
-2014年
-======
+个人笔记
+========
 .. toctree::
    :maxdepth: 1
 
+   2015
    2014
-
-2012年
-======
-.. toctree::
-   :maxdepth: 1
-
+   2013
    2012
-
-2011年
-======
-.. toctree::
-   :maxdepth: 1
-
    2011
-
-2010年
-======
-.. toctree::
-   :maxdepth: 1
-
    2010
-   
+   2009
+
 专题笔记
 ========
 .. toctree::
    :maxdepth: 1
 
-   git
-   sphinx_cheet_sheet
-   pdf
-   vim
-   apt
-   virtualenv
    compressor
-   pandas
+   git
+   install_linux_soft
    note
+   pandas
+   pdf
+   sphinx_cheet_sheet
+   sqlite
+   vim
+   virtualenv
 
 Python 笔记
 ===========
@@ -57,6 +43,14 @@ Python 笔记
    :glob:
 
    python_note/*
+
+Lego 笔记
+===========
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   lego/*
 
 Indices and tables
 ==================

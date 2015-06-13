@@ -184,9 +184,9 @@ the former, while the HTML builder would prefer the latter.
 
 
 脚注
----------
+====
 
-脚注用 ``[#name]_`` 来表示，在文档底部“ Footnotes ”标题后写具体内容::
+脚注用 ``[#name]_`` 来表示，在文档底部“ Footnotes ”标题后写具体内容，例如::
 
    Lorem ipsum [#f1]_ dolor sit amet ... [#f2]_
 
@@ -195,12 +195,15 @@ the former, while the HTML builder would prefer the latter.
    .. [#f1] Text of the first footnote.
    .. [#f2] Text of the second footnote.
 
-You can also explicitly number the footnotes (``[1]_``) or use auto-numbered
-footnotes without names (``[#]_``).
+显示为：
+
+Lorem ipsum [#f1]_ dolor sit amet ... [#f2]_
+
+可以显式指定数字 (``[1]_``) 或者自动生成数字 (``[#]_``) 。
 
 
-Citations
----------
+引文
+====
 
 Standard reST citations  are supported, with the
 additional feature that they are "global", i.e. all citations can be referenced
@@ -210,12 +213,16 @@ from all files.  Use them like so::
 
    .. [Ref] Book or article reference, URL or whatever.
 
+Lorem ipsum [Ref]_ dolor sit amet.
+
+.. [Ref] Book or article reference, URL or whatever.
+
 Citation usage is similar to footnote usage, but with a label that is not
 numeric or begins with ``#``.
 
 
-Comments
---------
+注释
+====
 
 Every explicit markup block which isn't a valid markup construct (like the
 footnotes above) is regarded as a comment .  For
@@ -231,8 +238,8 @@ You can indent text after a comment start to form multiline comments::
 
       Still in the comment.
 
-Gotchas
--------
+陷阱
+====
 
 There are some problems one commonly runs into while authoring reST documents:
 
@@ -245,8 +252,65 @@ There are some problems one commonly runs into while authoring reST documents:
 * **No nested inline markup:** Something like ``*see :func:`foo`*`` is not
   possible.
 
+警告
+====
+
+Specific Admonitions
+
+Directive Types:	"attention", "caution", "danger", "error", "hint", "important", "note", "tip", "warning", "admonition"
+
+Doctree Elements:	attention, caution, danger, error, hint, important, note, tip, warning, admonition, title
+
+Directive Arguments:	None.
+
+Directive Options:	:class:, :name:
+
+Directive Content:	Interpreted as body elements.
+
+Admonitions are specially marked "topics" that can appear anywhere an ordinary body element can. They contain arbitrary body elements. Typically, an admonition is rendered as an offset block in a document, sometimes outlined or shaded, with a title matching the admonition type. For example::
+
+    .. DANGER::
+       Beware killer rabbits!
+
+This directive might be rendered something like this:
+
+.. DANGER::
+   Beware killer rabbits!
+
+The following admonition directives have been implemented:
+
+* attention
+* caution
+* danger
+* error
+* hint
+* important
+* note
+* tip
+* warning
+
+Any text immediately following the directive indicator (on the same line and/or indented on following lines) is interpreted as a directive block and is parsed for normal body elements. For example, the following "note" admonition directive contains one paragraph and a bullet list consisting of two list items::
+
+    .. note:: This is a note admonition.
+       This is the second line of the first paragraph.
+
+       - The note contains all indented body elements
+         following.
+       - It includes this bullet list.
+
+
+.. note:: This is a note admonition.
+   This is the second line of the first paragraph.
+
+   - The note contains all indented body elements
+     following.
+   - It includes this bullet list.
 
 .. rubric:: Footnotes
 
 .. [1] When the default domain contains a :rst:dir:`class` directive, this directive
        will be shadowed.  Therefore, Sphinx re-exports it as :rst:dir:`rst-class`.
+
+.. [#f1] Text of the first footnote.
+.. [#f2] Text of the second footnote.
+

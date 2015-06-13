@@ -1,3 +1,8 @@
+===
+Git
+===
+
+
 Git 用法
 ========
 
@@ -64,6 +69,34 @@ Git 用法
 .gitignore 不起作用::
 
     git rm -r --cached _build/*
+
+
+submodule
+---------
+
+增加 submodule::
+
+    git submodule add https://github.com/klen/python-mode.git bundle/ropevim
+
+删除 submodule::
+
+    git rm --cache bundle/pep8
+    rm -rf bundle/pep8
+    del contene in .gitmodules
+
+
+用命令行创建新的 repository
+---------------------------
+
+::
+
+    echo "# vim-python-ide" >> README.md
+    git init
+    git add README.md
+    git commit -m "first commit"
+    git remote add origin git@github.com:dormouse/vim-python-ide.git
+    git push -u origin master
+
 
 使用 Github
 ============

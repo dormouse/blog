@@ -2,27 +2,11 @@
 随手记
 ======
 
-手机联电脑
-==========
-
-:create: 2014年 10月 23日 星期四 21:13:09 CST
-
-安装 adb 后，手机联上电脑后可以看见 SD 卡::
-
-    sudo apt-get install android-tools-adb
-
-
-Brickset 注册
-=============
-
-:create: 2014年 10月 23日 星期四 22:20:58 CST
-
-Write to brickset.com ,and my project name is LM_LEGO.
 
 同步资料
 ========
 
-:create: 2015年 06月 02日 星期二 10:12:23 CST
+:date: 2015年 06月 02日 星期二 10:12:23 CST
 
 同步一个目录到 U 盘示例::
 
@@ -48,4 +32,39 @@ delete   删除目的端多余的文件
 devices  保留设备文件
 specials 保留特定文件
 ======== ==================================================================
+
+
+ReText
+======
+
+:date: 2015年 03月 18日 星期三 10:02:54 CST
+
+安装 ReText::
+
+    sudo apt-get install retext
+    sudo apt-get install python3-docutils python3-markdown python3-pygments python3-enchant
+
+ReText 是一个使用python qt 写的 Markdown 编辑器。
+
+ReText 依赖： python3-markups python3-pyqt4 python3-sip
+
+
+Brickset 注册
+=============
+
+:date: 2014年 10月 23日 星期四 22:20:58 CST
+
+Write to brickset.com ,and my project name is LM_LEGO.
+
+
+手机联电脑
+==========
+
+:date: 2014年 10月 23日 星期四 21:13:09 CST
+
+安装 adb 后，手机联上电脑后可以看见 SD 卡::
+
+    sudo apt-get install android-tools-adb
+
+
 
