@@ -58,7 +58,7 @@ html:
 git:
 	@echo
 	@echo "Rsync starting..."
-	rsync -a $(BUILDDIR)/html/ ~/project/dormouse.github.io --exclude ".git"
+	rsync -a $(BUILDDIR)/html/ ~/project/dormouse.github.io --exclude ".*"
 	cd $(GITHUB_DIR) && git add --all && git commit -m 'update' && git push origin $(GITHUB_PAGES_BRANCH)
 	@echo
 	@echo "Rsync finished."

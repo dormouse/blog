@@ -2,6 +2,14 @@
 随手记
 ======
 
+pyqt4 示例所在目录::
+
+    /usr/share/doc/python-qt4-doc/examples/sql
+
+替换所有 python 文件内容示例::
+
+    find . -name "*.py" | xargs sed -i "s/PySide/PyQt4/g"
+
 
 同步资料
 ========
@@ -32,6 +40,10 @@ delete   删除目的端多余的文件
 devices  保留设备文件
 specials 保留特定文件
 ======== ==================================================================
+
+用 scp 同步远程文件::
+
+    scp -r source_dir admin@11.22.33.44:/var/tmp/
 
 
 ReText

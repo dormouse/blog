@@ -7,19 +7,6 @@
 Welcome to Dormouse's Blog!
 ===========================================
 
-个人笔记
-========
-.. toctree::
-   :maxdepth: 1
-
-   2015
-   2014
-   2013
-   2012
-   2011
-   2010
-   2009
-
 专题笔记
 ========
 .. toctree::
@@ -53,10 +40,22 @@ Lego 笔记
 
    lego/*
 
+个人笔记
+========
+.. toctree::
+   :maxdepth: 1
+
+   2015
+   2014
+   2013
+   2012
+   2011
+   2010
+   2009
+
 Indices and tables
 ==================
 
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-
