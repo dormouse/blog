@@ -18,7 +18,7 @@ pyqt4 示例所在目录::
 
 同步一个目录到 U 盘示例::
 
-    rsync -a --delete 编程资料2015 /media/dormouse/5078-63A5/
+    rsync -a --delete 编程资料2015 /media/dormouse/0078-63Aa/
 
 参数说明
 
