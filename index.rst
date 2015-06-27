@@ -31,6 +31,8 @@ Python 笔记
    :glob:
 
    python_note/*
+   pygtk3/pygtk3-note
+
 
 Lego 笔记
 ===========
