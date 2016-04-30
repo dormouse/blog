@@ -6,7 +6,7 @@
 
 开始日期:2012年4月25日
 
-最后修改:2014年10月31日
+最后修改:2016年4月30日
 
 使用 virtualenvwrapper
 =======================
@@ -25,6 +25,8 @@ Add flowing to ~/.bashrc::
 Reload it::
 
     reload .bashrc
+    or
+    source .bashrc
 
 Creat virtualenv::
 
