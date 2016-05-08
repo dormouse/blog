@@ -48,6 +48,7 @@ Lego 笔记
 .. toctree::
    :maxdepth: 1
 
+   2016
    2015
    2014
    2013

@@ -1,0 +1,19 @@
+2016 年笔记
+***********
+
+
+======================
+在 MAC 上安装 wxPython
+======================
+
+:date: 2016-05-08
+:modified: 2016-05-08
+:slug: install-wxpython-on-mac
+:tags: wxpython
+:category: wxpython
+:author: Dormouse Young
+
+使用如下命令安装::
+
+    brew install wxmac
+    brew install wxpython
