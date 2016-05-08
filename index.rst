@@ -30,6 +30,7 @@ Python 笔记
    :maxdepth: 1
    :glob:
 
+   pep/*
    python_note/*
    pygtk3/pygtk3-note
 
