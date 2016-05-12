@@ -80,6 +80,8 @@ Indentation
 
 Use 4 spaces per indentation level.
 
+每个缩进级别使用 4 个空格。
+
 Continuation lines should align wrapped elements either vertically
 using Python's implicit line joining inside parentheses, brackets and
 braces, or using a *hanging indent* [#fn-hi]_.  When using a hanging
@@ -90,10 +92,12 @@ clearly distinguish itself as a continuation line.
 Yes::
 
     # Aligned with opening delimiter.
+    # 与起始分隔符对齐
     foo = long_function_name(var_one, var_two,
                              var_three, var_four)
 
     # More indentation included to distinguish this from the rest.
+    # 用更多的缩进与后面的内容区别开来
     def long_function_name(
             var_one, var_two, var_three,
             var_four):
@@ -107,6 +111,7 @@ Yes::
 No::
 
     # Arguments on first line forbidden when not using vertical alignment.
+    # 使用垂直对齐时，第一行不应当有参数
     foo = long_function_name(var_one, var_two,
         var_three, var_four)
 
@@ -117,6 +122,8 @@ No::
         print(var_one)
 
 The 4-space rule is optional for continuation lines.
+
+对于后继行来说， 可以不遵循 4 空格规则。
 
 Optional::
 

@@ -58,3 +58,26 @@ list 转 dict
 将 ['1:a','2:b','3:c'] 转换为 {'1′: 'a', '3′: 'c', '2′: 'b'}::
 
     dict(item.split(':')[:2] for item in b)
+    
+dict 转 class
+=============
+
+方法如下::
+
+    class Struct:
+        def __init__(self, **entries):
+            for k, v in entries.items():
+                if isinstance(v, dict):
+                    entries[k] = Struct(**v)
+                    print entries[k]
+            self.__dict__.update(entries)
+
+
+        if __name__ == '__main__':
+            args = {'a': {'cola': ['xm', 'xb']},
+                    'b': 2}
+            s = Struct(**args)
+            print s.a
+            print s.a.cola
+            print s.b
+
