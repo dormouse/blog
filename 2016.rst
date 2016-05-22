@@ -59,11 +59,11 @@
 
 可见新安装的 cTags 位于 /usr/local/Cellar/ctags/5.8，首先删除系统自带的 ctags::
 
-    ➤ sudo rm /usr/bin/ctags
+    sudo rm /usr/bin/ctags
 
 然后创建软连接::
 
-    ➤ sudo ln -s /usr/local/Cellar/ctags/5.8_1/bin/ctags /usr/bin/ctags
+    sudo ln -s /usr/local/Cellar/ctags/5.8_1/bin/ctags /usr/bin/ctags
 
 方法二：
 
@@ -73,4 +73,15 @@
 
 比较推荐第二种方法。因为 brew 安装的东西大都在 /usr/local 下面，
 而且不改变原来的东西。
+
+============
+使用配置文件
+============
+
+使用 ConfigParser ::
+
+    conf_file = 'conf.ini'
+    conf_parser = ConfigParser.ConfigParser()
+    conf_parser.read(conf_file)
+    conf = {key: value for key, value in conf_parser.items(section_name)}
 
