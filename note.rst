@@ -2,11 +2,34 @@
 随手记
 ======
 
+PyQt
+====
+
 pyqt4 示例所在目录::
 
     /usr/share/doc/python-qt4-doc/examples/sql
 
-替换所有 python 文件内容示例::
+pyqt5
+-----
+安装::
+
+    sudo apt-get insatll python3-pyqt5
+    sudo apt-get insatll pyqt5-doc, pyqt5-examples
+
+示例所在目录::
+
+    /usr/share/doc/pyqt5-examples/
+
+运行 python3 时使用命令::
+
+    python3 xxx.py 或者 python3.4 xxx.py
+
+
+
+替换所有 python 文件内容
+========================
+
+示例::
 
     find . -name "*.py" | xargs sed -i "s/PySide/PyQt4/g"
 
