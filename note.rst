@@ -102,4 +102,12 @@ Write to brickset.com ,and my project name is LM_LEGO.
     sudo apt-get install android-tools-adb
 
 
+install nikola
+==============
 
+nikola 是 Python 系的静态博客系统，安装方法如下:: 
+
+    sudo apt-get install libjpeg-dev
+    sudo apt-get install python3.4-dev
+    mkvirtualenv -p python3.4 nikola
+    pip install --upgrade "Nikola[extras]"

@@ -21,6 +21,7 @@ Welcome to Dormouse's Blog!
    pdf
    sphinx_cheet_sheet
    sqlite
+   sublime_text3
    vim
    virtualenv
 

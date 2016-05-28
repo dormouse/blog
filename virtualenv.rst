@@ -33,6 +33,10 @@ Creat virtualenv::
     cd project
     mkvirtualenv legohole
 
+    or with version:
+
+    mkvirtualenv -p python3.4 nikola
+
 You should see something like::
 
     (legohole)dormouse@dormouse ~ $ 
