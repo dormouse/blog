@@ -5,7 +5,23 @@
 PyQt
 ====
 
-pyqt4 示例所在目录::
+Install pyqt4 on MAC
+====================
+
+use brew::
+
+    brew install qt
+    brew install sip
+    brew install pyqt
+
+use QtDesigner::
+
+    cd /usr/local/Cellar/qt/4.8.7_2
+    open Designer.app
+    该目录下还有其他APP
+
+
+linux 下 pyqt4 示例所在目录::
 
     /usr/share/doc/python-qt4-doc/examples/sql
 
@@ -105,7 +121,7 @@ Write to brickset.com ,and my project name is LM_LEGO.
 install nikola
 ==============
 
-nikola 是 Python 系的静态博客系统，安装方法如下:: 
+nikola 是 Python 系的静态博客系统，安装方法如下::
 
     sudo apt-get install libjpeg-dev
     sudo apt-get install python3.4-dev
