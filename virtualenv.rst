@@ -6,7 +6,7 @@
 
 开始日期:2012年4月25日
 
-最后修改:2016年4月30日
+最后修改:2016年11月11日
 
 使用 virtualenvwrapper
 =======================
@@ -14,6 +14,8 @@
 Install pip and virtualenvwrapper::
 
     sudo apt-get install python-pip
+    sudo apt-get install virtualenvwrapper
+    or:
     sudo pip install virtualenvwrapper
 
 Add flowing to ~/.bashrc::
