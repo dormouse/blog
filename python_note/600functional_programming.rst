@@ -75,3 +75,6 @@ sequence is empty::
     In [9]: reduce(lambda x, y: x + y, foo)
     Out[9]: 139
 
+reduce 函数在 python3 中已经不属于 build-in 了，而是在 functools 模块下，
+如需使用，需要从functools模块中引入。
+
