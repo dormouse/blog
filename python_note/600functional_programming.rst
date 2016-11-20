@@ -21,9 +21,9 @@ filter
 
 filter(function or None, sequence) -> list, tuple, or string
 
-Return those items of sequence for which function(item) is true.  If
-function is None, return the items that are true.  If sequence is a tuple
-or string, return the same type, else return a list::
+返回序列中 function(item) 为 true 的项目。如果 fuction 为 None ，那么就返回
+测试结果为 true 的项目。如果序列的类型为 tuple 或者 string ，那么返回相同的
+类型；其他的则返回 list::
 
     In [4]: foo = [2, 18, 9, 22, 17, 24, 8, 12, 27]
 
@@ -35,23 +35,21 @@ map
 
 map(function, sequence[, sequence, ...]) -> list
     
-Return a list of the results of applying the function to the items of the
-argument sequence(s)::
+返回一个 list ，其内容为把序列中的每一个值作为函数的参数得到的函数的返回值::
 
     In [6]: map(lambda x: x * 2 + 10, foo)
     Out[6]: [14, 46, 28, 54, 44, 58, 26, 34, 64]
 
-If more than one sequence is given, the function is called with an argument
-list consisting of the corresponding item of each sequence, substituting
-None for missing values when not all sequences have the same length::
+如果使用序列，那么函数会把每个序列相应的值作为参数，序列长度不够的则会以
+None 来补充::
 
-    In [7]: foo1 = [1]*9
+    In [1]: lista = [1, 2, 3, 4, 5]
+    In [2]: listb = [1] * 4
+    In [3]: map(lambda x,y:"%s|%s"%(x,y), lista, listb)
+    Out[3]: ['1|1', '2|1', '3|1', '4|1', '5|None']
 
-    In [8]: map(lambda x,y:x+y, foo, foo1)
-    Out[8]: [3, 19, 10, 23, 18, 25, 9, 13, 28]
-
-If the function is None, return a list of the items of the sequence
-(or a list of tuples if more than one sequence)::
+如果 function 为 None ，那么返回一个由序列项目组成的 list （如果是多个序列，
+那么返回一个 list ， 其每个项目为由每个序列相应项目组成的 tuple::
 
     In [9]: nfc = ["Packers", "49ers"]
 
