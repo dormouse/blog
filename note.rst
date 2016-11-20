@@ -6,22 +6,22 @@ PyQt
 ====
 
 Install pyqt4 on MAC
-====================
+--------------------
 
-use brew::
+Use brew::
 
     brew install qt
     brew install sip
     brew install pyqt
 
-use QtDesigner::
+Use QtDesigner::
 
     cd /usr/local/Cellar/qt/4.8.7_2
     open Designer.app
     该目录下还有其他APP
 
 
-linux 下 pyqt4 示例所在目录::
+Linux 下 pyqt4 示例所在目录::
 
     /usr/share/doc/python-qt4-doc/examples/sql
 
@@ -118,7 +118,7 @@ Write to brickset.com ,and my project name is LM_LEGO.
     sudo apt-get install android-tools-adb
 
 
-install nikola
+Install nikola
 ==============
 
 nikola 是 Python 系的静态博客系统，安装方法如下::
