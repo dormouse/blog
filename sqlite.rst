@@ -9,6 +9,17 @@ Sqlite 笔记
 :author: Dormouse Young
 :summary: notes of sqlite
 
+基本用法
+========
+
+::
+
+    import sqlite3 as sqlite
+    cx = sqlite.connect("some_db.sqlite")
+    cu = cx.cursor()
+    cu.execute('select * from some_table')
+    cu.fetchall()
+
 
 常用查询函数
 ============
