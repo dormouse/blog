@@ -1,12 +1,37 @@
 Linux 软件安装
 **************
 
+:date: 2015年 06月 13日 星期六 10:58:22 CST
+:modify: 2016年 11月 29日 星期二 09:33:31 CST
 
-=========================================
+=========================
+jupyter(ipython) notebook
+=========================
+
+Install
+=======
+
+::
+
+    sudo apt-get install build-essential
+    sudo apt-get install python3-dev  # for python 3.x
+    sudo apt-get install python-dev  # for python 2.x
+    sudo pip3 install ipython
+    sudo pip3 install jupyter
+
+===
+pip
+===
+
+用法
+====
+
+忽略现有的包，全新安装::
+
+    sudo pip3 install jupyter -I
+    
 使用国内镜像源来加速 python pypi 包的安装  
 =========================================
-
-:date: 2015年 06月 13日 星期六 10:58:22 CST
 
 pipy国内镜像目前有：
 
