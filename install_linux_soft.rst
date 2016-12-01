@@ -18,6 +18,12 @@ Install
     sudo apt-get install python-dev  # for python 2.x
     sudo pip3 install ipython
     sudo pip3 install jupyter
+    sudo apt-get install pandoc # for reST output
+
+转换为其他格式::
+
+    jupyter nbconvert --to html Untitled4.ipynb
+
 
 ===
 pip

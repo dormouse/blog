@@ -20,8 +20,10 @@ Welcome to Dormouse's Blog!
    pandas
    pdf
    sphinx_cheet_sheet
+   sqlalchemy_note
    sqlite
    sublime_text3
+   urlparse
    vim
    virtualenv
 
