@@ -2,6 +2,33 @@
 随手记
 ======
 
+后台运行程序
+============
+
+后台运行::
+
+    python some.py &
+
+查看后台运行的程序::
+
+    jobs
+
+输出如下::
+
+    [1]+ Running python some.py &
+
+停止后台运行的程序， num 是后台运行程度的编号，如上面的 1 ::
+
+    kill %num
+
+
+修改 ubuntu ip
+==============
+Ubuntu 网络配置文件为::
+
+   /etc/network/interfaces
+
+
 PyQt
 ====
 
