@@ -1,16 +1,17 @@
 .. title: Use Sublime Text3
 .. slug: use-sublime-text3
 .. date: 2016-05-28 16:49:21 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
+.. tags:
+.. category:
+.. link:
+.. description:
 .. type: text
 
 
 ==================
 使用 sublime text3
 ==================
+
 
 安装 Package Control
 ====================
@@ -26,9 +27,16 @@ https://packagecontrol.io/installation
 ``Package Contorl: Install Package`` (简写为 ``ip`` )，回车执行，
 进入插件的搜索窗口，查找选择到需要的插件后，回车即可进行安装，
 安装状态在最下面的状态栏内会有文字提示。
-    
+
+
+安装常用 Package
+================
+
 安装 Anaconda
-=============
+-------------
+
+Usage: http://damnwidget.github.io/anaconda/IDE/
+
 
 我的配置
 ========
@@ -72,3 +80,14 @@ https://packagecontrol.io/installation
         "translate_tabs_to_spaces": true,
         "trim_trailing_white_space_on_save": true
     }
+
+Use Fcitx in Sublime Text 3
+===========================
+
+Sublime text 3 is not support fcitx, so patch it::
+
+    $ wget https://github.com/yuan3y/sublime_zh_patch/archive/patch-1.zip
+    $ unzip patch-1.zip
+    $ cd sublime_zh_patch-patch-1/
+    $ sudo ./setup.sh
+    $ sudo apt-get install fcitx fcitx-config-gtk fcitx-googlepinyin fcitx-module-cloudpinyin fcitx-table-wubi

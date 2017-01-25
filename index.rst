@@ -15,6 +15,7 @@ Welcome to Dormouse's Blog!
    compressor
    django
    git
+   haskell-note
    install_linux_soft
    note
    pandas
@@ -51,6 +52,7 @@ Lego 笔记
 .. toctree::
    :maxdepth: 1
 
+   2017
    2016
    2015
    2014

@@ -154,3 +154,7 @@ nikola 是 Python 系的静态博客系统，安装方法如下::
     sudo apt-get install python3.4-dev
     mkvirtualenv -p python3.4 nikola
     pip install --upgrade "Nikola[extras]"
+
+在线任务管理工具
+================
+ - `Zenkit <https://zenkit.com>`_ ，免費方案下每個專案可放入最多 2000 個項目、有 1GB 空間，並且可以和五個成員共享。

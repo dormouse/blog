@@ -42,6 +42,11 @@ Haskell 笔记
 
     Prelude Data.Ratio> :unset +t
 
+Haskell 给每个操作符一个数值型的优先级值，从 1 表示最低优先级，
+到9表示最高优先级。高优先级的操作符先于低优先级的操作符被应用
+(apply)。在 ghci 中我们可以用命令 ``:info`` 来查看某个操作符的
+优先级。
+
 
 列表
 ====
@@ -167,7 +172,7 @@ include all size files within.
 Auto Github Push
 ================
 
-Modify Makefile.Add::
+Modify Makefile. Add::
 
     GITHUB_DIR=~/project/dormouse.github.io/
 
@@ -218,22 +223,22 @@ You will see blow::
     Please answer the following questions so this script can generate the files
     needed by Pelican.
 
-        
-    > Where do you want to create your new web site? [.] 
+
+    > Where do you want to create your new web site? [.]
     > What will be the title of this web site? Dormouse Hole
     > Who will be the author of this web site? Dormouse.Young
     > What will be the default language of this web site? [en] zh
-    > Do you want to specify a URL prefix? e.g., http://example.com   (Y/n) 
+    > Do you want to specify a URL prefix? e.g., http://example.com   (Y/n)
     > What is your URL prefix? (see above example; no trailing slash) http://http://dormouse.github.io
-    > Do you want to enable article pagination? (Y/n) 
-    > How many articles per page do you want? [10] 
-    > Do you want to generate a Fabfile/Makefile to automate generation and publishing? (Y/n) 
-    > Do you want an auto-reload & simpleHTTP script to assist with theme and site development? (Y/n) 
-    > Do you want to upload your website using FTP? (y/N) 
-    > Do you want to upload your website using SSH? (y/N) 
-    > Do you want to upload your website using Dropbox? (y/N) 
-    > Do you want to upload your website using S3? (y/N) 
-    > Do you want to upload your website using Rackspace Cloud Files? (y/N) 
+    > Do you want to enable article pagination? (Y/n)
+    > How many articles per page do you want? [10]
+    > Do you want to generate a Fabfile/Makefile to automate generation and publishing? (Y/n)
+    > Do you want an auto-reload & simpleHTTP script to assist with theme and site development? (Y/n)
+    > Do you want to upload your website using FTP? (y/N)
+    > Do you want to upload your website using SSH? (y/N)
+    > Do you want to upload your website using Dropbox? (y/N)
+    > Do you want to upload your website using S3? (y/N)
+    > Do you want to upload your website using Rackspace Cloud Files? (y/N)
     > Do you want to upload your website using GitHub Pages? (y/N) y
     > Is this your personal page (username.github.io)? (y/N) y
     Done. Your new project is available at /home/dormouse/project/pelican_blog

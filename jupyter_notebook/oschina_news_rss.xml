@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+    <title>开源中国社区最新新闻</title> 
+    <link>http://www.oschina.net/?from=rss</link> 
+    <description>开源中国社区——找到您想要的开源软件，分享和交流</description>
+    <language>zh-CN</language>
+    <pubDate>Tue, 20 Dec 2016 11:34:34 +0800</pubDate>    
+	<image>
+		<link>http://www.oschina.net</link>
+		<url>http://www.oschina.net/img/logo.gif</url>
+		<title>OsChina.NET</title>
+	</image>
+	<item>
+        <title>Jmr 1.0.0 发布，专注于代码生成的 Eclipse 插件</title>
+        <link>https://www.oschina.net/news/80195/jmr-1-0-0</link>
+        <category>软件更新新闻</category>
+        <description><![CDATA[<p><strong>Jmr</strong>是一款免费的，基于模型驱动开发，根据自己的项目和框架编写模板，生成代码的Eclipse插件。</p><p><strong>目标：</strong>让规律、重复的代码，实现自动化。</p><p><strong>模板：</strong>模板类似Jsp语法，学习成本低，再复杂的代码也能够生成。专属智能的模板编辑器，强大的标签支持。</p><p><img data-cke-saved-src="https://static.oschina.net/uploads/space/2016/1220/111621_xKO9_3155143.png" src="https://static.oschina.net/uploads/space/2016/1220/111621_xKO9_3155143.png" alt="" width="650" height="378" border="0" hspace="0" vspace="0" title="" style="width: 650px; height: 378px;"/></p><p><strong>通用：</strong>任何语言的代码，测试用例、文档均可生成。</p><p><strong>建模：</strong>可以把数据库、Java类、Xml转换成模型，也可以使用自定义Action。模型和变量会传给模板用于生成。</p><p><img data-cke-saved-src="https://static.oschina.net/uploads/space/2016/1220/111932_xMnv_3155143.png" src="https://static.oschina.net/uploads/space/2016/1220/111932_xMnv_3155143.png" alt="" width="636" height="448" border="0" hspace="0" vspace="0" title="" style="width: 636px; height: 448px;"/></p><p><strong>任务：</strong>完善的任务管理（根据自己的项目需求配置任务，如下一个典型的Web项目）。</p><p><img data-cke-saved-src="https://static.oschina.net/uploads/space/2016/1220/112421_qkir_3155143.png" src="https://static.oschina.net/uploads/space/2016/1220/112421_qkir_3155143.png" alt="" width="650" height="447" border="0" hspace="0" vspace="0" title="" style="width: 650px; height: 447px;"/></p><p><strong>独立：</strong>任何项目、框架都可以集成，不需要改变项目结构（如下，去除Jmr部分，完全不影响项目）。</p><p><img data-cke-saved-src="https://static.oschina.net/uploads/space/2016/1220/112655_0HHd_3155143.png" src="https://static.oschina.net/uploads/space/2016/1220/112655_0HHd_3155143.png" alt=""/></p>]]></description>
+        <pubDate>Tue, 20 Dec 2016 11:34:34 +0800</pubDate>
+        <guid>https://www.oschina.net/news/80195/jmr-1-0-0</guid>
+    </item>
+	<item>
+        <title>易贝云网站开发系统 v1.1.1 发布</title>
+        <link>https://www.oschina.net/news/80194/eb-v-1-1-1</link>
+        <category>软件更新新闻</category>
+        <description><![CDATA[<p>基于tp5最新版的力作，易贝云网站管理系统1.0隆重发布！</p><p>易贝云网站管理系统是一套模块化开发的组件式网站管理系统，能更好的适应您的网站需要！</p><p>安装要求：</p><ul class=" list-paddingleft-2"><li><p>php版本不低于5.4</p></li><li><p>空间不低于100MB</p></li></ul><p>系统主要有以下特点：</p><h3>一、模块化</h3><p>模块化开发，各个功能模块一件安装，使用方便，例如：</p><p>企业站&nbsp;= 文章系统 + 留言板 + 友情链接</p><p>新闻站&nbsp;= 文章系统 + 评论系统 + 友情链接</p><p>本地门户&nbsp;= 文章模块 + 分类信息 + 论坛 + 评论系统 + 友情链接 + 一些互动模块 。。。</p><p>以及更多。。</p><p>我们的应用商店会发布各类模块供大家使用，同时，还支持开发者提交其开发的应用。</p><h3>二、开发方便</h3><p>易贝云网站管理系统不仅仅有优质的已有模块，还提供开发助手，开发更加方便明了，同时，系统规避高耦合模式开发，您开发的模块完全可以不依赖系统，系统本身只是提供一些便捷的开发助手，帮您开发更加快速，您完全可以不用以下我们认为会对开发带来便捷的助手模块：</p><ul class=" list-paddingleft-2"><li><p>配置管理</p></li><li><p>表单生成</p></li><li><p>打包</p></li></ul><p>这些开发助手您只需要在后台简单的填写表单即可配置完成</p><h3>三、在线更新</h3><p>为了免除使用者手动下载更新包覆盖安装的烦恼，我们的系统内置在线更新，只需动动鼠标即可完成系统更新！</p><h3>四、下载地址</h3><p><a data-cke-saved-href="https://git.oschina.net/hetangyuese/ebcms_yun" target="_blank" href="https://git.oschina.net/hetangyuese/ebcms_yun">https://git.oschina.net/hetangyuese/ebcms_yun</a></p>]]></description>
+        <pubDate>Tue, 20 Dec 2016 11:02:55 +0800</pubDate>
+        <guid>https://www.oschina.net/news/80194/eb-v-1-1-1</guid>
+    </item>
+	<item>
+        <title>ThinkPHP V5.0.4 版本发布——喜迎双“旦”</title>
+        <link>https://www.oschina.net/news/80193/thinkphp-v-5-0-4</link>
+        <category>软件更新新闻</category>
+        <description><![CDATA[<h3>喜迎双旦，ThinkPHP V5.0.4版本发布^_^</h3><p>ThinkPHP V5.0——为API开发而设计的高性能框架<br/><br/>ThinkPHP5.0版本是一个颠覆和重构版本，官方团队历时十月，倾注了大量的时间和精力，采用全新的架构思想，引入了更多的PHP新特性，优化了核心，减少了依赖，实现了真正的惰性加载，支持composer，并针对API开发做了大量的优化，包括路由、日志、异常、模型、数据库、模板引擎和验证等模块都已经重构，不适合原有3.2项目的升级，请慎重考虑商业项目升级，但绝对是新项目的首选（无论是WEB还是API开发）。<br/><br/><a data-cke-saved-href="http://www.kancloud.cn/special/thinkphp5_quickstart" href="http://www.kancloud.cn/special/thinkphp5_quickstart" target="_blank">官方快速入门系列教程</a>&nbsp;新增了控制器从入门到精通<br/><br/>V5.0.4版本比5.0.3更稳定和规范，并增加了一些新的特性。<br/></p><p><strong>主要调整</strong></p><p>关联模型重构并增加多态一对多关联；<br/>数据库支持一个字段多次调用不同查询条件；<br/>增加数据库CURD事件支持；<br/>路由到类和控制器的方法支持传入额外参数；<br/>支持全局模板变量赋值；<br/>模型支持独立设置查询数据集对象；<br/>日志针对命令行及调试做出改进；<br/>改进Hook类的行为方法调用；<br/></p><p><strong>升级指导</strong></p><p>从`V5.0.3`升级到`V5.0.4`需要注意如下事项：<br/><br/>模型的关联定义方法必须采用驼峰法（小写字母打头）命名规范，但关联调用可以支持驼峰和小写方式。<br/><br/>行为类的方法必须使用驼峰法命名，如果你使用了钩子位作为行为执行方法入口，请修改为驼峰法，例如 `app_init`钩子位对应的行为方法名应该是 `appInit`。<br/><br/>如果你使用了Query类的`fetchClass`方法自定义数据集返回对象的话，请改为在模型中设置`resultSetType`属性，数据库类不再支持自定义查询数据集对象（只支持数组和系统的`think\Collection`数据集对象）<br/></p><p><strong>主要更新如下：</strong><br/></p><p><strong>[请求和路由]</strong></p><p>请求缓存支持模块单独开启<br/>Request类post方法支持获取json方式的请求数据<br/>路由到类的方法和控制器方法 支持传入额外参数，用于方法的参数<br/>改进控制器自动搜索的目录规范<br/>改进请求缓存<br/>改进自动参数绑定<br/>修正路由的请求缓存设置<br/>改进Route类name方法<br/></p><p><strong>[数据库和模型]</strong></p><p>增加数据库查询（CURD）事件<br/>改进多表更新的字段不存在问题<br/>改进Model类的useGlobalScope方法<br/>修正子查询作为表名查询的问题<br/>Model类增加resultSetType属性 用于指定模型查询的数据集对象（默认为空返回数组）<br/>Model类增加toCollection方法（自动调用）<br/>关联模型架构调整<br/>改进预载入with方法的参数支持小写和下划线定义<br/>修正关联多对多一处错误<br/>改进关联多对多的查询<br/>关联模型支持多态一对多关联<br/>预载入关联查询支持关联对象属性绑定到当前模型<br/>支持追加关联对象的属性到当前模型数据<br/>一对一关联预载入支持JOIN和IN两种方式（默认为JOIN）<br/>改进多对多查询<br/>改进模型更新的数据变化比较规则<br/>查询支持一个字段多次查询条件<br/>改进sql日志的sql语句<br/>修正join自身表的别名覆盖问题<br/>模型类的connection属性和数据库默认配置合并<br/>改进in和between查询条件的自动参数绑定<br/>改进Query类对数据集对象以及关联字段排序的支持<br/>增加模型的快捷事件方法<br/>改进Query类的getTableInfo方法缓存读取<br/>model类的saveAll方法支持调用allowField方法进行字段过滤<br/>修正关联查询的时候 whereTime方法的bug<br/>改进Query类的聚合查询<br/>table方法支持字符串方式的子查询<br/>修正count avg方法使用fetchsql无法正确返回sql的问题<br/></p><p><strong>[其它]</strong></p><p>改进命令行下的日志记录<br/>部署模式下简化日志记录<br/>增加debug日志类型 仅限调试模式记录<br/>改进Template类parseTemplateFile方法<br/>改进Validate类的getRuleMsg方法<br/>控制器的error方法在AJAX请求默认返回url为空<br/>Validate类架构方法增加field参数 用于设置验证字段的描述<br/>改进App类invokeMethod方法对架构函数依赖注入的支持<br/>增加RedirectResponse的restore方法返回值<br/>View类增加share静态方法 用于静态赋值模板变量<br/>验证类增加hasScene方法判断是否存在某个场景的验证配置<br/>修正redis和session驱动的destroy方法返回值<br/>空操作方法的参数传入去掉操作方法后缀<br/>在控制器中调用request和view增加类型提示<br/>改进input助手函数支持多维数据获取<br/>Cache类增加pull和remember方法<br/>改进验证类的confirm验证规则 支持自动规则识别<br/>改进验证类的错误信息定义<br/>增加Validate类自定义验证错误信息的替换规则<br/>Cookie类增加forever方法用于永久保存<br/>模板渲染支持从视图根目录读取模板<br/>改进Hook类的exec方法<br/></p><p><strong>[调整]</strong></p><p>Db类查询不再支持设置自定义数据集对象<br/>废除Query类的fetchClass方法<br/>控制器的error方法在AJAX请求默认返回的url为空<br/>关联方法定义不支持使用小写下划线，必须使用驼峰法<br/>行为类的方法必须使用驼峰法命名<br/><br/><strong>[ 文档 ]</strong></p><p>官方开发手册已经同步更新到V5.0.4版本</p><h3>[&nbsp;<a data-cke-saved-href="http://www.kancloud.cn/manual/thinkphp5" href="http://www.kancloud.cn/manual/thinkphp5" target="_blank">5.0完全开发手册</a>&nbsp;|&nbsp;<a data-cke-saved-href="http://www.kancloud.cn/thinkphp/thinkphp5_quickstart" href="http://www.kancloud.cn/thinkphp/thinkphp5_quickstart" target="_blank">5.0快速入门</a>&nbsp;|&nbsp;<a data-cke-saved-href="http://www.kancloud.cn/thinkphp/route-master" href="http://www.kancloud.cn/thinkphp/route-master" target="_blank">5.0路由完全指南</a>&nbsp;|&nbsp;<a data-cke-saved-href="http://www.kancloud.cn/thinkphp/controller-in-detail" href="http://www.kancloud.cn/thinkphp/controller-in-detail" target="_blank">5.0控制器从入门到精通</a>]</h3><p><strong>[ 下载地址 ]</strong></p><p>官网：<a data-cke-saved-href="http://www.thinkphp.cn/down/902.html" href="http://www.thinkphp.cn/down/902.html" target="_blank">核心包</a>&nbsp;</p><p>GitHub：&nbsp;<a data-cke-saved-href="https://github.com/top-think/think.git" href="https://github.com/top-think/think.git" target="_blank">https://github.com/top-think/think.git</a>&nbsp;（主要维护仓库 官方核心团队）</p><p>应用项目：https://git.oschina.net/liu21st/thinkphp5.git<br/>核心框架：https://git.oschina.net/liu21st/framework.git</p><p>Composer： composer create-project topthink/think tp5 --prefer-dist<br/><br/><strong>[ 扩展包 ]</strong></p><p>下面是针对ThinkPHP5的扩展包 需要使用Composer安装<br/>应用单元测试：<a data-cke-saved-href="https://github.com/top-think/think-testing.git" href="https://github.com/top-think/think-testing.git" target="_blank">https://github.com/top-think/think-testing.git</a><br/>验证码：<a data-cke-saved-href="https://github.com/top-think/think-captcha.git" href="https://github.com/top-think/think-captcha.git" target="_blank">https://github.com/top-think/think-captcha.git</a><br/>图像处理：<a data-cke-saved-href="https://github.com/top-think/think-image.git" href="https://github.com/top-think/think-image.git" target="_blank">https://github.com/top-think/think-image.git</a><br/>队列：<a data-cke-saved-href="https://github.com/top-think/think-queue.git" href="https://github.com/top-think/think-queue.git" target="_blank">https://github.com/top-think/think-queue.git</a><br/>MongoDb支持：<a data-cke-saved-href="https://github.com/top-think/think-mongo.git" href="https://github.com/top-think/think-mongo.git" target="_blank">https://github.com/top-think/think-mongo.git</a><br/>angular模板引擎：<a data-cke-saved-href="https://github.com/top-think/think-angular.git" href="https://github.com/top-think/think-angular.git" target="_blank">https://github.com/top-think/think-angular.git</a><br/>助手库：<a data-cke-saved-href="https://github.com/top-think/think-helper.git" href="https://github.com/top-think/think-helper.git" target="_blank">https://github.com/top-think/think-helper.git</a><br/>数据库迁移工具：<a data-cke-saved-href="https://github.com/top-think/think-migration.git" href="https://github.com/top-think/think-migration.git" target="_blank">https://github.com/top-think/think-migration.git</a><br/>Workerman：<a data-cke-saved-href="https://github.com/top-think/think-worker.git" href="https://github.com/top-think/think-worker.git" target="_blank">https://github.com/top-think/think-worker.git</a><br/><br/>通过支付宝捐赠支持我们：<br/><a data-cke-saved-href="http://www.thinkphp.cn/Uploads/editor/2016-07-08/577f852e40237.jpg" href="http://www.thinkphp.cn/Uploads/editor/2016-07-08/577f852e40237.jpg" target="_blank"><img data-cke-saved-src="http://www.thinkphp.cn/Uploads/editor/2016-07-08/577f852e40237.jpg" src="http://www.thinkphp.cn/Uploads/editor/2016-07-08/577f852e40237.jpg"/></a><br/>2016年12月20日<br/>ThinkPHP官方团队</p>]]></description>
+        <pubDate>Tue, 20 Dec 2016 10:54:29 +0800</pubDate>
+        <guid>https://www.oschina.net/news/80193/thinkphp-v-5-0-4</guid>
+    </item>
+	<item>
+        <title>PDF.NET SOD 5.6.0.1220 版本发布</title>
+        <link>https://www.oschina.net/news/80192/pdf-net-sod-5-6-0-1220</link>
+        <category>软件更新新闻</category>
+        <description><![CDATA[<p>PDF.NET SOD框架 5.6.0.1220 发布了，SOD 框架是 PDF.NET 开发框架下面的 “数据开发框架&quot;。<br/></p><p>更新内容如下：</p><p>1、修正自定义查询实体类 EntitySqlMap.config 分页问题</p><p>2、NUGET更新到5.6.0.1220</p><p>源码地址：</p><p>码云：<a data-cke-saved-href="http://git.oschina.net/dxzyx/SOD" href="http://git.oschina.net/dxzyx/SOD" target="_blank">http://git.oschina.net/dxzyx/SOD</a></p><p>Codeplex：<a data-cke-saved-href="http://pwmis.codeplex.com/SourceControl/latest" href="http://pwmis.codeplex.com/SourceControl/latest" target="_blank">http://pwmis.codeplex.com/SourceControl/latest</a></p><p>GITHUB：<a data-cke-saved-href="https://github.com/znlgis/PDF.NET-SOD" href="https://github.com/znlgis/PDF.NET-SOD" target="_blank">https://github.com/znlgis/PDF.NET-SOD</a></p><p>NUGET地址：<a data-cke-saved-href="https://www.nuget.org/profiles/znlgis" href="https://www.nuget.org/profiles/znlgis" target="_blank">https://www.nuget.org/profiles/znlgis</a></p>]]></description>
+        <pubDate>Tue, 20 Dec 2016 10:48:57 +0800</pubDate>
+        <guid>https://www.oschina.net/news/80192/pdf-net-sod-5-6-0-1220</guid>
+    </item>
+	<item>
+        <title>Joda-Time 2.9.7 发布，Java 日期时间处理库</title>
+        <link>https://www.oschina.net/news/80191/joda-time-2-9-7</link>
+        <category>软件更新新闻</category>
+        <description><![CDATA[<p>Joda-Time 2.9.7 发布了, Joda-Time 提供了一组 Java 类包用于处理包括 ISO8601 标准在内的 date 和 time。可以利用它把 JDK Date 和 Calendar 类完全替换掉，而且仍然能够提供很好的集成。</p><p>更新内容：</p><ul class=" list-paddingleft-2"><li><p>DateTimeZone 数据更新到 2016j 版本。<br/></p></li></ul><p>下载地址：</p><ul class=" list-paddingleft-2"><li><p><a data-cke-saved-href="https://github.com/JodaOrg/joda-time/releases/download/v2.9.7/joda-time-2.9.7-dist.tar.gz" href="https://github.com/JodaOrg/joda-time/releases/download/v2.9.7/joda-time-2.9.7-dist.tar.gz">joda-time-2.9.7-dist.tar.gz</a></p></li><li><p><a data-cke-saved-href="https://github.com/JodaOrg/joda-time/releases/download/v2.9.7/joda-time-2.9.7-dist.zip" href="https://github.com/JodaOrg/joda-time/releases/download/v2.9.7/joda-time-2.9.7-dist.zip">joda-time-2.9.7-dist.zip</a></p></li><li><p><a data-cke-saved-href="https://github.com/JodaOrg/joda-time/archive/v2.9.7.zip" href="https://github.com/JodaOrg/joda-time/archive/v2.9.7.zip">Source code&nbsp;(zip)</a></p></li><li><p><a data-cke-saved-href="https://github.com/JodaOrg/joda-time/archive/v2.9.7.tar.gz" href="https://github.com/JodaOrg/joda-time/archive/v2.9.7.tar.gz">Source code&nbsp;(tar.gz)</a></p></li></ul>]]></description>
+        <pubDate>Tue, 20 Dec 2016 10:14:28 +0800</pubDate>
+        <guid>https://www.oschina.net/news/80191/joda-time-2-9-7</guid>
+    </item>
+	<item>
+        <title>nginx-openresty-windows V1.11.7.1001 发布</title>
+        <link>https://www.oschina.net/news/80189/nginx-openresty-windows-1-11-7-1001</link>
+        <category>软件更新新闻</category>
+        <description><![CDATA[<p>最新版本<br/></p><p>版本号:1.11.7.1001<br/></p><p>修改日志:&nbsp;&nbsp;</p><p>Nginx：更新&nbsp;nginx&nbsp;到版本&nbsp;1.11.7&nbsp;<br/></p><p>32&nbsp;位下载地址:&nbsp;<img data-cke-saved-src="https://admin.oschina.net/js/ueditor/themes/default/images/spacer.gif" src="https://admin.oschina.net/js/ueditor/themes/default/images/spacer.gif"/><a href="http://pan.baidu.com/s/1bpvHYf9" target="_blank" textvalue="http://pan.baidu.com/s/1bpvHYf9">http://pan.baidu.com/s/1bpvHYf9</a></p><p>64&nbsp;位下载地址:&nbsp;<img data-cke-saved-src="https://admin.oschina.net/js/ueditor/themes/default/images/spacer.gif" src="https://admin.oschina.net/js/ueditor/themes/default/images/spacer.gif"/><a href="http://pan.baidu.com/s/1dEHcwiH" target="_blank" textvalue="http://pan.baidu.com/s/1dEHcwiH">http://pan.baidu.com/s/1dEHcwiH</a></p><p>发布时间:&nbsp;2016-12-19</p>]]></description>
+        <pubDate>Tue, 20 Dec 2016 09:29:41 +0800</pubDate>
+        <guid>https://www.oschina.net/news/80189/nginx-openresty-windows-1-11-7-1001</guid>
+    </item>
+	<item>
+        <title>JEPF 3.2.9 发布，我们的软件机床</title>
+        <link>https://www.oschina.net/news/80188/jepf-3-2-9</link>
+        <category>软件更新新闻</category>
+        <description><![CDATA[<p>JEPF新一代软件快速开发平台（Java Elephant Platform）是一款优秀的平台产品，它本着灵活、快捷开发、高性能、高协作性、高稳定性、高可用性、人性化的操作体验为设计宗旨历经2年研发成功适 用于搭建 OA、ERP、CRM、HR、HIS 等所有的企业信息管理系统（且适用于集团公司部署），同时利用平台提供丰富的接口与硬件进行信息通信从而帮助企业打造先进的物联网系统，产品一经投向市场 就得到广大客户的认可，他的诸多特性为软件企业自身提高软件质量、缩短开发周期、降低成本做出了巨额大的贡献，同时也间接的为下游用户获得更好的产品打下 坚实的基础。&nbsp;<br/></p><ul class=" list-paddingleft-2"><li><p>发布时间：2016-12-20</p></li><li><p>作者： 狂人社区</p></li><li><p>版本： v3.2.9</p></li><li><p>升级形式： 开发平台--安装升级包--单击按钮“更新至最新版本...”&nbsp;</p></li><li><p>注意：oracle的用户注意升级到3.2.9后继续升级oracle专属包(提高性能)</p></li></ul><p>修改Bug<br/></p><ul class=" list-paddingleft-2"><li><p>[B00182]工作流的分支节点选择人员窗口弹出，超出界面。</p></li><li><p>[B00183]当出现提示new的时候退出按钮就会换行错位&nbsp;</p></li><li><p>[B00184]MAC和LINUX机器发布工作流出现回撤问题例如节点(借款人\)</p></li><li><p>[B00185]日期控件已选数据后再选出错的问题</p></li><li><p>[B00186]会签流程-流程跟踪单击人员节点对话有问题</p></li><li><p>[B00187]流程提交后，点流程追踪进去，点短信，快递报错误。</p></li></ul><p><img data-cke-saved-src="https://static.oschina.net/uploads/space/2016/1220/091714_dJZp_2504738.png" src="https://static.oschina.net/uploads/space/2016/1220/091714_dJZp_2504738.png" alt=""/></p>]]></description>
+        <pubDate>Tue, 20 Dec 2016 09:17:42 +0800</pubDate>
+        <guid>https://www.oschina.net/news/80188/jepf-3-2-9</guid>
+    </item>
+	<item>
+        <title>网店系统 TinyShop V2.5 版正式发布</title>
+        <link>https://www.oschina.net/news/80187/tinyshop-v2-5</link>
+        <category>软件更新新闻</category>
+        <description><![CDATA[<p>TinyShopV2.5版，微信登录增添unionid，对以前版本已注册用户，会自动增补unionid，拆分缓存清理，多图片上传，优化系统更好的支持PHP7.X，精减系统。&nbsp;<br/></p><ol class=" list-paddingleft-2" style="list-style-type: decimal;"><li><p>后台多图片一次上传功能，提高图片添加效率。&nbsp;</p></li><li><p>微信增加unionid，方便不同方式登录识别同一账号，针对以前版本，已经注册的用户会自动增补unionid。&nbsp;</p></li><li><p>修复银联支付不能反馈已成功支付的问题。&nbsp;</p></li><li><p>修复商品在多个套餐下时，前台展示错乱问题。&nbsp;</p></li><li><p>修复PHP7.X版本中登录用户中心无限跳转的问题。&nbsp;</p></li><li><p>在增加第三方登录时，登录页加载慢的问题。&nbsp;</p></li><li><p>缓存清理拆分为数据缓存与模板缓存，清理更加方便。&nbsp;</p></li><li><p>调整新增加商品默认为已上架。&nbsp;</p></li><li><p>优化用户在未开启PHP的global时，微信不能正常支付问题。&nbsp;</p></li><li><p>去除protected/views/默认前台模板文件，存在必要性低，此目录下只存放默认的后台模板文件。&nbsp;</p></li><li><p>去除内核框架下部分老理的js框架，只留下一些必要与重要的框架。&nbsp;</p></li><li><p>去除内核框架下CSS框架引用的支持，CSS框架的引用放到应用中的模板中更为合理。&nbsp;</p></li></ol>]]></description>
+        <pubDate>Tue, 20 Dec 2016 08:59:30 +0800</pubDate>
+        <guid>https://www.oschina.net/news/80187/tinyshop-v2-5</guid>
+    </item>
+	<item>
+        <title>Guava v21.0-rc1，Google 的 Java 常用类库</title>
+        <link>https://www.oschina.net/news/80186/guava-21-0-rc1</link>
+        <category>软件更新新闻</category>
+        <description><![CDATA[<p>Guava v21.0-rc1 发布了。</p><p>Guava 中文是石榴的意思，该项目是 Google 的一个开源项目，包含许多 Google 核心的 Java 常用库。</p><p>详细更新内容请查看：<a href="https://github.com/google/guava/compare/v21.0-rc1...master" target="_self">https://github.com/google/guava/compare/v21.0-rc1...master</a></p><p>下载地址：</p><ul class=" list-paddingleft-2"><li><p><a href="https://github.com/google/guava/archive/v21.0-rc1.zip" rel="nofollow"><strong>Source code</strong> (zip)</a></p></li><li><p><a href="https://github.com/google/guava/archive/v21.0-rc1.tar.gz" rel="nofollow"><strong>Source code</strong> (tar.gz)</a></p></li></ul><p><br/></p>]]></description>
+        <pubDate>Tue, 20 Dec 2016 08:26:20 +0800</pubDate>
+        <guid>https://www.oschina.net/news/80186/guava-21-0-rc1</guid>
+    </item>
+	<item>
+        <title>OpenSSH 7.4 发布，不再支持 SSH-1 协议</title>
+        <link>https://www.oschina.net/news/80185/openssh-7-4</link>
+        <category>软件更新新闻</category>
+        <description><![CDATA[<p>OpenSSH 7.4&nbsp;发布了。<strong>OpenSSH</strong>（<strong>Open Secure Shell</strong>）是使用SSH透过计算机网络加密通讯的实现。它是取代由SSH Communications Security所提供的商用版本的开放源代码方案。</p><p>距离 OpenSSH 7.3 的发布，已经过去了四个半月，但 OpenSSH 7.4 主要修复了上一个版本中发现的 bug 和安全问题。需要指出的是，7.4 版本的各项底层变化，有可能会影响现有的配置。</p><p><strong>OpenSSH 7.4 移除了对 SSH v1 协议的支持，换成了更安全、高效的 SSH2，以及便携版本的 SSH（Secure Shell），提供了 SSH 加密的 SFTP 功能。</strong></p><p>它还移除了客户端上默认的 3des-cbc，且支持预鉴权压缩（pre-authentication compression）。其在发行说明中写到：</p><blockquote><p>早期压缩协议在 1990 年代似乎合理，但今时早已不同于往日，这对加密来说显然是个坏主意（参见针对甲骨文的多起 TLS 攻击）。预鉴权压缩支持已经被默认禁用了 10 多年，但客户端中仍然残存。</p></blockquote><p>新特性方面，受 PuTTY 应用程序的启发，OpenSSH 7.4 包括了添加了一个 ssh 命令的<strong>代理多路复用模式</strong>，以及一个&nbsp;<strong>sshd_config DisableForwaring</strong>&nbsp;选项，可拿来禁用 TCP、X11、隧道、代理、以及 Unix 域名的套接字转发。</p><p>此外，OpenSSH 7.4 添加了对<strong>“curve25519-sha256”到 sshd 和 ssh 命令</strong>&nbsp;的密钥交换方法的支持，提升了 SIGHUP 的处理操作，允许&nbsp;<strong>ClientAliveCountMax 和 ClientAliveInterval</strong>&nbsp;指令出现在 sshd_config Match 块中，以及在 AuthorizedPrincipalsCommand 中添加&nbsp;<strong>%-escapes</strong>&nbsp;。</p><p>最后，OpenSSH 7.4 还带来了字符串匹配的规化测试、字符串关头函数、地址匹配、改进密钥交换的 fuzzer harness、以及解决了 OpenSSH 7.3 中发现的诸多 bug 。</p><p>编译自：<a data-cke-saved-href="http://news.softpedia.com/news/openssh-7-4-removes-server-support-for-the-ssh-1-protocol-adds-new-features-511112.shtml" href="http://news.softpedia.com/news/openssh-7-4-removes-server-support-for-the-ssh-1-protocol-adds-new-features-511112.shtml" target="_self">Soft Pedia</a>&nbsp;, 来源：OpenSSH（<a data-cke-saved-href="https://www.openssh.com/txt/release-7.4" href="https://www.openssh.com/txt/release-7.4" target="_self">Release Note</a>）</p><p>来自：<a data-cke-saved-href="http://www.cnbeta.com/articles/568955.htm" target="_blank" href="http://www.cnbeta.com/articles/568955.htm">cnBeta.COM</a></p><p><span class="" tabindex="-1">官网地址：<a href="http://www.openssh.com/" _src="http://www.openssh.com/">http://www.openssh.com/</a></span></p>]]></description>
+        <pubDate>Tue, 20 Dec 2016 08:22:47 +0800</pubDate>
+        <guid>https://www.oschina.net/news/80185/openssh-7-4</guid>
+    </item>
+	<item>
+        <title>OpenCV 3.2.0 RC 发布，计算机视觉库</title>
+        <link>https://www.oschina.net/news/80184/opencv-3-2-0-rc</link>
+        <category>软件更新新闻</category>
+        <description><![CDATA[<p>OpenCV 3.2.0 RC 发布了。</p><p></p><p><span font-family:="" font-size:="" line-height:="" background-color:="">OpenCV 是 Intel 开源计算机视觉库。它由一系列 C 函数和少量 C++ 类构成，实现了图像处理和计算机视觉方面的很多通用算法。</span>OpenCV 拥有包括 300 多个C函数的跨平台的中、高层 API。它不依赖于其它的外部库——尽管也可以使用某些外部库。</p><p>暂无更新内容，你可点击查看<a href="https://github.com/opencv/opencv/releases/tag/3.2.0-rc" target="_self">发行日志</a>保持时刻关注。</p><p>下载地址：<br/></p><ul class=" list-paddingleft-2"><li><p><a href="https://github.com/opencv/opencv/archive/3.2.0-rc.zip" rel="nofollow"><strong>Source code</strong> (zip)</a></p></li><li><p><a href="https://github.com/opencv/opencv/archive/3.2.0-rc.tar.gz" rel="nofollow"><strong>Source code</strong> (tar.gz)</a></p></li></ul>]]></description>
+        <pubDate>Tue, 20 Dec 2016 08:15:05 +0800</pubDate>
+        <guid>https://www.oschina.net/news/80184/opencv-3-2-0-rc</guid>
+    </item>
+	<item>
+        <title>Samba 4.5.3 版本发布，主要 bug 修复</title>
+        <link>https://www.oschina.net/news/80183/samba-4-5-3</link>
+        <category>软件更新新闻</category>
+        <description><![CDATA[<p>Samba 4.5.3 版本发布了，作为一款开源、免费和跨平台的软件，Samba旨在取代UNIX平台上的SMB/CIFS网络协议，让GNU/Linux和Mac OS X系统能够与Windows网络分享通讯（比如访问Windows操作系统上的共享文件夹）。</p><p>更新内容：<br/></p><ul class=" list-paddingleft-2"><li><p>BUG 12409: CVE-2016-2123: Fix DNS vuln ZDI-CAN-3995.</p></li><li><p>BUG 12445: CVE-2016-2125: Don&#39;t send delegated credentials to all servers.</p></li><li><p>BUG 12446: CVE-2016-2126: auth/kerberos: Only allow known checksum types in&nbsp;</p><p>check_pac_checksum().</p></li></ul><p>下载地址：</p><ul class=" list-paddingleft-2"><li><p><a href="https://download.samba.org/pub/samba/stable/samba-4.5.3.tar.gz">Samba 4.5.3 (gzipped)</a></p></li></ul>]]></description>
+        <pubDate>Tue, 20 Dec 2016 08:07:57 +0800</pubDate>
+        <guid>https://www.oschina.net/news/80183/samba-4-5-3</guid>
+    </item>
+	<item>
+        <title>谷歌 2016 年发布的 7 款超酷的开源项目</title>
+        <link>https://my.oschina.net/u/2894582/blog/808533</link>
+        <category>综合新闻</category>
+        <description><![CDATA[<p>人工智能可以可以创作艺术和谱写曲子了，手机传感器也可以成为强大的研究实验室了，普通耳机也可以实现 VR 中的 3D 全景音效了……这些你还不知道？来看看谷歌的这些超酷的开源项目吧！</p>]]></description>
+        <pubDate>Tue, 20 Dec 2016 07:55:46 +0800</pubDate>
+        <guid>https://my.oschina.net/u/2894582/blog/808533</guid>
+    </item>
+	<item>
+        <title>Akka v2.4.15 和 2.4.16 发布，Actor 模型开发库</title>
+        <link>https://www.oschina.net/news/80181/akka-v2-4-15-and-2-4-16</link>
+        <category>软件更新新闻</category>
+        <description><![CDATA[<p>Akka v2.4.15 和 2.4.16 发布了。</p><p>Akka 是一个用 Scala 编写的库，用于简化编写容错的、高可伸缩性的 Java 和 Scala 的 Actor 模型应用。</p><p>暂无更新内容，相关链接：</p><ul class=" list-paddingleft-2"><li><p><a href="http://akka.io/news/" target="_self">http://akka.io/news/</a></p></li><li><p><a href="https://github.com/akka/akka/releases" target="_self">https://github.com/akka/akka/releases</a></p></li></ul><p>下载地址：<br/></p><p>v2.4.15</p><ul class=" list-paddingleft-2"><li><p><a href="https://github.com/akka/akka/archive/v2.4.15.zip" rel="nofollow"><strong>Source code</strong> (zip)</a></p></li><li><p><a href="https://github.com/akka/akka/archive/v2.4.15.tar.gz" rel="nofollow"><strong>Source code</strong> (tar.gz)</a></p></li></ul><p>v2.4.16</p><ul class=" list-paddingleft-2"><li><p><a href="https://github.com/akka/akka/archive/v2.4.16.zip" rel="nofollow"><strong>Source code</strong> (zip)</a></p></li><li><p><a href="https://github.com/akka/akka/archive/v2.4.16.tar.gz" rel="nofollow"><strong>Source code</strong> (tar.gz)</a></p></li></ul>]]></description>
+        <pubDate>Tue, 20 Dec 2016 07:55:12 +0800</pubDate>
+        <guid>https://www.oschina.net/news/80181/akka-v2-4-15-and-2-4-16</guid>
+    </item>
+	<item>
+        <title>每日一博 | 如何合理利用 Git 进行团队协作</title>
+        <link>https://my.oschina.net/qiangdada/blog/808527</link>
+        <category>综合新闻</category>
+        <description><![CDATA[<p>本文共分两篇，包括 Git的起步、Git的基础操作，及有关 Git 分支以及如何操作远程仓库进行团队协作。</p>]]></description>
+        <pubDate>Tue, 20 Dec 2016 07:54:32 +0800</pubDate>
+        <guid>https://my.oschina.net/qiangdada/blog/808527</guid>
+    </item>
+	<item>
+        <title>协作翻译 | 9 款极佳的 JavaScript 移动开发框架</title>
+        <link>https://www.oschina.net/translate/9-top-javascript-frameworks-for-mobile-app-develop</link>
+        <category>综合新闻</category>
+        <description><![CDATA[<p>从技术上来看，iOS，Android 和 Windows Phone 上的移动应用是使用不同的程序语言开发的，iOS 应用使用 Objective-C，Android 应用使用 Java，而 Windows Phone 应用使用 .NET. 。随着 JavaScript，CSS 和 HTML 知识技能的提升，相信你也可以构建一个超赞的移动应用。在这篇博客里，我们将会介绍一些极好的 JavaScript 移动应用程序开发框架。</p>]]></description>
+        <pubDate>Tue, 20 Dec 2016 07:50:42 +0800</pubDate>
+        <guid>https://www.oschina.net/translate/9-top-javascript-frameworks-for-mobile-app-develop</guid>
+    </item>
+	<item>
+        <title>Piwik 3.0.0 发布，网站访问统计系统	</title>
+        <link>https://www.oschina.net/news/80178/piwik-3-0-0</link>
+        <category>软件更新新闻</category>
+        <description><![CDATA[<p>网站访问统计系统&nbsp;Piwik 3.0.0 发布了。Piwik 是一套基于 PHP5+MySQL 技术构建的开源网站访问统计系统，前身是&nbsp;<a data-cke-saved-href="http://www.oschina.net/p/phpmyvisites" href="http://www.oschina.net/p/phpmyvisites">phpMyVisites</a>。Piwik 可以给你详细的统计信息，比如网页浏览人数，访问最多的页面，搜索引擎关键词等等流量分析功能。此外，它还采用了插件扩展及开放 API 架构，可以让用户根据自已的实际需求创建更多的功能。</p><p><span id="result_box" class="" tabindex="-1">Piwik 3.0.0 对 Piwik 做了许多改进，包括应用程序的全面重新设计，安全改进以及核心分析平台和核心插件API的几项重大改进。</span></p><p><span class="" tabindex="-1">详细改进内容：</span></p><ul class=" list-paddingleft-2"><li><p><span class="" tabindex="-1"><a href="http://piwik.org/blog/2016/09/piwik-3-development-update-1-new-ui-design-api-changes-release-date/">Piwik 3: New UI design, API changes</a></span></p></li><li><p><span class="" tabindex="-1"><a href="http://piwik.org/blog/2016/10/piwik-3-development-update-4-important-notes-breaking-changes/">Piwik 3: Important notes and breaking changes</a>.</span></p></li></ul><p><span class="" tabindex="-1">下载地址：<br/></span></p><ul class="release-downloads list-paddingleft-2"><li><p><a href="https://github.com/piwik/piwik/archive/3.0.0.zip" rel="nofollow">Source code&nbsp;(zip)</a></p></li><li><p><a href="https://github.com/piwik/piwik/archive/3.0.0.zip" rel="nofollow"></a></p><p><a href="https://github.com/piwik/piwik/archive/3.0.0.tar.gz" rel="nofollow">Source code&nbsp;(tar.gz)</a></p></li></ul>]]></description>
+        <pubDate>Tue, 20 Dec 2016 07:50:12 +0800</pubDate>
+        <guid>https://www.oschina.net/news/80178/piwik-3-0-0</guid>
+    </item>
+	<item>
+        <title>画风清奇！盘点各编程语言中有趣的开源项目</title>
+        <link>https://my.oschina.net/mrtudou/blog/808573</link>
+        <category>综合新闻</category>
+        <description><![CDATA[<p>生活不易，编程苦闷，不如“人为制造”点趣味，让日子过得更加有玩味感。本文参考了一些项目推荐，整理了一些编程语言中个人认为比较有意思，也相对实用的开源项目，每个语言列的都不多，感兴趣的有空可以试试看。</p>]]></description>
+        <pubDate>Tue, 20 Dec 2016 07:49:31 +0800</pubDate>
+        <guid>https://my.oschina.net/mrtudou/blog/808573</guid>
+    </item>
+	<item>
+        <title>OSChina 周二乱弹 ——没见过八宝山车神啊</title>
+        <link>https://my.oschina.net/xxiaobian/blog/808716</link>
+        <category>综合新闻</category>
+        <description><![CDATA[<p>古时候，口罩是个小小的道具，我在这头，强盗在那头；小时候，口罩是心中深深的恐惧，我在这头，针头在那头；再后来，口罩是2003惊恐的记忆，我在这头，SARS在那头；现如今，口罩是全民的防霾神器，我在这头，却看不清 谁在那头........</p>]]></description>
+        <pubDate>Tue, 20 Dec 2016 07:47:10 +0800</pubDate>
+        <guid>https://my.oschina.net/xxiaobian/blog/808716</guid>
+    </item>
+	<item>
+        <title>Tor 0.2.9.8 发布，新的稳定系列</title>
+        <link>https://www.oschina.net/news/80175/tor-0-2-9-8</link>
+        <category>软件更新新闻</category>
+        <description><![CDATA[<p>Tor 0.2.9.8 发布了。Tor 通过隐藏网址与你所使用的服务器的连接来保护隐私安全。</p><p>主要更新内容：</p><p>新系统要求：</p><ul class=" list-paddingleft-2"><li><p>When building with OpenSSL, Tor now requires version 1.0.1 or later.
+ OpenSSL 1.0.0 and earlier are no longer supported by the OpenSSL team, 
+and should not be used. Closes ticket <a target="_blank" href="https://bugs.torproject.org/20303">20303</a>.</p></li><li><p>Tor now requires Libevent version 2.0.10-stable or later. Older
+ versions of Libevent have less efficient backends for several 
+platforms, and lack the DNS code that we use for our server-side DNS 
+support. This implements ticket <a target="_blank" href="https://bugs.torproject.org/19554">19554</a>.</p></li><li><p>Tor now requires zlib version 1.2 or later, for security, efficiency, 
+and (eventually) gzip support. (Back when we started, zlib 1.1 and zlib 
+1.0 were still found in the wild. 1.2 was released in 2003. We recommend
+ the latest version.)
+ &nbsp;</p></li><li><p>........<br/></p></li></ul><p>完整内容，请<a href="https://blog.torproject.org/blog/tor-0298-released-finally-new-stable-series" target="_self">点击此处</a>查看。<br/></p><p>下载地址：</p><ul class="release-downloads list-paddingleft-2"><li><p><a href="https://github.com/torproject/tor/archive/tor-0.2.9.8.zip" rel="nofollow">Source code&nbsp;(zip)</a></p></li><li><p><a href="https://github.com/torproject/tor/archive/tor-0.2.9.8.zip" rel="nofollow"></a></p><p><a href="https://github.com/torproject/tor/archive/tor-0.2.9.8.tar.gz" rel="nofollow">Source code&nbsp;(tar.gz)</a></p></li></ul>]]></description>
+        <pubDate>Tue, 20 Dec 2016 07:43:59 +0800</pubDate>
+        <guid>https://www.oschina.net/news/80175/tor-0-2-9-8</guid>
+    </item>
+	<item>
+        <title>码云推荐 | 仿茄子快传的文件传输应用 KuaiChuan</title>
+        <link>https://git.oschina.net/mayubao2015/KuaiChuan</link>
+        <category>综合新闻</category>
+        <description><![CDATA[<p>KuaiChuan 是仿茄子快传的一款文件传输应用， 涉及到Socket通信，包括TCP，UDP通信。</p>]]></description>
+        <pubDate>Tue, 20 Dec 2016 07:43:19 +0800</pubDate>
+        <guid>https://git.oschina.net/mayubao2015/KuaiChuan</guid>
+    </item>
+	<item>
+        <title>WeMark —— 微信小程序 Markdown 渲染库</title>
+        <link>https://www.oschina.net/p/wemark</link>
+        <category>综合新闻</category>
+        <description><![CDATA[<p>本库可以实现在小程序下渲染 Markdown 内容，支持图片、表格在内的大部分 Markdown 特性。</p>]]></description>
+        <pubDate>Tue, 20 Dec 2016 07:42:17 +0800</pubDate>
+        <guid>https://www.oschina.net/p/wemark</guid>
+    </item>
+	<item>
+        <title>各编程语言开发者最常使用的按键，中了没?</title>
+        <link>https://www.oschina.net/news/80172/most-pressed-keys-and-programming-syntaxes</link>
+        <category>综合新闻</category>
+        <description><![CDATA[<p>网友 Mahdi Yusuf 在博客上发布了一篇有趣的话题：<a href="http://blog.mahdiyusuf.com/2016/11/12/most-pressed-keys-and-programming-syntaxes/" target="_blank">各编程语言最常使用的按键</a>。<span style="font-size: 10pt;">Mahdi Yusuf&nbsp;称自己时常会在不同的编程语言之间切换，想知道当处理不同的语法时会发生些什么。如今不敢说自己熟知哪种语言更具表现力或更快，但是却摸透了当使用不同的编程语言编写时，时常会按下什么键。</span></p><p>你可能会认为使用的变量名会改变结果，但是在大多数语言中，编程都有命名约定。可以假设变量名称有一个合理的扩展。Mahdi Yusuf 表示自己不提供结论，只是展示一些布局。</p><p><strong>Javascript</strong></p><p><img height="237" data-cke-saved-src="https://static.oschina.net/uploads/space/2016/1219/105822_YVTM_2896879.png" src="https://static.oschina.net/uploads/space/2016/1219/105822_YVTM_2896879.png" width="500"/></p><h4>Shell</h4><p><img height="233" data-cke-saved-src="https://static.oschina.net/uploads/space/2016/1219/105844_H67Z_2896879.png" src="https://static.oschina.net/uploads/space/2016/1219/105844_H67Z_2896879.png" width="500"/></p><h4>Java</h4><p><img height="228" data-cke-saved-src="https://static.oschina.net/uploads/space/2016/1219/105904_I3Pd_2896879.png" src="https://static.oschina.net/uploads/space/2016/1219/105904_I3Pd_2896879.png" width="500"/></p><h4>C</h4><p><img height="225" data-cke-saved-src="https://static.oschina.net/uploads/space/2016/1219/105945_mHMx_2896879.png" src="https://static.oschina.net/uploads/space/2016/1219/105945_mHMx_2896879.png" width="500"/></p><h4>C++</h4><p><img height="224" data-cke-saved-src="https://static.oschina.net/uploads/space/2016/1219/110001_AjhI_2896879.png" src="https://static.oschina.net/uploads/space/2016/1219/110001_AjhI_2896879.png" width="500"/></p><h4>Ruby</h4><p><img height="231" data-cke-saved-src="https://static.oschina.net/uploads/space/2016/1219/110017_vX44_2896879.png" src="https://static.oschina.net/uploads/space/2016/1219/110017_vX44_2896879.png" width="500"/></p><h4>Python</h4><p><img height="231" data-cke-saved-src="https://static.oschina.net/uploads/space/2016/1219/110031_ZqWC_2896879.png" src="https://static.oschina.net/uploads/space/2016/1219/110031_ZqWC_2896879.png" width="500"/></p><h4>PHP</h4><p><img height="232" data-cke-saved-src="https://static.oschina.net/uploads/space/2016/1219/110048_QUXg_2896879.png" src="https://static.oschina.net/uploads/space/2016/1219/110048_QUXg_2896879.png" width="500"/></p><h4>Perl</h4><p><img height="227" data-cke-saved-src="https://static.oschina.net/uploads/space/2016/1219/110103_idg8_2896879.png" src="https://static.oschina.net/uploads/space/2016/1219/110103_idg8_2896879.png" width="500"/></p><h4>ObjC</h4><p><img height="229" data-cke-saved-src="https://static.oschina.net/uploads/space/2016/1219/110118_JFLH_2896879.png" src="https://static.oschina.net/uploads/space/2016/1219/110118_JFLH_2896879.png" width="500"/></p><h4>Lisp</h4><p><img height="231" data-cke-saved-src="https://static.oschina.net/uploads/space/2016/1219/110133_qZVS_2896879.png" src="https://static.oschina.net/uploads/space/2016/1219/110133_qZVS_2896879.png" width="500"/></p>]]></description>
+        <pubDate>Tue, 20 Dec 2016 07:37:22 +0800</pubDate>
+        <guid>https://www.oschina.net/news/80172/most-pressed-keys-and-programming-syntaxes</guid>
+    </item>
+	<item>
+        <title>Kodi v17 “Krypton”Beta 7 最终版发布</title>
+        <link>https://www.oschina.net/news/80171/kodi-v17-krypton-beta7</link>
+        <category>软件更新新闻</category>
+        <description><![CDATA[<p>Kodi v17 “Krypton”Beta 7 发布了。</p><p>Kodi 17 在&nbsp;video playback, live TV and PVR/DVR, the music library, skinning 等方面投入了很多添加特性的工作。例如增加了新的皮肤以及默认触摸屏皮肤，分别叫Estuary和Estouchy。</p><p>Kodi(原名 XBMC) 是一款经典免费开源、跨平台且极其强大专业的多媒体影音中心软件播放器，包含了专业的影音内容管理以及解码播放功能一体，提供适合在电视/投影/大屏幕上显示的全屏界面，无线手机遥控操作方式，以及功能相当丰富的插件扩展。</p><p>更新内容：<br/></p><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p>Update Estuary and Estouchy skin with some bugfixes<br/></p></li><li><p>Enable IEC61937 audio passthrough support on Android for DTS-HD, 
+TrueHD, DTS:X and ATMOS in case the Android version supports this<br/></p></li><li><p>Fix PVR channel OSD display conditions<br/></p></li><li><p>Fix possible crash in PVR EPG<br/></p></li><li><p>Fix multiple selection in file browser<br/></p></li><li><p>Fix duplicate context menu for PVR recordings<br/></p></li><li><p>Fix wrong window size on OSX<br/></p></li><li><p>Fix problem on Windows that currently in use skins couldn’t be updated<br/></p></li><li><p>Further improvement of cmake build system<br/></p></li><li><p>Various other improvements and fixes</p></li></ul><p>完整更新内容，<a href="https://github.com/xbmc/xbmc/milestone/94?closed=1" target="_self">点击此处</a>查看。</p><p>下载地址：</p><ul class=" list-paddingleft-2"><li><p><a href="http://kodi.tv/download" target="_self">http://kodi.tv/download</a></p></li></ul>]]></description>
+        <pubDate>Tue, 20 Dec 2016 07:33:41 +0800</pubDate>
+        <guid>https://www.oschina.net/news/80171/kodi-v17-krypton-beta7</guid>
+    </item>
+	<item>
+        <title>Oracle 裁员后续，传中国 Solaris 开发团队被裁</title>
+        <link>https://www.oschina.net/news/80170/solaris-several-china-based-aolaris-groups-termination</link>
+        <category>综合新闻</category>
+        <description><![CDATA[<p>还记得在月初发布的“<a data-cke-saved-href="https://www.oschina.net/news/79592/solaris-being-canned-at-least-50-percent-of-teams-to-be-fired" href="https://www.oschina.net/news/79592/solaris-being-canned-at-least-50-percent-of-teams-to-be-fired" target="_blank">网曝 Solaris 系统被砍，开发团队将大半被解雇</a>”的消息吗？<a data-cke-saved-href="https://www.thelayoff.com/t/KTCW4qz" href="https://www.thelayoff.com/t/KTCW4qz" target="_blank">thelayoff</a>&nbsp;网站上一直有人员在更新该事件的进度，整理后大致如下：</p><ul class=" list-paddingleft-2"><li><p>确认：Solaris 12 已死。一些（不是全部）较新的进度将合并到明年的 Solaris 11 &quot;dot releases&quot;。Solaris 以后的优先级：云支持，ZFS 和 ZFSSA ，以及其他战略。 对 OpenStack 的支持现在降级为“仅客户端”，Docker 在 Solaris 中可能永远不会实现。通用 Solaris 和基于 SPARC 的通用服务器系统现在是第二优先级。</p></li><li><p>确认：SPARC S7 芯片的后续产品（代号为“Sonoma Next”或“S8”）已被无限期搁置，目前基于 S7 的系统将继续销售。SPARC M8 和 M9 不受影响。</p></li><li><p>确认：Linux“two dot oh”（包括 SPARC 上的 Linux ）已由 Mssr Fowler 上个月提交，它将为所有 Oracle 公有云“control planes” 提供基础；Solaris“guest VMs”仍在计划中。</p></li><li><p>确认：系统团队后续优先事项：1）云 2）云 3）云 4）ZFSSA 5）Solaris 11 &quot;dot releases&quot; 6）更新简历</p></li><li><p>确认：系统团队四类员工：1）安全的 2）转岗到 Oracle 其他部门的 &nbsp;3）已经通知被裁的（例如几个中国的 Solaris 团队）; 4）还待定的（很可能在本周收到人力资源通知，下个月终止合同）。还有几个核心的 Solaris 工程师已经选择了自己离开 Oracle 。Oracle 系统部门的士气处于历史最低点。</p></li><li><p>仍然不清楚：员工解雇的比例。目前来看，50%的数字似乎有点高，裁员的总和加上减少和重新分配的总和可能接近。一些小组将被淘汰，也有一些小组现在不受影响。</p></li></ul><p>请注意，<strong>以上所有的消息由网友整理而来，官方尚未有相关回应</strong>，真实性有待考量。更多细节和真实性有待后续跟踪……</p>]]></description>
+        <pubDate>Tue, 20 Dec 2016 07:32:01 +0800</pubDate>
+        <guid>https://www.oschina.net/news/80170/solaris-several-china-based-aolaris-groups-termination</guid>
+    </item>
+	<item>
+        <title>滴滴 iOS 动态化方案计划于 2017 年初开源</title>
+        <link>https://www.oschina.net/news/80169/didi-dynamiccocoa-2017-open-source</link>
+        <category>综合新闻</category>
+        <description><![CDATA[<p>DynamicCocoa，是滴滴 App 架构组自研的 iOS 动态化方案，可以让现有的 Objective-C 代码转换生成中间代码（JS），下发后动态执行。滴滴客户端 App 架构团队表示正在积极准备相关事项，考虑于 2017 年初开源。</p><p>相比其他动态化方案，DynamicCocoa 优势在于：</p><ul class=" list-paddingleft-2"><li><p>使用原生技术栈：使用者完全不用接触到 JS 或任何中间代码，保持原生的 Objective-C 开发、调试方式不变</p></li><li><p>无需重写已有代码：已有 native 模块能很方便的变成动态化插件</p></li><li><p>语法支持完备性高：支持绝大多数日常开发中用到的语法，不用担心这不支持那不支持</p></li><li><p>支持 HotPatch<strong>：</strong>改完 bug 后直接从源码打出 patch，一站式解决动态化和热修复需求</p></li></ul><p><img data-cke-saved-src="https://static.oschina.net/uploads/space/2016/1220/072137_GWvx_2896879.png" src="https://static.oschina.net/uploads/space/2016/1220/072137_GWvx_2896879.png" style="width: 640px; height: 176px;"/><br/></p><p>DynamicCocoa 能支持绝大部分日常使用的 Objective-C / C 语法，挑几个特殊的比如：</p><ul class=" list-paddingleft-2"><li><p><strong>完整的 Class 定义</strong>：interface、category、class extension、method、property，最重要的是支持完备的 ivar 定义，保持和 native 完全一致的实例内存结构</p></li><li><p><strong>ARC</strong>：可以正确处理 strong、weak、unsafe_unretained 等对象的引用计数，对象的 ivar 也可以正确的释放</p></li><li><p><strong>C 函数</strong>：支持 C 函数的定义与 C 函数的调用、内联函数的调用</p></li><li><p><strong>可变参数</strong>：支持 C 与 OC 的可变参数方法的调用，如 NSLog</p></li><li><p><strong>struct</strong>：支持任意结构体的使用，无需额外处理</p></li><li><p><strong>block</strong>：支持创建和调用任意参数类型的 block</p></li><li><p><strong>其他 OC 特性：</strong>如 @selector、@protocol、@encode、for..in 等</p></li><li><p><strong>其他 C 特性</strong>：支持使用宏、static 变量、全局变量，取地址等</p></li></ul><p>举个栗子，你可以放心的使用下面的写法，并能被正确的动态执行：</p><p><img data-cke-saved-src="https://static.oschina.net/uploads/space/2016/1220/072159_RX12_2896879.png" src="https://static.oschina.net/uploads/space/2016/1220/072159_RX12_2896879.png" width="640" height="292"/><br/></p><p><strong>资源支持</strong><br/></p><p>一个功能模块，除了代码外，资源也是必不可少的，DynamicCocoa 的动态 bundle 支持：</p><ul class=" list-paddingleft-2"><li><p>xib 和 storyboard</p></li><li><p>xcassets</p></li><li><p>不放在 xcassets 里的图片资源</p></li><li><p>其他资源文件</p></li></ul><p>对于习惯于使用 IB 来开发 UI 的人来说，这将是一个很好的开发体验。</p><p><strong>工具链支持</strong><br/></p><p>滴滴使用 ruby 开发了一套命令行工具（ 类比为 xcodebuild ），大幅简化了配置开发环境、OC 代码转换、资源处理、打包的复杂度，它可以：</p><ul class=" list-paddingleft-2"><li><p><strong>解析 Xcode Project</strong>：读取工程编译选项，保持和 native 编译参数一致</p></li><li><p><strong>增量编译</strong>：缓存 JS 转换结果，只重新转换修改过的文件，大幅提高 build 速度</p></li><li><p><strong>链接</strong>：分析类依赖，将多个 JS 按依赖顺序合并，提高文件读取速度</p></li><li><p><strong>资源编译</strong>：编译用到的 xib、storyboard 和 xcassets</p></li><li><p><strong>打包</strong>：将 JS、资源等打包成 bundle</p></li></ul><p>对于开发者来说，就像 pod 命令一样，所有操作都可以通过这个命令完成。</p><p><strong>DynamicCocoa 带来的改变</strong><br/></p><p>DynamicCocoa 动态化技术给 App 开发带来了很大的想象空间：</p><ul class=" list-paddingleft-2"><li><p>低成本的动态化：无需额外学习，无需重写代码，可以快速的将已有模块动态化</p></li><li><p>协作方式：对于大团队，发布版本不必再彼此牵制</p></li><li><p>功能快速迭代：无需经过审核和 App Store 发版，像 h5 一样随发随上</p></li><li><p>App 瘦身：native 只需要留好插件入口，实现由网络下发，减少 App 体积</p></li><li><p>AB Test：不必局限于 native 埋进去的 AB 功能 Test，发版后能动态下发各种 Test</p></li></ul><p>相比跨端方案，也带来了一个新思路：iOS 和 Android 都保留 native 开发模式，用各自的方式将 native 代码直接动态化，保持各平台的差异性。</p><p>来源：<a data-cke-saved-href="http://mp.weixin.qq.com/s/qRW_akbU3TSd0SxpF3iQmQ" href="http://mp.weixin.qq.com/s/qRW_akbU3TSd0SxpF3iQmQ" target="_blank">DDApp</a></p>]]></description>
+        <pubDate>Tue, 20 Dec 2016 07:28:33 +0800</pubDate>
+        <guid>https://www.oschina.net/news/80169/didi-dynamiccocoa-2017-open-source</guid>
+    </item>
+	<item>
+        <title>Redisson 2.7.2 和 3.2.2 发布，Redis 客户端</title>
+        <link>https://www.oschina.net/news/80168/redisson-2-7-2-and-3-2-2</link>
+        <category>软件更新新闻</category>
+        <description><![CDATA[<p>Redisson 2.7.2 和 3.2.2 发布了，Redisson 是基于&nbsp;<a data-cke-saved-href="http://www.oschina.net/p/redis" href="http://www.oschina.net/p/redis" target="_blank">Redis</a>&nbsp;服务之上构建的分布式、可伸缩的 Java 数据结构，高级的 Redis 客户端。</p><p>此次发布的新版本暂未提供更新内容，如需了解你可查看<a href="https://github.com/redisson/redisson/blob/master/CHANGELOG.md" target="_self">CHANGELOG</a>，保持关注。<br/></p><p>下载地址：</p><p>2.7.2</p><ul class=" list-paddingleft-2"><li><p><a href="https://github.com/redisson/redisson/archive/redisson-2.7.2.zip" rel="nofollow"><strong>Source code</strong> (zip)</a></p></li><li><p><a href="https://github.com/redisson/redisson/archive/redisson-2.7.2.tar.gz" rel="nofollow"><strong>Source code</strong> (tar.gz)</a></p></li></ul><p>3.2.2</p><ul class=" list-paddingleft-2"><li><p><a href="https://github.com/redisson/redisson/archive/redisson-3.2.2.zip" rel="nofollow"><strong>Source code</strong> (zip)</a></p></li><li><p><a href="https://github.com/redisson/redisson/archive/redisson-3.2.2.tar.gz" rel="nofollow"><strong>Source code</strong> (tar.gz)</a></p></li></ul>]]></description>
+        <pubDate>Tue, 20 Dec 2016 07:28:29 +0800</pubDate>
+        <guid>https://www.oschina.net/news/80168/redisson-2-7-2-and-3-2-2</guid>
+    </item>
+	<item>
+        <title>DBeauty 2.8 发布，数据关系浏览器</title>
+        <link>https://www.oschina.net/news/80167/dbeauty-2-8</link>
+        <category>软件更新新闻</category>
+        <description><![CDATA[<p>DBeauty 2.8 发布了.</p><p>DBeauty 是一个面向关系的数据库浏览器，提供了进入数据以及行记录关系的窗口，基于外键的记录关系。</p><p>此次更新暂未提供更新内容。</p><p>下载地址：<a href="https://sourceforge.net/projects/dbeauty/files/" target="_self">https://sourceforge.net/projects/dbeauty/files/</a></p><p><br/></p><p><br/></p>]]></description>
+        <pubDate>Tue, 20 Dec 2016 07:21:43 +0800</pubDate>
+        <guid>https://www.oschina.net/news/80167/dbeauty-2-8</guid>
+    </item>
+	<item>
+        <title>倒计时！苹果即将和使用 HTTP 的应用说再见</title>
+        <link>https://www.oschina.net/news/80166/apple-2017-1-1-should-use-https</link>
+        <category>综合新闻</category>
+        <description><![CDATA[<p>早在 WWDC 15 时，苹果提出 ATS (App Transport Security) ，是其在推进网络通讯安全的一个重要方式。在&nbsp;iOS 9&nbsp;和&nbsp;OS X 10.11&nbsp;中，默认情况下非&nbsp;HTTPS&nbsp;的网络访问被禁止。当时，因为这样的推进影响面非常广，作为缓冲，可以在&nbsp;Info.plist&nbsp;中添加&nbsp;NSAppTransportSecurity 并且将NSAllowsArbitraryLoads&nbsp;设置为&nbsp;YES&nbsp;来禁用&nbsp;ATS。</p><p>不过，在 WWDC 16&nbsp;上，苹果表示将继续在&nbsp;iOS 10&nbsp;和&nbsp;macOS 10.12&nbsp;里收紧对普通&nbsp;HTTP&nbsp;的访问限制，并<a href="https://www.oschina.net/news/74351/apple-2016-should-use-https" target="_blank">宣布了一个最后期限</a>：到 2017 年 1 月 1 日 App Store 中的所有应用都必须启用 App Transport Security 安全功能。也就是说，还有十来天，苹果就要对 APP 开发者们关闭 HTTP 的大门了。</p><p><img alt="" height="361" data-cke-saved-src="https://static.oschina.net/uploads/space/2016/1219/144405_IAfb_2896879.png" src="https://static.oschina.net/uploads/space/2016/1219/144405_IAfb_2896879.png" width="650" border="0" hspace="0" vspace="0" title="" style="width: 650px; height: 361px;"/></p>]]></description>
+        <pubDate>Tue, 20 Dec 2016 07:19:12 +0800</pubDate>
+        <guid>https://www.oschina.net/news/80166/apple-2017-1-1-should-use-https</guid>
+    </item>
+	<item>
+        <title>重磅！腾讯大数据宣布开源第三代高性能计算平台 Angel </title>
+        <link>https://www.oschina.net/news/80165/tencent-open-source-angel-to-2017</link>
+        <category>综合新闻</category>
+        <description><![CDATA[<p>腾讯大数据 12 月18 日宣布推出面向机器学习的第三代高性能计算平台——Angel，并预计于 2017 年一季度开放其源代码。</p><p>Angel 是腾讯大数据部门第三代的计算平台，使用 Java 和 Scala 语言开发，面向机器学习的高性能分布式计算框架，由腾讯大数据与香港科技大学、北京大学联合研发。它采用参数服务器架构，解决了上一代框架的扩展性问题，支持数据并行及模型并行的计算模式，能支持十亿级别维度的模型训练。</p><p>Angel 还采用了多种业界最新技术和腾讯大数据自主研发技术，如 SSP（Stale synchronous Parallel）、异步分布式SGD、多线程参数共享模式 HogWild、网络带宽流量调度算法、计算和网络请求流水化、参数更新索引和训练数据预处理方案等。这些技术使Angel性能大幅提高，达到常见开源系统Spark的数倍到数十倍，能在千万到十亿级的特征维度条件下运行。</p><p>在系统易用性上，Angel 提供丰富的机器学习算法库及高度抽象的编程接口、数据计算和模型划分的自动方案及参数自适应配置，同时，用户能像使用MR、Spark 一样在 Angel 上编程，我们还建设了拖拽式的一体化的开发运营门户，屏蔽底层系统细节，降低用户使用门槛。另外，Angel 还支持深度学习，它支持 Caffe、TensorFlow 和 Torch 等业界主流的深度学习框架，为其提供计算加速。</p><p>自今年初在腾讯内部上线以来，Angel已应用于腾讯视频、腾讯社交广告及用户画像挖掘等精准推荐业务。Angel 将是腾讯大数据下一代的核心计算平台。</p><p>稿源：<a href="http://tech.qq.com/a/20161219/045211.htm" target="_blank">腾讯科技</a></p>]]></description>
+        <pubDate>Mon, 19 Dec 2016 23:27:18 +0800</pubDate>
+        <guid>https://www.oschina.net/news/80165/tencent-open-source-angel-to-2017</guid>
+    </item>
+	<item>
+        <title>BeetlSql 2.7.5 发布，Java Dao工具</title>
+        <link>https://www.oschina.net/news/80164/beetlsql-2-7-5</link>
+        <category>软件更新新闻</category>
+        <description><![CDATA[<p><span style="font-size:14px;line-height:21px;">BeetlSql 2.7.5 发布了，该版本改进内容包括：</span></p><p><span style="font-size:14px;line-height:21px;">#83 增加泛型支持，减少编译告警<br/>#201 JPA 增强支持，使用 JPA2NameConversion<br/>#200 生成pojo 实现序列化接口<br/>#199 mysql 6.0 驱动不支持（因为是开发版本中，出现很多不兼容，建议用5.0驱动)<br/>#198 TailBean实现序列化接口<br/>#197 PageQuery 增加hashcode和equals方法，方便一些缓存接口要求<br/>#196 sql注解的rentrnType 不一定需要<br/></span></p><p><span style="font-size:14px;line-height:21px;">#194 映射java.util.Date 出错 的BUG修复</span></p><p><span style="font-size:14px;line-height:21px;"></span></p><p style="color:#333333;font-family:&#39;PingFang SC&#39;, &#39;Helvetica Neue&#39;, &#39;Microsoft YaHei UI&#39;, &#39;Microsoft YaHei&#39;, &#39;Noto Sans CJK SC&#39;, sans-serif;font-size:16px;background-color:#FFFFFF;"></p><pre>&lt;dependency&gt;
+&lt;groupId&gt;com.ibeetl&lt;/groupId&gt;
+&lt;artifactId&gt;beetlsql&lt;/artifactId&gt;
+&lt;version&gt;2.7.5&lt;/version&gt;
+&lt;/dependency&gt;</pre><p></p><p style="color:#333333;font-family:&#39;PingFang SC&#39;, &#39;Helvetica Neue&#39;, &#39;Microsoft YaHei UI&#39;, &#39;Microsoft YaHei&#39;, &#39;Noto Sans CJK SC&#39;, sans-serif;font-size:16px;background-color:#FFFFFF;">
+			BeetlSql 是全新的 Dao 工具，具有如下特性：		</p><p style="color:#333333;font-family:&#39;PingFang SC&#39;, &#39;Helvetica Neue&#39;, &#39;Microsoft YaHei UI&#39;, &#39;Microsoft YaHei&#39;, &#39;Noto Sans CJK SC&#39;, sans-serif;font-size:16px;background-color:#FFFFFF;">
+			开发效率：无需注解，自动使用大量内置SQL，轻易完成增删改查功能，节省50%的开发工作量		</p><ol style="color:#333333;font-family:&#39;PingFang SC&#39;, &#39;Helvetica Neue&#39;, &#39;Microsoft YaHei UI&#39;, &#39;Microsoft YaHei&#39;, &#39;Noto Sans CJK SC&#39;, sans-serif;font-size:16px;background-color:#FFFFFF;" class=" list-paddingleft-2"><li><p>
+					数据模型支持Pojo，也支持Map/List这种快速模型，也支持混合模型				</p></li><li><p>
+					SQL 模板基于Beetl实现，更容易写和调试，以及扩展 可以针对单个表(或者视图）				</p></li><li><p>
+					代码生成pojo类和sql模版，甚至是整个数据库。能减少代码编写工作量				</p></li></ol><p style="color:#333333;font-family:&#39;PingFang SC&#39;, &#39;Helvetica Neue&#39;, &#39;Microsoft YaHei UI&#39;, &#39;Microsoft YaHei&#39;, &#39;Noto Sans CJK SC&#39;, sans-serif;font-size:16px;background-color:#FFFFFF;">
+			维护性：		</p><ol style="color:#333333;font-family:&#39;PingFang SC&#39;, &#39;Helvetica Neue&#39;, &#39;Microsoft YaHei UI&#39;, &#39;Microsoft YaHei&#39;, &#39;Noto Sans CJK SC&#39;, sans-serif;font-size:16px;background-color:#FFFFFF;" class=" list-paddingleft-2"><li><p>
+					SQL 以更简洁的方式，Markdown方式集中管理，同时方便程序开发和数据库SQL调试。				</p></li><li><p>
+					可以自动将sql文件映射为dao接口类				</p></li><li><p>
+					直观灵活的支持一对一，一对多，多对多关系映射而不引入复杂的OR Mapping概念和技术。				</p></li><li><p>
+					具备Interceptor功能，可以调试，性能诊断SQL，以及扩展其他功能。				</p></li></ol><p style="color:#333333;font-family:&#39;PingFang SC&#39;, &#39;Helvetica Neue&#39;, &#39;Microsoft YaHei UI&#39;, &#39;Microsoft YaHei&#39;, &#39;Noto Sans CJK SC&#39;, sans-serif;font-size:16px;background-color:#FFFFFF;">
+			其他：		</p><ol style="color:#333333;font-family:&#39;PingFang SC&#39;, &#39;Helvetica Neue&#39;, &#39;Microsoft YaHei UI&#39;, &#39;Microsoft YaHei&#39;, &#39;Noto Sans CJK SC&#39;, sans-serif;font-size:16px;background-color:#FFFFFF;" class=" list-paddingleft-2"><li><p>
+					内置支持主从数据库支持的开源工具				</p></li><li><p>
+					真正支持跨数据库平台，开发者所需工作减少到最小，目前跨数据库支持mysql、postgres、oracle、sqlserver、h2、sqllite</p></li></ol><p></p>]]></description>
+        <pubDate>Mon, 19 Dec 2016 21:37:02 +0800</pubDate>
+        <guid>https://www.oschina.net/news/80164/beetlsql-2-7-5</guid>
+    </item>
+	<item>
+        <title>NoahGameFrame 5.0.0，分布式游戏服务器架构</title>
+        <link>https://www.oschina.net/news/80163/noahgameframe-5-0-0</link>
+        <category>软件更新新闻</category>
+        <description><![CDATA[<p>NoahGameFrame 5.0.0发布了!!!</p><p>NoahFrame/NF是一个c++开发的轻量级分布式游戏服务器架构，内部自带actor模式以及高效网络库，支持插件编程和模块编程，支持lua脚本，并提出重要编程思想-面向数据编程。<br/></p><p>NF已在大量游戏中使用，也创造过月流水近亿级别的产品，目前主要支持unity3d客户端，未来会支持更多的客户端。<br/></p><p>该版本内容：</p><ul class=" list-paddingleft-2"><li><p>全面支持cmake，支持夸平台一键编译</p></li><li><p>新添加aoiscene模块，使其成为抽象的组织管理模块</p></li><li><p>添加了schedule模块</p></li><li><p>网站增加了全新的开发文档</p></li><li><p>使用工具生成的std::string属性名代替char*属性名</p></li><li><p>修改log的目录，让其更合理化</p></li><li><p>修改net库为动态库</p></li><li><p>增加了内存对象实例计划，方便查看资源使用状况</p></li><li><p>添加了web页面来观察整个游戏运行状态</p></li><li><p>为nosql插件添加了断线重链功能</p></li><li><p>添加了calendar模块</p></li><li><p>为所有的property和record添加了upload功能，方便客户端提交数据到服务器或转发数据到其他客户端</p></li><li><p>添加了math库，支持vector3属性</p></li></ul>]]></description>
+        <pubDate>Mon, 19 Dec 2016 17:38:56 +0800</pubDate>
+        <guid>https://www.oschina.net/news/80163/noahgameframe-5-0-0</guid>
+    </item>
+	<item>
+        <title>Apache CarbonData : 大数据高性能数据格式</title>
+        <link>https://my.oschina.net/u/3156280/blog/808506</link>
+        <category>综合新闻</category>
+        <description><![CDATA[<p>Apache CarbonData是一种新的高性能数据存储格式，针对当前大数据领域分析场景需求各异而导致的存储冗余问题，CarbonData提供了一种新的融合数据存储方案，以一份数据同时支持“任意维度组合的过滤查询、快速扫描、详单查询等”多种应用场景，并通过多级索引、字典编码、列存等特性提升了IO扫描和计算性能，实现百亿数据级秒级响应。CarbonData是由华为开源贡献到Apache基金会的大数据项目，致力于推动大数据开源生态技术的发展。</p>]]></description>
+        <pubDate>Mon, 19 Dec 2016 16:59:40 +0800</pubDate>
+        <guid>https://my.oschina.net/u/3156280/blog/808506</guid>
+    </item>
+	<item>
+        <title>十个有关代码审查和质量的事实</title>
+        <link>https://www.oschina.net/news/80160/10-facts-about-code-reviews-and-quality</link>
+        <category>综合新闻</category>
+        <description><![CDATA[<blockquote><p>这是一篇关于代码质量和代码评审重要事实的简短文章。问及了 680 家公司的代码质量和代码审查实践，下面是一些总结。</p></blockquote><p style="text-align: center;"><img src="https://static.oschina.net/uploads/space/2016/1219/135717_3lcl_2720166.png"/></p><p style="text-align: center;"><em>苏联检查员在审查一架 BGM-109G “战斧”地面发射巡航导弹。</em></p><h3>事实一：</h3><p>我们花了大量的时间审查代码。但事实上，我们每周平均花费 5 个小时来审查代码，或者本周 12.5％ 的时间来查看代码。</p><h3>事实二：</h3><p>作为开发人员，每周花费超过一天的时间来审查代码与提高代码质量不相关，会用更多时间发布新功能（而不是修复 bug 或偿还技术债务）。</p><p style="text-align: center;"><img src="https://static.oschina.net/uploads/space/2016/1219/135916_FLxl_2720166.png"/></p><p style="text-align: center;"><em>每周花费在代码审查上的时间（收益递减：每周花费超过一天的时间审查代码与更好的代码质量不相关）</em></p><h3>事实三：</h3><p>45％ 的开发人员说，“缺少时间”是审查代码的真正障碍，而 34％ 的开发人员则认为是迫于“发布新功能的压力”</p><h3>事实四：</h3><p>72％ 的开发人员表示他们的代码审查被阻止（没有经过审核不发布一行代码）</p><h3>事实五：</h3><p>66％ 的开发人员需要 1 人批准他们的 <strong>pull requests，</strong>25％ 需要 2 人，小于 5％ 需要超过 2 人。</p><h3>事实六：</h3><p>53％ 的人监控代码覆盖率，但 65％ 没有代码覆盖率的最小阈值，用于批准<strong> pull requests&nbsp;</strong></p><h3>事实七：</h3><p>29％ 的开发人员说他们的项目中最大的问题是“工作量”，而 Eng 和 Director 的副总裁认为是“交付速度”。开发人员的第三大问题是“管理”。</p><h3>事实八：</h3><p>关于谁来审查代码，让团队中的每个人都参与是最常见的做法。其他替代方法是项目负责人或模块的拥有者来参与，或让更高级的开发人员审查大多数代码。</p><p style="text-align: center;"><img src="https://static.oschina.net/uploads/space/2016/1219/140215_SQeJ_2720166.png"/></p><p style="text-align: center;"><em>谁来审查代码？三分之二的公司倾向于所有开发者都能参与代码审查</em></p><h3>事实九：</h3><p>更严格的代码审查会让我们用更少的时间修复错误，也就有更多的时间来提供新功能。不太严格的代码审查者会花费 31％ 的时间修复错误，而严格的审查者则只花费 24％ 的时间。关于关注新功能的时间：和上面对应的分别是 43％ 和 54％。</p><h3>事实十：</h3><p>开发人员花费 45% 的时间修复错误或解决技术问题，与构建新功能所花费的时间不相上下。</p><p style="text-align: center;"><img src="https://static.oschina.net/uploads/space/2016/1219/140300_JuLz_2720166.png"/></p><p style="text-align: center;"><em>开发期间每个环节平均花费的时间</em></p><p><em>编者注：文章提到的数据和情况都是国外的环境，不知国内的又是如何？</em></p><p>编译自：<a href="https://medium.com/@jaimefjorge/10-facts-about-code-reviews-and-quality-c5adf2e869fe#.z12xfdnhm" target="_blank">Medium</a>&nbsp;</p><p>本文由<a href="http://www.oschina.net/" target="_blank">开源中国</a>原创编译</p>]]></description>
+        <pubDate>Mon, 19 Dec 2016 14:20:12 +0800</pubDate>
+        <guid>https://www.oschina.net/news/80160/10-facts-about-code-reviews-and-quality</guid>
+    </item>
+	<item>
+        <title>.NET Chloe.ORM v2.2 发布，新增 API</title>
+        <link>https://www.oschina.net/news/80157/net-chloe-orm-2-2</link>
+        <category>软件更新新闻</category>
+        <description><![CDATA[<p>Chloe.ORM：一款高质量的.Net C#数据库访问框架(ORM)。支持SqlServer、MySql、Oracle及SQLite，实体为纯POCO，支持基本数据类映射的同时也支持枚举类型。查询接口借鉴linq，支持lambda表达式，高效便捷开发。借助lambda表达式，完全用面向对象的方式就能轻松执行多表连接查询、分组查询、聚合查询、插入数据、批量删除和更新满足条件的数据等操作，完全不需要拼接Sql，开发容错率极高。</p><p><strong>更新内容：</strong></p><ul class=" list-paddingleft-2"><li><p>增加API IDbContext.QueryByKey(object key) 和 IDbContext.DeleteByKey(object key)</p></li><li><p>如果一个继承属性出现在 IQuery.Select 方法的 lambda 中，会出现空引用异常，现已修复</p></li></ul>]]></description>
+        <pubDate>Mon, 19 Dec 2016 09:00:40 +0800</pubDate>
+        <guid>https://www.oschina.net/news/80157/net-chloe-orm-2-2</guid>
+    </item>
+	<item>
+        <title>SparkyLinux 4.5.2 发布，Linux 发行版</title>
+        <link>https://www.oschina.net/news/80156/sparkylinux-4-5-2</link>
+        <category>软件更新新闻</category>
+        <description><![CDATA[<p>SparkyLinux 4.5.2 发布了。SparkyLinux 是轻量级的、快速的、简单的 Linux 发行，它被设计为既适合老旧的也适合新式的计算机，并以定制的 Enlightenment 和 LXDE 桌面为特色。它构建于 Debian GNU/Linux 的测试分支之上。</p><p><span id="result_box" class="" tabindex="-1">新的图像提供了Virtualbox相关的错误修复，它已经通过Debian测试repos更新解决，主要更新内容：</span></p><ul class=" list-paddingleft-2"><li><p>Budgie Desktop 10.2.9</p></li><li><p>CDE (Common Desktop Environment) 2.2.4-1 (some small issues fixed)</p></li><li><p>Enlightenment 0.21.5 &amp; EFL 1.18.4</p></li><li><p>Firefox 50.1</p></li><li><p>Linux kernel 4.8.15</p></li><li><p>Lumina Desktop 1.1.0-p1 (own build)</p></li><li><p>Palemoon 27.0.3</p></li><li><p>SlimJet 12.0.12</p></li><li><p>Vivaldi 1.6</p></li><li><p>Skype Installer 0.1.10 (installs 4.x i386 on 32 bit/1.x Alpha amd64 on x86_64 bit systems now)</p></li><li><p>TOR Browser 6.0.8</p></li></ul><p><span class="" tabindex="-1"></span>下载地址：<a href="https://sparkylinux.org/download/" target="_self">https://sparkylinux.org/download/</a></p>]]></description>
+        <pubDate>Mon, 19 Dec 2016 08:30:29 +0800</pubDate>
+        <guid>https://www.oschina.net/news/80156/sparkylinux-4-5-2</guid>
+    </item>
+	<item>
+        <title>Cinnamon 3.2.6 发布，桌面交互环境</title>
+        <link>https://www.oschina.net/news/80155/cinnamon-3-2-6</link>
+        <category>软件更新新闻</category>
+        <description><![CDATA[<p>Cinnamon 3.2.6 发布了。</p><p>Cinnamon 由 Clement Lefebvre，Linux Mint 创始的一个桌面交互环境，试图提供一个布局类似于 GNOME 2，一个底部面板和发射器，GNOME2-like 系统托盘和通知和更多。</p><p>此版本暂未提供更新内容，您可<a href="https://github.com/linuxmint/Cinnamon/issues" target="_self">点击此处</a>了解更多。</p><p>下载地址：</p><ul class="release-downloads list-paddingleft-2"><li><p><a href="https://github.com/linuxmint/Cinnamon/archive/3.2.6.zip" rel="nofollow">Source code&nbsp;(zip)</a></p></li><li><p><a href="https://github.com/linuxmint/Cinnamon/archive/3.2.6.zip" rel="nofollow"></a></p><p><a href="https://github.com/linuxmint/Cinnamon/archive/3.2.6.tar.gz" rel="nofollow">Source code&nbsp;(tar.gz)</a></p></li></ul><p><br/></p>]]></description>
+        <pubDate>Mon, 19 Dec 2016 08:24:13 +0800</pubDate>
+        <guid>https://www.oschina.net/news/80155/cinnamon-3-2-6</guid>
+    </item>
+	<item>
+        <title>投票有礼！2016最受欢迎国产开源软件评选启动！</title>
+        <link>https://www.oschina.net/news/80154/2016-cn-open-source-software-top</link>
+        <category>综合新闻</category>
+        <description><![CDATA[<p style="text-align: center;">还有十来天就到 2017 年了，准备好和 2016 说再见了吗？</p><p style="text-align: center;"><img alt="" height="202" data-cke-saved-src="https://static.oschina.net/uploads/space/2016/1219/081516_iZRk_2896879.gif" src="https://static.oschina.net/uploads/space/2016/1219/081516_iZRk_2896879.gif" width="200"/></p><p>岁末之际，开源中国的各项排行榜单也即将一一出炉。榜单的公布不为排个高低，只希望能够帮助大家更好地了解 2016 年行业发展情况，也为 2017 年行业趋势提供参考。</p><p>国人自己写的开源原创项目，是开源中国一直关注的重点。近两年，国产开源力量迅速崛起。尤其是在 2016 年，每天都有数个国人作者提交自己的原创项目到开源中国。同时，国产开源项目质量也在不断提高，无论从下载量、关注度、创新度，还是用户好评度上，都出现了飞跃。</p><p style="text-align: center;"><a data-cke-saved-href="http://www.oschina.net/project/top_cn_2016" href="http://www.oschina.net/project/top_cn_2016" target="_blank"><img height="236" data-cke-saved-src="https://static.oschina.net/uploads/space/2016/1218/192723_EZnh_2896879.png" src="https://static.oschina.net/uploads/space/2016/1218/192723_EZnh_2896879.png" width="650" border="0" hspace="0" vspace="0" title="" style="width: 650px; height: 236px;"/></a></p><p>开源中国 “2016 年度最受欢迎中国开源软件”评选活动正式启动！根据软件 2016 年在开源中国的关注度、浏览量、收藏量等数据，我们筛选出了100余款热门国产开源软件参与评选。每位用户共有5票投票权，&nbsp;投票时间截止到 2017年1月2日，所有参与投票的用户都可以参加抽奖，获得由博文视点提供的技术图书。最终榜单和获奖用户名单将在投票结束后三天内公布。</p><p>点击下方地址给你喜欢的国产开源软件投票吧！！！</p><p><a data-cke-saved-href="http://www.oschina.net/project/top_cn_2016" href="http://www.oschina.net/project/top_cn_2016" target="_blank">http://www.oschina.net/project/top_cn_2016</a></p>]]></description>
+        <pubDate>Mon, 19 Dec 2016 08:21:41 +0800</pubDate>
+        <guid>https://www.oschina.net/news/80154/2016-cn-open-source-software-top</guid>
+    </item>
+	<item>
+        <title>Python 3.6.0 RC2 发布，面向对象编程语言</title>
+        <link>https://www.oschina.net/news/80153/python-3-6-0-rc2</link>
+        <category>软件更新新闻</category>
+        <description><![CDATA[<p>Python 3.6.0 RC2 发布了。</p><p>Python&nbsp;(发音:[ &#39;paiθ(ə)n; (US) &#39;paiθɔn ]n.蟒蛇，巨蛇 )，是一种面向对象的解释性的计算机程序设计语言，也是一种功能强大而完善的通用型语言，已经具有十多年的发展历史，成熟且稳定。Python 具有脚本语言中最丰富和强大的类库，足以支持绝大多数日常应用。</p><p>更新内容：</p><p>Core and Built-ins:</p><ul class=" list-paddingleft-2"><li><p>Issue #28147: Fix a memory leak in split-table dictionaries: 
+setattr() must not convert combined table into split table. Patch 
+written by INADA Naoki.</p></li><li><p>Issue #28990: Fix asynchio SSL hanging if connection is closed before handshake is completed. (Patch by HoHo-Ho)</p></li></ul><p>Tools/Demos:</p><ul class=" list-paddingleft-2"><li><p>Issue #28770: Fix python-gdb.py for fastcalls.</p></li></ul><p>Build:</p><ul class=" list-paddingleft-2"><li><p>Issue #28898: Prevent gdb build errors due to HAVE_LONG_LONG redefinition.</p></li></ul><p>下载地址：</p><ul class=" list-paddingleft-2"><li><p><a href="http://mac.softpedia.com/get/Developer-Tools/Python-X.shtml#download" target="_self">http://mac.softpedia.com/get/Developer-Tools/Python-X.shtml#download</a><br/></p></li></ul>]]></description>
+        <pubDate>Mon, 19 Dec 2016 08:16:38 +0800</pubDate>
+        <guid>https://www.oschina.net/news/80153/python-3-6-0-rc2</guid>
+    </item>
+	<item>
+        <title>每日一博 | profile 配置 Spring-Boot 踩坑实录</title>
+        <link>https://my.oschina.net/u/2278977/blog/807958</link>
+        <category>综合新闻</category>
+        <description><![CDATA[<p>在springboot的开发中,有时候我们会有不同的配置,例如日志打印,数据库连接等,开发,测试,生产每个环境可能配置都不一致,还好,springboot支持通过不同的profile来配置不同环境的配置,下面就大致介绍一下yml配置文件跟properties配置文件怎么使用profile配置不同环境的配置文件...</p>]]></description>
+        <pubDate>Mon, 19 Dec 2016 08:07:14 +0800</pubDate>
+        <guid>https://my.oschina.net/u/2278977/blog/807958</guid>
+    </item>
+	<item>
+        <title>NVDA 2016.4 发布，屏幕阅读器</title>
+        <link>https://www.oschina.net/news/80151/nvda-2016-4</link>
+        <category>软件更新新闻</category>
+        <description><![CDATA[<p>NVDA 2016.4 发布了。</p><p>无视觉桌面访问(NVDA)是一个免费且开放源码的微软 windows 操作系统的屏幕阅读器。 通过合成器语音或者盲文点字的反馈，盲人和低视力人群无需付出更多而能使用运行在 Windows 操作系统下运作的电脑。NVDA 由 NV Access 和其他贡献者共同开发(译者注：中文相关的教程和资讯，也可访问：NVDA中文站获取)。</p><p>2016.4 版本的亮点包括对 Microsoft Edge 的改进支持、浏览模式在 Windows 10 邮件应用程序的增强支持和 NVDA 的对话框布局的重大改进。</p><p>新特性：</p><ul class=" list-paddingleft-2"><li><p>NVDA 现在可以使用音调指示行缩进。这可以使用 NVDA 的“文档格式设置”对话框中的“行缩进提示方式”组合框进行配置。 (#5906)</p></li><li><p>支持 Orbit Reader20 盲文点显器。 (#6007)</p></li><li><p>添加了一个在启动时打开语音查看器窗口的选项。这可以通过语音查看器窗口中的复选框来启用。</p></li></ul><p>下载地址：</p><ul class="release-downloads list-paddingleft-2"><li><p><a href="https://github.com/nvaccess/nvda/archive/release-2016.4.zip" rel="nofollow">Source code&nbsp;(zip)</a></p></li><li><p><a href="https://github.com/nvaccess/nvda/archive/release-2016.4.zip" rel="nofollow"></a></p><p><a href="https://github.com/nvaccess/nvda/archive/release-2016.4.tar.gz" rel="nofollow">Source code&nbsp;(tar.gz)</a></p></li></ul>]]></description>
+        <pubDate>Mon, 19 Dec 2016 08:03:21 +0800</pubDate>
+        <guid>https://www.oschina.net/news/80151/nvda-2016-4</guid>
+    </item>
+	<item>
+        <title>开源访谈 | Weex 勾股：开源社区不纯粹做技术</title>
+        <link>https://www.oschina.net/question/2886655_2214296</link>
+        <category>综合新闻</category>
+        <description><![CDATA[<p>从 2015 年双十一首秀到 2016 年 6月 30日Weex 正式开源，再到今年完成所有双十一活动页面，Weex 在这半年左右的开源之路上，各方面有什么样的提升，未来发展规划如何？维护 Weex 开源中遇到什么样的挑战？ 怎么看待阿里宣布 Weex 捐赠给 Apache 基金会后各种争议和讨论。本期，【开源访谈】邀请到了 Weex 负责人勾股和大家分享 Weex 的开源之路以及他对开源的见解。</p>]]></description>
+        <pubDate>Mon, 19 Dec 2016 08:01:03 +0800</pubDate>
+        <guid>https://www.oschina.net/question/2886655_2214296</guid>
+    </item>
+	<item>
+        <title>OSChina 周一乱弹 ——这个公主都没一旁的汪可爱</title>
+        <link>https://my.oschina.net/xxiaobian/blog/808100</link>
+        <category>综合新闻</category>
+        <description><![CDATA[<p>又到了一年一度的自夸比赛的时候！你们是不是要写工作总结了？是不是要写优秀员工推荐表了？</p>]]></description>
+        <pubDate>Mon, 19 Dec 2016 07:59:16 +0800</pubDate>
+        <guid>https://my.oschina.net/xxiaobian/blog/808100</guid>
+    </item>
+	<item>
+        <title>GNU Hurd 0.9，Mach 1.8，MIG 1.8 发布</title>
+        <link>https://www.oschina.net/news/80148/gnu-hurd-0-9-march-1-8-mig-1-8</link>
+        <category>软件更新新闻</category>
+        <description><![CDATA[<p>GNU Hurd 0.9，Mach 1.8，MIG 1.8 发布了。</p><p>更新内容：</p><p>GNU Hurd 0.9：</p><ul class=" list-paddingleft-2"><li><p><span id="result_box" tabindex="-1">&#39;boot&#39;程序现在可以作为非特权用户运行，允许任何用户创建无特权的子菜单。</span></p></li><li><p><span id="result_box" tabindex="-1"><span id="result_box" class="" tabindex="-1">以太网复用器（eth-multiplexer转换器）已合并<span class="">进入此存储库。</span></span></span></p></li><li><p><span id="result_box" tabindex="-1"><span id="result_box" class="" tabindex="-1"><span class=""><span id="result_box" class="" tabindex="-1">bug已经在整个代码中得到修复，特别是在libpager和ext2fs现在正常处理运行空间不足。进一步的兼容性修复已经应用（为了符合<span class="">标准如POSIX）。</span></span></span></span></span></p></li></ul><p><span id="result_box" tabindex="-1"><span id="result_box" class="" tabindex="-1"><span class=""><span id="result_box" class="" tabindex="-1"><span class="">下载地址：<a href="ftp://ftp.gnu.org/gnu/hurd/">ftp://ftp.gnu.org/gnu/hurd/</a></span></span></span></span></span></p><p><span id="result_box" tabindex="-1"><span id="result_box" class="" tabindex="-1"><span class=""><span id="result_box" class="" tabindex="-1"><span class="">GNU Mach 1.8：</span></span></span></span></span></p><ul class=" list-paddingleft-2"><li><p><span tabindex="-1"><span class="" tabindex="-1"><span class=""><span class="" tabindex="-1"><span class=""><span id="result_box" class="" tabindex="-1">内存管理系统被改写。</span></span></span></span></span></span></p></li><li><p><span tabindex="-1"><span class="" tabindex="-1"><span class=""><span class="" tabindex="-1"><span class=""><span id="result_box" class="" tabindex="-1"><span id="result_box" tabindex="-1">调试和错误报告已得到改进。</span></span></span></span></span></span></span></p></li><li><p><span tabindex="-1"><span class="" tabindex="-1"><span class=""><span class="" tabindex="-1"><span class=""><span id="result_box" class="" tabindex="-1">其他Bug修复</span></span></span></span></span></span></p></li></ul><p><span tabindex="-1"><span class="" tabindex="-1"><span class=""><span class="" tabindex="-1"><span class=""><span id="result_box" class="" tabindex="-1">下载地址：<a href="ftp://ftp.gnu.org/gnu/gnumach/">ftp://ftp.gnu.org/gnu/gnumach/</a>,</span></span></span></span></span></span></p><p><span tabindex="-1"><span class="" tabindex="-1"><span class=""><span class="" tabindex="-1"><span class=""></span></span></span></span></span></p><p><span tabindex="-1"><span class="" tabindex="-1"><span class=""><span class="" tabindex="-1"><span class="">GNU&nbsp;MIG 1.8：</span></span></span></span></span></p><ul class=" list-paddingleft-2"><li><p><span tabindex="-1"><span class="" tabindex="-1"><span class=""><span class="" tabindex="-1"><span class=""><span id="result_box" tabindex="-1">生成的代码中的伪警告已修复。</span></span></span></span></span></span></p></li></ul><p><span tabindex="-1"><span class="" tabindex="-1"><span class=""><span class="" tabindex="-1"><span class="">下载地址：<a href="ftp://ftp.gnu.org/gnu/mig/">ftp://ftp.gnu.org/gnu/mig/</a></span></span></span></span></span></p>]]></description>
+        <pubDate>Mon, 19 Dec 2016 07:56:27 +0800</pubDate>
+        <guid>https://www.oschina.net/news/80148/gnu-hurd-0-9-march-1-8-mig-1-8</guid>
+    </item>
+	<item>
+        <title>码云推荐 | 基于 Hadoop 的 Kafka On Yarn</title>
+        <link>https://git.oschina.net/zhzhenqin/kafka-on-yarn</link>
+        <category>综合新闻</category>
+        <description><![CDATA[<p>该项目用于把 Kafka 运行在 Yarn 的辅助项目，基于Apache Hadoop 2.6.5 开发，已经在 hadoop2.6上充分测试，运行稳定。</p>]]></description>
+        <pubDate>Mon, 19 Dec 2016 07:55:12 +0800</pubDate>
+        <guid>https://git.oschina.net/zhzhenqin/kafka-on-yarn</guid>
+    </item>
+	<item>
+        <title>EasyGUI —— Python 的图形界面编程模块</title>
+        <link>https://www.oschina.net/p/easygui</link>
+        <category>综合新闻</category>
+        <description><![CDATA[<p>EasyGUI 是一个用 Python 编写的非常简易的 GUI 编程模块。 EasyGUI 不同于其他 GUI 库，EasyGUI 不是事件驱动的。 相反，所有的 GUI 交互都是通过简单的函数调用来调用的。</p>]]></description>
+        <pubDate>Mon, 19 Dec 2016 07:49:01 +0800</pubDate>
+        <guid>https://www.oschina.net/p/easygui</guid>
+    </item>
+	<item>
+        <title>微软旗下培训网站数据库泄露，5.5万个账号被冻结</title>
+        <link>https://www.oschina.net/news/80145/lynda-data-breach</link>
+        <category>综合新闻</category>
+        <description><![CDATA[<p>微软刚刚完成收购的 LinkedIn 出问题了，LinkedIn 的培训网站 Lynda.com 正通知用户数据库遭泄露，包括 55,000 个帐户及密码。 为以防万一，所有的这些账户已被冻结禁止登录，需用户去重置登录。 Lynda.com 还给其它 950万用户发邮件提醒，使用需谨慎。</p><p>2012年，LinkedIn 曾出现密码被暴力破解事件，大约损失了 1.17 亿个帐户。目前，没有迹象表明这两个事件有所关联。</p><p><img data-cke-saved-src="https://static.oschina.net/uploads/space/2016/1219/073702_h4T4_2896879.png" src="https://static.oschina.net/uploads/space/2016/1219/073702_h4T4_2896879.png" style="width: 650px; height: 433px;"/><br/></p><p>编译自：<a href="https://www.engadget.com/2016/12/18/lynda-data-breach/" target="_blank" textvalue="Engadget">Engadget</a></p>]]></description>
+        <pubDate>Mon, 19 Dec 2016 07:43:11 +0800</pubDate>
+        <guid>https://www.oschina.net/news/80145/lynda-data-breach</guid>
+    </item>
+	<item>
+        <title>伤不起的三十岁，干不动的程序员要何去何从？</title>
+        <link>https://www.oschina.net/news/80144/programmer-to-30-years-of-age</link>
+        <category>综合新闻</category>
+        <description><![CDATA[<p>程序员干到30岁，好不容易从码奴混到了白领，却再也干不动了，还时时面临失业的危险。30岁，是一个程序员伤不起的年龄。明天，何去何从？</p><p><strong>一．30岁现象</strong></p><p>在官场上，曾经有一个59岁现象，就是官员们会在59岁时，会使劲捞上一把。很明显嘛，权力过期作废，再不捞就要退休了，没有机会了。</p><p>在程序员的圈子里，也有一个30岁现象。当然，如果你有铁饭碗，比如在国企或政府机关，那你是无法理解底层劳动人民的感受的。同时也要恭喜你成为体制内的一员，可以一直干到退休无忧。</p><p>30岁现象人人都明白，但要给出一个定义并不容易。列举几个表现，也许你会觉得心有戚戚焉。</p><p>面临职业瓶颈，程序写不动，上升又困难。</p><p>薪水较高，加班变少，后浪追前浪，面临失业压力；生活压力剧增，不敢跳槽；</p><p>招聘程序员年龄限制在30岁以下成为行业潜规则，跳槽困难。</p><p>30岁现象和59岁现象貌似不搭边，其实都出于同样的原因：价值贬值。官员老爷在任就像皇帝，一旦退休，就成为了平民百姓，贬值那是自然的。而程序员也一样， 所谓三十而立，一旦到了30岁左右，由于面临结婚生子，一方面需要高薪抚养家庭，另一方面却无法像以前那样全身心投入到工作，性价比急剧下降；与此同时， 大批廉价的新手涌入，他们往往还使用最新的技术，老一辈程序员只能慢慢的靠边站了。</p><p><strong>二．不可替代性</strong></p><p>30岁现象产生，只能程序员自身身上找原因。</p><p>当然我们也可以产业、从社会、从政府、从制度等多方面进行分析，发现不足，这些分析未必没有道理，但是肯定没有用，因为我们无法改变。所谓“命苦不能怪政府，命背不能怪社会”，从外部找原因，只会让我们满腹牢骚，整天觉得自己生不逢时，苦闷不堪。</p><p>从自身找原因，试着问自己几个问题：“为什么我的性价比以下降？老板为什么要请我，给我高工资呢？一个人有价值是由什么决定的呢？”</p><p>你也许可以列出很长很长的答案，但我想应该都可以浓缩为一句话：“一个的价值是由他的不可替代性决定的”。不可替代性可以理解为，为了替代你老板需要付出的代价。</p><p>因为你的可替代性高，所以性价比下降。反之，因为你不可替代性高，所以老板会给你开高工资。不是这样的吗？</p><p>有一则小故事：</p><p>技师退休时告诫自己的徒弟：“少说话，多做事。”</p><p>十年后徒弟也成了技师，他找到师傅，苦着脸说：“师傅，我一直都按您的教导做，只知埋头苦干，可那些比我技术差的都升职了、加薪了，我还是拿着过去的工资。”</p><p>师傅想了想，说：“你请一次假吧。如果一盏灯一直亮着，那就没人会注意到它……”</p><p>徒弟恍然大悟，真的请了一星期假，等他回去上班时，厂长找到他说要给他加薪。原来，在他请假时，厂长发现，工厂已经离不开他了。</p><p>徒弟很高兴，以后他时不时就请几天假，每次请假后厂长都会给他加薪。一天徒弟请假后准备去上班，厂长却告诉他：“你不用来上班了。”</p><p>徒弟苦恼地去找师傅，师傅说：“那天我的话还没说完呢。一盏灯偶尔可以熄灭一次，可如果它总是熄灭，性质就不一样了，因为没人会需要一盏时亮时熄的灯。”</p><p>故事中，因为徒弟的不可替代，所以厂长给他加薪；后来因为有其它的灯亮了，他被替代了，厂长不需要他了，所以被炒了鱿鱼。</p><p>所以我们归根到底还是要提高自己的不可替代性。否则，一旦老板觉得用较低的代价就可以替代你，那么你就面临可能失业的危险了。</p><p><strong>三．出路在哪里</strong></p><p>那程序员到了30岁，怎样提高自己的不可替代性呢？我们打算做一辈子程序员吗？敢问路在何方？</p><p>作为一个过来人、一个资深程序员，我觉得有几个方向可以选择：</p><p>（1）成为技术大拿</p><p>其实，做一辈子程序员并没有什么问题，重要的是，你必须成为一个不可替代的程序员，也就是说，你要成为技术大拿，能够解决普通程序员所不能解决的问题。技术大拿有两个版本：</p><p>一 是程序员加强版。你仍然是一个程序员，但你是一个很牛的程序员，凭借多年的积累，你在知识广度和深度方面均已不是等闲之辈。从汇编到java，你样样精 通。你在意数据结构和算法，对系统的优化有独到见解，对设计模式如 数家珍，你还有完备的工具箱和自己的专用类库。其实，加强版程序员有非常独特的价值，可 惜的是，在现实中却很少见，因为对任何一个公司而言，人才总是很稀缺的。老板的眼睛是雪亮的，他怎么会对你这种技术大牛视而不见呢，在你还没有成为真正的 大拿之前，早已经被任命为系统架构师、项目经理或者更高的职位了。因此，你想守住自己的一亩三分地，悠闲的做自己的大拿，往往是不可能的。</p><p>二 是程序员升级版。虽然你的内在仍然是一个程序员，但你的职位已经升级了，你成为了系统分析师或系统架构师。这是非常自然和现实的选择。程序员与系统分析师 或架构师之间并有鸿沟，只需一步而已，你就可以从崎岖山路驶向宽阔的大马路。但这一步却并不容易，需要几年时间不断思考、学习、实践，才能化蛹成蝶。</p><p>（2）成为行业专家</p><p>行 业专家也是一个公司不可缺少的角色，他们对公司的行业知识、业务流程和细节了如指掌。行业专家一般并不是从外部招聘的一个只懂业务、不懂技术的超人，而往 往是从程序员经过多年的摸爬滚打成长起来的。作为从程序员成长起来的行业专家，你往往还肩负系统分析师之职。在公司里，对业务有一般了解的人很多， 但专 家级别的往往很少，为了后30年的职业生涯，你必须成为专家。</p><p>（3）朝管理方向发展</p><p>向管理方向发展的第一步，一般是被任命为项目经理。在大部分IT公司里， 项目经理是最小的管理岗位了，可能你不会觉得有太多惊喜，工资也没有大的提升，但这个转变，可以说会成为你一生中最重要的转变之一。</p><p>不要小看了项目经理。有人说，项目经理是一个古老的职业。也人有人说，21世纪是项目管理的世纪。事实上，从人类有组织以来，就一直有项目管理，以前的项目 经理可能是部落首领，一次集体打猎、一次攻城拔寨，都可以视为一个项目。项目管理的知识可以应用到我们生活的方方面面，大至登月计划的实施，小至家庭聚会 的组织，都离不开项目管理。</p><p>一个优秀的项目经理，不仅需要高智商，还需要高情商。可以不夸张的说，如果你能胜任项目管理，你就可以胜任战术层的所有管理岗位，甚至你有家庭生活质量，也会提高到新层次。</p><p>然而，要成为一名优秀的项目经理，并不是一件容易的事情。可以说，需要一定的天分，有些人无师自通，有些人却永远也学不会。程序员属于高智商人群，情商却往往存在不足，这注定了只有少数程序员能够成长为项目经理，成为优秀的项目经理，则非常稀少了。</p><p>如果你觉得这几方面都合适，那你还有几条出路：</p><p>一是塌塌实实混日子。</p><p>说老实话，做老实人，办老实事，拿老实的工资，这种员工公司也是非常需要的，一般不会遭遇炒鱿鱼的命运；二是转行或者创业。</p><p>因为这个行业已经不再适合你，已经没有更大的发展前途，只能转行。如果可以转行，未必是坏事，也许在新的环境中，可以激发出更强的能量，创造出一番事业来。 至于创业，那就更具有挑战性了，建议你在创业之前，已经成为了一名优秀的项目经理。试想，如果转不动一个项目，如何能转动一个公司？</p><p>转载自：<a data-cke-saved-href="http://www.androidchina.net/" href="http://www.androidchina.net/" target="_blank">Android开发中文站</a></p><p>原标题：<a href="http://www.androidchina.net/6126.html" target="_blank" textvalue="程序员：伤不起的三十岁">程序员：伤不起的三十岁</a></p>]]></description>
+        <pubDate>Mon, 19 Dec 2016 07:39:17 +0800</pubDate>
+        <guid>https://www.oschina.net/news/80144/programmer-to-30-years-of-age</guid>
+    </item>
+	<item>
+        <title>Fastlane 2.1.0 发布，iOS 和安卓自动构建工具</title>
+        <link>https://www.oschina.net/news/80143/fastlane-2-1-0</link>
+        <category>软件更新新闻</category>
+        <description><![CDATA[<p>Fastlane 2.1.0 发布了。Fastlane 是一个针对于 iOS 和 Android（后来才支持的）全方位自动化流程的工具。利用目前支持的工具可以做所有包含自动化和可持续化构建的每个环节，比如单元测试、截图、分发渠道、上传元数据和 ipa 包提交审核等等。</p><p>更新内容：</p><ul class=" list-paddingleft-2"><li><p>Update README.md (<a href="https://github.com/fastlane/fastlane/pull/7385" class="issue-link js-issue-link" data-url="https://github.com/fastlane/fastlane/issues/7385" data-id="194444100" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">#7385</a>)</p></li><li><p>Fix not showing the lane list and selection when not passing any arguments (<a href="https://github.com/fastlane/fastlane/pull/7549" class="issue-link js-issue-link" data-url="https://github.com/fastlane/fastlane/issues/7549" data-id="196154441" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">#7549</a>)</p></li><li><p>Add &quot;--fail-on-errors&quot; support to Danger action (<a href="https://github.com/fastlane/fastlane/pull/7487" class="issue-link js-issue-link" data-url="https://github.com/fastlane/fastlane/issues/7487" data-id="195519571" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">#7487</a>)</p></li><li><p>Updated docs description for pilot/testflight action (<a href="https://github.com/fastlane/fastlane/pull/7550" class="issue-link js-issue-link" data-url="https://github.com/fastlane/fastlane/issues/7550" data-id="196156135" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">#7550</a>)</p></li><li><p>fix platform (<a href="https://github.com/fastlane/fastlane/pull/7360" class="issue-link js-issue-link" data-url="https://github.com/fastlane/fastlane/issues/7360" data-id="193995664" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">#7360</a>)</p></li><li><p>[gym] Remove promotion for use_legacy_build_api (<a href="https://github.com/fastlane/fastlane/pull/7379" class="issue-link js-issue-link" data-url="https://github.com/fastlane/fastlane/issues/7379" data-id="194410317" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">#7379</a>)</p></li><li><p>user_error if plist error (<a href="https://github.com/fastlane/fastlane/pull/7547" class="issue-link js-issue-link" data-url="https://github.com/fastlane/fastlane/issues/7547" data-id="196138792" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">#7547</a>)</p></li><li><p>more tests for aliases (<a href="https://github.com/fastlane/fastlane/pull/7546" class="issue-link js-issue-link" data-id="196136248" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">#7546</a>)</p></li></ul><p>下载地址：</p><ul class=" list-paddingleft-2"><li><p><a href="https://github.com/fastlane/fastlane/archive/2.1.0.zip" rel="nofollow"><strong>Source code</strong> (zip)</a></p></li><li><p><a href="https://github.com/fastlane/fastlane/archive/2.1.0.tar.gz" rel="nofollow"><strong>Source code</strong> (tar.gz)</a></p></li></ul>]]></description>
+        <pubDate>Mon, 19 Dec 2016 07:29:02 +0800</pubDate>
+        <guid>https://www.oschina.net/news/80143/fastlane-2-1-0</guid>
+    </item>
+	<item>
+        <title>2017 年将更加流行的 6 个 Web 开发趋势</title>
+        <link>https://www.oschina.net/news/80142/the-6-web-dev-trends-youre-going-to-see-more-of-in</link>
+        <category>综合新闻</category>
+        <description><![CDATA[<p>每到年底，人们总喜欢展望下一年，Web 开发领域也不例外。在 Web 开发领域，技术革新的速度堪比光速，未来总是超乎我们的想象，我们只能尽自己所能做一些合理的预测。</p><p>以下是我们需要关注的一些趋势：</p><p>1.<strong>更加移动优先</strong></p><p>响应式设计显然是目前 web 开发领域的主要趋势之一，并且这一趋势还将持续一段时间。虽然现在的响应式设计大部分还是以 PC 版优先，然而，如果有一天我们把 PC 版放到比移动版次要的位置上，也没什么好奇怪的。</p><p>许多 web 开发者已经开始转向以<a data-cke-saved-href="https://www.uxpin.com/studio/blog/a-hands-on-guide-to-mobile-first-design/" href="https://www.uxpin.com/studio/blog/a-hands-on-guide-to-mobile-first-design/">移动优先方案</a>来做他们的响应式设计和开发。这象征一个重大转变，值得我们跟进。</p><p>2.<strong>更多使用快速原型开发工具</strong></p><p>我们在 2016 年开始尝试使用快速原型开发工具，而 2017 年将是这种技术真正爆发的一年。</p><p>“UXpin、Webflow、Invision 以及其它许多快速原型开发工具，让设计师不用写一行代码，就能为网站和服务快速创建低保真和高保真原型，便于设计师衡量它们的可用性和美观性。” web 设计师&nbsp;<a data-cke-saved-href="https://www.zazzlemedia.co.uk/blog/digital-design-trends/" href="https://www.zazzlemedia.co.uk/blog/digital-design-trends/">Jamie Leeson says</a>&nbsp;如是说，“许多工具也允许你在浏览器中设计原型并从工具里真正启动网站自身。”</p><p>快速原型工具的一个优点是它们能让开发者/设计师与最终用户同时获益。双方能够提前对产品页面和交互达成一致，避免了最终交付的产品和用户预期的不符。</p><p>3.<strong>简化的 Web 设计</strong></p><p>在 2016 年，我们看到简化的 Web 设计得到广泛认可。事实上极简设计成为大部分行业的主要趋势。在 2017 年，预期极简设计会继续流行，即使有变化也是一些微小的改变。</p><p>虽然页面上留白将继续被认为是有价值的，但是也不用奇怪有些网站开始回归到使用基于文本内容的文字填充。你可以找到更多类似于<a data-cke-saved-href="https://www.expedia.com/explore/white-water-rafting" href="https://www.expedia.com/explore/white-water-rafting">这样的</a>网页，它们合理地结合了留白和文本，创造出一个视觉上简单，而信息内容很丰富的网页，也带给用户很好的体验。</p><p>4.<strong>更加重视人工智能</strong></p><p>你已经听说了人工智能（AI），但是你对 web 设计和开发中的人工智能熟悉吗？在 2017 年，我们期待 web 与 AI 的碰撞，带来更强大的网页，为网站主和用户同时带来价值。</p><p>提供网络主机服务的 Wix，是这一领域的领头羊。他们<a data-cke-saved-href="http://www.wix.com/" href="http://www.wix.com/">现在提供了一个过程</a>来询问用户一些问题，然后使用一个基于 AI 的平台根据用户的回答提供给用户最符合他们需求的 web 设计。这非常酷，值得一看。</p><p><img data-cke-saved-src="https://static.oschina.net/uploads/space/2016/1219/072637_Mq3k_2896879.png" src="https://static.oschina.net/uploads/space/2016/1219/072637_Mq3k_2896879.png" style="width: 650px; height: 421px;"/><br/></p><p>5.<strong>更多单页站点</strong></p><p>现在不流行那种有各种 tab 页和许多子页面的网站了。在 2017 年，你可以期待看到更多的单页站点。由于用户更喜欢用滚屏方式浏览网页，各公司将会引起重视并停止浪费时间在设计和开发用户不喜欢的层层相套的子页面上。这一趋势将简化互联网并带来更迷人和身临其境的网页浏览体验，每个人都会感觉到愉悦。</p><p>6.<strong>虚拟现实</strong></p><p>如果要讨论 2017 年技术趋势，怎能不提到虚拟现实（VR）？2017 年将是 VR 成为主流的一年，这意味着 web 开发者将通过 VR 来吸引用户。</p><p>我们已经看到一些公司比如 Mozilla 和 Google 投资开发 VR 与 Web 之间的 API。越来越多的 VR 应用程序将在接下来的几个月里相继问世，所以如果看到越来越多的虚拟现实元素出现在 Web 上，也别觉得奇怪。</p><h2>总结</h2><p>当你开始做 2017 年的项目时，将这些 web 趋势铭记于心。总体的事实是在接下来几个月里，很多东西都会迎来发展和变化。多往前看一步，你可以确保你总是立足于潮流之巅。</p><p>转载自：<a data-cke-saved-href="http://www.zcfy.cc/article/2011" href="http://www.zcfy.cc/article/2011" target="_blank">众成翻译</a>&nbsp;&nbsp;译者：<a data-cke-saved-href="http://www.zcfy.cc/@akira" href="http://www.zcfy.cc/@akira" target="_blank">十年踪迹</a></p><p>英文原文：<a data-cke-saved-href="https://dzone.com/articles/the-6-web-dev-trends-youre-going-to-see-more-of-in](https://dzone.com/articles/the-6-web-dev-trends-youre-going-to-see-more-of-in" href="https://dzone.com/articles/the-6-web-dev-trends-youre-going-to-see-more-of-in](https://dzone.com/articles/the-6-web-dev-trends-youre-going-to-see-more-of-in" target="_blank">https://dzone.com/articles/the-6-web-dev-trends-youre-going-to-see-more-of-in</a></p>]]></description>
+        <pubDate>Mon, 19 Dec 2016 07:27:04 +0800</pubDate>
+        <guid>https://www.oschina.net/news/80142/the-6-web-dev-trends-youre-going-to-see-more-of-in</guid>
+    </item>
+</channel>
+</rss>
