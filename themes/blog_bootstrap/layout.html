@@ -128,14 +128,9 @@
           </div>
         </div>
 
-        <div class="col-md-3" role="complementary">
+        <div class="col-md-3 toc" role="complementary">
           <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm">
-            <ul class="nav bs-docs-sidenav">
-              <li> <a href="#linux">linux</a> </li>
-              <li> <a href="#id2">id2</a> </li>
-              {%- block sidebar2 %}{{ sidebar() }}{%- endblock %}
-
-            </ul>
+            {{ toc }}
           </nav>
         </div>
       </div>
@@ -152,7 +147,10 @@
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="{{ pathto('_static/ie10-viewport-bug-workaround.js', 1) }}">
 </script>
-
+<script>
+$("div.col-md-3.toc nav ul").addClass( "nav bs-docs-sidenav" );
+$("div.col-md-3.toc nav ul a").removeClass()
+</script>
   </body>
 </html>
 
