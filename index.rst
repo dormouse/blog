@@ -15,7 +15,6 @@ Welcome to Dormouse's Blog!
    compressor
    django
    git
-   haskell-note
    install_linux_soft
    note
    pandas
@@ -38,6 +37,13 @@ Python 笔记
    python_note/*
    pygtk3/pygtk3-note
 
+Haskell
+=======
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   haskell/*
 
 Lego 笔记
 ===========

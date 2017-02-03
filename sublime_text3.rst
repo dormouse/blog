@@ -19,7 +19,7 @@
 https://packagecontrol.io/installation
 
 在 sublime text3 的终端中运行如下代码安装 Package Control ，终端打开方法为
-使用 ``ctrl+\``` 快捷键或者选择菜单 ``View > Show Console`` ::
+使用 ``ctrl + ``` 快捷键或者选择菜单 ``View > Show Console`` ::
 
     import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
 
@@ -60,7 +60,9 @@ Usage: http://damnwidget.github.io/anaconda/IDE/
             ".git",
             "__pycache__"
         ],
-        "font_face": "文泉驿等宽微米黑",
+        "font_face": "ubuntu mono",
+        // for OSX
+        // "font_face": "PT Mono",
         "font_size": 12.0,
         "font_options":
         [
@@ -68,11 +70,10 @@ Usage: http://damnwidget.github.io/anaconda/IDE/
             "no_bold"
         ],
         "highlight_line": true,
-        "ignored_packages":
-        [
-        ],
+        "ignored_packages": [],
         "line_padding_bottom": 1,
         "line_padding_top": 1,
+        "rulers": [75, 80],
         "scroll_past_end": false,
         "show_full_path": true,
         "show_minimap": false,
@@ -80,6 +81,7 @@ Usage: http://damnwidget.github.io/anaconda/IDE/
         "translate_tabs_to_spaces": true,
         "trim_trailing_white_space_on_save": true
     }
+
 
 Use Fcitx in Sublime Text 3
 ===========================

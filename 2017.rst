@@ -215,3 +215,53 @@ Outgoing::
     Authentication: Normal password
 
 Username for both should just be your actual username "dormouse.young", not your whole email address.
+
+==============
+Tinkerer Usage
+==============
+
+:date: 2017-02-01
+:slug: tinkerer-quick-start
+:tags: quickstart
+:category: software
+:author: Dormouse Young
+
+Install
+=======
+::
+
+    $ sudo pip install tinkerer
+
+
+Quick start
+===========
+::
+
+    $ mkdir tinkerer_blog
+    $ cd tinkerer_blog
+    $ tinker --setup
+
+Then edit the ``conf.py``.
+
+
+Tip
+===
+- Add post: ``tinker --post 'Hello World!'``
+- Add page: ``tinker --page 'About'``
+- Build blog: ``tinker --build``
+
+.. author:: default
+.. categories:: none
+.. tags:: none
+.. comments::
+
+
+Todo
+====
+- Show local toc in sidebar
+
+
+Reference
+=========
+Tinkerer Homepage: http://tinkerer.me/index.html
+
