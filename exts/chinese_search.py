@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 def setup(app):
     import sphinx.search as search
     import zh

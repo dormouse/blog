@@ -1,0 +1,158 @@
+{%- macro sidebar() %}
+      {%- if render_sidebar %}
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+          {%- block sidebarlogo %}
+          {%- if logo %}
+            <p class="logo"><a href="{{ pathto(master_doc) }}">
+              <img class="logo" src="{{ pathto('_static/' + logo, 1) }}" alt="Logo"/>
+            </a></p>
+          {%- endif %}
+          {%- endblock %}
+
+            {#- new style sidebar: explicitly include/exclude templates #}
+            {%- for sidebartemplate in sidebars %}
+            {%- include sidebartemplate %}
+            {%- endfor %}
+
+            {#- old style sidebars: using blocks -- should be deprecated #}
+            {%- block sidebartoc %}
+            {%- include "localtoc.html" %}
+            {%- endblock %}
+
+            {%- block sidebarrel %}
+            {%- include "relations.html" %}
+            {%- endblock %}
+
+            {%- block sidebarsourcelink %}
+            {%- include "sourcelink.html" %}
+            {%- endblock %}
+
+            {%- if customsidebar %}
+            {%- include customsidebar %}
+            {%- endif %}
+            {%- block sidebarsearch %}
+            {%- include "searchbox.html" %}
+            {%- endblock %}
+        </div>
+      </div>
+      {%- endif %}
+{%- endmacro %}
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Sphinx with Bootstrap theme">
+    <meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, bootstrap, front-end, frontend, web development">
+    <meta name="author" content="Dormouse Young">
+
+    <title>{{ title|striptags|e }}{{ titlesuffix }}</title>
+
+    <!-- pygments CSS
+    <link rel="stylesheet" href="./{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
+    -->
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{{ pathto('_static/bootstrap.min.css', 1) }}" type="text/css" />
+
+    <!-- Documentation extras -->
+
+    <link rel="stylesheet" href="{{ pathto('_static/docs.min.css', 1) }}" type="text/css" />
+    <link rel="stylesheet" href="{{ pathto('_static/patch.min.css', 1) }}" type="text/css" />
+
+    <script src="{{ pathto('_static/ie-emulation-modes-warning.js', 1) }}">
+    </script>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="{{ pathto('_static/apple-touch-icon.png', 1) }}">
+    <link rel="apple-touch-icon" href="{{ pathto('_static/favicon.ico', 1) }}">
+
+    <script>
+      var _hmt = _hmt || [];
+    </script>
+  </head>
+
+
+  <body>
+      <div class="container">
+
+      <!-- Static navbar -->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Project name</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="{{ pathto(master_doc) }}">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li>
+              <li><a href="../navbar-static-top/">Static top</a></li>
+              <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+    <div class="container bs-docs-container">
+      <div class="row">
+        <div class="col-md-9" role="main">
+          <div class="bs-docs-section">
+          {%- block body %} {%- endblock %}
+          </div>
+        </div>
+
+        <div class="col-md-3" role="complementary">
+          <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm">
+            <ul class="nav bs-docs-sidenav">
+              <li> <a href="#linux">linux</a> </li>
+              <li> <a href="#id2">id2</a> </li>
+              {%- block sidebar2 %}{{ sidebar() }}{%- endblock %}
+
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    </div> <!-- /container -->
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="{{ pathto('_static/jquery.min.js', 1) }}"></script>
+<script src="{{ pathto('_static/bootstrap.min.js', 1) }}"></script>
+<script src="{{ pathto('_static/docs.min.js', 1) }}"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="{{ pathto('_static/ie10-viewport-bug-workaround.js', 1) }}">
+</script>
+
+  </body>
+</html>
+
