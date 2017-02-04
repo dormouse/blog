@@ -250,11 +250,6 @@ Tip
 - Add page: ``tinker --page 'About'``
 - Build blog: ``tinker --build``
 
-.. author:: default
-.. categories:: none
-.. tags:: none
-.. comments::
-
 
 Todo
 ====

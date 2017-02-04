@@ -41,7 +41,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Dormouse\'s Blog'
-copyright = u'2010-2017, Dormouse.Young'
+copyright = u'2009-2017, Dormouse.Young'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -60,7 +60,7 @@ language = 'zh_CN'
 # non-false value, then it is used:
 #today = ''
 # Else, today_fmt is used as the format for a strftime call.
-today_fmt = u'%F %T'
+today_fmt = '%F %T'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -94,8 +94,8 @@ pygments_style = 'sphinx'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'blog_bootstrap'
 # html_theme = 'basic'
+# html_theme = 'classic'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -103,7 +103,7 @@ html_theme = 'blog_bootstrap'
 #html_theme_options = {}
 
 # Add any paths that contain custom themes here, relative to this directory.
-html_theme_path = ["./themes/"]
+# html_theme_path = ["./themes/"]
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
