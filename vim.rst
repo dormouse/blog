@@ -1,4 +1,85 @@
-=========
+Vim As Python IDE
+=================
+
+Vundle
+------
+
+Introduction
+^^^^^^^^^^^^
+
+Installation requires Git and triggers git clone for each configured
+repository to ~/.vim/bundle/ by default. Curl is required for search.
+
+If you are using Windows, go directly to Windows setup. If you run into
+any issues, please consult the FAQ. See Tips for some advanced configurations.
+
+Using non-POSIX shells, such as the popular Fish shell, requires additional
+setup. Please check the FAQ.
+
+Set up
+^^^^^^
+::
+
+    $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+Configure Plugins
+^^^^^^^^^^^^^^^^^
+
+Put this at the top of your .vimrc to use Vundle. Remove plugins you don't
+need, they are for illustration purposes::
+
+    set nocompatible              " be iMproved, required
+    filetype off                  " required
+
+    " set the runtime path to include Vundle and initialize
+    set rtp+=~/.vim/bundle/Vundle.vim
+    call vundle#begin()
+    " alternatively, pass a path where Vundle should install plugins
+    "call vundle#begin('~/some/path/here')
+
+    " let Vundle manage Vundle, required
+    Plugin 'VundleVim/Vundle.vim'
+
+    " The following are examples of different formats supported.
+    " Keep Plugin commands between vundle#begin/end.
+    " plugin on GitHub repo
+    Plugin 'tpope/vim-fugitive'
+    " plugin from http://vim-scripts.org/vim/scripts.html
+    Plugin 'L9'
+    " Git plugin not hosted on GitHub
+    Plugin 'git://git.wincent.com/command-t.git'
+    " git repos on your local machine (i.e. when working on your own plugin)
+    Plugin 'file:///home/gmarik/path/to/plugin'
+    " The sparkup vim script is in a subdirectory of this repo called vim.
+    " Pass the path to set the runtimepath properly.
+    Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+    " Install L9 and avoid a Naming conflict if you've already installed a
+    " different version somewhere else.
+    Plugin 'ascenator/L9', {'name': 'newL9'}
+
+    " All of your Plugins must be added before the following line
+    call vundle#end()            " required
+    filetype plugin indent on    " required
+    " To ignore plugin indent changes, instead use:
+    "filetype plugin on
+    "
+    " Brief help
+    " :PluginList       - lists configured plugins
+    " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+    " :PluginSearch foo - searches for foo; append `!` to refresh local cache
+    " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+    "
+    " see :h vundle for more details or wiki for FAQ
+    " Put your non-Plugin stuff after this line
+
+Install Plugins
+^^^^^^^^^^^^^^^
+
+    Launch ``vim`` and run ``:PluginInstall``
+
+    To install from command line: ``vim +PluginInstall +qall``
+
+
 Vim Tips
 =========
 
@@ -6,7 +87,6 @@ Vim Tips
 
 * :r! date 插入当前时间
 
-=========
 my .vimrc
 =========
 
@@ -14,49 +94,67 @@ my .vimrc
 
 There is my .vimrc::
 
-    set nocompatible
-    source $VIMRUNTIME/vimrc_example.vim
-    source $VIMRUNTIME/mswin.vim
-    behave mswin
+    set nocompatible              " be iMproved, required
+    filetype off                  " required
 
-    set diffexpr=MyDiff()
-    function MyDiff()
-      let opt = '-a --binary '
-      if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
-      if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
-      let arg1 = v:fname_in
-      if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
-      let arg2 = v:fname_new
-      if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
-      let arg3 = v:fname_out
-      if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
-      let eq = ''
-      if $VIMRUNTIME =~ ' '
-        if &sh =~ '\<cmd'
-          let cmd = '""' . $VIMRUNTIME . '\diff"'
-          let eq = '"'
-        else
-          let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
-        endif
-      else
-        let cmd = $VIMRUNTIME . '\diff'
-      endif
-      silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
-    endfunction
+    " set the runtime path to include Vundle and initialize
+    set rtp+=~/.vim/bundle/Vundle.vim
+    call vundle#begin()
+    " alternatively, pass a path where Vundle should install plugins
+    "call vundle#begin('~/some/path/here')
 
-    set lines=40 columns=85
+    " let Vundle manage Vundle, required
+    Plugin 'VundleVim/Vundle.vim'
+
+    " The following are examples of different formats supported.
+    " Keep Plugin commands between vundle#begin/end.
+    " plugin on GitHub repo
+    Plugin 'vim-scripts/VimIM'
+
+    " Plugin 'tpope/vim-fugitive'
+    " plugin from http://vim-scripts.org/vim/scripts.html
+    " Plugin 'L9'
+    " Git plugin not hosted on GitHub
+    " Plugin 'git://git.wincent.com/command-t.git'
+    " git repos on your local machine (i.e. when working on your own plugin)
+    " Plugin 'file:///home/gmarik/path/to/plugin'
+    " The sparkup vim script is in a subdirectory of this repo called vim.
+    " Pass the path to set the runtimepath properly.
+    " Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+    " Install L9 and avoid a Naming conflict if you've already installed a
+    " different version somewhere else.
+    " Plugin 'ascenator/L9', {'name': 'newL9'}
+
+    " All of your Plugins must be added before the following line
+    call vundle#end()            " required
+    filetype plugin indent on    " required
+    " To ignore plugin indent changes, instead use:
+    " filetype plugin on
+    "
+    " Brief help
+    " :PluginList       - lists configured plugins
+    " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+    " :PluginSearch foo - searches for foo; append `!` to refresh local cache
+    " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+    "
+    " see :h vundle for more details or wiki for FAQ
+    " Put your non-Plugin stuff after this line
+
+
     set autoindent
+    set columns=85
+    set expandtab 
+    set ignorecase
     set shiftwidth=4
     set tabstop=4 
-    set expandtab 
-    set nu
+    set lines=40
+    set number
     set nobackup
 
-    "搜索时忽略大小写
-    set ignorecase
 
     "解决中文字符显示半个的问题
     set ambiwidth=double
+
     """""""""""""""""""""""""""""
     "解决windows下的中文乱码问题
     """""""""""""""""""""""""""""
@@ -78,7 +176,7 @@ There is my .vimrc::
         set guifont=Fixedsys
     else
         set fileencoding=utf-8
-        set guifont=文泉驿等宽微米黑\ 11
+        set guifont=文泉驿等宽微米黑\ 12
     endif
 
     """""""""""""""""""""""
@@ -105,17 +203,7 @@ There is my .vimrc::
     let Tlist_Auto_Open=1 "自动打开Tlist
     "let Tlist_Use_Right_Window = 1 "在右侧窗口中显示 taglist 窗口。
 
-    """""""""""""""""""
-    " F5 运行当前程序 "
-    """""""""""""""""""
-    map <F5> <ESC>: call RunCurrentScript()<CR>
-
-    function RunCurrentScript()
-        w
-        if &filetype == "python"
-            !python %
-        elseif &filetype == "c"
-            !cc -o %:r % && ./%:r
-        endif
-    endfunction
+    map <F5> :!python %<CR>
+    map <F8> :w<CR>:!python3 %<CR>
+    colorscheme slate
 
