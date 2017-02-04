@@ -1,6 +1,12 @@
 Vim As Python IDE
 =================
 
+Install on MAC
+--------------
+
+Use ``brew install vim``.
+sudo mv /usr/bin/vim /usr/bin/vim74
+
 Vundle
 ------
 

@@ -48,6 +48,31 @@ Sqlite 笔记
 使用 `||` 符号。
 
 
+Install with brew
+=================
+
+When install sqlite with brew, see this::
+    ==> Installing vim dependency: sqlite
+    ==> Downloading https://homebrew.bintray.com/bottles/sqlite-3.16.2.sierra.bottle.tar.
+    ######################################################################## 100.0%
+    ==> Pouring sqlite-3.16.2.sierra.bottle.tar.gz
+    ==> Caveats
+    This formula is keg-only, which means it was not symlinked into /usr/local.
+
+    macOS provides an older sqlite3.
+
+    If you need to have this software first in your PATH run:
+      echo 'export PATH="/usr/local/opt/sqlite/bin:$PATH"' >> ~/.bash_profile
+
+      For compilers to find this software you may need to set:
+          LDFLAGS:  -L/usr/local/opt/sqlite/lib
+              CPPFLAGS: -I/usr/local/opt/sqlite/include
+              For pkg-config to find this software you may need to set:
+                  PKG_CONFIG_PATH: /usr/local/opt/sqlite/lib/pkgconfig
+
+                  ==> Summary
+                  🍺  /usr/local/Cellar/sqlite/3.16.2: 11 files, 2.9M
+
 内置函数
 ========
 
