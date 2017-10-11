@@ -1,8 +1,16 @@
-======
-字符串
-======
+Python Note 400 - String
+************************
 
-* capitalize() 首字符大写 
+:date: 2017-02-13
+:modified: 2017-02-13
+:slug: python-note-400-string
+:tags: python, note, string
+:category: Development
+:author: Dormouse Young
+:summary: Python note series 400 - string
+
+
+* capitalize() 首字符大写
 * center(width) 返回一个原字符串居中,并使用空格填充至长度 width 的新字串
 * count(str, beg=0, end=len(string)) 返回 str 在 string 里面出现的次数，如果 beg 或者 end 指定则返回指定范围内 str 出现的次数
 * decode(encoding='UTF-8', errors='strict') 以 encoding 指定的编码格式解码string ，如果出错默认报一个 ValueError 的异常 ，除非 errors 指定的是 'ignore' 或者 'replace'
@@ -36,7 +44,7 @@
 * startswith(obj, beg=0,end=len(string)) 检查字符串是否是以 obj 开头，是则返回True，否则返回 False。如果beg 和 end 指定值 ，则在指定范围内检查.
 * strip([obj]) 在string 上执行 lstrip()和 rstrip().
 * swapcase() 翻转 string 中的大小写
-* title() 返回"标题化"的 string,就是说所有单词都是以大写开始，其余字母均为小写(见 istitle()) 
+* title() 返回"标题化"的 string,就是说所有单词都是以大写开始，其余字母均为小写(见 istitle())
 * translate(str, del="") 根据 str 给出的表(包含 256 个字符)转换 string 的字符,要过滤掉的字符放到 del 参数中
 * upper() 转换 string 中的小写字母为大写
 * zfill(width) 返回长度为width的字符串,原字符串 string 右对齐,前面填充0

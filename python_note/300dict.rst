@@ -1,6 +1,14 @@
-====
-字典
-====
+Python Note 300 - Dict
+**********************
+
+:date: 2017-02-13
+:modified: 2017-02-13
+:slug: python-note-300-dict
+:tags: python, note, dict
+:category: Development
+:author: Dormouse Young
+:summary: Python note series 300 - dict
+
 
 字典推导
 ========
@@ -58,7 +66,7 @@ list 转 dict
 将 ['1:a','2:b','3:c'] 转换为 {'1′: 'a', '3′: 'c', '2′: 'b'}::
 
     dict(item.split(':')[:2] for item in b)
-    
+
 dict 转 class
 =============
 

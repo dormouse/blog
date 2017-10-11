@@ -1,6 +1,14 @@
-========
-文件操作
-========
+Python Note 100 - File
+**********************
+
+:date: 2017-02-13
+:modified: 2017-02-13
+:slug: python-note-100-file
+:tags: python, note, file
+:category: Development
+:author: Dormouse Young
+:summary: Python note series 100 - file
+
 
 打开文件
 ========
@@ -34,20 +42,20 @@
 open 的模式如下表：
 
 ==== ==============================================
-命令 说明                                           
+命令 说明
 ==== ==============================================
  r   以读方式打开
  w   以写方式打开
  a   以追加模式打开 (从 EOF 开始, 必要时创建新文件)
- r+  以读写模式打开                                 
- w+  以读写模式打开 (参见 w )                       
- a+  以读写模式打开 (参见 a )                       
- rb  以二进制读模式打开                             
- wb  以二进制写模式打开 (参见 w )                   
- ab  以二进制追加模式打开 (参见 a )                 
- rb+ 以二进制读写模式打开 (参见 r+ )                
- wb+ 以二进制读写模式打开 (参见 w+ )                
- ab+ 以二进制读写模式打开 (参见 a+ )                
+ r+  以读写模式打开
+ w+  以读写模式打开 (参见 w )
+ a+  以读写模式打开 (参见 a )
+ rb  以二进制读模式打开
+ wb  以二进制写模式打开 (参见 w )
+ ab  以二进制追加模式打开 (参见 a )
+ rb+ 以二进制读写模式打开 (参见 r+ )
+ wb+ 以二进制读写模式打开 (参见 w+ )
+ ab+ 以二进制读写模式打开 (参见 a+ )
 ==== ==============================================
 
 相关函数
@@ -72,8 +80,9 @@ shutil 操作
 
 复制文件：
 
-* shutil.copyfile("oldfile","newfile") oldfile和newfile都只能是文件
-* shutil.copy("oldfile","newfile") oldfile只能是文件夹，newfile可以是文件，也可以是目标目录
+* shutil.copyfile("oldfile","newfile") oldfile 和 newfile 都只能是文件。
+* shutil.copy("oldfile","newfile") oldfile 只能是文件夹， newfile 可以是文件，
+  也可以是目标目录
 
 复制文件夹：
 

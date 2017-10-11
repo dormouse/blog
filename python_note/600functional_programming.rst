@@ -1,14 +1,23 @@
-==========
-函数式编程
-==========
+Python Note 600 - Functional Programming
+========================================
+
+
+:date: 2017-02-13
+:modified: 2017-02-13
+:slug: python-note-600-functional-programming
+:tags: python, note, functional-programming
+:category: Development
+:author: Dormouse Young
+:summary: Python note series 600 - functional-programming
+
 
 lambda
-======
+-------
 
 lambda 语句中，冒号前是参数，可以有多个，用逗号隔开，冒号右边的返回值。
 lambda 语句构建是一个函数对象::
 
-    In [1]: f = lambda x: x * 2 
+    In [1]: f = lambda x: x * 2
 
     In [2]: f(8)
     Out[2]: 16
@@ -17,7 +26,7 @@ lambda 语句构建是一个函数对象::
     Out[3]: <function __main__.<lambda>>
 
 filter
-======
+-------
 
 filter(function or None, sequence) -> list, tuple, or string
 
@@ -31,10 +40,10 @@ filter(function or None, sequence) -> list, tuple, or string
     Out[5]: [18, 9, 24, 12, 27]
 
 map
-===
+----
 
 map(function, sequence[, sequence, ...]) -> list
-    
+
 返回一个 list ，其内容为把序列中的每一个值作为函数的参数得到的函数的返回值::
 
     In [6]: map(lambda x: x * 2 + 10, foo)
@@ -59,10 +68,10 @@ None 来补充::
     Out[11]: [('Packers', 'Ravens'), ('49ers', 'Patriots')]
 
 reduce
-======
+-------
 
 reduce(function, sequence[, initial]) -> value
-    
+
 Apply a function of two arguments cumulatively to the items of a sequence,
 from left to right, so as to reduce the sequence to a single value.
 For example, reduce(lambda x, y: x+y, [1, 2, 3, 4, 5]) calculates

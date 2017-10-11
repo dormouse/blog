@@ -2,7 +2,13 @@
 结合 Sphinx 与 xeTex 生成PDF
 ============================
 
-2013年 01月 27日 星期日 21:42:37 CST
+:date: 2013-01-27 21:42:37
+:modified: 2015-03-10 13:55:57
+:tags: sphinx, xetex, pdf
+:category: software
+:slug: make-pdf-with-Sphinx-and-xeTex
+:author: Dormouse Young
+:summary: make pdf with Sphinx and xeTex
 
 安装xeTex
 =========
@@ -16,7 +22,7 @@ apt-get install texlive-full
 方法二：
 --------
 
-去 tex 的老家 http://www.tug.org/ ，在 http://www.tug.org/texlive/acquire-netinstall.html 下载
+去 tex 的 `老家 <http://www.tug.org/texlive/acquire-netinstall.html>`_ 下载
 `install-tl-unx.tar.gz <http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz>`_ 。
 
 解压缩后，运行::
@@ -77,7 +83,7 @@ apt-get install texlive-full
 用 Sphinx 生成 PDF 文件
 =======================
 使用这个命令生成 tex 文件::
-  
+
     make latex
 
 把生成的 tex 文件的“\title{XXX}”之前的开头部分替换为如下内容::
@@ -105,3 +111,4 @@ apt-get install texlive-full
 运行 **两遍** 以下命令即可生成 PDF 文件::
 
     xelatex Test.tex
+

@@ -12,20 +12,38 @@ Welcome to Dormouse's Blog!
 .. toctree::
    :maxdepth: 1
 
-   compressor
-   django
-   git
-   install_linux_soft
-   note
-   pandas
-   pdf
-   sphinx_cheet_sheet
-   sqlalchemy_note
-   sqlite
-   sublime_text3
-   urlparse
-   vim
-   virtualenv
+   apt-cheat-sheet.rst
+   build-static-blog-with-pelican.rst
+   files-that-start-with-an-underscore-are-missing.rst
+   git-note.rst
+   golang-quick-start.rst
+   homebrew-note.rst
+   howto-config-icoloud-mail-in-thunderbird.rst
+   howto-start-a-python3-project.rst
+   hugo-quick-start.rst
+   ifttt-note.rst
+   install-linuxmint.rst
+   iterm2-note.rst
+   linux-compressor.rst
+   linux-note.rst
+   mac-note.rst
+   make-a-blog-with-flask.rst
+   pandas-note.rst
+   pdf.rst
+   pyqt5-note.rst
+   python-terminal-ide.rst
+   python-virtual-env.rst
+   semantic-note.rst
+   sphinx-cheet-sheet.rst
+   spyder-on-winxp.rst
+   sqlite-note.rst
+   sublime-text-note.rst
+   tinkerer-quick-start.rst
+   tumx-note.rst
+   vim-as-ide.rst
+   vim-note.rst
+   wordpress-on-dotcloud.rst
+   wordpress-on-linuxmint.rst
 
 Python 笔记
 ===========
@@ -57,16 +75,9 @@ Lego 笔记
 ========
 .. toctree::
    :maxdepth: 1
+   :glob:
 
-   2017
-   2016
-   2015
-   2014
-   2013
-   2012
-   2011
-   2010
-   2009
+   personal/*
 
 Indices and tables
 ==================

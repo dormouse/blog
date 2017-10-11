@@ -1,6 +1,13 @@
-======
-Logger
-======
+Python Note 800 - logger
+*************************
+
+:date: 2017-02-13
+:modified: 2017-02-13
+:slug: python-note-800-logger
+:tags: python, note, logger
+:category: Development
+:author: Dormouse Young
+:summary: Python note series 800 - logger
 
 常用代码::
 
