@@ -17,6 +17,7 @@ import sys, os
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #sys.path.insert(0, os.path.abspath('.'))
+sys.path.append(os.path.abspath('exts'))
 
 # -- General configuration -----------------------------------------------------
 
@@ -25,14 +26,13 @@ import sys, os
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = []
+extensions = ['chinese_search',]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
 # The suffix of source filenames.
 source_suffix = '.rst'
-
 # The encoding of source files.
 #source_encoding = 'utf-8-sig'
 
@@ -88,12 +88,12 @@ pygments_style = 'sphinx'
 
 
 # -- Options for HTML output ---------------------------------------------------
-# import sphinx_rtd_theme
-# html_theme = "sphinx_rtd_theme"
-# html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
+html_theme = "sphinxdoc"
+# html_theme = "sphinx_rtd_theme"
 # html_theme = 'basic'
 # html_theme = 'classic'
 
@@ -101,9 +101,10 @@ pygments_style = 'sphinx'
 # further.  For a list of options available for each theme, see the
 # documentation.
 #html_theme_options = {}
+# html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # Add any paths that contain custom themes here, relative to this directory.
-# html_theme_path = ["./themes/"]
+#html_theme_path = ["./themes/"]
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
@@ -182,7 +183,7 @@ htmlhelp_basename = 'DormousesBlogdoc'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'DormousesBlog.tex', u'Dormouse\'s Blog Documentation',
+  ('index', 'DormousesBlog.tex', u'Dormouse\'s Blog',
    u'Dormouse.Young', 'manual'),
 ]
 
@@ -226,9 +227,7 @@ latex_docclass = {
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'dormousesblog', u'Dormouse\'s Blog Documentation',
+    ('index', 'dormousesblog', u'Dormouse\'s Blog',
      [u'Dormouse.Young'], 1)
 ]
 
-sys.path.append(os.path.abspath('exts'))
-extensions.append('chinese_search')

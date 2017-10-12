@@ -78,10 +78,3 @@ Lego 笔记
    :glob:
 
    personal/*
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

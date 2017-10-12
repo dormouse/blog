@@ -1,7 +1,6 @@
 Vim Note
 ********
 
-
 :date: 2017-02-10
 :modified: 2017-02-16
 :slug: vim-note

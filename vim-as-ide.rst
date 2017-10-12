@@ -80,7 +80,7 @@ Two ways to Install Plugins
 My .vimrc
 =========
 
-2014年 10月 20日 星期一 20:24:31 CST
+2017年 10月 12日 星期四 08:49:53 CST
 
 There is my .vimrc::
 

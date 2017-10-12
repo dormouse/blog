@@ -3,10 +3,25 @@ Sphinx cheat sheet
 ==================
 
 :date: 2013-09-10
+:modified: 2017-05-11 10:43:00
 :slug: sphinx-cheet-sheet
 :tags: sphinx
 :category: software
 :author: Dormouse Young
+
+Install rtd theme
+=================
+
+website:https://github.com/rtfd/sphinx_rtd_theme
+
+::
+
+    pip install sphinx_rtd_theme
+
+In `conf.py` file::
+
+    html_theme = "sphinx_rtd_theme"
+
 
 Here is a quick and dirty cheat sheet for some common stuff you want
 to do in sphinx and ReST.
