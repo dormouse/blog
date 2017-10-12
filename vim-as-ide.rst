@@ -99,21 +99,23 @@ There is my .vimrc::
     " The following are examples of different formats supported.
     " Keep Plugin commands between vundle#begin/end.
 
+
     " plugin on GitHub repo
+    " for chinese input 
     Plugin 'vim-scripts/VimIM'
     " for file tree list
     Plugin 'scrooloose/nerdtree'
+    " for comment quickly
     Plugin 'scrooloose/nerdcommenter'
 
     " plugin from http://vim-scripts.org/vim/scripts.html
-    " Plugin 'L9'
+    " taglist
+    Plugin 'taglist.vim'
 
     " Git plugin not hosted on GitHub
     " Plugin 'git://git.wincent.com/command-t.git'
-
     " git repos on your local machine (i.e. when working on your own plugin)
     " Plugin 'file:///home/gmarik/path/to/plugin'
-
     " The sparkup vim script is in a subdirectory of this repo called vim.
     " Pass the path to set the runtimepath properly.
     " Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -122,7 +124,6 @@ There is my .vimrc::
     " Plugin 'ascenator/L9', {'name': 'newL9'}
 
     " All of your Plugins must be added before the following line
-
     call vundle#end()            " required
     filetype plugin indent on    " required
     " To ignore plugin indent changes, instead use:
@@ -130,24 +131,55 @@ There is my .vimrc::
     "
     " Brief help
     " :PluginList       - lists configured plugins
-    " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+    " :PluginInstall    - installs plugins;
+    "                     append `!` to update or just :PluginUpdate
     " :PluginSearch foo - searches for foo; append `!` to refresh local cache
-    " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+    " :PluginClean      - confirms removal of unused plugins;
+    "                     append `!` to auto-approve removal
     "
     " see :h vundle for more details or wiki for FAQ
     " Put your non-Plugin stuff after this line
 
 
+    """""""""""""""
+    " Key mapping "
+    """""""""""""""
+    map <F5> :!python %<CR>
+    map <F8> :w<CR>:!python3 %<CR>
+    map <C-n> :NERDTreeToggle<CR>
+    map <C-t> :TlistToggle<CR>
+
+
+    """"""""""""""""""
+    " Plugin setting "
+    """"""""""""""""""
+    " NerdCommenter
+    let g:NERDSpaceDelims = 1
+
+    " Taglist
+    let Tlist_Show_One_File = 1 " Only current file's tlist
+    let Tlist_Exit_OnlyWindow = 1 " If only tlist left, then quit vim
+    let Tlist_Auto_Open=1
+    let Tlist_Use_Right_Window = 1 " Show in right window
+
+
+    """""""""""""""""
+    " Other setting "
+    """""""""""""""""
     set autoindent
-    set columns=85
-    set expandtab
+    " set columns=85
+    set colorcolumn=80
+    set expandtab 
+    set foldmethod=syntax
+    set foldmethod=indent
     set ignorecase
     set shiftwidth=4
-    set tabstop=4
+    set tabstop=4 
     set lines=40
     set number
     set nobackup
 
+    colorscheme slate
 
     "解决中文字符显示半个的问题
     set ambiwidth=double
@@ -189,18 +221,4 @@ There is my .vimrc::
         hi DiffChange ctermfg=Black ctermbg=DarkGreen guifg=Black guibg=LightGray
         hi DiffText ctermfg=Black ctermbg=Grey guifg=Black guibg=Gray
     endif
-
-    """""""""""
-    " 设定TAG "
-    """""""""""
-    set foldmethod=syntax " 用语法高亮来定义折叠
-    set foldmethod=indent " 更多的缩进表示更高级别的折叠(这个似乎效果好一些)
-    let Tlist_Show_One_File = 1 "不同时显示多个文件的tag，只显示当前文件的。
-    let Tlist_Exit_OnlyWindow = 1 "如果 taglist 窗口是最后一个窗口，则退出 vim。
-    let Tlist_Auto_Open=1 "自动打开Tlist
-    "let Tlist_Use_Right_Window = 1 "在右侧窗口中显示 taglist 窗口。
-
-    map <F5> :!python %<CR>
-    map <F8> :w<CR>:!python3 %<CR>
-    colorscheme slate
 
