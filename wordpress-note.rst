@@ -1,4 +1,43 @@
-=======================
+======================================
+Wordpress Note
+======================================
+
+:date: 2014-10-26 19:45:34
+:slug: wordpress-note
+:tags: workpress, linuxmint, dotcloud
+:category: linux
+:author: Dormouse Young
+
+Install wordpress on LinuxMint(Ubuntu)
+======================================
+
+#. install softwares::
+
+    sudo apt-get install wordpress mysql-server phpmyadmin
+
+#. make links::
+
+    sudo ln -s /usr/share/wordpress/ /var/www/wp
+    sudo ln -s /usr/share/phpmyadmin/ /var/www/phpmyadmin
+
+#. restart services::
+
+    sudo service apache2 restart
+    sudo service mysql restart
+
+#. 在phpmyadmin中创建wordpress专用用户
+
+#. config wordpress::
+
+    cd /usr/share/wordpress
+    mv wp-config.php wp-config.php.bak
+    修改wp-config-sample.php 中的用户名和密码，另存为wp-config.php
+
+#. add administrator
+
+  open http://127.0.0.1/wp/ ,set user name and password of wordpress's admin.
+
+
 dotcloud 部署 wordpress
 =======================
 
@@ -9,7 +48,7 @@ dotcloud 部署 wordpress
 :author: Dormouse Young
 
 安装环境并创建项目
-==================
+-------------------
 
 首先在 dotcloud 网站注册，并记录 api key 。
 
@@ -35,11 +74,11 @@ dotcloud 部署 wordpress
       type: mysql
 
 推送项目::
-    
+
     dotcloud push dormouse
 
 查看项目信息
-============
+-------------
 
 全站信息::
 
@@ -108,7 +147,7 @@ www 信息::
     type: mysql
 
 数据库管理
-==========
+----------------
 
 远程管理数据库，添加用户::
 
@@ -122,7 +161,7 @@ www 信息::
     mysql>drop database wp //删除 wp 数据库
 
 下载安装wordpress
-=================
+---------------------
 
 ssh 登录后操作::
 
@@ -139,8 +178,8 @@ ssh 登录后操作::
 
 另：https://api.wordpress.org/secret-key/1.1/salt/
 
-重写URL
-=========
+重写 URL
+-------------
 
 wordpress在Dotcloud的服务器Nginx的URL重写规则，新建nginx.conf并输入以下内容::
 
@@ -153,22 +192,22 @@ wordpress在Dotcloud的服务器Nginx的URL重写规则，新建nginx.conf并输
     $ supervisorctl restart php5-fpm     //重启php5-fpm进程
     $ sudo /etc/init.d/nginx restart     //重启nginx进程
 
-强制https访问
-=============
+强制 https 访问
+----------------
 
 在nginx.conf中加入以下内容::
 
     if ($http_x_forwarded_port != 443) { rewrite ^ https://$http_host/; }
 
 绑定域名
-========
+-------------
 
 创建一条域名的CNAME记录到gateway.dotcloud.com就可以访问了::
 
     $ dotcloud alias add quany.www www.quany.info
 
 删除应用和服务
-==============
+----------------------
 
 删除应用::
 
@@ -181,7 +220,8 @@ wordpress在Dotcloud的服务器Nginx的URL重写规则，新建nginx.conf并输
 
 
 使用ssh shell
-=============
+-------------
+
 使用命令::
 
     ~/bin/dotCloud ssh wiwi.www
@@ -189,7 +229,7 @@ wordpress在Dotcloud的服务器Nginx的URL重写规则，新建nginx.conf并输
 或者::
 
     ~/bin/dotCloud info wiwi.www
-    
+
 之后，看端口号。
 
 用 ~/.dotcloud/dotcloud.key 登录进去,在 .ssh 目录下建立一个 config文件，内容
@@ -202,8 +242,6 @@ wordpress在Dotcloud的服务器Nginx的URL重写规则，新建nginx.conf并输
     IdentityFile ~/.dotcloud/dotcloud.key
 
 然后执行::
-    
+
     ssh -v wiwi.www
     ssh -N -v wiwi.www -D 127.0.0.1:7070
-
-

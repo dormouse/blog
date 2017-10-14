@@ -7,17 +7,16 @@
 Welcome to Dormouse's Blog!
 ===========================================
 
-专题笔记
-========
 .. toctree::
    :maxdepth: 1
 
+   python_note/index.rst
+   pep/pep-0008.rst
+   pygtk3/pygtk3-note.rst
    apt-cheat-sheet.rst
    build-static-blog-with-pelican.rst
-   files-that-start-with-an-underscore-are-missing.rst
    git-note.rst
    golang-quick-start.rst
-   homebrew-note.rst
    howto-config-icoloud-mail-in-thunderbird.rst
    howto-start-a-python3-project.rst
    hugo-quick-start.rst
@@ -42,39 +41,7 @@ Welcome to Dormouse's Blog!
    tumx-note.rst
    vim-as-ide.rst
    vim-note.rst
-   wordpress-on-dotcloud.rst
-   wordpress-on-linuxmint.rst
-
-Python 笔记
-===========
-.. toctree::
-   :maxdepth: 1
-   :glob:
-
-   pep/*
-   python_note/*
-   pygtk3/pygtk3-note
-
-Haskell
-=======
-.. toctree::
-   :maxdepth: 1
-   :glob:
-
-   haskell/*
-
-Lego 笔记
-===========
-.. toctree::
-   :maxdepth: 1
-   :glob:
-
-   lego/*
-
-个人笔记
-========
-.. toctree::
-   :maxdepth: 1
-   :glob:
-
-   personal/*
+   wordpress-note.rst
+   haskell/index.rst
+   personal/index.rst
+   lego/index.rst
