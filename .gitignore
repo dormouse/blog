@@ -2,4 +2,9 @@
 .*swp
 _build/
 .idea
+bin/
+lib/
+include/
+pyvenv.cfg
+pip-selfcheck.json
 
