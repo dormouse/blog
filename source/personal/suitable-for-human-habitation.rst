@@ -9,7 +9,7 @@
 
 来源： http://www.nasa.gov/topics/earth/features/health-sapping.html
 
-.. image:: /images/main_Global-PM2.5-map.JPG
+.. image:: main_Global-PM2.5-map.JPG
     :alt: main_Global-PM2.5-map.JPG
     :width: 400 px
 

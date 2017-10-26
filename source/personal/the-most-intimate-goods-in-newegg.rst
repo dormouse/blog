@@ -6,6 +6,6 @@
 :category: personal
 :author: Dormouse Young
 
-.. image:: /images/newegg.jpg
+.. image:: newegg.jpg
     :alt: newegg.jpg
 

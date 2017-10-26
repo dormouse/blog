@@ -8,7 +8,7 @@
 
 想买一本电子书，比较中...
 
-.. image:: /images/ebook.jpg
+.. image:: ebook.jpg
     :alt: ebook
 
 还有一些备选的型号:台电K3，纽曼6206。

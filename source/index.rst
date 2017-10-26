@@ -28,10 +28,10 @@ Welcome to Dormouse's Blog!
    mac-note.rst
    make-a-blog-with-flask.rst
    pandas-note.rst
-   pdf.rst
    pyqt5-note.rst
    python-terminal-ide.rst
    python-virtual-env.rst
+   rst-pdf.rst
    semantic-note.rst
    sphinx-cheet-sheet.rst
    spyder-on-winxp.rst

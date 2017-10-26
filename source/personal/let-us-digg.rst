@@ -11,5 +11,5 @@
 
 我出现在这里：》
 
-.. image:: /images/iamhere.png
+.. image:: iamhere.png
     :alt: iamhere.png

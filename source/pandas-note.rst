@@ -2366,7 +2366,7 @@ pandas 入门
 
 
 
-.. image:: images/pandas_67_1.png
+.. image:: pandas_67_1.png
     :alt: pandas_67_1.png
 
 .. code-block:: python
@@ -2464,7 +2464,7 @@ pandas 入门
 
 
 
-.. image:: images/pandas_69_1.png
+.. image:: pandas_69_1.png
     :alt: pandas_69_1.png
 
 

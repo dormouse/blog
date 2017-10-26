@@ -1,10 +1,12 @@
 *.pyc
 .*swp
-_build/
 .idea
+.DS_Store
+
 bin/
-lib/
+build/
 include/
-pyvenv.cfg
+lib/
 pip-selfcheck.json
+pyvenv.cfg
 
