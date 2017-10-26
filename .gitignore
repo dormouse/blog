@@ -3,6 +3,7 @@
 .idea
 .DS_Store
 
+.ropeproject/
 bin/
 build/
 include/
