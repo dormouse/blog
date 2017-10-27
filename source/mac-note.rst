@@ -35,7 +35,8 @@ Example::
 
 What is it?
 
-Homebrew installs packages to their own directory and then symlinks their files into /usr/local::
+Homebrew installs packages to their own directory and then symlinks their
+files into ``/usr/local``::
 
     $ cd /usr/local
     $ find Cellar
@@ -109,7 +110,8 @@ But it is very strange::
 
     FirefoxSetup.exe               7%[==>                                           ]   6.46M   577KB/s    eta 1m 54s
 
-So I have to go to http://ftp.mozilla.org/pub/firefox/releases/51.0.1/mac/en-US/ , and download manually.
+So I have to go to http://ftp.mozilla.org/pub/firefox/releases/51.0.1/mac/en-US/ ,
+and download manually.
 
 
 bash

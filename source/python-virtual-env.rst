@@ -16,8 +16,8 @@ Creation of virtual environments is done by executing the command venv::
 
     python3 -m venv /path/to/new/virtual/environment
 
-Running this command will create bin/ include/ lib/ and pyvenv.cfg in the
-path.
+Running this command will create ``bin/``, ``include/``, ``lib/`` and
+``pyvenv.cfg`` in the path.
 
 activate venv: ``$ source <venv>/bin/activate``
 
