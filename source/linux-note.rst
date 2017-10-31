@@ -9,6 +9,18 @@ Linux Note
 :author: Dormouse Young
 :summary: Note of how to use linux
 
+Pip note
+---------
+
+Install with pip: ``pip install imapclient``.
+
+Install from source::
+
+    $ git clone https://github.com/mjs/imapclient.git
+    $ cd imapclient
+    $ pip install -e .
+
+
 Install chrome
 --------------
 
