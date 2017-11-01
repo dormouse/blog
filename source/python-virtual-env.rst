@@ -1,15 +1,17 @@
+*******************************
 安装 Python 虚拟环境
-====================
+*******************************
 
 :date: 2012-04-25
 :modified: 2017-09-25
 :slug: python-virtual-env
-:tags: python, virtual
+:tags: python, virtual, venv, jupyter
 :category: development
 :author: Dormouse Young
 
 Python3 Build-in
------------------
+===================================
+
 Python3 doc: https://docs.python.org/3/library/venv.html
 
 Creation of virtual environments is done by executing the command venv::
@@ -22,68 +24,85 @@ Running this command will create ``bin/``, ``include/``, ``lib/`` and
 activate venv: ``$ source <venv>/bin/activate``
 
 Anaconda
----------
+====================
 
 Install
-~~~~~~~~
+--------------------
 
 官方网站：https://www.continuum.io/
 
-清华大学开源软件镜像站：https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/
-
 conda 官方文档：https://docs.anaconda.com/
 
-Anaconda 镜像使用帮助
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+清华大学开源软件镜像站：https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/
 
-Anaconda 是一个用于科学计算的 Python 发行版，支持 Linux, Mac, Windows, 包含了众多流行的科学计算、数据分析的 Python 包。
-
-Anaconda 安装包可以到 https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/ 下载。
-
-TUNA 还提供了 Anaconda 仓库的镜像，运行以下命令::
+安装清华大学仓库镜像，运行以下命令::
 
     conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
     conda config --set show_channel_urls yes
 
-即可添加 Anaconda Python 免费仓库。
-
-运行 `conda install numpy` 测试一下吧。
 
 常用命令
-~~~~~~~~~~~~~~~~
+-------------------------
 
-查看版本: `conda -V` 或者 `conda --version`
+查看版本: ``conda -V`` 或者 ``conda --version``
 
-查看信息: `conda info`
+查看信息: ``conda info``
 
-查看当前环境的包列表: `conda list`
+查看当前环境的包列表: ``conda list``
 
-搜索包: `conda search beautifulsoup4`
+搜索包: ``conda search beautifulsoup4``
+
 
 虚拟环境
-~~~~~~~~~~~~~~~~~~~~
+--------------------------
 
-创建虚拟环境::
+创建虚拟环境: ``conda create -n env_name package_name python=3*``
 
-    conda create -n env_name package_name python=3*
+查看有哪些虚拟环境: ``conda env list``
 
-    例如：
+查看当前所在的虚拟环境: ``conda info --e``
 
-    conda create -n blog sphinx python=3*
+激活或切换虚拟环境： ``source activate env_name``
 
-查看有哪些虚拟环境: `conda env list`
+关闭虚拟环境： ``source deactivate``
 
-查看当前所在的虚拟环境: `conda info --e`
+移除虚拟环境： ``conda remove -n env_name --all``
 
-激活或切换虚拟环境： `source activate env_name`
 
-关闭虚拟环境： `source deactivate`
+如何在虚拟环境下使用 Jupyter book
+-------------------------------------------------
 
-移除虚拟环境： `conda remove -n env_name --all`
+This section is copy from https://stackoverflow.com/questions/38280739/how-to-make-conda-virtual-environments-persistent-and-available-for-tools-such-a
+
+Register a (python) notebook kernel:
+
+Let's suppose you have created a conda environment named jupyter-env35 with
+conda create -n jupyter-env35 python=3.5 and now want to use it in jupyter.
+
+Installing and registering a python kernel in the environment will make it
+available over the graphical notebook interface.
+
+To do so, first install the ipython kernel::
+
+    conda install -n jupyter-env35 ipykernel
+
+Then activate the environment and register the kernel::
+
+    source activate jupyter-env35
+    ipython kernel install --user --name jupyter-env35
+
+When you now fire up juypter, it will show jupyter-env35 as a kernel in the
+list of available kernels. If you select it, all packages installed into
+juypter-env35 will be available.
+Unregister a notebook kernel:
+
+If you want delete the kernel from the notebook interface, ``jupyter --data-dir``, will print out jupyter's data directory.
+
+Navigate to the printed folder, find the subfolder kernels and delete the folder with the name of your kernel (here jupyter-env35). After that the kernel will not show up in jupyter anymore.
 
 
 使用 virtualenvwrapper
----------------------------------------------------
+==================================
 
 Install pip and virtualenvwrapper::
 
@@ -137,8 +156,9 @@ Use pip to install later::
 
     pip install -r requirements.txt
 
+
 使用 virtualenv
-------------------------------------
+===============================
 
 如果你使用 Mac OS X 或 Linux ，那么可以使用下面两条命令中任意一条::
 
