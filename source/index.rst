@@ -18,6 +18,7 @@ Welcome to Dormouse's Blog!
    git-note.rst
    golang-quick-start.rst
    howto-config-icoloud-mail-in-thunderbird.rst
+   howto-create-a-sublime-text-3-plugin
    howto-start-a-python3-project.rst
    hugo-quick-start.rst
    ifttt-note.rst

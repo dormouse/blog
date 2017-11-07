@@ -94,7 +94,26 @@ the Command Palette (``ctrl+shift+p``).
 See `First Use <https://github.com/bordaigorl/sublime-evernote#first-use>`_
 for linking the plugin to your account.
 
+Plugin
+======
 
+GraphvizPreview
+-----------------
+
+GraphvizPreview Plugin can not preview in my PC, my env is:
+
+* Linux Mint 18.2 'Sonya'
+* Sublime Text Version 3.0, Build 3143
+* Python 3.6.2 ``|Anaconda, Inc.|`` (default, Sep 22 2017, 02:03:08) [GCC 7.2.0] on linux
+
+The output is ::
+
+    (xreader:8971): Gtk-ERROR **: GTK+ 2.x symbols detected.
+    Using GTK+ 2.x and GTK+ 3 in the same process is not supported
+
+GraphvizPreview first covert code to pdf format, then use ``xdg-open`` to
+open the output file. So hack it, first covert code to png format, then use
+``feh`` to open it.
 
 My Settings
 ===========
