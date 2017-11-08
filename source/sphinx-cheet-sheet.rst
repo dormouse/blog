@@ -9,6 +9,7 @@ Sphinx cheat sheet
 :category: software
 :author: Dormouse Young
 
+
 Install rtd theme
 =================
 
@@ -22,6 +23,10 @@ In `conf.py` file::
 
     html_theme = "sphinx_rtd_theme"
 
+
+reStructuredText Primer
+=======================
+See http://www.sphinx-doc.org/en/stable/rest.html for more.
 
 Here is a quick and dirty cheat sheet for some common stuff you want
 to do in sphinx and ReST.

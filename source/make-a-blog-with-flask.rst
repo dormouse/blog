@@ -14,10 +14,10 @@ Init
 ====
 
 Fisst create a new repository which name "flask_site" on github.
-Then git clone to loacl. Init the env::
+Then git clone to local. Init the env::
 
     $ cd flask_site
-    $ mkvirtualenv -p python3 flask_site 
+    $ mkvirtualenv -p python3 flask_site
     $ pip install flask
     $ pip install flask-login
     $ pip install flask-openid
@@ -80,18 +80,18 @@ Change views.py::
     def index():
         blog_title = 'Awsome Blog'  # fake blog title
         posts = [  # fake array of posts
-            { 
-                'title': 'First blog', 
-                'content': 'This is my first blog!' 
+            {
+                'title': 'First blog',
+                'content': 'This is my first blog!'
             },
-            { 
-                'title': 'Second blog', 
-                'content': 'Second blog for flask blog.' 
+            {
+                'title': 'Second blog',
+                'content': 'Second blog for flask blog.'
             }
         ]
         return render_template("index.html",
                                blog_title=blog_title,
-                               posts=posts)                               
+                               posts=posts)
 
 Create ``blog/app/templates/base.html``::
 
