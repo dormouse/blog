@@ -172,3 +172,8 @@ Edit ``~/.bash_profile``, add following line::
 
 I recommend the second way for most of brew intalled software are in the
 ``/usr/local``.
+
+
+Other
+=====
+1. 使用 Cryptomator 实现云同步端到端加密
