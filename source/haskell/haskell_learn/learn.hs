@@ -144,4 +144,35 @@ We have to define a new data type, because lists in Haskell are homogeneous.
 -}
 data NestedList a = Elem a | List [NestedList a]
 flatten :: NestedList a -> [a]
-flatten (Elem x) = [x]
+flatten (Elem a) = [a]
+flatten (List (x:xs)) = flatten x ++ flatten (List xs)
+flatten (List []) = []
+
+{-
+ 8 Problem 8
+
+(**) Eliminate consecutive duplicates of list elements.
+
+If a list contains repeated elements they should be replaced with a single
+copy of the element. The order of the elements should not be changed.
+
+Example:
+
+* (compress '(a a a a b c c a a d e e e e))
+(A B C A D E)
+
+Example in Haskell:
+
+> compress "aaaabccaadeeee"
+"abcade"
+-}
+
+compress :: (Eq a) => [a] -> [a]
+compress [] = []
+compress [a] = [a]
+compress [a,b] = if a == b
+                 then [a]
+                 else [a,b]
+compress (a:b:xs) = if a == b
+                  then compress(b : xs)
+                  else a : compress(b : xs)
