@@ -1,5 +1,5 @@
--- learn haskell 99 questions
--- website: https://wiki.haskell.org/99_questions
+-- learn haskell 99 questions 1-10
+-- website: https://wiki.haskell.org/99_questions/1_to_10
 
 {-
  1 Problem 1
@@ -176,3 +176,53 @@ compress [a,b] = if a == b
 compress (a:b:xs) = if a == b
                   then compress(b : xs)
                   else a : compress(b : xs)
+
+{-
+ 9 Problem 9
+
+(**) Pack consecutive duplicates of list elements into sublists. If a list contains repeated elements they should be placed in separate sublists.
+
+Example:
+
+* (pack '(a a a a b c c a a d e e e e))
+((A A A A) (B) (C C) (A A) (D) (E E E E))
+
+Example in Haskell:
+
+*Main> pack ['a', 'a', 'a', 'a', 'b', 'c', 'c', 'a', 'a', 'd', 'e', 'e', 'e', 'e']
+["aaaa","b","cc","aa","d","eeee"]
+
+Solutions
+-}
+
+pack :: (Eq a) => [a] -> [[a]]
+pack [] = []
+pack [x] = [[x]]
+pack (x:xs) = if x == head(head rest)
+              then (x : (head rest)) : (tail rest)
+              else [x] : rest
+              where rest  = pack xs
+
+{-
+ 10 Problem 10
+
+(*) Run-length encoding of a list. Use the result of problem P09 to implement the so-called run-length encoding data compression method. Consecutive duplicates of elements are encoded as lists (N E) where N is the number of duplicates of the element E.
+
+Example:
+
+* (encode '(a a a a b c c a a d e e e e))
+((4 A) (1 B) (2 C) (2 A) (1 D)(4 E))
+
+Example in Haskell:
+
+encode "aaaabccaadeeee"
+[(4,'a'),(1,'b'),(2,'c'),(2,'a'),(1,'d'),(4,'e')]
+-}
+
+encode :: (Eq a) => [a] -> [(Int, a)]
+encode [] = []
+encode [x] = [(1, x)]
+encode (x:xs) = if x == snd(head rest)
+                then (fst(head rest) + 1, snd(head rest)): (tail rest)
+                else (1, x) : rest
+                where rest = encode xs

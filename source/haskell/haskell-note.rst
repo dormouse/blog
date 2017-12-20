@@ -16,6 +16,14 @@ Haskell Note
 
     sudo apt-get install ghc
 
+配置开发环境,Install cabal, hsdev and SublimeHaskell(sublime plugin)::
+
+    sudo apt install cabal-install
+    cabal update
+    cabal install hsdev
+
+
+
 终端命令::
 
     ghci
