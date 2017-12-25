@@ -1,4 +1,4 @@
-Lego Note
+Haskell Note
 =============
 
 .. toctree::
