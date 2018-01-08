@@ -23,7 +23,6 @@ Welcome to Dormouse's Blog!
    ifttt-note.rst
    install-linuxmint.rst
    iterm2-note.rst
-   linux-compressor.rst
    linux-note.rst
    mac-note.rst
    make-a-blog-with-flask.rst
@@ -45,3 +44,4 @@ Welcome to Dormouse's Blog!
    haskell/index.rst
    personal/index.rst
    lego/index.rst
+   software.rst

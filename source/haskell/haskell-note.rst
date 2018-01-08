@@ -16,6 +16,14 @@ Haskell Note
 
     sudo apt-get install ghc
 
+配置开发环境,Install cabal, hsdev and SublimeHaskell(sublime plugin)::
+
+    sudo apt install cabal-install
+    cabal update
+    cabal install hsdev
+
+
+
 终端命令::
 
     ghci
@@ -28,6 +36,8 @@ Haskell Note
 导入模块::
 
     ghci> :module + Data.Ratio
+    或者
+    ghci> :m + Data.Ratio
 
 我们探索类型世界的第一步是修改 ghci，让它在返回表达式的求值结果时，打印
 出这个结果的类型。使用 ghci 的 :set命令可以做到::

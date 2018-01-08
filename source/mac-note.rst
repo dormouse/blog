@@ -177,4 +177,5 @@ I recommend the second way for most of brew intalled software are in the
 Some software
 =============
 
-video covert: handbrake(https://handbrake.fr)
+* 使用 Cryptomator 实现云同步端到端加密
+* video covert: handbrake(https://handbrake.fr)
