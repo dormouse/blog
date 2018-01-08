@@ -172,3 +172,9 @@ Edit ``~/.bash_profile``, add following line::
 
 I recommend the second way for most of brew intalled software are in the
 ``/usr/local``.
+
+
+Some software
+=============
+
+video covert: handbrake(https://handbrake.fr)
