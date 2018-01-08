@@ -3,6 +3,10 @@
 .idea
 .DS_Store
 
+*.o
+*.hi
+test
+
 .ropeproject/
 bin/
 build/

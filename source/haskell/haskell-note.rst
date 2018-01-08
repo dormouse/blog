@@ -12,9 +12,10 @@ Haskell Note
 入门
 ====
 
-安装::
+安装:
 
-    sudo apt-get install ghc
+* Linux: ``sudo apt-get install ghc``
+* Mac OS X: ``brew cask install haskell-platform``
 
 配置开发环境,Install cabal, hsdev and SublimeHaskell(sublime plugin)::
 
