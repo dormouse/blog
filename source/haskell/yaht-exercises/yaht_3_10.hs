@@ -29,20 +29,11 @@ of the number it just read and the result of the recursive call.
 
 module Main
     where
-import System.Random
-
-my_factorial :: Int -> Int
-my_factorial 1 = 1
-my_factorial x = x * my_factorial (x - 1)
-
-my_product :: [Int] -> Int
-my_product [] = 1
-my_product (x:xs) = x * my_product xs
 
 main = do
     nums <- askForNum
     putStrLn ("The sum is " ++ show(sum nums))
-    putStrLn ("The product is " ++ show(my_product nums))
+    putStrLn ("The product is " ++ show(product nums))
     showFactorial nums
 
 askForNum = do
@@ -55,9 +46,11 @@ askForNum = do
             rest <- askForNum
             return (num : rest)
 
+showFactorial [] = return ()
 showFactorial (x:xs) = do
     putStrLn (show(x) ++ " factorial is " ++ show(my_factorial x))
-    if xs /= []
-        then showFactorial xs
-        else putStrLn ""
+    showFactorial xs
 
+my_factorial :: Int -> Int
+my_factorial 1 = 1
+my_factorial x = x * my_factorial (x - 1)
