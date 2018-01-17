@@ -23,82 +23,10 @@ Running this command will create ``bin/``, ``include/``, ``lib/`` and
 
 activate venv: ``$ source <venv>/bin/activate``
 
-Anaconda
+使用 conda
 ====================
 
-Install
---------------------
-
-官方网站：https://www.continuum.io/
-
-conda 官方文档：https://docs.anaconda.com/
-
-清华大学开源软件镜像站：https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/
-
-安装清华大学仓库镜像，运行以下命令::
-
-    conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
-    conda config --set show_channel_urls yes
-
-
-常用命令
--------------------------
-
-查看版本: ``conda -V`` 或者 ``conda --version``
-
-查看信息: ``conda info``
-
-查看当前环境的包列表: ``conda list``
-
-搜索包: ``conda search beautifulsoup4``
-
-
-虚拟环境
---------------------------
-
-创建虚拟环境: ``conda create -n env_name package_name python=3*``
-
-查看有哪些虚拟环境: ``conda env list``
-
-查看当前所在的虚拟环境: ``conda info --e``
-
-激活或切换虚拟环境： ``source activate env_name``
-
-关闭虚拟环境： ``source deactivate``
-
-移除虚拟环境： ``conda remove -n env_name --all``
-
-
-如何在虚拟环境下使用 Jupyter book
--------------------------------------------------
-
-This section is copy from https://stackoverflow.com/questions/38280739/how-to-make-conda-virtual-environments-persistent-and-available-for-tools-such-a
-
-Register a (python) notebook kernel:
-
-Let's suppose you have created a conda environment named jupyter-env35 with
-conda create -n jupyter-env35 python=3.5 and now want to use it in jupyter.
-
-Installing and registering a python kernel in the environment will make it
-available over the graphical notebook interface.
-
-To do so, first install the ipython kernel::
-
-    conda install -n jupyter-env35 ipykernel
-
-Then activate the environment and register the kernel::
-
-    source activate jupyter-env35
-    ipython kernel install --user --name jupyter-env35
-
-When you now fire up juypter, it will show jupyter-env35 as a kernel in the
-list of available kernels. If you select it, all packages installed into
-juypter-env35 will be available.
-Unregister a notebook kernel:
-
-If you want delete the kernel from the notebook interface, ``jupyter --data-dir``, will print out jupyter's data directory.
-
-Navigate to the printed folder, find the subfolder kernels and delete the folder with the name of your kernel (here jupyter-env35). After that the kernel will not show up in jupyter anymore.
+参见如何在 conda 下使用 :ref:`venv-in-conda`
 
 
 使用 virtualenvwrapper

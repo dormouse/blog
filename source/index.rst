@@ -15,6 +15,7 @@ Welcome to Dormouse's Blog!
    pygtk3/pygtk3-note.rst
    apt-cheat-sheet.rst
    build-static-blog-with-pelican.rst
+   conda-anaconda.rst
    git-note.rst
    golang-quick-start.rst
    howto-config-icoloud-mail-in-thunderbird.rst
