@@ -4,6 +4,7 @@ Personal Note
 .. toctree::
     :maxdepth: 1
 
+    read-list.rst
     a-gang-story-review.rst
     a-year-with-no-taste.rst
     booknote-20101113.rst
