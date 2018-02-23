@@ -126,19 +126,48 @@ htmlhelp_basename = 'DormouseBlogdoc'
 
 
 # -- Options for LaTeX output ---------------------------------------------
+on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 
-latex_elements = {
+if on_rtd:
+    latex_elements = {
     # The paper size ('letterpaper' or 'a4paper').
-    #
-    'papersize': 'a4paper',
+    #'papersize': 'letterpaper',
 
     # The font size ('10pt', '11pt' or '12pt').
-    #
-    # 'pointsize': '10pt',
+    #'pointsize': '10pt',
 
     # Additional stuff for the LaTeX preamble.
-    #
-    'preamble': '''
+    'preamble': r'''
+\hypersetup{unicode=true}
+\usepackage{CJKutf8}
+\DeclareUnicodeCharacter{00A0}{\nobreakspace}
+\DeclareUnicodeCharacter{2203}{\ensuremath{\exists}}
+\DeclareUnicodeCharacter{2200}{\ensuremath{\forall}}
+\DeclareUnicodeCharacter{2286}{\ensuremath{\subseteq}}
+\DeclareUnicodeCharacter{2713}{x}
+\DeclareUnicodeCharacter{27FA}{\ensuremath{\Longleftrightarrow}}
+\DeclareUnicodeCharacter{221A}{\ensuremath{\sqrt{}}}
+\DeclareUnicodeCharacter{221B}{\ensuremath{\sqrt[3]{}}}
+\DeclareUnicodeCharacter{2295}{\ensuremath{\oplus}}
+\DeclareUnicodeCharacter{2297}{\ensuremath{\otimes}}
+\begin{CJK}{UTF8}{gbsn}
+\AtEndDocument{\end{CJK}}
+''',
+    }
+else:
+    if sys.platform == 'linux':
+        latex_elements = {
+        # The paper size ('letterpaper' or 'a4paper').
+        #
+            'papersize': 'a4paper',
+
+        # The font size ('10pt', '11pt' or '12pt').
+        #
+        # 'pointsize': '10pt',
+
+        # Additional stuff for the LaTeX preamble.
+        #
+            'preamble': '''
 \usepackage{xeCJK}
 \usepackage{indentfirst}
 \setlength{\parindent}{2em}
@@ -147,20 +176,35 @@ latex_elements = {
 \setCJKmonofont{WenQuanYi Micro Hei Mono}
 ''',
 
-    # Latex figure (float) alignment
-    #
-    # 'figure_align': 'htbp',
+        # Latex figure (float) alignment
+        #
+        # 'figure_align': 'htbp',
 
-    # Additional stuff for the LaTeX preamble.
+        # Additional stuff for the LaTeX preamble.
 
-}
+        }
+    else:
+        latex_elements = {
+                'papersize': 'a4paper',
+                'preamble': '''
+\usepackage{xeCJK}
+\usepackage{indentfirst}
+\setlength{\parindent}{2em}
+\setCJKmainfont[BoldFont=STFangsong, ItalicFont=STKaiti]{STSong}
+\setCJKsansfont[BoldFont=STHeiti]{STXihei}
+\setCJKmonofont{STFangsong}
+''',
+        }
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'DormouseBlog.tex', 'Dormouse Blog Documentation',
-     'Dormouse Young', 'manual'),
+    (master_doc,
+     'DormouseBlog.tex',
+     'Dormouse Blog Documentation',
+     'Dormouse Young',
+     'manual'),
 ]
 
 
