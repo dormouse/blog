@@ -142,9 +142,9 @@ latex_elements = {
 \usepackage{xeCJK}
 \usepackage{indentfirst}
 \setlength{\parindent}{2em}
-\setCJKmainfont[BoldFont=STFangsong, ItalicFont=STKaiti]{STSong}
-\setCJKsansfont[BoldFont=STHeiti]{STXihei}
-\setCJKmonofont{STFangsong}
+\setCJKmainfont[BoldFont=WenQuanYi Micro Hei, ItalicFont=WenQuanYi Micro Hei]{WenQuanYi Micro Hei}
+\setCJKsansfont[BoldFont=WenQuanYi Micro Hei Mono]{WenQuanYi Micro Hei Mono}
+\setCJKmonofont{WenQuanYi Micro Hei Mono}
 ''',
 
     # Latex figure (float) alignment

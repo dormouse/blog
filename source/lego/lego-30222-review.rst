@@ -25,94 +25,94 @@ Lego 30222 Review
 
 RMB价格 ：某逊买满199元送一个
 
-.. image:: http://www.brickshelf.com/gallery/dormouse/City/30222/30222-01.jpg
+.. image:: 30222-01.jpg
     :alt: 30222-01.jpg
 
 先来一张定妆照。今天天气不错，非常合适开着敞篷飞机，看祖国各地的People Mount People Sea。
 
-.. image:: http://www.brickshelf.com/gallery/dormouse/City/30222/30222-02.jpg
+.. image:: 30222-02.jpg
     :alt: 30222-02.jpg
 
 袋子正面。
 
-.. image:: http://www.brickshelf.com/gallery/dormouse/City/30222/30222-03.jpg
+.. image:: 30222-03.jpg
     :alt: 30222-03.jpg
 
 袋子反面。
 
-.. image:: http://www.brickshelf.com/gallery/dormouse/City/30222/30222-04.jpg
+.. image:: 30222-04.jpg
     :alt: 30222-04.jpg
 
 零件全家福。透明盖子不错。
 
-.. image:: http://www.brickshelf.com/gallery/dormouse/City/30222/30222-05.jpg
+.. image:: 30222-05.jpg
     :alt: 30222-05.jpg
 
 说明书就一张纸，这是正面。
 
-.. image:: http://www.brickshelf.com/gallery/dormouse/City/30222/30222-06.jpg
+.. image:: 30222-06.jpg
     :alt: 30222-06.jpg
 
 这是反面。
 
-.. image:: http://www.brickshelf.com/gallery/dormouse/City/30222/30222-07.jpg
+.. image:: 30222-07.jpg
     :alt: 30222-07.jpg
 
 人偶分解。普通的白色头盔。
 
-.. image:: http://www.brickshelf.com/gallery/dormouse/City/30222/30222-08.jpg
+.. image:: 30222-08.jpg
     :alt: 30222-08.jpg
 
 人偶正面。为什么老外警察可以这样笑呢？
 
-.. image:: http://www.brickshelf.com/gallery/dormouse/City/30222/30222-09.jpg
+.. image:: 30222-09.jpg
     :alt: 30222-09.jpg
 
 人偶背面。身材一般。
 
-.. image:: http://www.brickshelf.com/gallery/dormouse/City/30222/30222-10.jpg
+.. image:: 30222-10.jpg
     :alt: 30222-10.jpg
 
 下面开始简单的搭建。不解说。
 
-.. image:: http://www.brickshelf.com/gallery/dormouse/City/30222/30222-11.jpg
+.. image:: 30222-11.jpg
     :alt: 30222-11.jpg
 
-.. image:: http://www.brickshelf.com/gallery/dormouse/City/30222/30222-12.jpg
+.. image:: 30222-12.jpg
     :alt: 30222-12.jpg
 
-.. image:: http://www.brickshelf.com/gallery/dormouse/City/30222/30222-13.jpg
+.. image:: 30222-13.jpg
     :alt: 30222-13.jpg
 
-.. image:: http://www.brickshelf.com/gallery/dormouse/City/30222/30222-14.jpg
+.. image:: 30222-14.jpg
     :alt: 30222-14.jpg
 
-.. image:: http://www.brickshelf.com/gallery/dormouse/City/30222/30222-15.jpg
+.. image:: 30222-15.jpg
     :alt: 30222-15.jpg
 
-.. image:: http://www.brickshelf.com/gallery/dormouse/City/30222/30222-16.jpg
+.. image:: 30222-16.jpg
     :alt: 30222-16.jpg
 
 搭建完成。三十多个零件就多出了四个零件。
 
-.. image:: http://www.brickshelf.com/gallery/dormouse/City/30222/30222-17.jpg
+.. image:: 30222-17.jpg
     :alt: 30222-17.jpg
 
-.. image:: http://www.brickshelf.com/gallery/dormouse/City/30222/30222-18.jpg
+.. image:: 30222-18.jpg
     :alt: 30222-18.jpg
 
-.. image:: http://www.brickshelf.com/gallery/dormouse/City/30222/30222-19.jpg
+.. image:: 30222-19.jpg
     :alt: 30222-19.jpg
 
-.. image:: http://www.brickshelf.com/gallery/dormouse/City/30222/30222-20.jpg
+.. image:: 30222-20.jpg
     :alt: 30222-20.jpg
 
-.. image:: http://www.brickshelf.com/gallery/dormouse/City/30222/30222-21.jpg
+.. image:: 30222-21.jpg
     :alt: 30222-21.jpg
 
 各种角度。
 
-.. image:: http://www.brickshelf.com/gallery/dormouse/City/30222/30222-22.jpg
+.. image:: 30222-22.jpg
     :alt: 30222-22.jpg
 
 专属停机坪。

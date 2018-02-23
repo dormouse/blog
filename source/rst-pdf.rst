@@ -245,6 +245,7 @@ Linux 下安装 TeX Live
 ------------------------------------------
 
 方法一是使用 ``apt-get install texlive-full`` 命令安装。
+
 方法二是
 去 tex 的 `老家 <http://www.tug.org/texlive/acquire-netinstall.html>`_ 下载
 `install-tl-unx.tar.gz <http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz>`_ 。
