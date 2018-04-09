@@ -13,7 +13,7 @@ class SearchChinese(SearchLanguage):
         self.seg = jieba
 
     def split(self, input):
-        return self.seg.cut(input.encode("utf8"))
+        return self.seg.cut_for_search(input.encode("utf8"))
 
     def word_filter(self, stemmed_word):
         return len(stemmed_word) > 1
