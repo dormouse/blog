@@ -49,7 +49,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Dormouse Blog'
-copyright = '2017, Dormouse Young'
+copyright = '2011-2018, Dormouse Young'
 author = 'Dormouse Young'
 
 # The version info for the project you're documenting, acts as replacement for
