@@ -1,9 +1,9 @@
-***********************************************
+=========================
 使用 Sphinx 生成 PDF 文件
-***********************************************
+=========================
 
 :date: 2013-01-27 21:42:37
-:modified: 2017-10-26 13:55:57
+:modified: 2021-03-15
 :tags: sphinx, xetex, pdf, reStructuredText, markdown
 :category: software
 :slug: rst-pdf
@@ -23,13 +23,13 @@ Sphinx 支持 html 、 LaTeX 、 ePub 等多种输出格式。
 
 
 安装编译环境
-=============================================
+============
 
 本文的测试环境为 macOS Sierra 10.12.6, Python 3.6.1 。
 
-#. 因为 Sphinx 需要 Python 2.7 或者 Python 3.4 以上版本的 Python ，所以首先要检查
-   系统的 Python 是否安装， Python 的版本是否符合要求。如果想要使用 Python3 ， macOS
-   下建议使用 brew 安装， Linux 下建议使用 Anaconda 。
+#. 因为 Sphinx 需要 Python 2.7 或者 Python 3.4 以上版本的 Python ，所以首先
+   要检查系统的 Python 是否安装， Python 的版本是否符合要求。如果想要使用
+   Python3 ， macOS 下建议使用 brew 安装， Linux 下建议使用 Anaconda 。
 
 
 #. 首先我们创建并激活一个 Python3 虚拟环境。打开终端，输入如下命令：
@@ -57,9 +57,7 @@ Sphinx 支持 html 、 LaTeX 、 ePub 等多种输出格式。
 
 
 编写文档
-=============================================
-
-
+========
 
 创建一个 Sphinx 项目，运行 ``sphinx-quickstart`` 命令::
 
@@ -170,19 +168,19 @@ Sphinx 支持 html 、 LaTeX 、 ePub 等多种输出格式。
 
     latex_elements = {
         'papersize': 'a4paper',
-        # Additional stuff for the LaTeX preamble.
         'preamble': '''
-    \usepackage{xeCJK}
-    \usepackage{indentfirst}
-    \setlength{\parindent}{2em}
-    \setCJKmainfont[BoldFont=STFangsong, ItalicFont=STKaiti]{STSong}
-    \setCJKsansfont[BoldFont=STHeiti]{STXihei}
-    \setCJKmonofont{STFangsong}
+    \\usepackage{xeCJK}
+    \\usepackage{indentfirst}
+    \\setlength{\\parindent}{2em}
+    \\setCJKmainfont{WenQuanYi Zen Hei Sharp}
+    \\setCJKmonofont[Scale=0.9]{WenQuanYi Zen Hei Mono}
+    \\setCJKfamilyfont{song}{WenQuanYi Zen Hei}
+    \\setCJKfamilyfont{sf}{WenQuanYi Zen Hei}
     ''',
     }
 
-现在可以在 ``source`` 目录下添加我们自己的 reStructuredText 文件。例如本文的源文件就是
-``rst_pdf`` 文件。
+现在可以在 ``source`` 目录下添加我们自己的 reStructuredText 文件。例如本文
+的源文件就是 ``rst_pdf`` 文件。
 
 写完后要修改 ``index.rst`` 文件，把新添加的 ``rst`` 文件加入目录树。例如本文的
 ``index.rst`` 内容为：
@@ -202,9 +200,33 @@ Sphinx 支持 html 、 LaTeX 、 ePub 等多种输出格式。
 生成 PDF 文件
 ==============================================
 
-在项目根目录下使用 ``make latex`` 命令生成 tex 文件，
-最后在 ``build/latex/`` 目录下运行 **两遍** ``xelatex rst_pdf.tex`` 命令即可生成
-PDF 文件。
+在项目根目录下使用 ``make latex`` 命令生成 tex 文件。修改文件中的字体，把
+其中的 ``.otf`` 都改为 ``.ttf`` ::
+
+    \setmainfont{FreeSerif}[
+      Extension      = .ttf,
+      UprightFont    = *,
+      ItalicFont     = *Italic,
+      BoldFont       = *Bold,
+      BoldItalicFont = *BoldItalic
+    ]
+    \setsansfont{FreeSans}[
+      Extension      = .ttf,
+      UprightFont    = *,
+      ItalicFont     = *Oblique,
+      BoldFont       = *Bold,
+      BoldItalicFont = *BoldOblique,
+    ]
+    \setmonofont{FreeMono}[
+      Extension      = .ttf,
+      UprightFont    = *,
+      ItalicFont     = *Oblique,
+      BoldFont       = *Bold,
+      BoldItalicFont = *BoldOblique,
+    ]
+
+最后在 ``build/latex/`` 目录下运行 **两遍** ``xelatex rst_pdf.tex`` 命令即
+可生成 PDF 文件。
 
 
 一些 Tips

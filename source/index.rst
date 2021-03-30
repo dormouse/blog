@@ -16,6 +16,7 @@ Welcome to Dormouse's Blog!
    apt-cheat-sheet.rst
    build-static-blog-with-pelican.rst
    conda-anaconda.rst
+   conda.md
    git-note.rst
    golang-quick-start.rst
    howto-config-icoloud-mail-in-thunderbird.rst

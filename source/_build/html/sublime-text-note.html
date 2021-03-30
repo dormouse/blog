@@ -1,0 +1,639 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="索引" href="genindex.html" /><link rel="search" title="搜索" href="search.html" /><link rel="next" title="Tinkerer Quick Start" href="tinkerer-quick-start.html" /><link rel="prev" title="Sqlite Note" href="sqlite-note.html" />
+
+    <meta name="generator" content="sphinx-3.5.1, furo 2021.02.28.beta28"/>
+        <title>Sublime Text Note - Dormouse Blog 1.1 文档</title>
+      <link rel="stylesheet" href="_static/styles/furo.css?digest=be5985a4059b5c2cd56ed0804790452beca62674">
+    <link rel="stylesheet" href="_static/pygments.css">
+    <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="_static/pygments_dark.css">
+    
+
+
+<style>
+  :root {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+  }
+
+  /* For allowing end-user-specific overrides */
+  .override-light {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  .override-dark {
+    --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+  }
+</style><link rel="stylesheet" href="_static/styles/furo-extensions.css?digest=d391b54134226e4196576da3bdb6dddb7e05ba2b"></head>
+  <body dir="">
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke-width="1.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z"/>
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">Dormouse Blog 1.1 文档</div></a>
+    </div>
+    <div class="header-right">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  
+  <span class="sidebar-brand-text">Dormouse Blog 1.1 文档</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html">
+  <input class="sidebar-search" placeholder=搜索 name="q">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="python_note/index.html">Python Note</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="python_note/100file.html">Python Note 100 - File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python_note/200list.html">Python Note 200 - List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python_note/300dict.html">Python Note 300 - Dict</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python_note/400str.html">Python Note 400 - String</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python_note/500datetime.html">Python Note 500 - Datetime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python_note/600functional_programming.html">Python Note 600 - Functional Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python_note/700sorting.html">Python Note 700 - Sorting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python_note/800logger.html">Python Note 800 - logger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python_note/900other.html">Python Note 900 - Other</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pep/pep-0008.html">Style Guide for Python Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pygtk3/pygtk3-note.html">Python GTK+ 3 笔记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apt-cheat-sheet.html">Apt cheat sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="build-static-blog-with-pelican.html">Build Static Blog With Pelican</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conda-anaconda.html">Conda &amp; Anaconda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git-note.html">Git Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="golang-quick-start.html">Golang Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howto-config-icoloud-mail-in-thunderbird.html">How to configure iCloud mail in Mozilla Thunderbird</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howto-start-a-python3-project.html">How to start a python3 project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hugo-quick-start.html">Hugo Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ifttt-note.html">Ifttt Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install-linuxmint.html">安装 Linux Mint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iterm2-note.html">iTerm2 Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linux-note.html">Linux Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mac-note.html">Mac Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="make-a-blog-with-flask.html">Make a blog with Flask</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pandas-note.html">pandas 入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pyqt5-note.html">PyQt5 Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-terminal-ide.html">IDE in terminal for Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-virtual-env.html">安装 Python 虚拟环境</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rst-pdf.html">使用 Sphinx 生成 PDF 文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="semantic-note.html">Semantic Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sphinx-cheet-sheet.html">Sphinx cheat sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spyder-on-winxp.html">Spyder in Winxp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sqlite-note.html">Sqlite Note</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Sublime Text Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tinkerer-quick-start.html">Tinkerer Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tumx-note.html">Tmux Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vim-as-ide.html">Vim As IDE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vim-note.html">Vim Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wordpress-note.html">Wordpress Note</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="haskell/index.html">Haskell Note</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label for="toctree-checkbox-2"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="haskell/haskell-note.html">Haskell Note</a></li>
+<li class="toctree-l2"><a class="reference internal" href="haskell/haskell-exercieses.html">Haskell Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="personal/index.html">Personal Note</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label for="toctree-checkbox-3"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="personal/read-list.html">读书记录</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/a-gang-story-review.html">A Gang Story（2011） 里昂黑帮</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/a-year-with-no-taste.html">一个没有味道的年</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/booknote-20101113.html">读书笔记20101113</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/fei-cheng-wu-rao-review.html">今天看《非诚勿扰》</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/get-him-to-the-greek.html">Get Him to the Greek</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/if-only-one-bowl-of-porridge.html">如果只有一碗粥…</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/i-saw-a-beaver-nest.html">我看见了河狸的窝</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/let-us-digg.html">让我们来打洞吧</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/listen-and-watch-movie.html">听听琴，看看电影</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/long-men-fei-jia-review.html">龙门飞甲3D版</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/ni-yi-sheng-de-gu-shi-du-hou-gan.html">《你一生的故事》读后感</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/roomba550-review.html">家里来了一个“机器人”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/selecting-ebook.html">电子书比较中…</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/suitable-for-human-habitation.html">据说10以上的地方更适合人类居住</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/the-most-intimate-goods-in-newegg.html">新蛋最贴心的商品</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/the-terminal-review.html">幸福终点站</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/unthinkable-review.html">《战略特勤组》观后感</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/you-will-forget-it.html">You will forget it</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="lego/index.html">Lego Note</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label for="toctree-checkbox-4"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="lego/lego-10222.html">拆还是不拆呢？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lego/lego-30106-review.html">Lego 30106 Review</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lego/lego-30222-review.html">Lego 30222 Review</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lego/lego-service.html">这就是LEGO®的售后服务</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="software.html">Software Note</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <main class="main">
+    <div class="content">
+      <article role="main">
+        <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+        </label>
+        <div class="section" id="sublime-text-note">
+<h1>Sublime Text Note<a class="headerlink" href="#sublime-text-note" title="永久链接至标题">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">date</dt>
+<dd class="field-odd"><p>2017-01-19 12:48:01</p>
+</dd>
+<dt class="field-even">modified</dt>
+<dd class="field-even"><p>2017-09-25</p>
+</dd>
+<dt class="field-odd">slug</dt>
+<dd class="field-odd"><p>sublime-text-note</p>
+</dd>
+<dt class="field-even">tags</dt>
+<dd class="field-even"><p>sublime, note, plugin</p>
+</dd>
+<dt class="field-odd">category</dt>
+<dd class="field-odd"><p>software</p>
+</dd>
+<dt class="field-even">author</dt>
+<dd class="field-even"><p>Dormouse Young</p>
+</dd>
+<dt class="field-odd">summary</dt>
+<dd class="field-odd"><p>Note for sublime text.
+Sublime Text is a sophisticated text editor for code, markup and prose.
+You’ll love the slick user interface, extraordinary features and amazing
+performance.</p>
+</dd>
+</dl>
+<div class="section" id="install-sublime-text3">
+<h2>Install Sublime Text3<a class="headerlink" href="#install-sublime-text3" title="永久链接至标题">¶</a></h2>
+<p>Install the GPG key:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="o">-</span><span class="n">qO</span> <span class="o">-</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">download</span><span class="o">.</span><span class="n">sublimetext</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">sublimehq</span><span class="o">-</span><span class="n">pub</span><span class="o">.</span><span class="n">gpg</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">key</span> <span class="n">add</span> <span class="o">-</span>
+</pre></div>
+</div>
+<p>Ensure apt is set up to work with https sources:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">apt</span><span class="o">-</span><span class="n">transport</span><span class="o">-</span><span class="n">https</span>
+</pre></div>
+</div>
+<p>Select the channel to use:</p>
+<p>Stable:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">"deb https://download.sublimetext.com/ apt/stable/"</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">tee</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="o">.</span><span class="n">list</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">sublime</span><span class="o">-</span><span class="n">text</span><span class="o">.</span><span class="n">list</span>
+</pre></div>
+</div>
+<p>Dev:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">"deb https://download.sublimetext.com/ apt/dev/"</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">tee</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="o">.</span><span class="n">list</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">sublime</span><span class="o">-</span><span class="n">text</span><span class="o">.</span><span class="n">list</span>
+</pre></div>
+</div>
+<p>Update apt sources and install Sublime Text:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">sublime</span><span class="o">-</span><span class="n">text</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="install-package-control">
+<h2>Install Package Control<a class="headerlink" href="#install-package-control" title="永久链接至标题">¶</a></h2>
+<p>在 sublime text3 的终端中运行如下代码安装 Package Control ，终端打开方法为
+使用 <code class="docutils literal notranslate"><span class="pre">ctrl</span> <span class="pre">+</span> <span class="pre">`</span></code> 快捷键或者选择菜单 <code class="docutils literal notranslate"><span class="pre">View</span> <span class="pre">&gt;</span> <span class="pre">Show</span> <span class="pre">Console</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">urllib.request</span><span class="o">,</span><span class="nn">os</span><span class="o">,</span><span class="nn">hashlib</span><span class="p">;</span> <span class="n">h</span> <span class="o">=</span> <span class="s1">'2915d1851351e5ee549c20394736b442'</span> <span class="o">+</span> <span class="s1">'8bc59f460fa1548d1514676163dafc88'</span><span class="p">;</span> <span class="n">pf</span> <span class="o">=</span> <span class="s1">'Package Control.sublime-package'</span><span class="p">;</span> <span class="n">ipp</span> <span class="o">=</span> <span class="n">sublime</span><span class="o">.</span><span class="n">installed_packages_path</span><span class="p">();</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">install_opener</span><span class="p">(</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">build_opener</span><span class="p">(</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">ProxyHandler</span><span class="p">())</span> <span class="p">);</span> <span class="n">by</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span> <span class="s1">'http://packagecontrol.io/'</span> <span class="o">+</span> <span class="n">pf</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">' '</span><span class="p">,</span> <span class="s1">'%20'</span><span class="p">))</span><span class="o">.</span><span class="n">read</span><span class="p">();</span> <span class="n">dh</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="n">by</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">();</span> <span class="nb">print</span><span class="p">(</span><span class="s1">'Error validating download (got </span><span class="si">%s</span><span class="s1"> instead of </span><span class="si">%s</span><span class="s1">), please try manual install'</span> <span class="o">%</span> <span class="p">(</span><span class="n">dh</span><span class="p">,</span> <span class="n">h</span><span class="p">))</span> <span class="k">if</span> <span class="n">dh</span> <span class="o">!=</span> <span class="n">h</span> <span class="k">else</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span> <span class="n">ipp</span><span class="p">,</span> <span class="n">pf</span><span class="p">),</span> <span class="s1">'wb'</span> <span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">by</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">注意</p>
+<p>以上代码全因为 Sublime Text 的版本不同而变化，
+请到 <a class="reference external" href="https://packagecontrol.io/installation">https://packagecontrol.io/installation</a> 复制最新的代码。</p>
+</div>
+<p>通过 <code class="docutils literal notranslate"><span class="pre">ctrl+shift+p</span></code> 进入 <code class="docutils literal notranslate"><span class="pre">Command</span> <span class="pre">Palette</span></code> ，输入
+<code class="docutils literal notranslate"><span class="pre">Package</span> <span class="pre">Contorl:</span> <span class="pre">Install</span> <span class="pre">Package</span></code> (简写为 <code class="docutils literal notranslate"><span class="pre">ip</span></code> )，回车执行，
+进入插件的搜索窗口，查找选择到需要的插件后，回车即可进行安装，
+安装状态在最下面的状态栏内会有文字提示。</p>
+<p>See <a class="reference external" href="https://packagecontrol.io/docs">offical docs</a> for detail.</p>
+</div>
+<div class="section" id="install-packages">
+<h2>Install Packages<a class="headerlink" href="#install-packages" title="永久链接至标题">¶</a></h2>
+<p>Packages will install in <code class="docutils literal notranslate"><span class="pre">~/.config/sublime-text-3/Installed</span> <span class="pre">Packages/somename.sublime-package</span></code>.
+“somename.sublime-package” is a zipfile,
+you can overwrite the contents in the zipfile by put same name file in
+<code class="docutils literal notranslate"><span class="pre">~/.config/sublime-text-3/Packages/somename</span></code>.</p>
+<div class="section" id="anaconda">
+<h3>Anaconda<a class="headerlink" href="#anaconda" title="永久链接至标题">¶</a></h3>
+<p>Usage: <a class="reference external" href="http://damnwidget.github.io/anaconda/IDE/">http://damnwidget.github.io/anaconda/IDE/</a></p>
+</div>
+<div class="section" id="graphvizpreview">
+<h3>GraphvizPreview<a class="headerlink" href="#graphvizpreview" title="永久链接至标题">¶</a></h3>
+<p>GraphvizPreview Plugin can not preview in my PC, my env is:</p>
+<ul class="simple">
+<li><p>Linux Mint 18.2 ‘Sonya’</p></li>
+<li><p>Sublime Text Version 3.0, Build 3143</p></li>
+<li><p>Python 3.6.2 <code class="docutils literal notranslate"><span class="pre">|Anaconda,</span> <span class="pre">Inc.|</span></code> (default, Sep 22 2017, 02:03:08) [GCC 7.2.0] on linux</p></li>
+</ul>
+<p>The output is</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">xreader</span><span class="p">:</span><span class="mi">8971</span><span class="p">):</span> <span class="n">Gtk</span><span class="o">-</span><span class="n">ERROR</span> <span class="o">**</span><span class="p">:</span> <span class="n">GTK</span><span class="o">+</span> <span class="mf">2.</span><span class="n">x</span> <span class="n">symbols</span> <span class="n">detected</span><span class="o">.</span>
+<span class="n">Using</span> <span class="n">GTK</span><span class="o">+</span> <span class="mf">2.</span><span class="n">x</span> <span class="ow">and</span> <span class="n">GTK</span><span class="o">+</span> <span class="mi">3</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">same</span> <span class="n">process</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">supported</span>
+</pre></div>
+</div>
+<p>GraphvizPreview first covert code to pdf format, then use <code class="docutils literal notranslate"><span class="pre">xdg-open</span></code> to
+open the output file. So hack it, first covert code to png format, then use
+<code class="docutils literal notranslate"><span class="pre">feh</span></code> to open it.</p>
+<p>There is my modifyed GraphvizPreview:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
+
+<span class="kn">import</span> <span class="nn">sublime</span><span class="o">,</span> <span class="nn">sublime_plugin</span>
+<span class="kn">from</span> <span class="nn">subprocess</span> <span class="kn">import</span> <span class="n">call</span>
+<span class="kn">import</span> <span class="nn">subprocess</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">tempfile</span>
+<span class="kn">import</span> <span class="nn">platform</span>
+
+<span class="n">ENVIRON</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span>
+<span class="k">if</span> <span class="n">platform</span><span class="o">.</span><span class="n">system</span><span class="p">()</span> <span class="o">!=</span> <span class="s1">'Windows'</span><span class="p">:</span>
+    <span class="n">ENVIRON</span><span class="p">[</span><span class="s1">'PATH'</span><span class="p">]</span> <span class="o">+=</span> <span class="s1">':/usr/local/bin'</span>
+
+<span class="n">DIGRAPH_START</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+    <span class="s1">'.*(digraph([ </span><span class="se">\t\n\r</span><span class="s1">]+[a-zA-Z</span><span class="se">\200</span><span class="s1">-</span><span class="se">\377</span><span class="s1">_][a-zA-Z</span><span class="se">\200</span><span class="s1">-</span><span class="se">\377</span><span class="s1">0-9_]*[ </span><span class="se">\t\n\r</span><span class="s1">]*{|[ </span><span class="se">\t\n\r</span><span class="s1">]*{).*)'</span><span class="p">,</span>
+    <span class="n">re</span><span class="o">.</span><span class="n">DOTALL</span> <span class="o">|</span> <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span>
+<span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">surroundingGraphviz</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">cursor</span><span class="p">):</span>
+    <span class="sd">'''</span>
+<span class="sd">    Find graphviz code in source surrounding the cursor.</span>
+<span class="sd">    '''</span>
+
+    <span class="n">data_before</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">cursor</span><span class="p">]</span>
+    <span class="n">data_after</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">cursor</span><span class="p">:]</span>
+
+    <span class="c1"># find code before selector</span>
+    <span class="n">code_before_match</span> <span class="o">=</span> <span class="n">DIGRAPH_START</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">data_before</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">code_before_match</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="n">code_before</span> <span class="o">=</span> <span class="n">code_before_match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">unopened_braces</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">code_before</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">'{'</span><span class="p">))</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">code_before</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">'}'</span><span class="p">))</span>
+
+    <span class="c1"># cursor must be in the middle of the graphviz code</span>
+    <span class="k">if</span> <span class="n">unopened_braces</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="c1"># find code after selector</span>
+    <span class="n">code_after_match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">'('</span> <span class="o">+</span> <span class="p">(</span><span class="s1">'.*</span><span class="se">\\</span><span class="s1">}'</span> <span class="o">*</span> <span class="n">unopened_braces</span><span class="p">)</span> <span class="o">+</span> <span class="s1">').*'</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">DOTALL</span><span class="p">)</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">data_after</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">code_after_match</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="n">code_after</span> <span class="o">=</span> <span class="n">code_after_match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="c1"># done!</span>
+    <span class="n">code</span> <span class="o">=</span> <span class="n">code_before</span> <span class="o">+</span> <span class="n">code_after</span>
+    <span class="k">return</span> <span class="n">code</span>
+
+
+<span class="k">def</span> <span class="nf">g_converter</span><span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="n">output_format</span><span class="p">):</span>
+    <span class="sd">'''</span>
+<span class="sd">    Convert graphviz code to a PDF or PNG.</span>
+<span class="sd">    '''</span>
+    <span class="n">output_prefix</span> <span class="o">=</span> <span class="s1">'sublime_text_graphviz_'</span>
+
+    <span class="c1"># temporary graphviz file</span>
+    <span class="n">grapviz</span> <span class="o">=</span> <span class="n">tempfile</span><span class="o">.</span><span class="n">NamedTemporaryFile</span><span class="p">(</span><span class="n">prefix</span><span class="o">=</span><span class="n">output_prefix</span><span class="p">,</span>
+                                          <span class="nb">dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                                          <span class="n">suffix</span><span class="o">=</span><span class="s1">'.viz'</span><span class="p">,</span>
+                                          <span class="n">delete</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                                          <span class="n">mode</span><span class="o">=</span><span class="s1">'wb'</span><span class="p">)</span>
+    <span class="n">grapviz</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">code</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">'utf-8'</span><span class="p">))</span>
+    <span class="n">grapviz</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="c1"># compile pdf</span>
+    <span class="k">if</span> <span class="n">output_format</span> <span class="o">==</span> <span class="s1">'pdf'</span><span class="p">:</span>
+        <span class="n">output_suffix</span> <span class="o">=</span> <span class="s1">'.pdf'</span>
+        <span class="n">output_cmd</span> <span class="o">=</span> <span class="s1">'-Tpdf'</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">output_suffix</span> <span class="o">=</span> <span class="s1">'.png'</span>
+        <span class="n">output_cmd</span> <span class="o">=</span> <span class="s1">'-Tpng'</span>
+
+    <span class="n">filename</span> <span class="o">=</span> <span class="n">tempfile</span><span class="o">.</span><span class="n">mktemp</span><span class="p">(</span><span class="n">prefix</span><span class="o">=</span><span class="n">output_prefix</span><span class="p">,</span>
+                               <span class="nb">dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                               <span class="n">suffix</span><span class="o">=</span><span class="n">output_suffix</span><span class="p">)</span>
+    <span class="n">call</span><span class="p">([</span><span class="s1">'dot'</span><span class="p">,</span> <span class="n">output_cmd</span><span class="p">,</span> <span class="s1">'-o'</span> <span class="o">+</span> <span class="n">filename</span><span class="p">,</span> <span class="n">grapviz</span><span class="o">.</span><span class="n">name</span><span class="p">],</span>
+         <span class="n">env</span><span class="o">=</span><span class="n">ENVIRON</span><span class="p">)</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">unlink</span><span class="p">(</span><span class="n">grapviz</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">filename</span>
+
+
+<span class="k">class</span> <span class="nc">GraphvizPreviewCommand</span><span class="p">(</span><span class="n">sublime_plugin</span><span class="o">.</span><span class="n">TextCommand</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edit</span><span class="p">):</span>
+        <span class="n">sel</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">sel</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">sel</span><span class="o">.</span><span class="n">empty</span><span class="p">():</span>
+            <span class="n">code</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">substr</span><span class="p">(</span><span class="n">sel</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">code</span> <span class="o">=</span> <span class="n">surroundingGraphviz</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">substr</span><span class="p">(</span><span class="n">sublime</span><span class="o">.</span><span class="n">Region</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">size</span><span class="p">())),</span>
+                <span class="n">sel</span><span class="o">.</span><span class="n">begin</span><span class="p">()</span>
+            <span class="p">)</span>
+
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">code</span><span class="p">:</span>
+            <span class="n">sublime</span><span class="o">.</span><span class="n">error_message</span><span class="p">(</span><span class="s1">'Graphviz: Please place cursor in graphviz code before running'</span><span class="p">)</span>
+            <span class="k">return</span>
+
+
+        <span class="n">pdf_filename</span> <span class="o">=</span> <span class="n">g_converter</span><span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="s1">'pdf'</span><span class="p">)</span>
+        <span class="n">png_filename</span> <span class="o">=</span> <span class="n">g_converter</span><span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="s1">'png'</span><span class="p">)</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">platform</span><span class="o">.</span><span class="n">system</span><span class="p">()</span> <span class="o">==</span> <span class="s1">'Windows'</span><span class="p">:</span>
+                <span class="n">os</span><span class="o">.</span><span class="n">startfile</span><span class="p">(</span><span class="n">pdf_filename</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">platform</span><span class="o">.</span><span class="n">system</span><span class="p">()</span> <span class="o">==</span> <span class="s1">'Linux'</span><span class="p">:</span>
+                <span class="n">call</span><span class="p">([</span><span class="s1">'feh'</span><span class="p">,</span> <span class="n">png_filename</span><span class="p">],</span> <span class="n">env</span><span class="o">=</span><span class="n">ENVIRON</span><span class="p">)</span>
+                <span class="c1"># p = subprocess.Popen(['feh', png_filename],</span>
+                    <span class="c1"># stdin=subprocess.PIPE,</span>
+                    <span class="c1"># stdout=subprocess.PIPE,</span>
+                    <span class="c1"># stderr=subprocess.PIPE,</span>
+                    <span class="c1"># shell=False)</span>
+
+                <span class="c1"># stdout,stderr = p.communicate()</span>
+                <span class="c1"># print('stdout : ',stdout)</span>
+                <span class="c1"># print('stderr : ',stderr)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">call</span><span class="p">([</span><span class="s1">'open'</span><span class="p">,</span> <span class="n">pdf_filename</span><span class="p">],</span> <span class="n">env</span><span class="o">=</span><span class="n">ENVIRON</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="n">sublime</span><span class="o">.</span><span class="n">error_message</span><span class="p">(</span><span class="s1">'Graphviz: Could not open PDF, '</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
+            <span class="k">raise</span> <span class="n">e</span>
+        <span class="k">return</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="play-with-evernote">
+<h3>Play with evernote<a class="headerlink" href="#play-with-evernote" title="永久链接至标题">¶</a></h3>
+<p>Use Sublime Text plugin for Evernote, you and read and write evernote.</p>
+<p>This package is based on SublimeEvernote for ST2 but is only supported on
+ST3 and adds many new features.</p>
+<p>To start using it install it from Package Control and type “Evernote” on
+the Command Palette (<code class="docutils literal notranslate"><span class="pre">ctrl+shift+p</span></code>).
+See <a class="reference external" href="https://github.com/bordaigorl/sublime-evernote#first-use">First Use</a>
+for linking the plugin to your account.</p>
+</div>
+</div>
+<div class="section" id="use-fcitx-in-sublime-text-3">
+<h2>Use Fcitx in Sublime Text 3<a class="headerlink" href="#use-fcitx-in-sublime-text-3" title="永久链接至标题">¶</a></h2>
+<p>Sublime text 3 is not support fcitx, so patch it:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ wget https://github.com/yuan3y/sublime_zh_patch/archive/patch-1.zip
+$ unzip patch-1.zip
+$ cd sublime_zh_patch-patch-1/
+$ sudo ./setup.sh
+$ sudo apt-get install fcitx fcitx-config-gtk fcitx-googlepinyin fcitx-module-cloudpinyin fcitx-table-wubi
+</pre></div>
+</div>
+</div>
+<div class="section" id="my-settings">
+<h2>My Settings<a class="headerlink" href="#my-settings" title="永久链接至标题">¶</a></h2>
+<p>Flowing is my settings:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">"auto_complete"</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+    <span class="s2">"color_scheme"</span><span class="p">:</span> <span class="s2">"Packages/Color Scheme - Default/Monokai.tmTheme"</span><span class="p">,</span>
+    <span class="s2">"ensure_newline_at_eof_on_save"</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+    <span class="s2">"file_exclude_patterns"</span><span class="p">:[</span>
+        <span class="s2">".DS_Store"</span><span class="p">,</span>
+        <span class="s2">"*.pid"</span><span class="p">,</span>
+        <span class="s2">"*.pyc"</span>
+    <span class="p">],</span>
+    <span class="s2">"find_selected_text"</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+    <span class="s2">"fold_buttons"</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+    <span class="s2">"folder_exclude_patterns"</span><span class="p">:[</span>
+        <span class="s2">".git"</span><span class="p">,</span>
+        <span class="s2">"__pycache__"</span>
+    <span class="p">],</span>
+    <span class="s2">"font_face"</span><span class="p">:</span> <span class="s2">"ubuntu mono"</span><span class="p">,</span>
+    <span class="o">//</span> <span class="k">for</span> <span class="n">OSX</span>
+    <span class="o">//</span> <span class="s2">"font_face"</span><span class="p">:</span> <span class="s2">"PT Mono"</span><span class="p">,</span>
+    <span class="s2">"font_size"</span><span class="p">:</span> <span class="mf">12.0</span><span class="p">,</span>
+    <span class="s2">"font_options"</span><span class="p">:</span>
+    <span class="p">[</span>
+        <span class="s2">"subpixel_antialias"</span><span class="p">,</span>
+        <span class="s2">"no_bold"</span>
+    <span class="p">],</span>
+    <span class="s2">"highlight_line"</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+    <span class="s2">"ignored_packages"</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="s2">"line_padding_bottom"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">"line_padding_top"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">"rulers"</span><span class="p">:</span> <span class="p">[</span><span class="mi">75</span><span class="p">,</span> <span class="mi">80</span><span class="p">],</span>
+    <span class="s2">"scroll_past_end"</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+    <span class="s2">"show_full_path"</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+    <span class="s2">"show_minimap"</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+    <span class="s2">"tab_size"</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="s2">"translate_tabs_to_spaces"</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+    <span class="s2">"trim_trailing_white_space_on_save"</span><span class="p">:</span> <span class="n">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sublime-text-3">
+<h2>如何创建 Sublime Text 3 插件<a class="headerlink" href="#sublime-text-3" title="永久链接至标题">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">date</dt>
+<dd class="field-odd"><p>2017-11-07</p>
+</dd>
+<dt class="field-even">modified</dt>
+<dd class="field-even"><p>2017-11-07</p>
+</dd>
+</dl>
+<p>本文的测试环境为:</p>
+<ul class="simple">
+<li><p>Linux Mint 18.2 ‘Sonya’</p></li>
+<li><p>Sublime Text Version 3.0, Build 3143</p></li>
+<li><p>Python 3.6.2 <code class="docutils literal notranslate"><span class="pre">|Anaconda,</span> <span class="pre">Inc.|</span></code> (default, Sep 22 2017, 02:03:08) [GCC 7.2.0] on linux</p></li>
+</ul>
+<div class="section" id="id1">
+<h3>第一个插件<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h3>
+<p>在菜单中选择 <code class="docutils literal notranslate"><span class="pre">Tools</span> <span class="pre">-&gt;</span> <span class="pre">Deveolper</span> <span class="pre">-&gt;</span> <span class="pre">New</span> <span class="pre">Plugin...</span></code> 。
+Sublime Text 会新建一个文件，内容如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sublime</span>
+<span class="kn">import</span> <span class="nn">sublime_plugin</span>
+
+
+<span class="k">class</span> <span class="nc">ExampleCommand</span><span class="p">(</span><span class="n">sublime_plugin</span><span class="o">.</span><span class="n">TextCommand</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edit</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">edit</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"Hello, World!"</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>保存这个文件，文件名为 <code class="docutils literal notranslate"><span class="pre">hello.py</span></code> 。缺省的保存目录为
+<code class="docutils literal notranslate"><span class="pre">~/.config/sublime-text-3/Packages/User/</span></code> 。</p>
+<p>打开 Sublime Text 终端（快捷键： <code class="docutils literal notranslate"><span class="pre">Ctrl+`</span></code>），输入命令
+<code class="docutils literal notranslate"><span class="pre">view.run_command('example')</span></code> ，你会发现当前文件的开头插入了
+<code class="docutils literal notranslate"><span class="pre">Hello,</span> <span class="pre">World!</span></code> 。</p>
+<p>如果你是一个 Python 程序员，那么你可以轻松的解理 Sublime Text 的插件本质是一个
+Python 程序。如果你不是一个 Python 程序员，那么现在开始学习 Python 是一个不错
+的主意。</p>
+<p>这个程序首先导入了 <code class="docutils literal notranslate"><span class="pre">sublime</span></code> 和 <code class="docutils literal notranslate"><span class="pre">sublime_plugin</span></code> 两个模块，
+然后定义了一个 <code class="docutils literal notranslate"><span class="pre">sublime_plugin.TextCommand</span></code> 的子类，其 <code class="docutils literal notranslate"><span class="pre">run</span></code> 方法中内容就
+是插件运行的入口。</p>
+<p>这里要注意的是我们在终端中运行的名称是 <code class="docutils literal notranslate"><span class="pre">example</span></code> 而不是 <code class="docutils literal notranslate"><span class="pre">ExampleCommand</span></code> ，
+这是 Sublime Text 自身的命名约定。这个约定是：首先去掉后缀 <code class="docutils literal notranslate"><span class="pre">Command</span></code> ，然后
+把名称由驼峰式（ CamelCaseinto ）转化为下划线式 （ underscore_notation ）。
+例如你的类的名称如果是 <code class="docutils literal notranslate"><span class="pre">DormouseFirstPlugin</span></code> 那么就会转化为
+<code class="docutils literal notranslate"><span class="pre">my_first_plugin</span></code> 。</p>
+</div>
+</div>
+<div class="section" id="ref">
+<h2>Ref<a class="headerlink" href="#ref" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.zhihu.com/question/33409254">https://www.zhihu.com/question/33409254</a></p></li>
+<li><p>Sublime Text Document: <a class="reference external" href="https://www.sublimetext.com/docs/3/linux_repositories.html">Linux Package Manager Repositories</a></p></li>
+<li><p><a class="reference external" href="https://code.tutsplus.com/tutorials/how-to-create-a-sublime-text-2-plugin--net-22685">https://code.tutsplus.com/tutorials/how-to-create-a-sublime-text-2-plugin–net-22685</a></p></li>
+<li><p><a class="reference external" href="http://sublimetext.info/docs/en/extensibility/plugins.html">http://sublimetext.info/docs/en/extensibility/plugins.html</a></p></li>
+</ul>
+</div>
+</div>
+
+      </article>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="tinkerer-quick-start.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Tinkerer Quick Start</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="sqlite-note.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Sqlite Note</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+              Copyright &#169; 2011-2021, Dormouse Young
+            |
+            最后更新于 3月 15, 2021.
+            |
+            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
+              and
+              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+              <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
+            |
+            <a class="muted-link" href="_sources/sublime-text-note.rst.txt"
+               rel="nofollow">
+              显示源代码
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            目录
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Sublime Text Note</a><ul>
+<li><a class="reference internal" href="#install-sublime-text3">Install Sublime Text3</a></li>
+<li><a class="reference internal" href="#install-package-control">Install Package Control</a></li>
+<li><a class="reference internal" href="#install-packages">Install Packages</a><ul>
+<li><a class="reference internal" href="#anaconda">Anaconda</a></li>
+<li><a class="reference internal" href="#graphvizpreview">GraphvizPreview</a></li>
+<li><a class="reference internal" href="#play-with-evernote">Play with evernote</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#use-fcitx-in-sublime-text-3">Use Fcitx in Sublime Text 3</a></li>
+<li><a class="reference internal" href="#my-settings">My Settings</a></li>
+<li><a class="reference internal" href="#sublime-text-3">如何创建 Sublime Text 3 插件</a><ul>
+<li><a class="reference internal" href="#id1">第一个插件</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ref">Ref</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </main>
+</div>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
+    <script src="_static/scripts/main.js?digest=e931d09b2a40c1bb82b542effe772014573baf67"></script></body>
+</html>

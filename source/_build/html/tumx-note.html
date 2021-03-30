@@ -1,0 +1,633 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="索引" href="genindex.html" /><link rel="search" title="搜索" href="search.html" /><link rel="next" title="Vim As IDE" href="vim-as-ide.html" /><link rel="prev" title="Tinkerer Quick Start" href="tinkerer-quick-start.html" />
+
+    <meta name="generator" content="sphinx-3.5.1, furo 2021.02.28.beta28"/>
+        <title>Tmux Note - Dormouse Blog 1.1 文档</title>
+      <link rel="stylesheet" href="_static/styles/furo.css?digest=be5985a4059b5c2cd56ed0804790452beca62674">
+    <link rel="stylesheet" href="_static/pygments.css">
+    <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="_static/pygments_dark.css">
+    
+
+
+<style>
+  :root {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+  }
+
+  /* For allowing end-user-specific overrides */
+  .override-light {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  .override-dark {
+    --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+  }
+</style><link rel="stylesheet" href="_static/styles/furo-extensions.css?digest=d391b54134226e4196576da3bdb6dddb7e05ba2b"></head>
+  <body dir="">
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke-width="1.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z"/>
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">Dormouse Blog 1.1 文档</div></a>
+    </div>
+    <div class="header-right">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  
+  <span class="sidebar-brand-text">Dormouse Blog 1.1 文档</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html">
+  <input class="sidebar-search" placeholder=搜索 name="q">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="python_note/index.html">Python Note</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="python_note/100file.html">Python Note 100 - File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python_note/200list.html">Python Note 200 - List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python_note/300dict.html">Python Note 300 - Dict</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python_note/400str.html">Python Note 400 - String</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python_note/500datetime.html">Python Note 500 - Datetime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python_note/600functional_programming.html">Python Note 600 - Functional Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python_note/700sorting.html">Python Note 700 - Sorting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python_note/800logger.html">Python Note 800 - logger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python_note/900other.html">Python Note 900 - Other</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pep/pep-0008.html">Style Guide for Python Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pygtk3/pygtk3-note.html">Python GTK+ 3 笔记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apt-cheat-sheet.html">Apt cheat sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="build-static-blog-with-pelican.html">Build Static Blog With Pelican</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conda-anaconda.html">Conda &amp; Anaconda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git-note.html">Git Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="golang-quick-start.html">Golang Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howto-config-icoloud-mail-in-thunderbird.html">How to configure iCloud mail in Mozilla Thunderbird</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howto-start-a-python3-project.html">How to start a python3 project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hugo-quick-start.html">Hugo Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ifttt-note.html">Ifttt Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install-linuxmint.html">安装 Linux Mint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iterm2-note.html">iTerm2 Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linux-note.html">Linux Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mac-note.html">Mac Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="make-a-blog-with-flask.html">Make a blog with Flask</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pandas-note.html">pandas 入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pyqt5-note.html">PyQt5 Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-terminal-ide.html">IDE in terminal for Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-virtual-env.html">安装 Python 虚拟环境</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rst-pdf.html">使用 Sphinx 生成 PDF 文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="semantic-note.html">Semantic Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sphinx-cheet-sheet.html">Sphinx cheat sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spyder-on-winxp.html">Spyder in Winxp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sqlite-note.html">Sqlite Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sublime-text-note.html">Sublime Text Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tinkerer-quick-start.html">Tinkerer Quick Start</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Tmux Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vim-as-ide.html">Vim As IDE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vim-note.html">Vim Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wordpress-note.html">Wordpress Note</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="haskell/index.html">Haskell Note</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label for="toctree-checkbox-2"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="haskell/haskell-note.html">Haskell Note</a></li>
+<li class="toctree-l2"><a class="reference internal" href="haskell/haskell-exercieses.html">Haskell Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="personal/index.html">Personal Note</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label for="toctree-checkbox-3"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="personal/read-list.html">读书记录</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/a-gang-story-review.html">A Gang Story（2011） 里昂黑帮</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/a-year-with-no-taste.html">一个没有味道的年</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/booknote-20101113.html">读书笔记20101113</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/fei-cheng-wu-rao-review.html">今天看《非诚勿扰》</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/get-him-to-the-greek.html">Get Him to the Greek</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/if-only-one-bowl-of-porridge.html">如果只有一碗粥…</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/i-saw-a-beaver-nest.html">我看见了河狸的窝</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/let-us-digg.html">让我们来打洞吧</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/listen-and-watch-movie.html">听听琴，看看电影</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/long-men-fei-jia-review.html">龙门飞甲3D版</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/ni-yi-sheng-de-gu-shi-du-hou-gan.html">《你一生的故事》读后感</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/roomba550-review.html">家里来了一个“机器人”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/selecting-ebook.html">电子书比较中…</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/suitable-for-human-habitation.html">据说10以上的地方更适合人类居住</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/the-most-intimate-goods-in-newegg.html">新蛋最贴心的商品</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/the-terminal-review.html">幸福终点站</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/unthinkable-review.html">《战略特勤组》观后感</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/you-will-forget-it.html">You will forget it</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="lego/index.html">Lego Note</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label for="toctree-checkbox-4"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="lego/lego-10222.html">拆还是不拆呢？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lego/lego-30106-review.html">Lego 30106 Review</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lego/lego-30222-review.html">Lego 30222 Review</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lego/lego-service.html">这就是LEGO®的售后服务</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="software.html">Software Note</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <main class="main">
+    <div class="content">
+      <article role="main">
+        <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+        </label>
+        <div class="section" id="tmux-note">
+<h1>Tmux Note<a class="headerlink" href="#tmux-note" title="永久链接至标题">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">date</dt>
+<dd class="field-odd"><p>2017-02-08 18:35:00</p>
+</dd>
+<dt class="field-even">modified</dt>
+<dd class="field-even"><p>2017-02-08 18:35:00</p>
+</dd>
+<dt class="field-odd">slug</dt>
+<dd class="field-odd"><p>tmux-note</p>
+</dd>
+<dt class="field-even">tags</dt>
+<dd class="field-even"><p>tmux, note</p>
+</dd>
+<dt class="field-odd">category</dt>
+<dd class="field-odd"><p>software</p>
+</dd>
+<dt class="field-even">author</dt>
+<dd class="field-even"><p>Dormouse Young</p>
+</dd>
+<dt class="field-odd">summary</dt>
+<dd class="field-odd"><p>Note for tmux.</p>
+</dd>
+</dl>
+<p>Official site: <a class="reference external" href="https://github.com/tmux/tmux">https://github.com/tmux/tmux</a></p>
+<div class="section" id="cheat-sheet">
+<h2>cheat-sheet<a class="headerlink" href="#cheat-sheet" title="永久链接至标题">¶</a></h2>
+<p>tmux use prefix key (default: <code class="docutils literal notranslate"><span class="pre">C-b</span></code>)</p>
+<div class="section" id="general">
+<h3>General<a class="headerlink" href="#general" title="永久链接至标题">¶</a></h3>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 50%"/>
+<col style="width: 50%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Key</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>:</p></td>
+<td><p>interactive dialog (promt)</p></td>
+</tr>
+<tr class="row-odd"><td><p>d</p></td>
+<td><p>detach session</p></td>
+</tr>
+<tr class="row-even"><td><p>tmux restore</p></td>
+<td><p>restore session</p></td>
+</tr>
+<tr class="row-odd"><td><p>: source -file ~/.tmux.conf</p></td>
+<td><p>reload .tmux.conf</p></td>
+</tr>
+<tr class="row-even"><td><p>t</p></td>
+<td><p>big clock</p></td>
+</tr>
+<tr class="row-odd"><td><p>?</p></td>
+<td><p>list bindings</p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="section" id="pane-handling">
+<h3>Pane Handling<a class="headerlink" href="#pane-handling" title="永久链接至标题">¶</a></h3>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 27%"/>
+<col style="width: 73%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Key</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>%</p></td>
+<td><p>split vertically</p></td>
+</tr>
+<tr class="row-odd"><td><p>“</p></td>
+<td><p>split horizontally</p></td>
+</tr>
+<tr class="row-even"><td><p>o</p></td>
+<td><p>go to next pane (down- pane)</p></td>
+</tr>
+<tr class="row-odd"><td><p>q</p></td>
+<td><p>show pane number, press number to go to</p></td>
+</tr>
+<tr class="row-even"><td><p>{</p></td>
+<td><p>move current pane left</p></td>
+</tr>
+<tr class="row-odd"><td><p>}</p></td>
+<td><p>move current pane right</p></td>
+</tr>
+<tr class="row-even"><td><p>x</p></td>
+<td><p>kill pane</p></td>
+</tr>
+<tr class="row-odd"><td><p>&lt;space&gt;</p></td>
+<td><p>toggle through layouts</p></td>
+</tr>
+<tr class="row-even"><td><p>;</p></td>
+<td><p>last pane</p></td>
+</tr>
+<tr class="row-odd"><td><p>z</p></td>
+<td><p>resize pane</p></td>
+</tr>
+<tr class="row-even"><td><p>M-Up</p></td>
+<td><p>resize pane up 5 row</p></td>
+</tr>
+<tr class="row-odd"><td><p>C-Up</p></td>
+<td><p>resize pane up 1 row</p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="section" id="window-handling">
+<h3>Window Handling<a class="headerlink" href="#window-handling" title="永久链接至标题">¶</a></h3>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 30%"/>
+<col style="width: 70%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Key</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>c</p></td>
+<td><p>new window</p></td>
+</tr>
+<tr class="row-odd"><td><p>,</p></td>
+<td><p>rename window</p></td>
+</tr>
+<tr class="row-even"><td><p>n</p></td>
+<td><p>next window</p></td>
+</tr>
+<tr class="row-odd"><td><p>p</p></td>
+<td><p>previous window</p></td>
+</tr>
+<tr class="row-even"><td><p>l</p></td>
+<td><p>previously selected window</p></td>
+</tr>
+<tr class="row-odd"><td><p>w</p></td>
+<td><p>list all windows</p></td>
+</tr>
+<tr class="row-even"><td><p>[0-9]</p></td>
+<td><p>move to window number [0-9]</p></td>
+</tr>
+<tr class="row-odd"><td><p>f [window name]</p></td>
+<td><p>find window</p></td>
+</tr>
+<tr class="row-even"><td><p>:</p></td>
+<td><p>list-windows list windows</p></td>
+</tr>
+<tr class="row-odd"><td><p>&amp;</p></td>
+<td><p>kill window</p></td>
+</tr>
+<tr class="row-even"><td><p>.</p></td>
+<td><p>move window</p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="section" id="session-handling">
+<h3>Session handling<a class="headerlink" href="#session-handling" title="永久链接至标题">¶</a></h3>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 45%"/>
+<col style="width: 55%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Key</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>tmux</p></td>
+<td><p>start new</p></td>
+</tr>
+<tr class="row-odd"><td><p>tmux new -s myname</p></td>
+<td><p>start new with name</p></td>
+</tr>
+<tr class="row-even"><td><p>tmux a -t</p></td>
+<td><p>reattach session (or at, or attach)</p></td>
+</tr>
+<tr class="row-odd"><td><p>tmux a -t myname</p></td>
+<td><p>reattach named session</p></td>
+</tr>
+<tr class="row-even"><td><p>tmux ls</p></td>
+<td><p>list sessions</p></td>
+</tr>
+<tr class="row-odd"><td><p>tmux kill-s ession -t myname</p></td>
+<td><p>kill named session</p></td>
+</tr>
+<tr class="row-even"><td><p>:new</p></td>
+<td><p>new session</p></td>
+</tr>
+<tr class="row-odd"><td><p>s</p></td>
+<td><p>list sessions</p></td>
+</tr>
+<tr class="row-even"><td><p>$</p></td>
+<td><p>name session</p></td>
+</tr>
+<tr class="row-odd"><td><p>tmux kill-s erver</p></td>
+<td><p>kill server and all sessions</p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="section" id="customizing-tmux">
+<h3>customizing tmux<a class="headerlink" href="#customizing-tmux" title="永久链接至标题">¶</a></h3>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 39%"/>
+<col style="width: 61%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Key</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>set-option -g prefix C-a</p></td>
+<td><p>rebind the Ctrl-b prefix to Ctrl-a ;
+-g for global =&gt; every window</p></td>
+</tr>
+<tr class="row-odd"><td><p>bind-key C-a last-window</p></td>
+<td><p>switch to last active window;
+To use hit Ctrl-a twice</p></td>
+</tr>
+<tr class="row-even"><td><p>unbind %</p></td>
+<td><p>Remove default split binding</p></td>
+</tr>
+<tr class="row-odd"><td><p>bind | split-window -h</p></td>
+<td><p>bind vertical splitting to |</p></td>
+</tr>
+<tr class="row-even"><td><p>bind - split-window -v</p></td>
+<td><p>bind vertical splitting to -</p></td>
+</tr>
+<tr class="row-odd"><td><p>set -g status-bg black</p></td>
+<td><p>set status bar bg color to black</p></td>
+</tr>
+<tr class="row-even"><td><p>set -g status-fg white</p></td>
+<td><p>set status bar fg color to white</p></td>
+</tr>
+<tr class="row-odd"><td><p>set -g status-left
+‘#[fg=green]#H’</p></td>
+<td><p>beginning of statusbar hostname in
+green</p></td>
+</tr>
+<tr class="row-even"><td><p>set -g status-right
+‘#[fg=yellow]#( uptime
+| cut -d “,” -f 2-)’</p></td>
+<td><p>number of users and load average for
+computer</p></td>
+</tr>
+<tr class="row-odd"><td><p>set-window-o ption -g
+window-status-current-bg
+red</p></td>
+<td><p>current window shown in red</p></td>
+</tr>
+<tr class="row-even"><td><p>setw -g monito r-a
+ctivity on</p></td>
+<td><p>highlight window with new activity</p></td>
+</tr>
+<tr class="row-odd"><td><p>set -g visual -ac tivity
+on</p></td>
+<td><p>show info on new activity</p></td>
+</tr>
+<tr class="row-even"><td><p>setw -g automatic
+-rename on</p></td>
+<td><p>set window title to current command</p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="section" id="default-key-bindings">
+<h2>Default key bindings<a class="headerlink" href="#default-key-bindings" title="永久链接至标题">¶</a></h2>
+<p>The default command key bindings are:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>C-b Send the prefix key (C-b) through to the application.
+C-o Rotate the panes in the current window forwards.
+C-z Suspend the tmux client.
+!  Break the current pane out of the window.
+" Split the current pane into two, top and bottom.
+# List all paste buffers.
+$ Rename the current session.
+% Split the current pane into two, left and right.
+&amp; Kill the current window.
+' Prompt for a window index to select.
+( Switch the attached client to the previous session.
+) Switch the attached client to the next session.
+, Rename the current window.
+- Delete the most recently copied buffer of text.
+.  Prompt for an index to move the current window.
+0 to 9 Select windows 0 to 9.
+: Enter the tmux command prompt.
+; Move to the previously active pane.
+= Choose which buffer to paste interactively from a list.
+?  List all key bindings.
+D Choose a client to detach.
+L Switch the attached client back to the last session.
+[ Enter copy mode to copy text or view the history.
+] Paste the most recently copied buffer of text.
+c Create a new window.
+d Detach the current client.
+f Prompt to search for text in open windows.
+i Display some information about the current window.
+l Move to the previously selected window.
+n Change to the next window.
+o Select the next pane in the current window.
+p Change to the previous window.
+q Briefly display pane indexes.
+r Force redraw of the attached client.
+m Mark the current pane (see select-pane -m).
+M Clear the marked pane.
+s Select a new session for the attached client interactively.
+t Show the time.
+w Choose the current window interactively.
+x Kill the current pane.
+z Toggle zoom state of the current pane.
+{ Swap the current pane with the previous pane.
+} Swap the current pane with the next pane.
+~ Show previous messages from tmux, if any.
+Page Up Enter copy mode and scroll one page up.
+Up, Down Left, Right Change to the pane above, below, to the left, or to the right of the current pane.
+M-1 to M-5 Arrange panes in one of the five preset layouts: even-horizontal, even-vertical, main-horizontal, main-vertical, or tiled.
+Space Arrange the current window in the next preset layout.
+M-n Move to the next window with a bell or activity marker.
+M-o Rotate the panes in the current window backwards.
+M-p Move to the previous window with a bell or activity marker.
+C-Up, C-Down C-Left, C-Right Resize the current pane in steps of one cell.
+M-Up, M-Down M-Left, M-Right Resize the current pane in steps of five cells.
+</pre></div>
+</div>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.cheatography.com/bechtold/cheat-sheets/tmux-the-terminal-multiplexer/">https://www.cheatography.com/bechtold/cheat-sheets/tmux-the-terminal-multiplexer/</a></p></li>
+<li><p><a class="reference external" href="http://harttle.com/2015/11/06/tmux-startup.html">http://harttle.com/2015/11/06/tmux-startup.html</a></p></li>
+</ul>
+</div>
+</div>
+
+      </article>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="vim-as-ide.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Vim As IDE</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="tinkerer-quick-start.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Tinkerer Quick Start</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+              Copyright &#169; 2011-2021, Dormouse Young
+            |
+            最后更新于 3月 15, 2021.
+            |
+            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
+              and
+              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+              <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
+            |
+            <a class="muted-link" href="_sources/tumx-note.rst.txt"
+               rel="nofollow">
+              显示源代码
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            目录
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Tmux Note</a><ul>
+<li><a class="reference internal" href="#cheat-sheet">cheat-sheet</a><ul>
+<li><a class="reference internal" href="#general">General</a></li>
+<li><a class="reference internal" href="#pane-handling">Pane Handling</a></li>
+<li><a class="reference internal" href="#window-handling">Window Handling</a></li>
+<li><a class="reference internal" href="#session-handling">Session handling</a></li>
+<li><a class="reference internal" href="#customizing-tmux">customizing tmux</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#default-key-bindings">Default key bindings</a></li>
+<li><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </main>
+</div>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
+    <script src="_static/scripts/main.js?digest=e931d09b2a40c1bb82b542effe772014573baf67"></script></body>
+</html>

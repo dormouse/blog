@@ -1,0 +1,589 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="索引" href="genindex.html" /><link rel="search" title="搜索" href="search.html" /><link rel="next" title="Mac Note" href="mac-note.html" /><link rel="prev" title="iTerm2 Note" href="iterm2-note.html" />
+
+    <meta name="generator" content="sphinx-3.5.1, furo 2021.02.28.beta28"/>
+        <title>Linux Note - Dormouse Blog 1.1 文档</title>
+      <link rel="stylesheet" href="_static/styles/furo.css?digest=be5985a4059b5c2cd56ed0804790452beca62674">
+    <link rel="stylesheet" href="_static/pygments.css">
+    <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="_static/pygments_dark.css">
+    
+
+
+<style>
+  :root {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+  }
+
+  /* For allowing end-user-specific overrides */
+  .override-light {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  .override-dark {
+    --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+  }
+</style><link rel="stylesheet" href="_static/styles/furo-extensions.css?digest=d391b54134226e4196576da3bdb6dddb7e05ba2b"></head>
+  <body dir="">
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke-width="1.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z"/>
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">Dormouse Blog 1.1 文档</div></a>
+    </div>
+    <div class="header-right">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  
+  <span class="sidebar-brand-text">Dormouse Blog 1.1 文档</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html">
+  <input class="sidebar-search" placeholder=搜索 name="q">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="python_note/index.html">Python Note</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="python_note/100file.html">Python Note 100 - File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python_note/200list.html">Python Note 200 - List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python_note/300dict.html">Python Note 300 - Dict</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python_note/400str.html">Python Note 400 - String</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python_note/500datetime.html">Python Note 500 - Datetime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python_note/600functional_programming.html">Python Note 600 - Functional Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python_note/700sorting.html">Python Note 700 - Sorting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python_note/800logger.html">Python Note 800 - logger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python_note/900other.html">Python Note 900 - Other</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pep/pep-0008.html">Style Guide for Python Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pygtk3/pygtk3-note.html">Python GTK+ 3 笔记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apt-cheat-sheet.html">Apt cheat sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="build-static-blog-with-pelican.html">Build Static Blog With Pelican</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conda-anaconda.html">Conda &amp; Anaconda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git-note.html">Git Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="golang-quick-start.html">Golang Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howto-config-icoloud-mail-in-thunderbird.html">How to configure iCloud mail in Mozilla Thunderbird</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howto-start-a-python3-project.html">How to start a python3 project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hugo-quick-start.html">Hugo Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ifttt-note.html">Ifttt Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install-linuxmint.html">安装 Linux Mint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iterm2-note.html">iTerm2 Note</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Linux Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mac-note.html">Mac Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="make-a-blog-with-flask.html">Make a blog with Flask</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pandas-note.html">pandas 入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pyqt5-note.html">PyQt5 Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-terminal-ide.html">IDE in terminal for Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-virtual-env.html">安装 Python 虚拟环境</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rst-pdf.html">使用 Sphinx 生成 PDF 文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="semantic-note.html">Semantic Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sphinx-cheet-sheet.html">Sphinx cheat sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spyder-on-winxp.html">Spyder in Winxp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sqlite-note.html">Sqlite Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sublime-text-note.html">Sublime Text Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tinkerer-quick-start.html">Tinkerer Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tumx-note.html">Tmux Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vim-as-ide.html">Vim As IDE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vim-note.html">Vim Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wordpress-note.html">Wordpress Note</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="haskell/index.html">Haskell Note</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label for="toctree-checkbox-2"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="haskell/haskell-note.html">Haskell Note</a></li>
+<li class="toctree-l2"><a class="reference internal" href="haskell/haskell-exercieses.html">Haskell Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="personal/index.html">Personal Note</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label for="toctree-checkbox-3"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="personal/read-list.html">读书记录</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/a-gang-story-review.html">A Gang Story（2011） 里昂黑帮</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/a-year-with-no-taste.html">一个没有味道的年</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/booknote-20101113.html">读书笔记20101113</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/fei-cheng-wu-rao-review.html">今天看《非诚勿扰》</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/get-him-to-the-greek.html">Get Him to the Greek</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/if-only-one-bowl-of-porridge.html">如果只有一碗粥…</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/i-saw-a-beaver-nest.html">我看见了河狸的窝</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/let-us-digg.html">让我们来打洞吧</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/listen-and-watch-movie.html">听听琴，看看电影</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/long-men-fei-jia-review.html">龙门飞甲3D版</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/ni-yi-sheng-de-gu-shi-du-hou-gan.html">《你一生的故事》读后感</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/roomba550-review.html">家里来了一个“机器人”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/selecting-ebook.html">电子书比较中…</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/suitable-for-human-habitation.html">据说10以上的地方更适合人类居住</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/the-most-intimate-goods-in-newegg.html">新蛋最贴心的商品</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/the-terminal-review.html">幸福终点站</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/unthinkable-review.html">《战略特勤组》观后感</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal/you-will-forget-it.html">You will forget it</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="lego/index.html">Lego Note</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label for="toctree-checkbox-4"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="lego/lego-10222.html">拆还是不拆呢？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lego/lego-30106-review.html">Lego 30106 Review</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lego/lego-30222-review.html">Lego 30222 Review</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lego/lego-service.html">这就是LEGO®的售后服务</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="software.html">Software Note</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <main class="main">
+    <div class="content">
+      <article role="main">
+        <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+        </label>
+        <div class="section" id="linux-note">
+<h1>Linux Note<a class="headerlink" href="#linux-note" title="永久链接至标题">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">date</dt>
+<dd class="field-odd"><p>2016-05-27</p>
+</dd>
+<dt class="field-even">modified</dt>
+<dd class="field-even"><p>2017-09-25</p>
+</dd>
+<dt class="field-odd">slug</dt>
+<dd class="field-odd"><p>linux-note</p>
+</dd>
+<dt class="field-even">tags</dt>
+<dd class="field-even"><p>linux, note</p>
+</dd>
+<dt class="field-odd">category</dt>
+<dd class="field-odd"><p>software</p>
+</dd>
+<dt class="field-even">author</dt>
+<dd class="field-even"><p>Dormouse Young</p>
+</dd>
+<dt class="field-odd">summary</dt>
+<dd class="field-odd"><p>Note of how to use linux</p>
+</dd>
+</dl>
+<div class="section" id="pip-note">
+<h2>Pip note<a class="headerlink" href="#pip-note" title="永久链接至标题">¶</a></h2>
+<p>Install with pip: <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">imapclient</span></code>.</p>
+<p>Install from source:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/mjs/imapclient.git
+$ cd imapclient
+$ pip install -e .
+</pre></div>
+</div>
+</div>
+<div class="section" id="install-chrome">
+<h2>Install chrome<a class="headerlink" href="#install-chrome" title="永久链接至标题">¶</a></h2>
+<p>date: 2016-05-27</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">dl</span><span class="o">.</span><span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">linux</span><span class="o">/</span><span class="n">direct</span><span class="o">/</span><span class="n">google</span><span class="o">-</span><span class="n">chrome</span><span class="o">-</span><span class="n">stable_current_amd64</span><span class="o">.</span><span class="n">deb</span>
+<span class="n">sudo</span> <span class="n">gdebi</span> <span class="n">google</span><span class="o">-</span><span class="n">chrome</span><span class="o">-</span><span class="n">stable_current_amd64</span><span class="o">.</span><span class="n">deb</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="install-new-font">
+<h2>Install new font<a class="headerlink" href="#install-new-font" title="永久链接至标题">¶</a></h2>
+<p>date: 2015-04-29</p>
+<p>How-to:</p>
+<p>For system wide installation, copy the fonts to <code class="docutils literal notranslate"><span class="pre">/usr/share/fonts</span></code> and run
+<code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">fc-cache</span></code> to rebuild the font cache, or for user local installation,
+make sure <code class="docutils literal notranslate"><span class="pre">~/.fonts</span></code> exists, copy them into there, then rebuild the font
+cache.</p>
+<p>Example:</p>
+<p>Install <a class="reference external" href="https://github.com/adobe-fonts/source-code-pro">adobe-fonts/source-code-pro</a> in Ubuntu 14.04:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span> <span class="o">-</span><span class="n">d</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">fonts</span><span class="o">/</span><span class="n">opentype</span> <span class="p">]</span> <span class="o">||</span> <span class="n">sudo</span> <span class="n">mkdir</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">fonts</span><span class="o">/</span><span class="n">opentype</span>
+<span class="n">sudo</span> <span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">adobe</span><span class="o">-</span><span class="n">fonts</span><span class="o">/</span><span class="n">source</span><span class="o">-</span><span class="n">code</span><span class="o">-</span><span class="n">pro</span><span class="o">.</span><span class="n">git</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">fonts</span><span class="o">/</span><span class="n">opentype</span><span class="o">/</span><span class="n">scp</span>
+<span class="n">sudo</span> <span class="n">fc</span><span class="o">-</span><span class="n">cache</span> <span class="o">-</span><span class="n">f</span> <span class="o">-</span><span class="n">v</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="install-downlaod-tools">
+<h2>Install Downlaod tools<a class="headerlink" href="#install-downlaod-tools" title="永久链接至标题">¶</a></h2>
+<p>Date: 2017-07-12</p>
+<p>Install uGet:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">add</span><span class="o">-</span><span class="n">apt</span><span class="o">-</span><span class="n">repository</span> <span class="n">ppa</span><span class="p">:</span><span class="n">plushuang</span><span class="o">-</span><span class="n">tw</span><span class="o">/</span><span class="n">uget</span><span class="o">-</span><span class="n">stable</span>
+<span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">uget</span>
+</pre></div>
+</div>
+<p>Install aria2:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">aria2</span>
+</pre></div>
+</div>
+<p>Install firefox plugin FlashGot</p>
+</div>
+<div class="section" id="id1">
+<h2>以交互模式查找历史命令<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p>用 <code class="docutils literal notranslate"><span class="pre">history</span></code> 可以查找历史命令。</p>
+<p>在终端可以使用 <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">r</span></code> 命令搜索历史命令。使用方法是先按下
+<code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">r</span></code> ，然后输入字符就会显示包含字符的历史命令。再次按下
+<code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">r</span></code> 会向后搜索更老的命令，或者按下 ctrl+s 向前搜索。</p>
+<p>注意，<code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">s</span></code> 有时会与 <code class="docutils literal notranslate"><span class="pre">XON/XOFF</span></code> 流控制冲突，即 <code class="docutils literal notranslate"><span class="pre">XON/XOFF</span></code> 流控
+制也会使用该快捷键。你可以通过运行 stty -ixon 命令来禁用该快捷键。在你的个
+人电脑上，这通常是有用的，但是在禁用前，确保你不需要 XON/XOFF 。</p>
+</div>
+<div class="section" id="at">
+<h2>使用 at 命令<a class="headerlink" href="#at" title="永久链接至标题">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">at</span></code> 命令的运行方式是在后面紧跟着你想要运行任务的运行时间。时间是灵活
+的，因为它支持许多时间格式。包括下面这些例子:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">at</span> <span class="mi">12</span><span class="p">:</span><span class="mi">00</span> <span class="n">PM</span> <span class="n">September</span> <span class="mi">30</span> <span class="mi">2017</span>
+<span class="n">at</span> <span class="n">now</span> <span class="o">+</span> <span class="mi">1</span> <span class="n">hour</span>
+<span class="n">at</span> <span class="mi">9</span><span class="p">:</span><span class="mi">00</span> <span class="n">AM</span> <span class="n">tomorrow</span>
+</pre></div>
+</div>
+<p>当你以带参数的方式输入 <cite>at</cite> 命令以后，将会提示你该命令将在你的 Linux 系统
+上运行。这可能是一个备份脚本，一套维护任务，或者甚至是一个普通的 bash
+命令。如果要结束任务，可以按 ctrl+d 。</p>
+<p>另外，你可以使用 <cite>atq</cite> 命令查看当前用户的所有任务，或者使用 <cite>sudo atq</cite>
+查看所有用户的任务。它将会展示出所有排定好的任务，并且每个任务都伴有一个
+ID 。如果你想取消一个排定好的任务，可以使用 <cite>atrm</cite> 命令，并且以任务 ID
+作为参数。</p>
+</div>
+<div class="section" id="shell">
+<h2>通过子 shell 保持当前目录<a class="headerlink" href="#shell" title="永久链接至标题">¶</a></h2>
+<p>通过子 shell 可以在当前目录执行其他目录下的内容。子 shell 是一个包含在括号
+中的命令，例如：<code class="docutils literal notranslate"><span class="pre">(cd</span> <span class="pre">/etc</span> <span class="pre">&amp;&amp;</span> <span class="pre">ls</span> <span class="pre">-a)</span></code> 。这个命令会输出 <code class="docutils literal notranslate"><span class="pre">/etc</span></code> 中的内容，
+并且保持当前目录不变。</p>
+<p>其工作原理是：一个括号中的命令会创建一个子 shell 或当前 shell 的副本。
+该子 shell 可以访问所有的父变量，反之则不行。所以请记住，你是在运行一个
+非常复杂的单行命令。</p>
+</div>
+<div class="section" id="shred">
+<h2>用 shred 命令更安全地删除文件<a class="headerlink" href="#shred" title="永久链接至标题">¶</a></h2>
+<p>使用 shred 命令删除一个文件之后，文件中的数据会被多次随机覆写。甚至有一个
+选项可以在随机覆写之后对所有的数据进行清零。</p>
+<p>如果你想安全的删除一个文件并且以零覆盖，那么可以使用下面的命令:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">shred</span> <span class="o">-</span><span class="n">u</span> <span class="o">-</span><span class="n">z</span> <span class="p">[</span><span class="n">file</span> <span class="n">name</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>同时，你也可以使用 -n 选项和一个数字作为参数，从而指定在随机覆盖数据的时候
+迭代多少次。</p>
+</div>
+<div class="section" id="id2">
+<h2>你可以按照功能搜索命令，而不仅仅是通过名字<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>记住命令的名字非常困难，特别是对于初学者来说。幸运的是，Linux 附带了一个
+通过名字和描述来搜索 man 页面的工具。</p>
+<p>下次，如果你没有记住你想要使用的工具的名称，你可以尝试使用 apropos 命令
+加上你想要干的事情的描述。比如，apropos build filesystem 将会返回一系列
+名字和描述包括了 “build” 和 “filesystem” 单词的工具。</p>
+<p>apropos 命令接受一个或多个字符串作为参数，但同时它也有其他参数，比如你可以
+使用 -r 参数，从而通过正则表达式来搜索。</p>
+</div>
+<div class="section" id="id3">
+<h2>一个允许你来管理系统版本的替代系统<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>如果你曾进行过软件开发，你就会明白跨项目管理不同版本的语言的支持的重要性。
+许多 Linux 发行版都有工具可以来处理不同的内建版本。</p>
+<p>可执行文件比如 java 往往符号链接到目录 /etc/alternatives 下。反过来，该
+目录会将符号链接存储为二进制文件并提供一个管理这些链接的接口。Java 可能是
+替代系统最常管理的语言，但是，经过一些配置，它也可以作为其他应用程序替代
+品，比如 NVM 和 RVM （NVM 和 RVM 分别是 NodeJS 和 Ruby 的版本管理器）。</p>
+<p>在基于 Debian 的系统中，你可以使用 update-alternatives 命令创建和管理这些
+链接。在 CentOS 中，这个工具就叫做 alternatives 。通过更改你的 alternatives
+文件中的链接，你便可以安装一个语言的多个版本，并且在不同的情况下使用不同的
+二进制。这个替代系统也提供了对任何你可能在命令行运行的程序的支持。</p>
+</div>
+<div class="section" id="id4">
+<h2>通过自动更正来避免输入很长的无效文件路径<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>有多少次，你输入一个文件的绝对路径，然而却看到“没有该文件或目录”的消息。
+任何人都会明白输入一个很长的字符串的痛苦。幸运的是，有一个很简单的解决办法。</p>
+<p>内建的 shopt 命令允许你设置不同的选项来改变 shell 的行为。设置 cdspell 选项
+是避免输入文件路径时一个字母出错的头痛的一个简单方式。你可以通过运行
+<code class="docutils literal notranslate"><span class="pre">shopt</span> <span class="pre">-s</span> <span class="pre">cdspell</span></code> 命令来启用该选项。启用该选项后，当你想要切换目录时，会
+自动更正为最匹配的目录。</p>
+<p>Shell 选项是节省时间的一个好方法（更不用说减少麻烦），此外还有许许多多的
+其他选项。如果想查看你的系统中所有选项的完整列表，可以运行不带参数的 shopt
+命令。需要注意的是，这是 bash 的特性，如果你运行 zsh 或者其他可供选择的
+shell，可能无法使用。</p>
+</div>
+<div class="section" id="id5">
+<h2>压缩和解压缩<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id6">
+<h3>常用命令<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 13%"/>
+<col style="width: 36%"/>
+<col style="width: 51%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>扩展名</p></th>
+<th class="head"><p>解压</p></th>
+<th class="head"><p>打包</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>.tar</p></td>
+<td><p>tar xvf FileName.tar</p></td>
+<td><p>tar cvf FileName.tar DirName</p></td>
+</tr>
+<tr class="row-odd"><td><p>.tar.gz</p></td>
+<td><p>tar zxvf FileName.tar.gz</p></td>
+<td><p>tar zcvf FileName.tar.gz DirName</p></td>
+</tr>
+<tr class="row-even"><td><p>.tar.bz2</p></td>
+<td><p>tar jxvf FileName.tar.bz2</p></td>
+<td><p>tar jcvf FileName.tar.bz2 DirName</p></td>
+</tr>
+<tr class="row-odd"><td><p>.gz</p></td>
+<td><p>gunzip FileName.gz
+gzip -d FileName.gz</p></td>
+<td><p>gzip FileName</p></td>
+</tr>
+<tr class="row-even"><td><p>.bz2</p></td>
+<td><p>bzip2 -d FileName.bz2
+bunzip2 FileName.bz2</p></td>
+<td><p>bzip2 -z FileName</p></td>
+</tr>
+<tr class="row-odd"><td><p>.bz</p></td>
+<td><p>bzip2 -d FileName.bz
+bunzip2 FileName.bz</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>.tar.bz</p></td>
+<td><p>tar jxvf FileName.tar.bz</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>.Z</p></td>
+<td><p>uncompress FileName.Z</p></td>
+<td><p>compress FileName</p></td>
+</tr>
+<tr class="row-even"><td><p>.tar.Z</p></td>
+<td><p>tar Zxvf FileName.tar.Z</p></td>
+<td><p>tar Zcvf FileName.tar.Z DirName</p></td>
+</tr>
+<tr class="row-odd"><td><p>.tgz</p></td>
+<td><p>tar zxvf FileName.tgz</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>.tar.tgz</p></td>
+<td><p>tar zxvf FileName.tar.tgz</p></td>
+<td><p>tar zcvf FileName.tar.tgz FileName</p></td>
+</tr>
+<tr class="row-odd"><td><p>.zip</p></td>
+<td><p>unzip FileName.zip</p></td>
+<td><p>zip FileName.zip DirName</p></td>
+</tr>
+<tr class="row-even"><td><p>.rar</p></td>
+<td><p>rar a FileName.rar</p></td>
+<td><p>rar e FileName.rar</p></td>
+</tr>
+<tr class="row-odd"><td><p>.lha</p></td>
+<td><p>lha -e FileName.lha</p></td>
+<td><p>lha -a FileName.lha FileName</p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="section" id="sex">
+<h3>sEx<a class="headerlink" href="#sex" title="永久链接至标题">¶</a></h3>
+<p>.tar .tgz .tar.gz .tar.Z .tar.bz .tar.bz2 .zip</p>
+<p>.cpio .rpm .deb .slp .arj .rar .ace .lha .lzh</p>
+<p>.lzx .lzs .arc .sda .sfx .lnx .zoo .cab .kar .</p>
+<p>cpt .pit .sit .sea</p>
+<p>解压:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sEx</span> <span class="n">x</span> <span class="n">FileName</span><span class="o">.*</span>
+</pre></div>
+</div>
+<p>压缩:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sEx</span> <span class="n">a</span> <span class="n">FileName</span><span class="o">.*</span> <span class="n">FileName</span>
+</pre></div>
+</div>
+<p>sEx只是调用相关程序，本身并无压缩、解压功能，请注意！</p>
+</div>
+<div class="section" id="id7">
+<h3>分卷压缩及解压分卷压缩文件<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<p>使用rar</p>
+<p>1.分卷压缩</p>
+<p>ubuntu下没有默认安装rar，可以通过 sudo apt-get install rar,sudo apt-get install unrar 来安装rar.</p>
+<p>安装过后，使用以下命令进行分卷压缩:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rar</span> <span class="n">a</span> <span class="o">-</span><span class="n">vSIZE</span>  <span class="n">压缩后的文件名</span> <span class="n">被压缩的文件或者文件夹</span>
+</pre></div>
+</div>
+<p>例如:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rar</span> <span class="n">a</span> <span class="o">-</span><span class="n">v1024m</span> <span class="n">foo</span><span class="o">.</span><span class="n">rar</span> <span class="n">foo</span>
+</pre></div>
+</div>
+<p>此命令即为对foo文件夹进行分卷压缩，每卷的大小为1024m，压缩后的文件名为foo.rar</p>
+<p>2.解压</p>
+<p>对任何一个分卷执行:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rar</span> <span class="n">e</span> <span class="n">foo</span><span class="o">.</span><span class="n">part1</span><span class="o">.</span><span class="n">rar</span>
+</pre></div>
+</div>
+<p>使用tar</p>
+<p>1.分卷压缩:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tar</span> <span class="n">cvzpf</span> <span class="o">-</span> <span class="n">foo</span> <span class="o">|</span> <span class="n">split</span> <span class="o">-</span><span class="n">d</span> <span class="o">-</span><span class="n">b</span> <span class="mi">50</span><span class="n">m</span>
+</pre></div>
+</div>
+<p>上面的命令是将foo这个文件夹分卷压缩，每卷50m，注意foo前面有空格.压缩完之后，
+会被命名为x00,x01,x02,…。</p>
+<p>2.解压</p>
+<p>首先需要合并， 然后解压:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="n">x</span><span class="o">*&gt;</span><span class="n">foo</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+<span class="n">tar</span> <span class="n">xzvf</span> <span class="n">foo</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>参考<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://opensourceforu.com/2017/09/top-7-things-linux-may-not-known-far/">Seven things about Linux you may not have known so far</a> （<a class="reference external" href="http://www.oschina.net/news/89404/top-7-things-linux-may-not-known-far">中文翻译</a>）</p></li>
+</ul>
+</div>
+</div>
+
+      </article>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="mac-note.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Mac Note</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="iterm2-note.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">iTerm2 Note</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+              Copyright &#169; 2011-2021, Dormouse Young
+            |
+            最后更新于 3月 15, 2021.
+            |
+            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
+              and
+              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+              <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
+            |
+            <a class="muted-link" href="_sources/linux-note.rst.txt"
+               rel="nofollow">
+              显示源代码
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            目录
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Linux Note</a><ul>
+<li><a class="reference internal" href="#pip-note">Pip note</a></li>
+<li><a class="reference internal" href="#install-chrome">Install chrome</a></li>
+<li><a class="reference internal" href="#install-new-font">Install new font</a></li>
+<li><a class="reference internal" href="#install-downlaod-tools">Install Downlaod tools</a></li>
+<li><a class="reference internal" href="#id1">以交互模式查找历史命令</a></li>
+<li><a class="reference internal" href="#at">使用 at 命令</a></li>
+<li><a class="reference internal" href="#shell">通过子 shell 保持当前目录</a></li>
+<li><a class="reference internal" href="#shred">用 shred 命令更安全地删除文件</a></li>
+<li><a class="reference internal" href="#id2">你可以按照功能搜索命令，而不仅仅是通过名字</a></li>
+<li><a class="reference internal" href="#id3">一个允许你来管理系统版本的替代系统</a></li>
+<li><a class="reference internal" href="#id4">通过自动更正来避免输入很长的无效文件路径</a></li>
+<li><a class="reference internal" href="#id5">压缩和解压缩</a><ul>
+<li><a class="reference internal" href="#id6">常用命令</a></li>
+<li><a class="reference internal" href="#sex">sEx</a></li>
+<li><a class="reference internal" href="#id7">分卷压缩及解压分卷压缩文件</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id8">参考</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </main>
+</div>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
+    <script src="_static/scripts/main.js?digest=e931d09b2a40c1bb82b542effe772014573baf67"></script></body>
+</html>

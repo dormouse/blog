@@ -1,6 +1,6 @@
-*******************************
+=================
 Conda & Anaconda
-*******************************
+=================
 
 :date: 2018-01-17
 :modified: 2018-01-17
@@ -42,7 +42,7 @@ Conda是一个包管理器， Anaconda 是一个 python 发行版。
     show_channel_urls: true
 
 
-常用命令
+常用 conda 命令
 =============================
 
 查看版本: ``conda -V`` 或者 ``conda --version``
@@ -75,9 +75,10 @@ Conda是一个包管理器， Anaconda 是一个 python 发行版。
 
 查看当前所在的虚拟环境: ``conda info --e``
 
-激活或切换虚拟环境： ``source activate env_name``
+激活或切换虚拟环境： ``conda activate env_name``
+（原： ``source activate env_name`` ）
 
-关闭虚拟环境： ``source deactivate``
+关闭虚拟环境： ``conda deactivate`` （原 ``source deactivate`` ）
 
 移除虚拟环境： ``conda remove -n env_name --all``
 

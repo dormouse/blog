@@ -21,6 +21,19 @@ Install from source::
     $ cd imapclient
     $ pip install -e .
 
+Show package inof: ``pip show package-name`` , for example::
+
+    $ pip show PyQt5
+    Name: PyQt5
+    Version: 5.15.4
+    Summary: Python bindings for the Qt cross platform application toolkit
+    Home-page: https://www.riverbankcomputing.com/software/pyqt/
+    Author: Riverbank Computing Limited
+    Author-email: info@riverbankcomputing.com
+    License: GPL v3
+    Location: /home/user-name/anaconda3/envs/jtjd/lib/python3.9/site-packages
+    Requires: PyQt5-Qt5, PyQt5-sip
+
 
 Install chrome
 ==================

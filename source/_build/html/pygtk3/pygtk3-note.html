@@ -1,0 +1,443 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="索引" href="../genindex.html" /><link rel="search" title="搜索" href="../search.html" /><link rel="next" title="Apt cheat sheet" href="../apt-cheat-sheet.html" /><link rel="prev" title="Style Guide for Python Code" href="../pep/pep-0008.html" />
+
+    <meta name="generator" content="sphinx-3.5.1, furo 2021.02.28.beta28"/>
+        <title>Python GTK+ 3 笔记 - Dormouse Blog 1.1 文档</title>
+      <link rel="stylesheet" href="../_static/styles/furo.css?digest=be5985a4059b5c2cd56ed0804790452beca62674">
+    <link rel="stylesheet" href="../_static/pygments.css">
+    <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../_static/pygments_dark.css">
+    
+
+
+<style>
+  :root {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+  }
+
+  /* For allowing end-user-specific overrides */
+  .override-light {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  .override-dark {
+    --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+  }
+</style><link rel="stylesheet" href="../_static/styles/furo-extensions.css?digest=d391b54134226e4196576da3bdb6dddb7e05ba2b"></head>
+  <body dir="">
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke-width="1.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z"/>
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">Dormouse Blog 1.1 文档</div></a>
+    </div>
+    <div class="header-right">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  
+  <span class="sidebar-brand-text">Dormouse Blog 1.1 文档</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html">
+  <input class="sidebar-search" placeholder=搜索 name="q">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../python_note/index.html">Python Note</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../python_note/100file.html">Python Note 100 - File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python_note/200list.html">Python Note 200 - List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python_note/300dict.html">Python Note 300 - Dict</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python_note/400str.html">Python Note 400 - String</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python_note/500datetime.html">Python Note 500 - Datetime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python_note/600functional_programming.html">Python Note 600 - Functional Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python_note/700sorting.html">Python Note 700 - Sorting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python_note/800logger.html">Python Note 800 - logger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python_note/900other.html">Python Note 900 - Other</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../pep/pep-0008.html">Style Guide for Python Code</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Python GTK+ 3 笔记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apt-cheat-sheet.html">Apt cheat sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../build-static-blog-with-pelican.html">Build Static Blog With Pelican</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../conda-anaconda.html">Conda &amp; Anaconda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../git-note.html">Git Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../golang-quick-start.html">Golang Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../howto-config-icoloud-mail-in-thunderbird.html">How to configure iCloud mail in Mozilla Thunderbird</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../howto-start-a-python3-project.html">How to start a python3 project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hugo-quick-start.html">Hugo Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ifttt-note.html">Ifttt Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-linuxmint.html">安装 Linux Mint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../iterm2-note.html">iTerm2 Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux-note.html">Linux Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mac-note.html">Mac Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../make-a-blog-with-flask.html">Make a blog with Flask</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pandas-note.html">pandas 入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pyqt5-note.html">PyQt5 Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python-terminal-ide.html">IDE in terminal for Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python-virtual-env.html">安装 Python 虚拟环境</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst-pdf.html">使用 Sphinx 生成 PDF 文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../semantic-note.html">Semantic Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sphinx-cheet-sheet.html">Sphinx cheat sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spyder-on-winxp.html">Spyder in Winxp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sqlite-note.html">Sqlite Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sublime-text-note.html">Sublime Text Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tinkerer-quick-start.html">Tinkerer Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tumx-note.html">Tmux Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vim-as-ide.html">Vim As IDE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vim-note.html">Vim Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wordpress-note.html">Wordpress Note</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../haskell/index.html">Haskell Note</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label for="toctree-checkbox-2"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../haskell/haskell-note.html">Haskell Note</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../haskell/haskell-exercieses.html">Haskell Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../personal/index.html">Personal Note</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label for="toctree-checkbox-3"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../personal/read-list.html">读书记录</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../personal/a-gang-story-review.html">A Gang Story（2011） 里昂黑帮</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../personal/a-year-with-no-taste.html">一个没有味道的年</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../personal/booknote-20101113.html">读书笔记20101113</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../personal/fei-cheng-wu-rao-review.html">今天看《非诚勿扰》</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../personal/get-him-to-the-greek.html">Get Him to the Greek</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../personal/if-only-one-bowl-of-porridge.html">如果只有一碗粥…</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../personal/i-saw-a-beaver-nest.html">我看见了河狸的窝</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../personal/let-us-digg.html">让我们来打洞吧</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../personal/listen-and-watch-movie.html">听听琴，看看电影</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../personal/long-men-fei-jia-review.html">龙门飞甲3D版</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../personal/ni-yi-sheng-de-gu-shi-du-hou-gan.html">《你一生的故事》读后感</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../personal/roomba550-review.html">家里来了一个“机器人”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../personal/selecting-ebook.html">电子书比较中…</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../personal/suitable-for-human-habitation.html">据说10以上的地方更适合人类居住</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../personal/the-most-intimate-goods-in-newegg.html">新蛋最贴心的商品</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../personal/the-terminal-review.html">幸福终点站</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../personal/unthinkable-review.html">《战略特勤组》观后感</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../personal/you-will-forget-it.html">You will forget it</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../lego/index.html">Lego Note</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label for="toctree-checkbox-4"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lego/lego-10222.html">拆还是不拆呢？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lego/lego-30106-review.html">Lego 30106 Review</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lego/lego-30222-review.html">Lego 30222 Review</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lego/lego-service.html">这就是LEGO®的售后服务</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../software.html">Software Note</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <main class="main">
+    <div class="content">
+      <article role="main">
+        <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+        </label>
+        <div class="section" id="python-gtk-3">
+<h1>Python GTK+ 3 笔记<a class="headerlink" href="#python-gtk-3" title="永久链接至标题">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">date</dt>
+<dd class="field-odd"><p>2015年 06月 27日 星期六 16:03:07 CST</p>
+</dd>
+<dt class="field-even">author</dt>
+<dd class="field-even"><p>Dormouse.Young(<a class="reference external" href="mailto:dormouse.young%40gmail.com">dormouse<span>.</span>young<span>@</span>gmail<span>.</span>com</a>)</p>
+</dd>
+</dl>
+<p>本文基于 Linux Mint 17 Cinnamon 64-bit, Python 2.7.6, PyGObject 3.12.0 。</p>
+<div class="section" id="id1">
+<h2>安装<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p>Python GTK+ 3 编程现在推荐使用 PyGObject。</p>
+<p>Python GTK+ 2 编程现在推荐使用 PyGTK。</p>
+<p>其依赖于：</p>
+<ul class="simple">
+<li><p>GTK+3</p></li>
+<li><p>Python 2 (2.6 or later) or Python 3 (3.1 or later)</p></li>
+<li><p>gobject-introspection</p></li>
+</ul>
+<p>安装方法见其主页： <a class="reference external" href="https://wiki.gnome.org/Projects/PyGObject">https://wiki.gnome.org/Projects/PyGObject</a></p>
+</div>
+<div class="section" id="hello-world">
+<h2>Hello World<a class="headerlink" href="#hello-world" title="永久链接至标题">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/python</span>
+<span class="kn">from</span> <span class="nn">gi.repository</span> <span class="kn">import</span> <span class="n">Gtk</span>
+
+
+<span class="k">class</span> <span class="nc">MyWindow</span><span class="p">(</span><span class="n">Gtk</span><span class="o">.</span><span class="n">Window</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">Gtk</span><span class="o">.</span><span class="n">Window</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">"Hello World"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">button</span> <span class="o">=</span> <span class="n">Gtk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">"Click Here"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">button</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">"clicked"</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">on_button_clicked</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">button</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">on_button_clicked</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">widget</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Hello World"</span><span class="p">)</span>
+
+<span class="n">win</span> <span class="o">=</span> <span class="n">MyWindow</span><span class="p">()</span>
+<span class="n">win</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">"delete-event"</span><span class="p">,</span> <span class="n">Gtk</span><span class="o">.</span><span class="n">main_quit</span><span class="p">)</span>
+<span class="n">win</span><span class="o">.</span><span class="n">show_all</span><span class="p">()</span>
+<span class="n">Gtk</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>信号<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">handler_id</span> <span class="o">=</span> <span class="n">widget</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">"event"</span><span class="p">,</span> <span class="n">callback</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+<span class="n">widget</span><span class="o">.</span><span class="n">disconnect</span><span class="p">(</span><span class="n">handler_id</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>控件属性<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>以下两种方式是等价的:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">label</span> <span class="o">=</span> <span class="n">Gtk</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">"Hello World"</span><span class="p">,</span> <span class="n">angle</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">halign</span><span class="o">=</span><span class="n">Gtk</span><span class="o">.</span><span class="n">Align</span><span class="o">.</span><span class="n">END</span><span class="p">)</span>
+
+<span class="n">label</span> <span class="o">=</span> <span class="n">Gtk</span><span class="o">.</span><span class="n">Label</span><span class="p">()</span>
+<span class="n">label</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s2">"Hello World"</span><span class="p">)</span>
+<span class="n">label</span><span class="o">.</span><span class="n">set_angle</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+<span class="n">label</span><span class="o">.</span><span class="n">set_halign</span><span class="p">(</span><span class="n">Gtk</span><span class="o">.</span><span class="n">Align</span><span class="o">.</span><span class="n">END</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>还可以使用以下方式:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">widget</span><span class="o">.</span><span class="n">get_property</span><span class="p">(</span><span class="s2">"prop-name"</span><span class="p">)</span>
+<span class="n">widget</span><span class="o">.</span><span class="n">set_property</span><span class="p">(</span><span class="s2">"prop-name"</span><span class="p">,</span> <span class="n">value</span><span class="p">),</span>
+</pre></div>
+</div>
+<p>查看控件属性的方式:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">widget</span> <span class="o">=</span> <span class="n">Gtk</span><span class="o">.</span><span class="n">Box</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">widget</span><span class="o">.</span><span class="n">props</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="unicode">
+<h2>Unicode<a class="headerlink" href="#unicode" title="永久链接至标题">¶</a></h2>
+<p>GTK+ 内部使用 UTF-8。 PyGObject 会自动把 unicode 参数转换为 UTF-8 。
+示例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">gi.repository</span> <span class="kn">import</span> <span class="n">Gtk</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">unicode_string</span> <span class="o">=</span> <span class="sa">u</span><span class="s2">"中国"</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">label</span> <span class="o">=</span> <span class="n">Gtk</span><span class="o">.</span><span class="n">Label</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">label</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="n">unicode_string</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">txt</span> <span class="o">=</span> <span class="n">label</span><span class="o">.</span><span class="n">get_text</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">txt</span><span class="p">),</span> <span class="n">txt</span>
+<span class="go">(&lt;type 'str'&gt;, '\xe4\xb8\xad\xe5\x9b\xbd')</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">txt</span> <span class="o">==</span> <span class="n">unicode_string</span>
+<span class="go">__main__:1: UnicodeWarning: Unicode equal comparison failed to convert</span>
+<span class="go">both arguments to Unicode - interpreting them as being unequal</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">txt</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">"utf-8"</span><span class="p">)</span>
+<span class="go">u'\u4e2d\u56fd'</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">txt</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">"utf-8"</span><span class="p">)</span><span class="o">==</span><span class="n">unicode_string</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>容器<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>单儿子容器是 Gtk.Bin 的后代，多儿子容器是 Gtk.Container 的后代。</p>
+<p>常用容器为 boxes (Gtk.Box) 、 tables (Gtk.Table) 和 (Gtk.Grid) 。</p>
+<div class="section" id="box">
+<h3>Box<a class="headerlink" href="#box" title="永久链接至标题">¶</a></h3>
+<p>Box 的组装函数为 Gtk.Box.pack_start() 或 Gtk.Box.pack_end() 。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/python</span>
+<span class="c1"># -*- coding: utf8 -*-</span>
+
+<span class="kn">from</span> <span class="nn">gi.repository</span> <span class="kn">import</span> <span class="n">Gtk</span>
+
+
+<span class="k">class</span> <span class="nc">MyWindow</span><span class="p">(</span><span class="n">Gtk</span><span class="o">.</span><span class="n">Window</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">Gtk</span><span class="o">.</span><span class="n">Window</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">"Hello World"</span><span class="p">)</span>
+        <span class="c1"># 间隔为6</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">box</span> <span class="o">=</span> <span class="n">Gtk</span><span class="o">.</span><span class="n">Box</span><span class="p">(</span><span class="n">spacing</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">box</span><span class="p">)</span>
+
+        <span class="c1"># 从左向右排</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">button1</span> <span class="o">=</span> <span class="n">Gtk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">"Hello"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">button1</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">"clicked"</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">on_button1_clicked</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">box</span><span class="o">.</span><span class="n">pack_start</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">button1</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">button2</span> <span class="o">=</span> <span class="n">Gtk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">"Goodbye"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">button2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">"clicked"</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">on_button2_clicked</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">box</span><span class="o">.</span><span class="n">pack_start</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">button2</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+        <span class="c1"># 从右向左排</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">button3</span> <span class="o">=</span> <span class="n">Gtk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">"I am 3"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">button3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">"clicked"</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">on_button3_clicked</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">box</span><span class="o">.</span><span class="n">pack_end</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">button3</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">button4</span> <span class="o">=</span> <span class="n">Gtk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">"I am 4"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">button4</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">"clicked"</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">on_button4_clicked</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">box</span><span class="o">.</span><span class="n">pack_end</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">button4</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">on_button1_clicked</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">widget</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Hello"</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">on_button2_clicked</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">widget</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Goodbye"</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">on_button3_clicked</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">widget</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"I am 3"</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">on_button4_clicked</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">widget</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"I am 4"</span><span class="p">)</span>
+
+<span class="n">win</span> <span class="o">=</span> <span class="n">MyWindow</span><span class="p">()</span>
+<span class="n">win</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">"delete-event"</span><span class="p">,</span> <span class="n">Gtk</span><span class="o">.</span><span class="n">main_quit</span><span class="p">)</span>
+<span class="n">win</span><span class="o">.</span><span class="n">show_all</span><span class="p">()</span>
+<span class="n">Gtk</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+      </article>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="../apt-cheat-sheet.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Apt cheat sheet</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="../pep/pep-0008.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Style Guide for Python Code</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+              Copyright &#169; 2011-2021, Dormouse Young
+            |
+            最后更新于 3月 15, 2021.
+            |
+            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
+              and
+              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+              <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
+            |
+            <a class="muted-link" href="../_sources/pygtk3/pygtk3-note.rst.txt"
+               rel="nofollow">
+              显示源代码
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            目录
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Python GTK+ 3 笔记</a><ul>
+<li><a class="reference internal" href="#id1">安装</a></li>
+<li><a class="reference internal" href="#hello-world">Hello World</a></li>
+<li><a class="reference internal" href="#id2">信号</a></li>
+<li><a class="reference internal" href="#id3">控件属性</a></li>
+<li><a class="reference internal" href="#unicode">Unicode</a></li>
+<li><a class="reference internal" href="#id4">容器</a><ul>
+<li><a class="reference internal" href="#box">Box</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </main>
+</div>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="../_static/scripts/main.js?digest=e931d09b2a40c1bb82b542effe772014573baf67"></script></body>
+</html>
