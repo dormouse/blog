@@ -1,4 +1,4 @@
-Personal Note
+Blog
 =============
 
 .. toctree::

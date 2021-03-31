@@ -4,15 +4,13 @@
    contain the root `toctree` directive.
 
 ===========================================
-Welcome to Dormouse's Documentation!
+文档写作
 ===========================================
 
 .. toctree::
-   :caption: You will forget it.
-   :maxdepth: 1
+   :maxdepth: 2
 
-   devnote/index
-   python_note/index.rst
-   haskell/index.rst
-   personal/index.rst
-   lego/index.rst
+   sphinx-note.rst
+   build-static-blog-with-pelican.rst
+   hugo-quick-start.rst
+   pydata-theme-docs/index.rst

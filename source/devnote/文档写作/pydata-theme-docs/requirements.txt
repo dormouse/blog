@@ -1,0 +1,12 @@
+sphinx
+numpydoc
+recommonmark
+pandas
+pytest
+pytest-regressions
+beautifulsoup4
+# For demo examples
+jupyter_sphinx
+plotly
+numpy
+xarray

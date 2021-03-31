@@ -1,4 +1,4 @@
-Python Note
+Python
 ===========
 
 .. toctree::

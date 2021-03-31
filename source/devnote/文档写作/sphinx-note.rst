@@ -1,4 +1,313 @@
-=========================
+==================
+Sphinx Note
+==================
+
+:date: 2013-09-10
+:modified: 2021-03-31
+:slug: sphinx-note
+:tags: sphinx
+:category: software
+:author: Dormouse Young
+
+reStructuredText 入门 
+=======================
+See http://www.sphinx-doc.org/en/stable/rest.html for more.
+
+Here is a quick and dirty cheat sheet for some common stuff you want
+to do in sphinx and ReST.
+
+.. _formatting-text:
+
+文本格式化
+----------
+
+=====  ====================     ============
+名称   代码                     示例
+=====  ====================     ============
+斜体   ``*斜体*``               *斜体*
+粗休   ``**粗体**``             **粗体**
+原文   \`\`**原文**\`\`         ``**原文**``
+=====  ====================     ============
+
+源代码
+------
+
+末尾使用 ``::`` 符号，则下面的内容就显示为源代码,源代码需要缩进，例如::
+
+    You can represent code blocks fairly easily::
+
+       import numpy as np
+       x = np.random.rand(12)
+
+以上代码显示效果如下：
+
+You can represent code blocks fairly easily::
+
+   import numpy as np
+   x = np.random.rand(12)
+
+也可以直接从文件引入代码。例如从exts/chinese_search.py 引入代码可以使用如下命令::
+
+    .. literalinclude:: exts/chinese_search.py
+
+.. _making-a-list:
+
+生成列表
+--------
+
++------------------------+---------------------+
+| 代码                   | 显示效果            |
++========================+=====================+
+| ``* point A``          | * point A           |
+|                        |                     |
+| ``* point B``          | * point B           |
+|                        |                     |
+| ``* point C``          | * point C           |
+|                        |                     |
++------------------------+---------------------+
+| ``#. point A``         | #. point A          |
+|                        |                     |
+| ``#. point B``         | #. point B          |
+|                        |                     |
+| ``#. point C``         | #. point C          |
+|                        |                     |
++------------------------+---------------------+
+
+.. _making-a-table:
+
+制作表格
+--------
+
+复杂表格写法如下::
+
+   +------------------------+------------+----------+----------+
+   | Header row, column 1   | Header 2   | Header 3 | Header 4 |
+   | (header rows optional) |            |          |          |
+   +========================+============+==========+==========+
+   | body row 1, column 1   | column 2   | column 3 | column 4 |
+   +------------------------+------------+----------+----------+
+   | body row 2             | ...        | ...      |          |
+   +------------------------+------------+----------+----------+
+
+简单表格写法如下::
+
+   =====  =====  =======
+   A      B      A and B
+   =====  =====  =======
+   False  False  False
+   True   False  False
+   False  True   False
+   True   True   True
+   =====  =====  =======
+
+.. _making-links:
+
+制作链接
+--------
+
+```mysite <http://mysite.com>`_`` 显示为 `mysite <http://mysite.com>`_ 。
+
+``http://www.mysite.com`` 直接显示为 http://www.mysite.com 。
+
+``:ref:`making-a-table``` 用于引用文章内部章节。
+
+``:mod:`matplotlib.backend_bases``` 用于引用模块。
+
+``:class:`~matplotlib.backend_bases.LocationEvent``` 用于引用类。
+
+``:meth:`~matplotlib.backend_bases.FigureCanvasBase.mpl_connect``` 用于引用方法。
+
+划分章节
+--------
+
+* ``#`` with overline, for parts
+* ``*`` with overline, for chapters
+* ``=``, for sections
+* ``-``, for subsections
+* ``^``, for subsubsections
+* ``"``, for paragraphs
+
+全局替换
+--------
+
+reST支持“替换”，例如::
+
+   .. |name| replace:: replacement *text*
+
+或者::
+
+   .. |caution| image:: warning.png
+                :alt: Warning!
+
+如果你想在所有文件使用中这些替换，一种方式是把它们写入 `rst_prolog` ；
+另一种方式是把它们放到一个单独的文件中，然后在需要使用的文件中使用::
+
+     :rst:dir:`include`
+
+指令来导入这些替换。
+
+Sphinx 内置的全局替换有 ``|today|`` 、 ``|release|`` 和 ``|version|`` 。
+
+`today` 表示当前日期（时间），其显示格式可以通过 `conf.py` 文件中的 `today_fmt`
+来设置。
+
+图像
+----
+
+使用方法::
+
+   .. image:: gnu.png
+      (options)
+
+When used within Sphinx, the file name given (here ``gnu.png``) must either be
+relative to the source file, or absolute which means that they are relative to
+the top source directory.  For example, the file ``sketch/spam.rst`` could refer
+to the image ``images/spam.png`` as ``../images/spam.png`` or
+``/images/spam.png``.
+
+Sphinx will automatically copy image files over to a subdirectory of the output
+directory on building (e.g. the ``_static`` directory for HTML output.)
+
+Interpretation of image size options (``width`` and ``height``) is as follows:
+if the size has no unit or the unit is pixels, the given size will only be
+respected for output channels that support pixels (i.e. not in LaTeX output).
+Other units (like ``pt`` for points) will be used for HTML and LaTeX output.
+
+Sphinx extends the standard docutils behavior by allowing an asterisk for the
+extension::
+
+   .. image:: gnu.*
+
+Sphinx then searches for all images matching the provided pattern and determines
+their type.  Each builder then chooses the best image out of these candidates.
+For instance, if the file name ``gnu.*`` was given and two files `gnu.pdf`
+and `gnu.png` existed in the source tree, the LaTeX builder would choose
+the former, while the HTML builder would prefer the latter.
+
+脚注
+^^^^
+
+脚注用 ``[#name]_`` 来表示，在文档底部“ Footnotes ”标题后写具体内容::
+
+   Lorem ipsum [#f1]_ dolor sit amet ... [#f2]_
+
+   .. rubric:: Footnotes
+
+   .. [#f1] Text of the first footnote.
+   .. [#f2] Text of the second footnote.
+
+You can also explicitly number the footnotes (``[1]_``) or use auto-numbered
+footnotes without names (``[#]_``).
+
+
+Citations
+^^^^^^^^^^
+
+Standard reST citations  are supported, with the
+additional feature that they are "global", i.e. all citations can be referenced
+from all files.  Use them like so::
+
+   Lorem ipsum [Ref]_ dolor sit amet.
+
+   .. [Ref] Book or article reference, URL or whatever.
+
+Citation usage is similar to footnote usage, but with a label that is not
+numeric or begins with ``#``.
+
+
+Comments
+^^^^^^^^^
+
+Every explicit markup block which isn't a valid markup construct (like the
+footnotes above) is regarded as a comment .  For
+example::
+
+   .. This is a comment.
+
+You can indent text after a comment start to form multiline comments::
+
+   ..
+      This whole indented block
+      is a comment.
+
+      Still in the comment.
+
+Gotchas
+^^^^^^^^
+
+There are some problems one commonly runs into while authoring reST documents:
+
+* **Separation of inline markup:** As said above, inline markup spans must be
+  separated from the surrounding text by non-word characters, you have to use a
+  backslash-escaped space to get around that.  See `the reference
+  <http://docutils.sf.net/docs/ref/rst/restructuredtext.html#inline-markup>`_
+  for the details.
+
+* **No nested inline markup:** Something like ``*see :func:`foo`*`` is not
+  possible.
+
+
+Theme
+=====
+
+Install pydata theme
+---------------------
+
+The theme is available on PyPI and conda-forge, and can thus be installed with:
+
+.. code:: console
+
+    $ pip install pydata-sphinx-theme
+
+.. code:: console
+
+    $ conda install pydata-sphinx-theme --channel conda-forge
+
+Then, in the ``conf.py`` of your sphinx docs, you update the ``html_theme``
+configuration option:
+
+.. code:: python
+
+    html_theme = "pydata_sphinx_theme"
+
+
+If you want to track the development version of the theme, you can
+install it from the git repo:
+
+.. code:: console
+
+    $ pip install git+https://github.com/pydata/pydata-sphinx-theme.git@master
+
+or in a conda environment yml file, you can add:
+
+.. code:: none
+
+    - pip:
+      - git+https://github.com/pydata/pydata-sphinx-theme.git@master
+
+More info : https://pydata-sphinx-theme.readthedocs.io/en/latest/index.html
+
+
+Install rtd theme
+-----------------
+
+
+The theme is available on PyPI and conda-forge, and can thus be installed with:
+
+.. code:: console
+
+    $ pip install sphinx_rtd_theme
+
+Then, in the ``conf.py`` of your sphinx docs, you update the ``html_theme``
+configuration option:
+
+.. code:: python
+
+    html_theme = "sphinx_rtd_theme"
+
+More info : https://github.com/rtfd/sphinx_rtd_theme
+
+
 使用 Sphinx 生成 PDF 文件
 =========================
 
@@ -12,7 +321,7 @@
 
 
 简介
-====
+----
 
 本文主要说明如何使用 Sphinx 来生成 PDF 文件。
 
@@ -23,7 +332,7 @@ Sphinx 支持 html 、 LaTeX 、 ePub 等多种输出格式。
 
 
 安装编译环境
-============
+------------
 
 本文的测试环境为 macOS Sierra 10.12.6, Python 3.6.1 。
 
@@ -57,7 +366,7 @@ Sphinx 支持 html 、 LaTeX 、 ePub 等多种输出格式。
 
 
 编写文档
-========
+--------
 
 创建一个 Sphinx 项目，运行 ``sphinx-quickstart`` 命令::
 
@@ -198,7 +507,7 @@ Sphinx 支持 html 、 LaTeX 、 ePub 等多种输出格式。
 这里扩展名可以省略。
 
 生成 PDF 文件
-==============================================
+-------------
 
 在项目根目录下使用 ``make latex`` 命令生成 tex 文件。修改文件中的字体，把
 其中的 ``.otf`` 都改为 ``.ttf`` ::
@@ -229,39 +538,64 @@ Sphinx 支持 html 、 LaTeX 、 ePub 等多种输出格式。
 可生成 PDF 文件。
 
 
-一些 Tips
-==============================================
 
 让 Sphinx 支持 markdown
--------------------------------------------------
+========================
 
-Sphinx 是可以支持 markdown 的。要让 Sphinx 支持 markdown ，需要按如下方法操作：
+`Markdown`__ is a lightweight markup language with a simplistic plain text
+formatting syntax.  It exists in many syntactically different *flavors*.  To
+support Markdown-based documentation, Sphinx can use `recommonmark`__.
+recommonmark is a Docutils bridge to `CommonMark-py`__, a Python package for
+parsing the `CommonMark`__ Markdown flavor.
 
-#. 安装 recommonmark ：
+__ https://daringfireball.net/projects/markdown/
+__ https://recommonmark.readthedocs.io/en/latest/index.html
+__ https://github.com/rtfd/CommonMark-py
+__ https://commonmark.org/
 
-   ::
+Configuration
+-------------
 
-      pip install recommonmark
+To configure your Sphinx project for Markdown support, proceed as follows:
 
-#. 在 Sphinx 配置文件中的 ``source_parsers`` 变量中添加 Markdown 解析器：
+#. Install the Markdown parser *recommonmark*::
 
-   ::
+      pip install --upgrade recommonmark
 
-      source_parsers = {
-         '.md': 'recommonmark.parser.CommonMarkParser',
+   .. note::
+
+      The configuration as explained here requires recommonmark version
+      0.5.0 or later.
+
+#. Add *recommonmark* to the
+   :confval:`list of configured extensions <extensions>`::
+
+      extensions = ['recommonmark']
+
+   .. versionchanged:: 1.8
+      Version 1.8 deprecates and version 3.0 removes the ``source_parsers``
+      configuration variable that was used by older *recommonmark* versions.
+
+#. If you want to use Markdown files with extensions other than ``.md``, adjust
+   the :confval:`source_suffix` variable.  The following example configures
+   Sphinx to parse all files with the extensions ``.md`` and ``.txt`` as
+   Markdown::
+
+      source_suffix = {
+          '.rst': 'restructuredtext',
+          '.txt': 'markdown',
+          '.md': 'markdown',
       }
 
-   `.md` 表示 Markdown 文件的扩展名，你可以替换为其他的扩展名。
+#. You can further configure *recommonmark* to allow custom syntax that
+   standard *CommonMark* doesn't support.  Read more in the `recommonmark
+   documentation`__.
 
-#. 把 Markdown 文件的扩展名添加到配置文件的 ``source_suffix`` 变量中：
+__ https://recommonmark.readthedocs.io/en/latest/auto_structify.html
 
-   ::
 
-      source_suffix = ['.rst', '.md']
-
-#. CommonMark 支持添加自定义 Markdown 语法，详见
-   `recommonmark 文档 <http://recommonmark.readthedocs.io/en/latest/auto_structify.html>`__.
-
+一些 Tips
+==============================================
 
 Linux 下安装 TeX Live
 ------------------------------------------
@@ -326,3 +660,4 @@ Linux 下安装 TeX Live
 
 在 macOS 中可以使用“字体册”应用来查看字体名称。
 在 Linux 中可以用 ``fc-list`` 命令来获得字体名称。
+

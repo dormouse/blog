@@ -1,4 +1,4 @@
-Haskell Note
+Haskell
 =============
 
 .. toctree::
