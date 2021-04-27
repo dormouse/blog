@@ -35,7 +35,7 @@ Development
    tinkerer-quick-start.rst
    tumx-note.rst
    vim-as-ide.rst
-   vim-note.md
+   vim-note
    wordpress-note.rst
    software.rst
    文档写作/index.rst
