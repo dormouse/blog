@@ -185,7 +185,7 @@ and `gnu.png` existed in the source tree, the LaTeX builder would choose
 the former, while the HTML builder would prefer the latter.
 
 脚注
-^^^^
+----
 
 脚注用 ``[#name]_`` 来表示，在文档底部“ Footnotes ”标题后写具体内容::
 
@@ -201,7 +201,7 @@ footnotes without names (``[#]_``).
 
 
 Citations
-^^^^^^^^^^
+---------
 
 Standard reST citations  are supported, with the
 additional feature that they are "global", i.e. all citations can be referenced
@@ -216,7 +216,7 @@ numeric or begins with ``#``.
 
 
 Comments
-^^^^^^^^^
+---------
 
 Every explicit markup block which isn't a valid markup construct (like the
 footnotes above) is regarded as a comment .  For
@@ -233,7 +233,7 @@ You can indent text after a comment start to form multiline comments::
       Still in the comment.
 
 Gotchas
-^^^^^^^^
+-------
 
 There are some problems one commonly runs into while authoring reST documents:
 
@@ -464,7 +464,6 @@ Sphinx 支持 html 、 LaTeX 、 ePub 等多种输出格式。
 ``build`` 目录用于存放输出的内容，比如我们以后要生成的 PDF 文件。
 ``source`` 目录用于存放用户的源文件。
 ``Makefile`` 是项目工程文件，方便我们以后生成各种格式的文件。
-
 ``source`` 目录下有以下两个目录和两个文件。
 ``_static`` 目录用于存放用户自定义样式表或者其他静态文件。
 ``_templates`` 目录用于存放用户自定义的模版。
@@ -472,8 +471,7 @@ Sphinx 支持 html 、 LaTeX 、 ePub 等多种输出格式。
 ``index.rst`` 是项目的索引文件，每个 sphinx-doc 项目都至少有一个索引文件。
 
 为了能够正确的生成中文 PDF 文件，我们需要修改 ``conf.py`` 的
-``Options for LaTeX output`` 一节中的 ``latex_elements`` 变量，修改为以下内容：
-::
+``Options for LaTeX output`` 一节中的 ``latex_elements`` 变量，修改为以下内容::
 
     latex_elements = {
         'papersize': 'a4paper',
@@ -492,8 +490,7 @@ Sphinx 支持 html 、 LaTeX 、 ePub 等多种输出格式。
 的源文件就是 ``rst_pdf`` 文件。
 
 写完后要修改 ``index.rst`` 文件，把新添加的 ``rst`` 文件加入目录树。例如本文的
-``index.rst`` 内容为：
-::
+``index.rst`` 内容为::
 
     Welcome to rst_pdf's documentation!
     ===================================
@@ -510,7 +507,7 @@ Sphinx 支持 html 、 LaTeX 、 ePub 等多种输出格式。
 -------------
 
 在项目根目录下使用 ``make latex`` 命令生成 tex 文件。修改文件中的字体，把
-其中的 ``.otf`` 都改为 ``.ttf`` ::
+其中的 ``.otf`` 都改为 ``.ttf``::
 
     \setmainfont{FreeSerif}[
       Extension      = .ttf,
@@ -567,8 +564,7 @@ To configure your Sphinx project for Markdown support, proceed as follows:
       The configuration as explained here requires recommonmark version
       0.5.0 or later.
 
-#. Add *recommonmark* to the
-   :confval:`list of configured extensions <extensions>`::
+#. Add *recommonmark* to the list of configured extensions::
 
       extensions = ['recommonmark']
 
@@ -576,8 +572,8 @@ To configure your Sphinx project for Markdown support, proceed as follows:
       Version 1.8 deprecates and version 3.0 removes the ``source_parsers``
       configuration variable that was used by older *recommonmark* versions.
 
-#. If you want to use Markdown files with extensions other than ``.md``, adjust
-   the :confval:`source_suffix` variable.  The following example configures
+#. If you want to use Markdown files with extensions other than ``.md``,
+   adjust the ``source_suffix`` variable.  The following example configures
    Sphinx to parse all files with the extensions ``.md`` and ``.txt`` as
    Markdown::
 
