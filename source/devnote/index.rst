@@ -34,7 +34,6 @@ Development
    sublime-text-note.rst
    tinkerer-quick-start.rst
    tumx-note.rst
-   vim-as-ide.rst
    vim-note
    wordpress-note.rst
    software.rst
