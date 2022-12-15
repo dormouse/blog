@@ -535,19 +535,18 @@ Sphinx 支持 html 、 LaTeX 、 ePub 等多种输出格式。
 可生成 PDF 文件。
 
 
-
 让 Sphinx 支持 markdown
 ========================
 
 `Markdown`__ is a lightweight markup language with a simplistic plain text
 formatting syntax.  It exists in many syntactically different *flavors*.  To
-support Markdown-based documentation, Sphinx can use `recommonmark`__.
-recommonmark is a Docutils bridge to `CommonMark-py`__, a Python package for
+support Markdown-based documentation, Sphinx can use `MyST-Parser`__.
+MyST-Parser is a Docutils bridge to `markdown-it-py`__, a Python package for
 parsing the `CommonMark`__ Markdown flavor.
 
 __ https://daringfireball.net/projects/markdown/
-__ https://recommonmark.readthedocs.io/en/latest/index.html
-__ https://github.com/rtfd/CommonMark-py
+__ https://myst-parser.readthedocs.io/en/latest/
+__ https://github.com/executablebooks/markdown-it-py
 __ https://commonmark.org/
 
 Configuration
@@ -555,25 +554,19 @@ Configuration
 
 To configure your Sphinx project for Markdown support, proceed as follows:
 
-#. Install the Markdown parser *recommonmark*::
+#. Install the Markdown parser *MyST-Parser*::
 
-      pip install --upgrade recommonmark
+      pip install --upgrade myst-parser
+
+#. Add *myst_parser* to the list of configured extensions::
+
+      extensions = ['myst_parser']
 
    .. note::
-
-      The configuration as explained here requires recommonmark version
-      0.5.0 or later.
-
-#. Add *recommonmark* to the list of configured extensions::
-
-      extensions = ['recommonmark']
-
-   .. versionchanged:: 1.8
-      Version 1.8 deprecates and version 3.0 removes the ``source_parsers``
-      configuration variable that was used by older *recommonmark* versions.
+      MyST-Parser requires Sphinx 2.1 or newer.
 
 #. If you want to use Markdown files with extensions other than ``.md``,
-   adjust the ``source_suffix`` variable.  The following example configures
+   adjust the `source_suffix` variable.  The following example configures
    Sphinx to parse all files with the extensions ``.md`` and ``.txt`` as
    Markdown::
 
@@ -583,20 +576,34 @@ To configure your Sphinx project for Markdown support, proceed as follows:
           '.md': 'markdown',
       }
 
-#. You can further configure *recommonmark* to allow custom syntax that
-   standard *CommonMark* doesn't support.  Read more in the `recommonmark
+#. You can further configure *MyST-Parser* to allow custom syntax that
+   standard *CommonMark* doesn't support.  Read more in the `MyST-Parser
    documentation`__.
 
-__ https://recommonmark.readthedocs.io/en/latest/auto_structify.html
+__ https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html
+
+
+
+让 Sphinx 更好地支持中文搜索
+============================
+
+安装结巴分词::
+
+    pip install jieba
 
 
 一些 Tips
-==============================================
+==========
 
 Linux 下安装 TeX Live
 ------------------------------------------
 
 方法一是使用 ``apt-get install texlive-full`` 命令安装。
+
+用这个命令可能下载和安装的速度会速度快一点，方便一点。但是 TexLive 的版
+本会比较旧。今天是 2021 年 7 月 5 日，我用的是 LinuxMint ，其中新立得软
+件管理器中的 TexLive 是 2017 版的，而软件管理器中的则是 2014 版的。
+
 
 方法二是
 去 tex 的 `老家 <http://www.tug.org/texlive/acquire-netinstall.html>`_ 下载
@@ -604,7 +611,20 @@ Linux 下安装 TeX Live
 
 解压缩后，运行::
 
-    sudo ./install-tl --gui=wizard
+    sudo ./install-tl --gui
+
+然后出现如下界面：
+
+.. image:: TexLive2021Install00.png
+
+点击图中的“ Install ”，开始漫长的安装。
+
+.. image:: TexLive2021Install01.png
+
+2012 年总共有 2599 个包，2021 年就发展为 4211 个包。
+安装完成后如下图：
+
+.. image:: TexLive2021Install02.png
 
 如果没有安装 wget ，则运行::
 
@@ -612,43 +632,42 @@ Linux 下安装 TeX Live
 
 安装输出大致如下::
 
-    输入 “In” 开始安装，一共有2599个项目......
-    Actions:
-    <I> start installation to hard disk
-    <H> help
-    <Q> quit
+    Installing to: /usr/local/texlive/2021
+    Installing [0001/4211, time/total: ??:??/??:??]: texlive.infra [429k]
+    Installing [0002/4211, time/total: 00:00/00:00]: texlive.infra.x86_64-linux [143k]
+    Installing [0003/4211, time/total: 00:00/00:00]: 12many [376k]
+    Installing [0004/4211, time/total: 00:01/01:03:11]: 2up [56k]
+    Installing [0005/4211, time/total: 00:01/59:41]: a0poster [119k]
+    Installing [0006/4211, time/total: 00:01/53:22]: a2ping [69k]
 
-    Enter command: i
-    Installing to: /usr/local/texlive/2012
-    Installing [0001/2599, time/total: ??:??/??:??]: 12many [376k]
-    Installing [0002/2599, time/total: 00:09/10:05:07]: 2up [66k]
-    Installing [0003/2599, time/total: 00:10/09:32:46]: Asana-Math [458k]
-    Installing [0004/2599, time/total: 00:12/05:36:55]: ESIEEcv [137k]
-    Installing [0005/2599, time/total: 00:15/06:05:39]: FAQ-en [5765k]
     ......
 
-    See /usr/local/texlive/2012/index.html
-    for links to documentation.  The TeX Live web site
-    contains updates and corrections: http://tug.org/texlive.
-
-    TeX Live is a joint project of the TeX user groups around the world;
-    please consider supporting it by joining the group best for you. The
-    list of user groups is on the web at http://tug.org/usergroups.html.
+    Welcome to TeX Live!
 
 
-    Add /usr/local/texlive/2012/texmf/doc/man to MANPATH, if not dynamically determined.
-    Add /usr/local/texlive/2012/texmf/doc/info to INFOPATH.
+    See /usr/local/texlive/2021/index.html for links to documentation.
+    The TeX Live web site (https://tug.org/texlive/) contains any
+    updates and corrections. TeX Live is a joint project of the TeX
+    user groups around the world; please consider supporting it by
+    joining the group best for you. The list of groups is available on
+    the web at https://tug.org/usergroups.html.
 
-    Most importantly, add /usr/local/texlive/2012/bin/x86_64-linux
+
+    Add /usr/local/texlive/2021/texmf-dist/doc/man to MANPATH.
+    Add /usr/local/texlive/2021/texmf-dist/doc/info to INFOPATH.
+    Most importantly, add /usr/local/texlive/2021/bin/x86_64-linux
     to your PATH for current and future sessions.
+    Logfile: /usr/local/texlive/2021/install-tl.log
+    Installed on platform x86_64-linux at /usr/local/texlive/2021
+
 
 设置路径，把以下内容放在 .bash_profile 中，然后运行 . ~/.bash_profile(ubuntu
 下是 ~/.bashrc)::
 
     PATH=$PATH:$HOME/.local/bin:$HOME/bin
-    PATH=/usr/local/texlive/2012/bin/x86_64-linux:$PATH; export PATH
-    MANPATH=/usr/local/texlive/2012/texmf/doc/man:$MANPATH; export MANPATH
-    INFOPATH=/usr/local/texlive/2012/texmf/doc/info:$INFOPATH; export INFOPATH
+    PATH=/usr/local/texlive/2021/bin/x86_64-linux:$PATH; export PATH
+    MANPATH=/usr/local/texlive/2021/texmf-dist/doc/man:$MANPATH; export MANPATH
+    INFOPATH=/usr/local/texlive/2021/texmf-dist/doc/info:$INFOPATH; export INFOPATH
 
 
 如何查看系统中的字体

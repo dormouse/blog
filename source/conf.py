@@ -23,7 +23,8 @@ copyright = '2011-2021, Dormouse Young'
 author = 'Dormouse Young'
 
 # The full version, including alpha/beta/rc tags
-release = '1.1'
+version = '1.1'
+release = '2021.07.01'
 master_doc = 'index'
 language = 'zh_CN'
 
@@ -39,7 +40,7 @@ extensions = [
     'sphinx.ext.autosummary',
     'sphinx.ext.todo',
     'sphinx.ext.autosectionlabel',
-    'recommonmark',
+    'myst_parser',
 ]
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
